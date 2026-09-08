@@ -65,9 +65,7 @@ export const megaMenuData = {
                 subServices: [
                     { title: "iOS Development", href: "/services/mobile-app-development/ios-development" },
                     { title: "Android Development", href: "/services/mobile-app-development/android-development" },
-                    { title: "Flutter Development", href: "/services/mobile-app-development/flutter-development" },
-                    { title: "React Native Development", href: "/services/mobile-app-development/react-native-development" },
-                    { title: "Cross-platform Apps", href: "/services/mobile-app-development/cross-platform-apps" }
+                    { title: "Hybrid App Development", href: "/services/mobile-app-development/hybrid-app-development" }
                 ]
             },
             {
@@ -126,8 +124,7 @@ export const megaMenuData = {
                     { title: "SEO", href: "/services/digital-marketing/seo" },
                     { title: "PPC", href: "/services/digital-marketing/ppc" },
                     { title: "Social Media", href: "/services/digital-marketing/social-media" },
-                    { title: "Content Marketing", href: "/services/digital-marketing/content-marketing" },
-                    { title: "Performance Marketing", href: "/services/digital-marketing/performance-marketing" }
+                    { title: "Content Marketing", href: "/services/digital-marketing/content-marketing" }
                 ]
             }
         ]

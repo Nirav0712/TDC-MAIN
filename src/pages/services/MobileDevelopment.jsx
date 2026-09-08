@@ -2,7 +2,7 @@ import React from 'react';
 import useSEO from '../../hooks/useSEO';
 import { motion } from 'framer-motion';
 import MainServiceLayout from '../../components/services/MainServiceLayout';
-import { Smartphone, Apple, Wifi, ShieldCheck, Gamepad2, Settings, Server, BellRing } from 'lucide-react';
+import { Smartphone, Apple, Wifi, ShieldCheck, Gamepad2, Settings, Server, BellRing, Combine } from 'lucide-react';
 
 const MobileHeroVisual = () => (
   <div className="relative w-full max-w-[500px] h-[500px] flex items-center justify-center z-20">
@@ -124,12 +124,9 @@ const MobileDevelopment = () => {
         content: "People spend over 4 hours a day on their smartphones. To capture that attention, your app needs to be flawless. We engineer high-performance native and cross-platform mobile apps that deliver stunning interfaces, buttery-smooth animations, and robust backend integrations. We don't just write code; we design experiences that drive retention and build loyalty."
       }}
       capabilities={[
-        { icon: <Apple />, title: "iOS Development", desc: "Native Swift applications pushing the boundaries of the Apple ecosystem." },
-        { icon: <Smartphone />, title: "Android Development", desc: "High-performance Kotlin apps deployed flawlessly across thousands of devices." },
-        { icon: <Gamepad2 />, title: "Cross-Platform Development", desc: "React Native & Flutter builds delivering native feel with single-codebase efficiency." },
-        { icon: <Settings />, title: "API Integration", desc: "Seamless connections to your existing web systems and cloud databases." },
-        { icon: <ShieldCheck />, title: "App Security", desc: "Enterprise-grade encryption and secure auth flows protecting user data." },
-        { icon: <Wifi />, title: "Push Notifications", desc: "Automated engagement funnels utilizing real-time cloud messaging." }
+        { icon: <Apple />, title: "iOS Development", desc: "Build secure, intuitive, and high-performance iOS applications designed around your business goals and customer needs.", href: "/services/mobile-app-development/ios-development", ctaText: "Explore iOS Development" },
+        { icon: <Smartphone />, title: "Android Development", desc: "Create scalable, secure, and feature-rich Android applications that deliver seamless experiences across modern devices.", href: "/services/mobile-app-development/android-development", ctaText: "Explore Android Development" },
+        { icon: <Combine />, title: "Hybrid App Development", desc: "Develop cost-effective, scalable mobile applications that provide seamless experiences across iOS and Android through a shared hybrid approach.", href: "/services/mobile-app-development/hybrid-app-development", ctaText: "Explore Hybrid App Development" }
       ]}
       technologies={['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'Firebase', 'GraphQL', 'SQLite', 'Redux', 'AWS Mobile']}
       UniqueVisual={MobileUniqueVisual}

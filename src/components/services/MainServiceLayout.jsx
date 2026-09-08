@@ -80,7 +80,7 @@ const MainServiceLayout = ({
                             <span className={`text-[13px] font-bold tracking-[0.2em] uppercase mb-4 block ${themeConfig.accentText}`}>What We Build</span>
                             <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-[#171717] mb-6">Capabilities</h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className={`grid grid-cols-1 md:grid-cols-2 ${capabilities.length === 4 ? 'lg:grid-cols-2 lg:max-w-5xl lg:mx-auto' : 'lg:grid-cols-3'} gap-6`}>
                             {capabilities.map((cap, i) => (
                                 cap.href ? (
                                     <Link key={i} to={cap.href} className="group bg-white border border-black/5 rounded-2xl p-8 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col items-start block">
@@ -90,7 +90,7 @@ const MainServiceLayout = ({
                                         <h3 className="text-xl font-bold text-[#171717] mb-3 group-hover:text-primary transition-colors">{cap.title}</h3>
                                         <p className="text-[#171717]/60 leading-relaxed text-sm mb-6 flex-1">{cap.desc}</p>
                                         <span className="text-sm font-semibold flex items-center gap-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary mt-auto">
-                                            Learn More <ArrowRight className="w-4 h-4" />
+                                            {cap.ctaText || "Learn More"} <ArrowRight className="w-4 h-4" />
                                         </span>
                                     </Link>
                                 ) : (

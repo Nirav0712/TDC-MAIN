@@ -76,9 +76,8 @@ import APIIntegration from '../pages/services/web-development/APIIntegration';
 import CustomWebApplications from '../pages/services/web-development/CustomWebApplications';
 import IOSDevelopment from '../pages/services/mobile-app-development/IOSDevelopment';
 import AndroidDevelopment from '../pages/services/mobile-app-development/AndroidDevelopment';
-import FlutterDevelopment from '../pages/services/mobile-app-development/FlutterDevelopment';
-import ReactNativeDevelopment from '../pages/services/mobile-app-development/ReactNativeDevelopment';
-import CrossPlatformApps from '../pages/services/mobile-app-development/CrossPlatformApps';
+import HybridAppDevelopment from '../pages/services/mobile-app-development/HybridAppDevelopment';
+import { Navigate } from 'react-router-dom';
 import UXResearch from '../pages/services/ui-ux-design/UXResearch';
 import Wireframing from '../pages/services/ui-ux-design/Wireframing';
 import Prototyping from '../pages/services/ui-ux-design/Prototyping';
@@ -98,7 +97,6 @@ import SEO from '../pages/services/digital-marketing/SEO';
 import PPC from '../pages/services/digital-marketing/PPC';
 import SocialMedia from '../pages/services/digital-marketing/SocialMedia';
 import ContentMarketing from '../pages/services/digital-marketing/ContentMarketing';
-import PerformanceMarketing from '../pages/services/digital-marketing/PerformanceMarketing';
 
 const AppRoutes = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -175,9 +173,10 @@ const AppRoutes = () => {
                     <Route path="/services/web-development/custom-web-applications" element={<CustomWebApplications />} />
                     <Route path="/services/mobile-app-development/ios-development" element={<IOSDevelopment />} />
                     <Route path="/services/mobile-app-development/android-development" element={<AndroidDevelopment />} />
-                    <Route path="/services/mobile-app-development/flutter-development" element={<FlutterDevelopment />} />
-                    <Route path="/services/mobile-app-development/react-native-development" element={<ReactNativeDevelopment />} />
-                    <Route path="/services/mobile-app-development/cross-platform-apps" element={<CrossPlatformApps />} />
+                    <Route path="/services/mobile-app-development/hybrid-app-development" element={<HybridAppDevelopment />} />
+                    <Route path="/services/mobile-app-development/flutter-development" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
+                    <Route path="/services/mobile-app-development/react-native-development" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
+                    <Route path="/services/mobile-app-development/cross-platform-apps" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
                     <Route path="/services/ui-ux-design/ux-research" element={<UXResearch />} />
                     <Route path="/services/ui-ux-design/wireframing" element={<Wireframing />} />
                     <Route path="/services/ui-ux-design/prototyping" element={<Prototyping />} />
@@ -197,7 +196,7 @@ const AppRoutes = () => {
                     <Route path="/services/digital-marketing/ppc" element={<PPC />} />
                     <Route path="/services/digital-marketing/social-media" element={<SocialMedia />} />
                     <Route path="/services/digital-marketing/content-marketing" element={<ContentMarketing />} />
-                    <Route path="/services/digital-marketing/performance-marketing" element={<PerformanceMarketing />} />
+                    <Route path="/services/digital-marketing/performance-marketing" element={<Navigate to="/services/digital-marketing" replace />} />
 
                     {HireRoutes().props.children}
 

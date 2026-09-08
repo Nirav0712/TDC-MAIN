@@ -231,4 +231,72 @@ export const CrossPlatformVisual = () => (
             </div>
         </motion.div>
     </div>
-); 
+);
+
+export const HybridAppVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8">
+        <div className="relative w-full h-full flex flex-col items-center justify-between z-20">
+            {/* Top iOS Device */}
+            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="w-32 h-16 bg-white rounded-xl shadow-lg border-[3px] border-slate-200 flex items-center justify-center flex-col relative z-20">
+                <Apple size={20} className="text-slate-600 mb-1" />
+                <span className="text-[10px] font-bold text-slate-500">iOS Target</span>
+            </motion.div>
+
+            {/* Connection Line Top */}
+            <div className="absolute top-16 left-1/2 w-0.5 h-20 bg-gradient-to-b from-slate-200 to-cyan-500 -translate-x-1/2 z-10">
+                <motion.div animate={{ top: ['0%', '100%'], opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }} className="absolute left-1/2 w-1.5 h-1.5 bg-cyan-400 rounded-full -translate-x-1/2 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></motion.div>
+            </div>
+
+            {/* Center Hybrid App Card */}
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1, y: [0, -5, 0] }} transition={{ opacity: { duration: 0.8 }, scale: { duration: 0.8 }, y: { duration: 4, repeat: Infinity } }} className="w-64 h-48 bg-slate-900 rounded-[24px] shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative z-30 group cursor-pointer">
+                <div className="h-8 w-full bg-slate-800 flex items-center gap-1.5 px-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                    <span className="ml-auto text-[10px] text-slate-400 font-mono">hybrid_core.js</span>
+                </div>
+                <div className="p-4 flex-1 flex flex-col justify-center relative overflow-hidden">
+                    <motion.div animate={{ opacity: [1, 0.5, 1] }} transition={{ duration: 2, repeat: Infinity }} className="absolute -right-10 -bottom-10 opacity-10">
+                        <Code size={120} className="text-cyan-500" />
+                    </motion.div>
+                    <h4 className="text-white font-bold text-lg mb-1">ONE CODEBASE</h4>
+                    <p className="text-cyan-400 text-xs font-mono mb-4">HTML • CSS • JavaScript</p>
+                    <div className="flex gap-2">
+                        <div className="h-2 w-1/2 bg-slate-700 rounded"></div>
+                        <div className="h-2 w-1/3 bg-cyan-600/50 rounded"></div>
+                    </div>
+                    <div className="flex gap-2 mt-2">
+                        <div className="h-2 w-1/3 bg-cyan-600/50 rounded"></div>
+                        <div className="h-2 w-2/3 bg-slate-700 rounded"></div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Connection Line Bottom */}
+            <div className="absolute bottom-16 left-1/2 w-0.5 h-20 bg-gradient-to-t from-slate-200 to-cyan-500 -translate-x-1/2 z-10">
+                <motion.div animate={{ top: ['0%', '100%'], opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'linear', delay: 0.7 }} className="absolute left-1/2 w-1.5 h-1.5 bg-cyan-400 rounded-full -translate-x-1/2 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></motion.div>
+            </div>
+
+            {/* Bottom Android Device */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="w-32 h-16 bg-white rounded-xl shadow-lg border-[3px] border-slate-200 flex items-center justify-center flex-col relative z-20">
+                <Smartphone size={20} className="text-slate-600 mb-1" />
+                <span className="text-[10px] font-bold text-slate-500">Android Target</span>
+            </motion.div>
+        </div>
+
+        {/* Floating Badges */}
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-1/3 -right-6 lg:-right-4 bg-white px-2 py-2 rounded-xl shadow-xl flex items-center gap-2 border border-slate-100 z-40">
+            <div className="bg-green-50 text-green-500 p-1.5 rounded-lg"><CheckCircle size={14} /></div>
+            <div>
+                <p className="text-[10px] font-bold text-[#0A1024]">Sync 100%</p>
+            </div>
+        </motion.div>
+
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-1/3 -left-6 lg:-left-4 bg-white px-2 py-2 rounded-xl shadow-xl flex items-center gap-2 border border-slate-100 z-40">
+            <div className="bg-purple-50 text-purple-500 p-1.5 rounded-lg"><Layers size={14} /></div>
+            <div>
+                <p className="text-[10px] font-bold text-[#0A1024]">Shared Logic</p>
+            </div>
+        </motion.div>
+    </div>
+);

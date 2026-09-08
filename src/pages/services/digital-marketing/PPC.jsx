@@ -54,7 +54,9 @@ const PPC = () => {
                 imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "One of the most prevalent methods of paid search marketing is search advertising. Search advertising is shown to those already interested in your sector or brand. Short sales cycles or one-time campaigns might benefit from these pay-per-click advertisements.",
+
                     "We propose search advertising for companies looking to attract new consumers with powerful, high-quality leads. Prospects seeking your sector or brand offers online will see your search advertisements. These pay-per-click advertisements are appropriate for brief sales cycles or one-time campaign promotions.",
+
                     "If you are a company looking to get powerful, high-quality leads from new consumers, our pay-per-click advertising service advises search advertising. Contact us if you’d like to chat with one of our strategists about the advantages of social media ad management."
                 ],
                 cta: "Hire us to get reliable search ads campaigns for your business!"
@@ -65,7 +67,9 @@ const PPC = () => {
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Display advertising is the most successful advertising method. Display advertising shows on sites that Google has approved as partners. Display advertising makes the most of images and text to draw viewers and persuade them to act. Display ads help to increase your brand awareness.",
+
                     "Our pay-per-click advertising firm advises display advertising for businesses with long sales cycles and specialized or luxury clientele. Display advertisements appear on Google’s partner websites and target individuals who have visited websites similar to their sector.",
+
                     "Regarding internet advertising, display advertising makes the most of pictures and text to attract consumers’ attention and persuade them to take action. When it comes to firms with long sales cycles and consumers that are either specialized or luxury, our pay-per-click advertising agency offers display advertising."
                 ],
                 cta: "Let us frame Display ads to grow your business!"
@@ -76,7 +80,9 @@ const PPC = () => {
                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Pay-per-click advertising on social media has become the fastest-growing part of the industry. Social media platforms like Facebook, LinkedIn, Instagram, and Twitter all provide social advertisements. They are pre-programmed to target potential customers based on their interests, hobbies, and social networks, among other things.",
-                    "At 21Twelve Interactive, our paid ads experts team will help you promote your events, webinar, product launching, lead generation, post-boost, retargeting, and many other paid social media ads.",
+
+                    "At The Digital Connect, our paid ads experts team will help you promote your events, webinar, product launching, lead generation, post-boost, retargeting, and many other paid social media ads.",
+
                     "Firms in practically any sector may use social advertising to engage, educate, and convert their target audience. Know how our agency and social media ad management services may help you develop your online presence and boost consumer loyalty by contacting us now."
                 ],
                 cta: "For decent social media ads, you may also call us!"
@@ -87,8 +93,10 @@ const PPC = () => {
                 imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "One of the greatest methods to find consumers that convert well is via remarketing, which may quadruple your revenue. People who have previously visited your website will be reminded and persuaded to convert via remarketing advertisements. Since fewer people compete for the same customers, remarketing is less expensive than search advertising.",
-                    "With our PPC marketing services, you’ll get the best results from your PPC campaign. Competitive remarketing services from 21Twelve Interactive attract paying clients back to your company. Our digital marketing experts have hundreds of successful pay-per-click (PPC) campaigns under their belts and can give our customers results that are second to none.",
-                    "It is possible to use remarketing as a significant instrument for boosting sales and expanding your organization. Your organization may reap the benefits of remarketing with the help of 21Twelve Interactive’s remarketing services."
+
+                    "With our PPC marketing services, you’ll get the best results from your PPC campaign. Competitive remarketing services from The Digital Connect attract paying clients back to your company. Our digital marketing experts have hundreds of successful pay-per-click (PPC) campaigns under their belts and can give our customers results that are second to none.",
+
+                    "It is possible to use remarketing as a significant instrument for boosting sales and expanding your organization. Your organization may reap the benefits of remarketing with the help of The Digital Connect’s remarketing services."
                 ],
                 cta: "Contact us online to learn more about what our distinguished team can do for you!"
             },
@@ -98,7 +106,9 @@ const PPC = () => {
                 imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Whether you’re spending too much money on your pay-per-click (PPC) advertising campaign and getting too little return, a PPC audit may help you figure out what’s wrong and how to solve it. And you don’t even have to pay a dime to get started.",
+
                     "If you’re spending too much money on your pay-per-click (PPC) advertising campaign and getting too little return, a PPC audit may help you figure out what’s wrong and how to solve it. And you don’t even have to pay a dime to get started.",
+
                     "Our outstanding PPC audits services are the key to increasing your company’s online revenue. A personal consultation with a strategist is available if you’re interested in learning more about our expert PPC management services or assessing your current paid advertising campaigns."
                 ],
                 cta: "To get started, get your free PPC audit services quotes now!"

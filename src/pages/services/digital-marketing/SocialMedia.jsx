@@ -54,8 +54,10 @@ const SocialMedia = () => {
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Through Facebook, you are certain to reach your target demographic since the social media platform has over 2 billion monthly active users. Use the most popular social media network to expand your company’s reach.",
+
                     "Facebook advertising services may help your company create an online following, raise brand recognition, and improve lead generation and revenue-generating initiatives. It’s a must-use advertising channel for organizations that want to develop because of Facebook’s large audience (it has more than two billion monthly users), extensive targeting possibilities, and a wide variety of ad kinds.",
-                    "We at 21Twelve Interactive provide Facebook ad management services to get the most out of Facebook. We’re a one-stop solution for Facebook advertising, taking care of everything from developing your strategy and ad creatives to starting and tracking your campaigns."
+
+                    "We at The Digital Connect provide Facebook ad management services to get the most out of Facebook. We’re a one-stop solution for Facebook advertising, taking care of everything from developing your strategy and ad creatives to starting and tracking your campaigns."
                 ],
                 cta: "Hire us to get the best-in-class Facebook marketing services!"
             },
@@ -65,7 +67,9 @@ const SocialMedia = () => {
                 imgUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Is Instagram advertising something you’re interested in using for your business? If this is the case, you need a strategy. Effective Instagram advertising needs strategic knowledge, a creative eye, and the time to execute and track results.",
+
                     "Many companies don’t have the means to run effective Instagram ads, so we’re here to assist. If you’re looking for an Instagram advertising agency, we’ll keep you up to speed on the most recent industry developments, algorithm adjustments, and best practices. The buyer’s journey may be broken down into phases, from awareness through conversion, and we can do so while keeping inside your budget.",
+
                     "Our agency can maximize your ad budget because of Instagram’s large and diversified user base, which includes more than 1 billion active monthly accounts and more than 500 million active daily accounts. We can target our digital advertising efforts to the specific individuals you want to reach by determining characteristics like geography, interests, demographics, habits, and more."
                 ],
                 cta: "Get Instagram marketing services quotes now!"
@@ -76,7 +80,9 @@ const SocialMedia = () => {
                 imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "When it comes to targeting and efficiently reaching professionals all around the globe, LinkedIn stands out above the other social media giants that may claim comparable figures. Consider using LinkedIn advertising services if you’re planning to target individuals based on their professions, skill sets, industries, or professional interests since more than half of its members have a college degree.",
+
                     "Our LinkedIn advertising agency is always up to speed on algorithm updates and LinkedIn news to provide the greatest possible marketing results for your company. To get the best results for your company, we use our LinkedIn ad campaign management knowledge and smart selection among the platform’s many ad formatting and targeting options.",
+
                     "You can count on us to keep you updated throughout the process since we know how important it is to make the most of your financial resources. Every step of the way, you can be certain that we will use your resources effectively and productively to help you reach the goals you care about most."
                 ],
                 cta: "Give us a call right away to hire trusted LinkedIn marketing services!"
@@ -87,7 +93,9 @@ const SocialMedia = () => {
                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Get in touch with present and future customers quickly with Twitter advertising services. Become the company that people follow and believe in. The sheer volume of tweets on Twitter might be frightening, but we have the expertise to assist your company in cutting through the clutter and getting your message out there.",
+
                     "Does your company want to tap into the buying power of generations who have grown up in the digital age? We’ll use your marketing campaign’s latest industry information and platform technologies to target your targeted consumers. We follow industry best practices to get the greatest outcomes and make the most of every opportunity.",
+
                     "Don’t hesitate to contact us for your Twitter advertising management if you don’t have the time to build smart advertising campaigns, evaluate and make adjustments based on Twitter information, and keep up with industry developments."
                 ],
                 cta: "Hire us and get a cost-free Twitter marketing consultation now!"
@@ -98,7 +106,9 @@ const SocialMedia = () => {
                 imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "You can attract more clients to your eCommerce site and enhance your income through social network marketing. As a result, your eCommerce shop’s social media advertising campaigns may directly impact sales and profits.",
+
                     "Social media marketing strategies for eCommerce businesses include paid advertising on social media networks such as Facebook, Twitter, Instagram, LinkedIn, YouTube, and other platforms. Paid social media advertising allows you to expand the reach of your brand’s social media presence beyond what you can accomplish organically on social media.",
+
                     "Because of algorithm changes on social media networks such as Facebook, connecting consumers organically on these platforms is more difficult than ever. E-tailers should consider employing social media advertising to boost their online sales to grow their business."
                 ],
                 cta: "Connect with a reliable eCommerce social media services company today!"

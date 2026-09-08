@@ -54,64 +54,84 @@ const WooCommerce = () => {
                 icon: <Code className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Drafting totally unique, extremely robust open-source web infrastructures effectively connecting your physical catalog directly into massive digital distribution workflows securely."
+                    "The Digital Connect is the top WooCommerce development agency offering a comprehensive range of WooCommerce design as well as development services. Our custom solution mainly meets the specific eCommerce requirements. At The Digital Connect, we provide you with the top WooCommerce development service providing a team of specialists capable of giving you agile web development approaches.",
+
+                    "Our team strives to provide you with the best effective and maximum level of approach in the WooCommerce-powered project. Whether you are looking for Full-Stack WooCommerce Development, WooCommerce Multi-site Dropship Platform Development, or any other service, then you can easily get the best solution.",
+
+                    "We offer you unique WooCommerce solutions mainly custom-tailored for every client. We have the In-house designers, developers, as well as marketers, bring you suitable solutions. Get the Hassle-free Project Management with the 100% Project Transparency Guaranteed. Our teams of experts are well versed in providing the Conversion Tracking system with advanced technology."
                 ],
                 cta: "Start Development"
             },
             {
-                title: "WooCommerce Store Design",
+                title: "WooCommerce Plugin Development",
                 icon: <Palette className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Forging highly persuasive landing page interfaces optimizing the overarching consumer tracking funnel maximizing conversions naturally."
+                    "By availing of our WooCommerce development services, clients get a responsive, fully-functional, and mainly SEO-friendly e-commerce store. Our WooCommerce experts mainly assure with creating the best intuitive interface to the extent. We are ready to build custom solutions for businesses that are looking for advanced features.",
+
+                    "We assure you of providing the plugin development for easily increasing the user experience. We offer you the best WooCommerce Plugin Development services to develop the variant online stores for extensively attracting customers. Our WooCommerce development team creates better visibility to many powerful features along with a plethora of themes & resources.",
+
+                    "We ensure to add the best scope for add-ons or 3rd party API integrations. We provide an intuitive web interface for extensively performing simple and secure checkout. Our team assures in enabling the WooCommerce Plugin Development for powerful payment gateways, smart tracking integration for Google Analytics along up-sell and cross-sell widgets."
                 ],
                 cta: "Design Your Store"
             },
             {
-                title: "WooCommerce Theme Customization",
+                title: "WooCommerce Theme Development",
                 icon: <Layout className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Surgically tweaking exact frontend cart variables and navigation layouts avoiding heavy core WordPress function destruction entirely."
+                    "Creating a stunning storefront always impresses the visitors. These WooCommerce Theme Development matches brand identity to create the best eCommerce landscape. Are you looking forward to starting developing WooCommerce themes? You’re in the right place.",
+
+                    "We’ll take a look at WooCommerce themes to easily give you the best results. We are the leading WooCommerce Developers ready to fit your problem definition and fulfill your end goals. WooCommerce Themes files work to create an innovative and effective design and functionality for your site. Each Theme is unique, and we offer you the best-preferred result.",
+
+                    "Our WooCommerce development agency brings you an attractive website. WooCommerce is the ultimate and flexible plugin for WordPress integrations along with the themes. Opt for our professional services for easily getting theme customization. We bring you tailor-made web solutions with 100% guaranteed success."
                 ],
                 cta: "Customize Your Theme"
             },
             {
-                title: "Plugin & Payment Integration",
+                title: "WooCommerce Migration",
                 icon: <CreditCard className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Fusing explicitly massive payment gateway networks properly handling immense transaction volumes securely across fragmented international geographies."
+                    "When you are an online retailer who likes to move towards WooCommerce, our team is ready to help you migrate. We are the leading eCommerce technology partner having years of development and migration experience. WooCommerce Migration Service helps you to move the store from the eCommerce platform into WooCommerce.",
+
+                    "Our migration processes are automatic, secure, and accurate. WooCommerce Migration helps you to easily transfer the data newly appeared on Source Store. Our team believes every company’s budget for website service is different. Our WooCommerce customization service brings you affordable support plans mainly tailored for your requirement.",
+
+                    "We can offer you WooCommerce web design services as well. Our team works on all the sites seamlessly, starting from the landing page to the blog. Get the 99.9% Uptime with minimal downtime for WooCommerce Migration with getting the best accurate results. With the Lossless database migration, you have plenty of time to reach customers."
                 ],
                 cta: "Integrate Payments"
             },
             {
-                title: "WooCommerce Migration",
+                title: "WooCommerce Support & Maintenance",
                 icon: <RefreshCw className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Executing rigorous ETL actions transferring historical databases away from closed ecosystems natively into safe decentralized environments flawlessly."
+                    "At The Digital Connect, we are well versed in dealing with the security patches, broken links and legacy code on the website. We are the top WooCommerce Development Agency well versed in keeping the website secure, up-to-date as well as bug-free. Our team provides the complete WooCommerce support and maintenance services with focusing on the core business activities.",
+
+                    "We are a reliable and professional team ready to take care of complete website maintenance and updates. We provide 100% WooCommerce maintenance services or support. We have experienced professionals in the team for bringing you better website maintenance.",
+
+                    "We offer you a fully-fledged support team ready to assist you in resolving issues 24×7. We offer you full-service website maintenance with the highest range of support available for every business type. We have a global footprint with a proven work record. Our team has gained years of experience in delivering website support and maintenance."
                 ],
                 cta: "Migrate to WooCommerce"
             },
-            {
-                title: "WooCommerce Performance Optimization",
-                icon: <Zap className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "Repairing explicitly broken underlying infrastructure logic ensuring your open-source store matches enterprise rendering sub-millisecond rates directly."
-                ],
-                cta: "Optimize Performance"
-            },
-            {
-                title: "WooCommerce Maintenance & Support",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "Executing standard PHP updates natively explicitly deploying patches preventing heavy technical debt from scaling exponentially locally."
-                ],
-                cta: "Maintain Your Store"
-            }
+            // {
+            //     title: "WooCommerce Performance Optimization",
+            //     icon: <Zap className="w-8 h-8" />,
+            //     imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
+            //     paragraphs: [
+            //         "Repairing explicitly broken underlying infrastructure logic ensuring your open-source store matches enterprise rendering sub-millisecond rates directly."
+            //     ],
+            //     cta: "Optimize Performance"
+            // },
+            // {
+            //     title: "WooCommerce Maintenance & Support",
+            //     icon: <Server className="w-8 h-8" />,
+            //     imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+            //     paragraphs: [
+            //         "Executing standard PHP updates natively explicitly deploying patches preventing heavy technical debt from scaling exponentially locally."
+            //     ],
+            //     cta: "Maintain Your Store"
+            // }
         ]
     };
 

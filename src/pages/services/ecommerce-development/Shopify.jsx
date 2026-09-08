@@ -50,70 +50,88 @@ const Shopify = () => {
         title: "Shopify Development Services",
         items: [
             {
-                title: "Shopify Store Development",
+                title: "Custom Shopify Store Development",
                 icon: <Store className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Developing robust entire storefronts natively bypassing off-the-shelf templates and integrating direct analytics protocols flawlessly.",
-                    "Creating a highly predictable direct revenue machine driven purely by optimized user experiences."
+                    "A Shopify shop comprises a wide range of features and functions that allow merchants to sell their items online and provide them with cloud-based systems and themes. Regarding e-commerce, the Shopify app is inevitable in terms of its relevance and role in the overall success of a business.",
+
+                    "We can’t overlook the Shopify applications when it comes to expanding the functionality of a Shopify shop and adding new features and services. We realize that no two internet businesses are alike, even if they offer the same things. You can rely on our staff to develop a Shopify website design that matches your unique needs, no matter what they may be.",
+
+                    "Our Shopify developers are proficient in the most recent versions of the Shopify and Shopify Plus platforms, so hire them at reasonable rates. With the most recent Shopify improvements, our team has constantly adapted to provide our clients with the best possible Shopify websites."
                 ],
                 cta: "Build Your Store"
             },
             {
-                title: "Custom Shopify Theme Development",
+                title: "Shopify Migration",
                 icon: <Code className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Authoring immaculate raw Liquid code fundamentally avoiding massively bloated pre-bought marketplace themes entirely.",
-                    "Connecting visually engaging, highly functional front-end assets directly to Shopify's secure backend."
+                    "A new storefront is far easier to set up than a platform transfer. The process is complicated to migrate a traditional online store to Shopify. To avoid damaging your store’s data and rating throughout the Shopify migration process, you must ensure it is done the first time correctly.",
+
+                    "At The Digital Connect, we help you migrate all of your online store’s items, orders, customers, data, and content without any hassles or chance of losing data. Your online shop items, content, photos, order data, and customers’ data might be difficult to migrate if the engineers are skilled. Over the years, we’ve helped several companies migrate their e-commerce operations from various e-commerce platforms to Shopify.",
+
+                    "It includes Magento, WooCommerce, BigCommerce, and more. Our Shopify ecommerce website building firm has a team of experts that can help you migrate to the platform without any issues. We provide a worry-free migration solution from other eCommerce platforms to Shopify and Shopify to Shopify Plus."
                 ],
                 cta: "Design Custom Theme"
             },
             {
-                title: "Shopify Theme Customization",
+                title: "Shopify Apps Development",
                 icon: <Layout className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Surgically modifying existing templates specifically improving filtering algorithms and navigation funnels without breaking global CSS logic natively."
+                    "Creating an eCommerce website for your business is the best bet to increase your customers and improve sales. Besides our excellent technological skills, we also know a lot about the ins and outs of every e-commerce specialty and sector and the business processes that go along with them.",
+
+                    "Our expert and experienced developers will help you to develop various Shopify apps to enhance your Shopify eCommerce store. Our experts not only design and develop Shopify apps, but we also provide Shopify app maintenance and upgradation services. Also, our marketing experts will help you to optimize your app in the market and increase your app installation in the app market.",
+
+                    "As an expert Shopify development company, we deeply understand the technology and can help you choose the ideal recruiting strategy for your organization. Our Shopify developers will be available and willing to assist you in creating and transforming your Shopify website if you select this dedicated Shopify development model."
                 ],
                 cta: "Customize Your Theme"
             },
             {
-                title: "Shopify App Integration",
+                title: "Themes Development & Customization",
                 icon: <Layers className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Fusing bespoke middleware explicitly pushing high-volume inventory data perfectly across fragmented global warehouses or ERP suites."
+                    "Shopify themes are fantastic because they meet the demands of e-commerce businesses and the expectations of their consumers. However, they may need to meet your expectations since you want something more to make them ideal for your company. You may modify the Shopify theme with the help of our design specialists.",
+
+                    "We are one of the best Shopify developers and designers globally. We will completely redesign your Shopify store’s user interface. Our designers have worked on various projects for small and large enterprises alike. We adhere to industry best practices to provide the most incredible theme architecture.",
+
+                    "We’re here to help you every step of the way as a trusted theme development specialist. With our universal and engaging themes, you can give your online business a facelift. If you’re looking for the most remarkable e-commerce website design, go no further than our team of UX/UI designers."
                 ],
                 cta: "Integrate Powerful Apps"
             },
             {
-                title: "Shopify Store Migration",
+                title: "Shopify Support & Maintenance",
                 icon: <RefreshCw className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "Deploying rigorous ETL (Extract, Transform, Load) protocols safely shifting massive customer databases and dense SKU catalogs completely securely preserving all metadata."
+                    "If you ask us here at The Digital Connect, our work continues once your site is live. In addition to creating and hosting, we provide comprehensive Shopify maintenance. Our team of professionals will deal with any issues or malfunctions swiftly.",
+
+                    "There is no difference in the level of service we provide whether you have a brand new Shopify shop or are migrating from an older site to a hosting plan. We at The Digital Connect know how critical it is for your business to have a fully functional location at all times. We’re here to help you get there with our round-the-clock customer service and maintenance.",
+
+                    "To maintain your e-commerce site running at its best functionality, we work around the clock to handle any difficulties you have daily. We’ve worked with eCommerce sites of all shapes and sizes for over a decade. All Shopify shops are included in this, and we guarantee to keep them up to date for you and your customers."
                 ],
                 cta: "Migrate to Shopify"
             },
-            {
-                title: "Shopify Performance Optimization",
-                icon: <Zap className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "Implementing rapid checkout customization aggressively reducing cart abandonment metrics explicitly."
-                ],
-                cta: "Optimize Performance"
-            },
-            {
-                title: "Shopify Maintenance & Support",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "Continuously projecting massive updates providing robust security sweeps keeping your entire framework perfectly intact."
-                ],
-                cta: "Get Ongoing Support"
-            }
+            // {
+            //     title: "Shopify Performance Optimization",
+            //     icon: <Zap className="w-8 h-8" />,
+            //     imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+            //     paragraphs: [
+            //         "Implementing rapid checkout customization aggressively reducing cart abandonment metrics explicitly."
+            //     ],
+            //     cta: "Optimize Performance"
+            // },
+            // {
+            //     title: "Shopify Maintenance & Support",
+            //     icon: <Database className="w-8 h-8" />,
+            //     imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
+            //     paragraphs: [
+            //         "Continuously projecting massive updates providing robust security sweeps keeping your entire framework perfectly intact."
+            //     ],
+            //     cta: "Get Ongoing Support"
+            // }
         ]
     };
 

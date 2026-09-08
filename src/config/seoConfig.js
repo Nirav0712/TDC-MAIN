@@ -95,8 +95,8 @@ export const seoConfig = {
         description: "Architecting bespoke, cloud-native web applications uniquely tailored for complex operational workflows and high user scalability."
     },
     "/services/mobile-app-development": {
-        title: "Mobile App Development Services | iOS & Android",
-        description: "Create seamless native and cross-platform mobile experiences for iOS and Android platforms engineered for high retention."
+        title: "Mobile App Development Company | The Digital Connect",
+        description: "The Digital Connect provides custom mobile app development services for iOS, Android, and hybrid applications with scalable, secure, and user-focused solutions."
     },
     "/services/mobile-app-development/ios-development": {
         title: "iOS App Development Services | Swift & Objective-C",
@@ -106,16 +106,8 @@ export const seoConfig = {
         title: "Android App Development Services | Kotlin & Java",
         description: "Build scalable native Android applications robust enough for thousands of Android device variants dominating the global market."
     },
-    "/services/mobile-app-development/flutter-development": {
-        title: "Flutter Development Services | Cross-Platform Apps",
-        description: "Deploy rapidly to iOS, Android, and Web from a single codebase utilizing our premium Flutter application development strategy."
-    },
-    "/services/mobile-app-development/react-native-development": {
-        title: "React Native App Development | The Digital Connect",
-        description: "Leverage React Native to rapidly deploy near-native cross-platform mobile apps retaining exceptional UI fluidity without duplicating effort."
-    },
-    "/services/mobile-app-development/cross-platform-apps": {
-        title: "Cross-Platform App Development Services",
+    "/services/mobile-app-development/hybrid-app-development": {
+        title: "Hybrid App Development Services | Cross Platform",
         description: "Maximize your reach while reducing time-to-market and maintenance overheads using advanced cross-platform hybrid frameworks."
     },
     "/services/ui-ux-design": {

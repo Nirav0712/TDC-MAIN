@@ -53,8 +53,10 @@ const ContentMarketing = () => {
                 icon: <Target className="w-8 h-8" />,
                 imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
-                    "White papers are long-form content publications professionally produced to offer knowledge while building trust among your target audience. These papers show what your organization offers to answer a specific issue. At 21Twelve Interactive, we provide our clients with excellent white paper writing services at a low cost.",
+                    "White papers are long-form content publications professionally produced to offer knowledge while building trust among your target audience. These papers show what your organization offers to answer a specific issue. At The Digital Connect, we provide our clients with excellent white paper writing services at a low cost.",
+
                     "We have access to a diverse spectrum of knowledge because we have a workforce scattered throughout the world. Our staff is prepared to begin the research necessary and SEO content writing service to put together your white paper as soon as possible. White papers may take on a variety of formats; our professional content writers of white papers are adaptable and well-organized.",
+
                     "Whitepapers help you develop your thought leadership & reputation in the market by demonstrating your expertise. As a result, the content of the whitepaper will be produced in a unique manner that will have an impact on decision-making in your industry."
                 ],
                 cta: "Give us a call today to frame effective white papers!"
@@ -65,7 +67,9 @@ const ContentMarketing = () => {
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "The Case study is indeed a persistent marketing tactic used by many companies. A decent case study can create a lasting impact on your consumer, increasing the likelihood of a long-term relationship and partnership between you. More than that, the company will increase the number of new clients seeking your services. To accomplish this, we develop case studies that are both visible and persuasive.",
+
                     "It is set against futuristic backgrounds; highlights your product’s ability to deal with potential obstacles. Through our work with businesses, organizations, and even entire corporations, we have gathered a wealth of knowledge and experience in effective case study writing, allowing us to present our clients with services that will astound even the most jaded of them.",
+
                     "Case study writing is something that we take extremely seriously, and we make use of all of our capabilities, expertise, and service capabilities to ensure that we provide amazing services to all of our clients on every occasion."
                 ],
                 cta: "We can offer you the best, call us now!"
@@ -76,7 +80,9 @@ const ContentMarketing = () => {
                 imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Whether you intend for the eBook to be a stand-alone product or a promotional tool to promote your company’s products and services, it must strike the right emotional chord with the reader. Our eBook writers possess the knowledge and the ability to produce high-quality content ebooks.",
+
                     "Hire our eBook content writer & make your eBook project succeed. Online content is the future medium of information, entertainment, and marketing. In addition to being a part of the future, electronic books are also a logical development of printed books.",
+
                     "Because of the ease with which ebooks can be shared or distributed, they are an excellent medium for various reasons, including marketing. We write content for eBooks that are of actual value to readers and, as a result, help grow your business. If you require further changes, we will offer you as many as you require."
                 ],
                 cta: "Get your eBooks now. Contact us to know more!"
@@ -87,7 +93,9 @@ const ContentMarketing = () => {
                 imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "A scriptwriter creates commercials, webinars, videos, television shows, and film scripts. Having a thorough understanding of the ins & outs of screenwriting, our writers can craft natural-sounding, captivating scripts on virtually any subject matter.",
-                    "Whether you have a concept for a movie but lack the experience to turn it into a script, require a plot for gameplay you’re developing, need a refined narration for a webinar the company is hosting, or require a script for your organization’s first TV commercial, there is a writer at 21Twelve Interactive who can best help.",
+
+                    "Whether you have a concept for a movie but lack the experience to turn it into a script, require a plot for gameplay you’re developing, need a refined narration for a webinar the company is hosting, or require a script for your organization’s first TV commercial, there is a writer at The Digital Connect who can best help.",
+
                     "We are well-versed in the various copy formats and can combine the most relevant option for the client. Apart from that, we make certain that the substance of the ad copy is relevant to the readers by conducting the appropriate research before generating these materials. We simplify the text to make it easier to understand and integrate the brand’s personality into the materials."
                 ],
                 cta: "Hire us for video & animation script writing services now!"
@@ -98,7 +106,9 @@ const ContentMarketing = () => {
                 imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "We are your go-to resource for all types of web material. Our professional content writers are highly skilled and trained to develop entirely personalized copies for the online audience, whether for a blog, website, or article marketing campaign. Most users of a website glance over the information rather than reading it from beginning to end.",
+
                     "Because of this, our web content writers are well aware of the need to maintain the structure & format of articles, blogs, and websites so that readers find it easy to read them. We are committed to exceeding your expectations. The task of writing good blog content is to understand both the expectations of the client and the expectations of the customer’s audience before starting.",
+
                     "Our blog writers are experienced in writing about various topics and themes and know SEO content writing services. This adaptability enables us to meet the blog writing requirements of a wide range of clients. Furthermore, our content writing agency ensures that the blog articles are written at a level of comprehension appropriate for the typical reader, allowing them to absorb the information thoroughly."
                 ],
                 cta: "Get website content & blog writing services quotes now!"

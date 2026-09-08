@@ -52,7 +52,9 @@ const IOSDevelopment = () => {
             icon: <MessageSquare className="w-8 h-8" />,
             paragraphs: [
                 "Having an online presence has become vital for business. However, it is not easy to become the best in the market. Well! There are some best ways you can utilize you to create your mobile presence to reach a broad audience. As a professional iPhone application development company, we can help you leverage a perfect iOS app to get the immense benefits of having a robust mobile presence.",
+
                 "Our trusted iOS app development consultants understand your requirements and work accordingly by following an agile development process. We ensure that you will get positive and profitable results in less time. Our veteran consultants create powerful and intuitive iOS experiences from scratch, so you don’t need to worry about anything.",
+
                 "We consult from SMBs to large-scale businesses in getting a digital transformation. With us, you can easily enhance your overall performance in the right direction. Our consultants strategize a perfect end-to-end mobile app to monetize your efforts and make your business profitable."
             ],
             cta: "Get in touch with us for your iOS app development needs!"
@@ -62,8 +64,10 @@ const IOSDevelopment = () => {
             imgUrl: "/images/ios_tv_watch.svg",
             icon: <MonitorPlay className="w-8 h-8" />,
             paragraphs: [
-                "Today businesses are incomplete without a functional mobile application. If you also run an online business, 21Twelve Interactive would be the best destination for you. Here we offer multidimensional website development for all types of business. No matter whether you’re looking to develop an application for iOS TV, iWatch, iPad or any other smart device, we are well-versed in it all.",
+                "Today businesses are incomplete without a functional mobile application. If you also run an online business, The Digital Connect would be the best destination for you. Here we offer multidimensional website development for all types of business. No matter whether you’re looking to develop an application for iOS TV, iWatch, iPad or any other smart device, we are well-versed in it all.",
+
                 "As a certified iPhone application development service, we ensure quick delivery of your business applications within an affordable price range. As a market leader, we ensure that your application thrives in the market. We offer development and provide post-development services such as maintenance, support, and performance review.",
+
                 "Along with this, we keep an eye on the latest trends and keep updating your website from time to time, ensuring it stays ahead of its competitors. Reach out to us right away to assess your business requirements and get professional iOS app development services."
             ],
             cta: "Hire a professional iOS app development company!"
@@ -73,8 +77,10 @@ const IOSDevelopment = () => {
             imgUrl: "/images/ios_support.svg",
             icon: <Briefcase className="w-8 h-8" />,
             paragraphs: [
-                "As mobile applications become our need, we get new technologies and updates now and then. With this, it becomes essential for the business to have professional support service. 21Twelve Interactive is a leading iOS App Support, Maintenance & Optimization service provider that helps businesses worldwide run smoothly.",
+                "As mobile applications become our need, we get new technologies and updates now and then. With this, it becomes essential for the business to have professional support service. The Digital Connect is a leading iOS App Support, Maintenance & Optimization service provider that helps businesses worldwide run smoothly.",
+
                 "We look after companies from various domains. With a dynamic team of research experts, we always watch every market update and update our client’s applications accordingly. Whether you have developed your website and application with us or not, we provide the same standard of support and maintenance.",
+
                 "Once you hire our support and maintenance service, we keep an eye on your website 24/7/365 to ensure that the performance is on point. Or if there’s any flaw detected, we resolve it right away. This also includes migrating, updating and porting the website to the new updates. Hire us today to avail the best support service for your website and application."
             ],
             cta: "Drop a message to get expert app development services!"

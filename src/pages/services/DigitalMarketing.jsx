@@ -146,12 +146,10 @@ const DigitalMarketing = () => {
         content: "A beautiful website without traffic is a billboard in the desert. We deploy aggressive, data-driven marketing frameworks prioritizing explicit ROI over vanity metrics. By combining extremely technical SEO, sharp performance media, and behavioral conversion optimization, we establish a relentless digital sales funnel that aggressively scales your market share."
       }}
       capabilities={[
-        { icon: <Search />, title: "Search Engine Optimization", desc: "Technical, On-Page, and Content SEO designed to dominate extremely competitive search verticals organically." },
-        { icon: <BarChart />, title: "Performance Marketing", desc: "Hyper-targeted Google Ads & Meta Ads optimizing ROAS (Return On Ad Spend) meticulously." },
-        { icon: <Target />, title: "Lead Generation", desc: "Full-funnel B2B structures generating pre-qualified SQL (Sales Qualified Leads)." },
-        { icon: <Share2 />, title: "Social Media Strategy", desc: "Omnichannel brand positioning across LinkedIn, Instagram, TikTok and X." },
-        { icon: <PieChart />, title: "Conversion Optimization", desc: "A/B testing layout layouts structurally turning passive traffic into active buyers." },
-        { icon: <Mail />, title: "Email Automation", desc: "Drip campaigns and newsletters actively nurturing your existing databases." }
+        { icon: <Search />, title: "SEO", desc: "Technical, On-Page, and Content SEO designed to dominate extremely competitive search verticals organically.", href: "/services/digital-marketing/seo", ctaText: "Explore SEO" },
+        { icon: <BadgeDollarSign />, title: "PPC", desc: "Hyper-targeted Google Ads & Meta Ads optimizing ROAS (Return On Ad Spend) meticulously.", href: "/services/digital-marketing/ppc", ctaText: "Explore PPC" },
+        { icon: <Share2 />, title: "Social Media", desc: "Omnichannel brand positioning across LinkedIn, Instagram, TikTok and X.", href: "/services/digital-marketing/social-media", ctaText: "Explore Social Media" },
+        { icon: <PieChart />, title: "Content Marketing", desc: "Strategically crafted content frameworks structurally turning passive traffic into active buyers.", href: "/services/digital-marketing/content-marketing", ctaText: "Explore Content Marketing" }
       ]}
       technologies={['Google Analytics 4', 'Google Tag Manager', 'Google Ads', 'Meta Business Manager', 'Ahrefs', 'Semrush', 'HubSpot', 'Mailchimp']}
       UniqueVisual={MarketingUniqueVisual}

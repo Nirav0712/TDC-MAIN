@@ -55,7 +55,9 @@ const SEO = () => {
                 imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "Local SEO is all about boosting your local business’s internet visibility and reaching out to the people who live in your area with your goods or services. Rather than targeting the whole country, local SEO targets a particular location. We know how to optimize your website, including keywords, frame headers, meta titles, meta descriptions, and images.",
+
                     "Search engine rankings are often influenced by how effectively your Google My Business page is optimized. It is where you give your location, company hours, a brief description, and a few images. When a user types a search query, the search engine’s results pages consider proximity, relevancy, and popularity before selecting a firm.",
+
                     "We utilize our in-depth skills to help you increase your business’s visibility in the local vicinity. Our local SEO service provides reliable and targeted results to all clients. We optimize your website for better visibility and access to all different search engines."
                 ],
                 cta: "Hire us for the best local SEO service!"
@@ -66,7 +68,9 @@ const SEO = () => {
                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "E-commerce SEO refers to the practice of improving a company’s online shop. eCommerce SEO is the umbrella term for all of the subsequent SEO developments. Every day, search engines answer millions of inquiries related to eCommerce. Your website’s traffic and ranking will rise in less time if you use our eCommerce SEO services. Indeed, we are a one-stop solution for all your SEO needs.",
+
                     "Being a professional SEO company, we have extensive expertise in working with top brands and can assist you in getting the top ranking on SERPs. We are committed to offering result-oriented eCommerce SEO to drive growth, increase conversion, and generate organic traffic and sales.",
+
                     "We help you improve your eCommerce business presence with the best content and website optimization strategy recommended by search engines. We also deliver relevant information to your customers using our appropriate SEO content tactics. So don’t worry; you will always get committed and affordable eCommerce SEO services with us."
                 ],
                 cta: "Get eCommerce SEO service quotes now!"
@@ -77,7 +81,9 @@ const SEO = () => {
                 imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "You’ll need to use global SEO techniques to increase your website’s organic traffic from other countries and languages. To succeed at international SEO, you must cater to your target market’s cultural context and enable them to make purchases in their currency and language.",
+
                     "Whether you want to conduct local keyword research in the international market or maximize your search engine rankings, our global SEO experts are here to assist you with their robust knowledge. Our international SEO approach will boost your brand’s visibility among global customers. Being a professional SEO company, we know how to make your business global and bring profits.",
+
                     "As the best SEO Company, we are committed to providing a complete set of integrated services to drive more growth for your company. Our professional SEO services are tailored to your business needs from SEO consultation and management."
                 ],
                 cta: "Connect with us to get professional international SEO services today!"
@@ -88,7 +94,9 @@ const SEO = () => {
                 imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop",
                 paragraphs: [
                     "A strong presence on search engines is vital for all businesses as it helps you get more visibility, profits, and ROI in less time and effort. Your website needs to be optimized for search engines using on-page optimization or on-site SEO. Our experienced SEO consultants optimize your website as per the modern SEO approach and search engine algorithm.",
+
                     "We work with the motto to increase your business’s visibility so more customers can grab your products and services. As the best SEO company, we create high-quality links on high DA and PA websites. Moreover, we implement the best-in-class SEO strategies to boost your website’s ranking and brand’s presence in today’s highly competitive market.",
+
                     "Using our SEO consulting service, you can leverage the benefits of experienced digital marketers, business analysts, project managers, and content developers. We empower our clients to achieve the desired results and rank on the SERP."
                 ],
                 cta: "Call us right now to get the best SEO consultation for your business development!"
