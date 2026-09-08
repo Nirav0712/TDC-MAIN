@@ -11,7 +11,7 @@ const WebHeroVisual = () => (
       transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       className="absolute top-[10%] left-[5%] w-[80%] h-[70%] bg-white rounded-2xl shadow-2xl border border-black/5 flex flex-col overflow-hidden"
     >
-      <div className="h-10 bg-[#FAF9F7] border-b border-black/5 flex items-center px-4 gap-2">
+      <div className="h-10 bg-[#FAF9F7] border-b border-black/5 flex items-center px-1 gap-2">
         <div className="w-3 h-3 rounded-full bg-red-400"></div>
         <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
         <div className="w-3 h-3 rounded-full bg-green-400"></div>

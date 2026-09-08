@@ -17,8 +17,8 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
     return (
         <div className="flex w-full h-full min-h-[480px]">
             {/* Left Category Nav */}
-            <div className="w-[280px] shrink-0 bg-white border-r border-brand-border py-8 px-6 flex flex-col gap-1">
-                <h4 className="text-[11px] font-bold tracking-widest uppercase text-brand-text-muted mb-4 px-3">Filter By Category</h4>
+            <div className="w-[280px] shrink-0 bg-white border-r border-brand-border py-8 px-1 flex flex-col gap-1">
+                <h4 className="text-[11px] font-bold tracking-widest uppercase text-brand-text-muted mb-4 px-1">Filter By Category</h4>
                 {data.items.map((item) => {
                     const isActive = activeId === item.id;
                     return (
@@ -30,7 +30,7 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={item.href} // Navigate to portfolio root or filtered
                                 onClick={() => setActiveMenu(null)}
-                                className={`flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 ${isActive ? 'bg-brand-primary-navy text-white' : 'hover:bg-brand-bg-light text-brand-primary-navy'}`}
+                                className={`flex items-center justify-between px-1 py-3 rounded-lg transition-all duration-200 ${isActive ? 'bg-brand-primary-navy text-white' : 'hover:bg-brand-bg-light text-brand-primary-navy'}`}
                             >
                                 <span className={`text-sm font-bold`}>
                                     {item.label}
@@ -43,7 +43,7 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
                     );
                 })}
 
-                <div className="mt-auto px-2">
+                <div className="mt-auto px-1">
                     <Link
                         to="/portfolio"
                         onClick={() => setActiveMenu(null)}
@@ -80,7 +80,7 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
 
                             {/* Hover overlay */}
                             <div className="absolute inset-0 bg-brand-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center">
-                                <span className="bg-white text-brand-primary-navy px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <span className="bg-white text-brand-primary-navy px-1 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </span>
                             </div>
@@ -88,7 +88,7 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
 
                         {/* Project Details */}
                         <div className="flex-1 flex flex-col justify-center">
-                            <span className="inline-block px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan text-xs font-bold tracking-widest uppercase mb-4 self-start">
+                            <span className="inline-block px-1 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan text-xs font-bold tracking-widest uppercase mb-4 self-start">
                                 Featured {currentItem.label}
                             </span>
 
@@ -102,7 +102,7 @@ const PortfolioMenu = ({ data, setActiveMenu }) => {
 
                             <div className="flex flex-wrap gap-2 mb-10">
                                 {currentItem.featuredProject.tags.map((tag, idx) => (
-                                    <span key={idx} className="px-3 py-1.5 rounded-md bg-white border border-brand-border text-xs font-bold text-brand-primary-navy/70">
+                                    <span key={idx} className="px-1 py-1.5 rounded-md bg-white border border-brand-border text-xs font-bold text-brand-primary-navy/70">
                                         {tag}
                                     </span>
                                 ))}

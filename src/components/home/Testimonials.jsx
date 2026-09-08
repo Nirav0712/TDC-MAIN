@@ -4,7 +4,7 @@ import SectionHeading from '../common/SectionHeading';
 const Testimonials = () => {
   return (
     <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-1 text-center">
         <SectionHeading title="Client Testimonials" subtitle="What They Say" centered />
         <div className="max-w-4xl mx-auto mt-12 bg-secondary/20 p-12 rounded-2xl border border-border">
           <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-8 italic text-foreground">

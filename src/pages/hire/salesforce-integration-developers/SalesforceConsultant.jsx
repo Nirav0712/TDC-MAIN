@@ -12,7 +12,7 @@ const SalesforceConsultant = () => {
             <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
             <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
                 {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-5 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
+                <div className="pt-[90px] md:pt-[100px] px-1 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
                     <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
                     <ChevronRight size={14} />
                     <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
@@ -23,8 +23,8 @@ const SalesforceConsultant = () => {
                 </div>
 
                 {/* HERO */}
-                <section className="py-10 md:py-16 px-5 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
+                <section className="py-10 md:py-16 px-1 max-w-[1320px] mx-auto text-center">
+                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-1 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
                         EXPERT TALENT
                     </motion.div>
                     <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
@@ -34,7 +34,7 @@ const SalesforceConsultant = () => {
                         Accelerate your product roadmap by hiring highly vetted, dedicated Salesforce Strategy engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
                     </motion.p>
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
+                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-2 lg:px-1 py-4 lg:py-5 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
                             Hire a Salesforce Strategy Expert <ArrowRight size={20} className="ml-2" />
                         </Link>
                     </motion.div>
@@ -43,7 +43,7 @@ const SalesforceConsultant = () => {
                 {/* WHAT WE CAN BUILD */}
                 <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
                     <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-5 relative z-10">
+                    <div className="max-w-[1320px] mx-auto px-1 relative z-10">
                         <div className="mb-12">
                             <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Salesforce Strategy Developers Build</h2>
                             <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
@@ -74,7 +74,7 @@ const SalesforceConsultant = () => {
                 </section>
 
                 {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-5">
+                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-1">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
@@ -121,11 +121,11 @@ const SalesforceConsultant = () => {
                 </section>
 
                 {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-5 text-center">
+                <section className="bg-[#FAFAFA] py-16 px-1 text-center">
                     <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
                         <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Salesforce Strategy developers?</h2>
                         <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-10 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
+                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
                             Hire Salesforce Consultants <ArrowRight size={20} className="ml-2" />
                         </Link>
                     </div>

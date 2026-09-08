@@ -26,7 +26,9 @@ const IOSDevelopment = () => {
             icon: <PenTool className="w-8 h-8" />,
             paragraphs: [
                 "Mobile applications have a significant impact on businesses. iOS apps are helpful to create a significant impact on your business’s presence, profit, and visibility in today’s competitive world. This is not done yet with a professional iPhone application development company; you can easily reach your customers and increase ROI effortlessly.",
-                "At 21Twelve Interactive, we have a strong team of UI/UX designers who are certified and skilled. Being a renowned iOS app development company, we have in-depth knowledge and expertise in making your app interactive and user-friendly. We know how to validate your ideas with our creative thinking and app development knowledge.",
+
+                "At The Digital Connect, we have a strong team of UI/UX designers who are certified and skilled. Being a renowned iOS app development company, we have in-depth knowledge and expertise in making your app interactive and user-friendly. We know how to validate your ideas with our creative thinking and app development knowledge.",
+
                 "Our expert designers have years of experience to create a perfect-match iOS application for iOS TV, tablets, or wearable devices. We are well-versed in designing, analysis, and development, so you can easily live stress-free and focus on your core business activities. We help you leverage the full potential of seamless UI/UX designs of iOS apps."
             ],
             cta: "Hire trusted iOS app development company!"
@@ -37,8 +39,10 @@ const IOSDevelopment = () => {
             icon: <Smartphone className="w-8 h-8" />,
             paragraphs: [
                 "With the increasing use of mobile devices, businesses worldwide are moving towards creating mobile apps. Indeed it is a billion-dollar industry enabling businesses of all sizes and domains to increase their profits and reach globally. The iOS app market is huge, and millions of apps are available today that are operated on iOS. So why not grab its potential to improve your business growth.",
+
                 "If you seek a professional iOS application development company, we are here to help you with our extensive expertise and industry knowledge. Whether you are a start-up or a well-known organization, iOS can help you boost it up more.",
-                "With our custom iOS app development services, you can make your business competitive and take it to the new height of success. 21Twelve Interactive assists our clients in becoming sustainable and profitable in this digital age. We are committed to making your business competitive, sustainable, and profitable in today’s digital age."
+
+                "With our custom iOS app development services, you can make your business competitive and take it to the new height of success. The Digital Connect assists our clients in becoming sustainable and profitable in this digital age. We are committed to making your business competitive, sustainable, and profitable in today’s digital age."
             ],
             cta: "Contact us for iPhone app development services!"
         },
@@ -119,9 +123,9 @@ const IOSDevelopment = () => {
 
                 {/* Intro Section mapping exactly to user request */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="max-w-7xl mx-auto px-1 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1024] mb-8">
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                 Trusted iOS App Development Company
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
@@ -148,59 +152,79 @@ const IOSDevelopment = () => {
                 />
 
                 {/* OUR iOS APP DEVELOPMENT SERVICES */}
-                <section className="py-20 lg:py-32 bg-slate-50 relative">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Empower Your Business with Our Services</h2>
-                            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1024]">Our iOS App Development Services</h3>
+                <section>
+                    {/* TOP HEADING AREA */}
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-1 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-1 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our iOS App Development Services
+                            </h3>
                         </div>
-                        <div className="space-y-12 lg:space-y-24">
-                            {services.map((svc, i) => (
-                                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeIn} className={`flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center lg:items-center py-4`}>
+                    </div>
 
-                                    {/* Text Content */}
-                                    <div className="w-full lg:w-1/2 space-y-6">
-                                        <div className="w-16 h-16 bg-cyan-50 text-cyan-600 border border-cyan-100 rounded-2xl flex items-center justify-center">
-                                            {svc.icon}
-                                        </div>
-                                        <div>
-                                            <h4 className="text-2xl md:text-3xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                            <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-cyan-500 rounded-full mt-4 mb-6"></div>
-                                        </div>
-                                        <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                                            {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
-                                        </div>
-                                        <div className="pt-4">
-                                            <Link to="/contact" className="inline-flex items-center text-cyan-600 font-bold hover:text-cyan-700 transition-colors group/link text-lg">
-                                                {svc.cta}
-                                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    {/* Image Card */}
+                    {/* MAIN SERVICE CONTENT AREA */}
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-1">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
                                     <motion.div
-                                        initial={{ opacity: 0, scale: 0.95, x: i % 2 !== 0 ? -20 : 20 }}
-                                        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                                        viewport={{ once: true, margin: "-100px" }}
-                                        className="w-full lg:w-1/2 relative group"
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
                                     >
-                                        <div className="absolute -inset-4 bg-cyan-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"></div>
-                                        <div className="relative w-full bg-slate-100 border border-slate-100 rounded-[18px] shadow-xl overflow-hidden group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]">
-                                            <img src={svc.imgUrl} alt={svc.title} className="w-full h-auto object-cover block" />
-                                        </div>
-                                    </motion.div>
 
-                                </motion.div>
-                            ))}
+                                        {/* LEFT COLUMN: Height determined organically by paragraph text */}
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        {/* RIGHT COLUMN: Stretches matching left side through cascading flex layout */}
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            {/* Decorative Orange Shape (Absolute behind card) */}
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+
+                                            {/* Outer Card (Given flex-1 to consume the full stretched column height) */}
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                {/* Image Space (Takes all remaining inner vertical height pushing CTA flush) */}
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+
+                                                {/* Rigid CTA Link positioned below fluid image limit */}
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* INDUSTRIES */}
                 <section className="py-20 lg:py-32 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto px-1">
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
                             <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries</h3>
@@ -224,7 +248,7 @@ const IOSDevelopment = () => {
 
                 {/* REASONS TO CHOOSE US */}
                 <section className="py-20 lg:py-32 bg-[#F5FAFD]">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto px-1">
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose US</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
@@ -247,7 +271,7 @@ const IOSDevelopment = () => {
 
                 {/* GET A FREE QUOTE Form */}
                 <section className="py-16 md:py-24 lg:py-32 bg-white relative">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="max-w-4xl mx-auto px-1 relative z-10">
                         <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
                             <div className="text-center mb-10">
                                 <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
@@ -257,29 +281,29 @@ const IOSDevelopment = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                        <input required type="email" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                        <input required type="tel" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                    <textarea required rows={4} className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
                                 </div>
                                 <div className="pt-4">
-                                    <button type="submit" className="w-full md:w-auto px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                    <button type="submit" className="w-full md:w-auto px-2 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
                                         Submit Request
                                         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </button>

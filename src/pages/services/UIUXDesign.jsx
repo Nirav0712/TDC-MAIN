@@ -55,13 +55,13 @@ const UIUXHeroVisual = () => (
       </div>
       <div className="w-full h-32 rounded-xl bg-gradient-to-br from-brand-peach/40 via-brand-pink/20 to-brand-lavender/30 flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3 w-full px-4">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3 w-full px-1">
           <div className="h-10 bg-white rounded-lg shadow-sm border border-white/50"></div>
           <div className="h-10 bg-[#171717] rounded-lg shadow-sm"></div>
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="w-full h-8 bg-brand-soft rounded-lg flex items-center px-3">
+        <div className="w-full h-8 bg-brand-soft rounded-lg flex items-center px-1">
           <div className="w-full h-2 bg-white rounded-full"></div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const UIUXHeroVisual = () => (
 );
 
 const UIUXUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4">
+  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-1">
     <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">From Idea to Interface</h3>
     <div className="flex flex-col md:flex-row items-center justify-between w-full relative">
       {/* Connecting line */}
@@ -99,7 +99,7 @@ const UIUXUniqueVisual = () => (
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-2 text-center"
+            className="font-bold text-sm text-[#171717] px-1 text-center"
           >
             {step.title}
           </motion.span>

@@ -62,7 +62,7 @@ const ProcessMenu = ({ data, setActiveMenu }) => {
             </div>
 
             {/* Bottom Area: Timeline */}
-            <div className="h-[140px] shrink-0 bg-brand-off-white border-t border-brand-border px-10 flex items-center justify-center relative shadow-[inset_0_10px_20px_rgba(0,0,0,0.02)]">
+            <div className="h-[140px] shrink-0 bg-brand-off-white border-t border-brand-border px-3 flex items-center justify-center relative shadow-[inset_0_10px_20px_rgba(0,0,0,0.02)]">
                 {/* Connecting Line */}
                 <div className="absolute top-1/2 left-10 right-10 h-0.5 bg-brand-border -translate-y-1/2 z-0"></div>
 
@@ -107,7 +107,7 @@ const ProcessMenu = ({ data, setActiveMenu }) => {
             <Link
                 to="/contact"
                 onClick={() => setActiveMenu(null)}
-                className="absolute top-6 right-10 bg-brand-cyan text-brand-primary-navy px-6 py-2.5 rounded-full text-sm font-bold hover:bg-white hover:text-brand-primary-navy hover:shadow-lg transition-all"
+                className="absolute top-6 right-10 bg-brand-cyan text-brand-primary-navy px-1 py-2.5 rounded-full text-sm font-bold hover:bg-white hover:text-brand-primary-navy hover:shadow-lg transition-all"
             >
                 Start a Project &rarr;
             </Link>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const RelatedSubServices = ({ links, theme }) => (
-    <section className="py-24 px-6 lg:px-8 bg-[#FAF9F7] border-t border-black/5">
+    <section className="py-24 px-1 bg-[#FAF9F7] border-t border-black/5">
         <div className="max-w-[1400px] mx-auto">
             <h2 className="text-3xl font-heading font-extrabold text-[#171717] mb-12">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

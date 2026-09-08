@@ -41,7 +41,7 @@ const MobileHeroVisual = () => (
     <motion.div
       animate={{ x: [0, -10, 0], opacity: [0, 1, 0.8, 0] }}
       transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-      className="absolute top-[30%] -right-8 lg:-right-16 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-30 border border-black/5"
+      className="absolute top-[30%] -right-8 lg:-right-16 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-30 border border-black/5"
     >
       <div className="w-8 h-8 rounded-full bg-brand-peach flex items-center justify-center">
         <BellRing className="w-4 h-4 text-white" />

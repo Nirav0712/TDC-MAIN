@@ -6,13 +6,13 @@ export const FrontendVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8">
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }} className="w-full h-full bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col relative z-20">
             {/* Browser Header */}
-            <div className="h-12 border-b border-slate-100 bg-slate-50 flex items-center px-4 gap-4 shrink-0">
+            <div className="h-12 border-b border-slate-100 bg-slate-50 flex items-center px-1 gap-4 shrink-0">
                 <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-400"></div>
                     <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
-                <div className="flex-1 max-w-[200px] h-6 bg-white rounded flex items-center px-3 border border-slate-200 text-[10px] text-slate-400 font-mono">
+                <div className="flex-1 max-w-[200px] h-6 bg-white rounded flex items-center px-1 border border-slate-200 text-[10px] text-slate-400 font-mono">
                     <Lock className="w-3 h-3 text-slate-400 mr-2" /> https://yoursite.com
                 </div>
             </div>
@@ -38,7 +38,7 @@ export const FrontendVisual = () => (
                     </motion.div>
                 </div>
                 <div className="w-full h-32 bg-slate-50 rounded-2xl border border-slate-100 mt-auto relative overflow-hidden flex items-end">
-                    <div className="w-full h-full flex items-end gap-2 px-6 pt-8 pb-0">
+                    <div className="w-full h-full flex items-end gap-2 px-1 pt-8 pb-0">
                         {[40, 60, 30, 80, 50, 70, 90, 65].map((h, i) => (
                             <motion.div key={i} initial={{ height: 0 }} animate={{ height: `${h}%` }} transition={{ delay: 0.5 + (i * 0.1), duration: 0.6 }} className="flex-1 bg-gradient-to-t from-cyan-400 to-cyan-200 rounded-t-sm"></motion.div>
                         ))}
@@ -48,7 +48,7 @@ export const FrontendVisual = () => (
         </motion.div>
 
         {/* Floating Badges */}
-        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -right-4 top-20 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -right-4 top-20 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-green-50 text-green-600 p-2 rounded-xl"><Globe size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Core Web Vitals</p>
@@ -69,7 +69,7 @@ export const BackendVisual = () => (
                         <p className="text-xs font-bold text-[#0A1024] flex items-center gap-2"><Lock className="w-4 h-4 text-cyan-600" /> API Gateway</p>
                         <p className="text-[10px] text-slate-500 mt-1">Routing & Rate Limiting</p>
                     </div>
-                    <div className="text-xs font-bold text-green-500 px-3 py-1 bg-green-50 rounded-full border border-green-100">Secured</div>
+                    <div className="text-xs font-bold text-green-500 px-1 py-1 bg-green-50 rounded-full border border-green-100">Secured</div>
                 </motion.div>
 
                 {/* DB & Services */}
@@ -92,7 +92,7 @@ export const BackendVisual = () => (
             </div>
         </div>
 
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -left-4 top-1/2 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -left-4 top-1/2 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-blue-50 text-blue-600 p-2 rounded-xl"><Activity size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Server Uptime</p>
@@ -109,10 +109,10 @@ export const CMSVisual = () => (
             <div className="w-[120px] bg-slate-50 border-r border-slate-100 p-4 flex flex-col gap-6">
                 <h4 className="text-xs font-black text-[#0A1024] tracking-widest pl-2">ADMIN</h4>
                 <div className="flex flex-col gap-3">
-                    <div className="w-full bg-white rounded-lg flex items-center px-3 py-2 border border-slate-200 shadow-sm gap-2">
+                    <div className="w-full bg-white rounded-lg flex items-center px-1 py-2 border border-slate-200 shadow-sm gap-2">
                         <FileText className="w-4 h-4 text-cyan-600" />
                     </div>
-                    <div className="w-full bg-transparent rounded-lg flex items-center px-3 py-2 gap-2 opacity-50">
+                    <div className="w-full bg-transparent rounded-lg flex items-center px-1 py-2 gap-2 opacity-50">
                         <Layers className="w-4 h-4 text-slate-600" />
                     </div>
                 </div>
@@ -121,11 +121,11 @@ export const CMSVisual = () => (
             <div className="flex-1 p-6 flex flex-col bg-white">
                 <div className="flex justify-between items-center mb-8">
                     <h3 className="text-lg font-bold text-[#0A1024]">Content Editor</h3>
-                    <div className="bg-cyan-600 text-white text-[10px] font-bold px-4 py-2 rounded-full cursor-pointer hover:bg-cyan-500">Publish Now</div>
+                    <div className="bg-cyan-600 text-white text-[10px] font-bold px-1 py-2 rounded-full cursor-pointer hover:bg-cyan-500">Publish Now</div>
                 </div>
 
                 <div className="flex-1 border border-slate-200 rounded-2xl p-6 flex flex-col relative overflow-hidden bg-slate-50">
-                    <div className="w-full bg-white border border-slate-200 h-10 rounded-xl mb-4 flex items-center px-4">
+                    <div className="w-full bg-white border border-slate-200 h-10 rounded-xl mb-4 flex items-center px-1">
                         <span className="text-sm font-bold text-[#0A1024]">Digital Transformation Strategy 2026</span>
                     </div>
 
@@ -161,7 +161,7 @@ export const APIVisual = () => (
 
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", delay: 0.2 }} className="w-28 h-28 bg-white border border-slate-200 rounded-3xl shadow-xl flex items-center justify-center text-cyan-600 relative z-30">
                 <Code size={48} />
-                <div className="absolute -bottom-4 bg-cyan-600 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full">REST/GraphQL</div>
+                <div className="absolute -bottom-4 bg-cyan-600 text-white text-[10px] uppercase font-bold px-1 py-1 rounded-full">REST/GraphQL</div>
             </motion.div>
         </div>
     </div>
@@ -173,7 +173,7 @@ export const CustomWebVisual = () => (
             <div className="flex justify-between items-center mb-8">
                 <h4 className="text-xl font-bold text-[#0A1024]">Application Core</h4>
                 <div className="flex gap-2">
-                    <div className="bg-cyan-50 text-cyan-600 px-3 py-1 rounded border border-cyan-100 text-xs font-bold">Secure</div>
+                    <div className="bg-cyan-50 text-cyan-600 px-1 py-1 rounded border border-cyan-100 text-xs font-bold">Secure</div>
                 </div>
             </div>
 
@@ -201,7 +201,7 @@ export const CustomWebVisual = () => (
                 </svg>
             </div>
 
-            <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -left-6 bottom-10 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+            <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute -left-6 bottom-10 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
                 <div className="bg-indigo-50 text-indigo-600 p-2 rounded-xl"><Lock size={20} /></div>
                 <div>
                     <p className="text-xs font-bold text-[#0A1024]">Enterprise Grade</p>

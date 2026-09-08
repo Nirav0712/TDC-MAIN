@@ -13,7 +13,7 @@ const MarketingHeroVisual = () => (
       transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
       className="w-[90%] h-[75%] bg-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] border border-brand-purple/20 flex flex-col overflow-hidden z-10"
     >
-      <div className="h-12 bg-[#FAF9F7] flex items-center px-4 justify-between border-b border-black/5">
+      <div className="h-12 bg-[#FAF9F7] flex items-center px-1 justify-between border-b border-black/5">
         <div className="flex gap-2">
           <div className="w-8 h-8 rounded-full bg-brand-purple/10 flex items-center justify-center"><LineChart className="w-4 h-4 text-brand-purple" /></div>
           <div className="flex flex-col justify-center gap-1">
@@ -52,7 +52,7 @@ const MarketingHeroVisual = () => (
           </div>
         </div>
 
-        <div className="flex-1 bg-brand-soft/50 rounded-xl border border-black/5 relative overflow-hidden flex items-end px-4 gap-2 pt-4">
+        <div className="flex-1 bg-brand-soft/50 rounded-xl border border-black/5 relative overflow-hidden flex items-end px-1 gap-2 pt-4">
           {[30, 45, 25, 60, 40, 80, 50, 100].map((height, i) => (
             <motion.div
               key={i}
@@ -85,7 +85,7 @@ const MarketingHeroVisual = () => (
 );
 
 const MarketingUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4">
+  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-1">
     <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">The Growth Funnel</h3>
     <div className="flex flex-col md:flex-row items-center justify-between w-full relative">
 
@@ -113,7 +113,7 @@ const MarketingUniqueVisual = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-2 text-center"
+            className="font-bold text-sm text-[#171717] px-1 text-center"
           >
             {step.title}
           </motion.span>

@@ -4,7 +4,7 @@ import GlowOrb from '../backgrounds/GlowOrb';
 
 const FinalCTA = () => {
   return (
-    <section className="py-32 bg-primary text-white text-center px-6 overflow-hidden relative">
+    <section className="py-32 bg-primary text-white text-center px-1 overflow-hidden relative">
       <GlowOrb className="w-[800px] h-[800px] top-[-30%] left-[-20%] bg-brand-electric-cyan opacity-20 animate-blob" />
       <GlowOrb className="w-[600px] h-[600px] bottom-[-20%] right-[-10%] bg-brand-primary-navy opacity-20 animate-blob" style={{ animationDelay: '4s' }} />
 

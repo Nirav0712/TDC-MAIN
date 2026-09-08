@@ -26,7 +26,7 @@ const About = () => {
                     <div className="absolute bottom-0 right-0 w-1/2 h-96 bg-[#159ED9]/10 rounded-full blur-[100px] pointer-events-none"></div>
                     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#08BFE8 1px, transparent 1px), linear-gradient(90deg, #08BFE8 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
-                    <div className="max-w-[1320px] mx-auto px-5 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                    <div className="max-w-[1320px] mx-auto px-1 lg:px-1 relative z-10 flex flex-col items-center text-center">
                         <motion.span
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const About = () => {
                 </section>
 
                 {/* 4 CARDS NAVIGATION SECTION */}
-                <section className="relative -mt-12 z-20 pb-16 lg:pb-24 px-5 max-w-[1320px] mx-auto w-full">
+                <section className="relative -mt-12 z-20 pb-16 lg:pb-24 px-1 max-w-[1320px] mx-auto w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {cards.map((card, i) => {
                             const Icon = card.icon;
@@ -97,7 +97,7 @@ const About = () => {
                 </section>
 
                 {/* Additional content below cards */}
-                <section className="relative w-full bg-[#061B2E] text-white py-16 md:py-24 lg:py-32 px-5 overflow-hidden">
+                <section className="relative w-full bg-[#061B2E] text-white py-16 md:py-24 lg:py-32 px-1 overflow-hidden">
                     <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(#08BFE8 1px, transparent 1px), linear-gradient(90deg, #08BFE8 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                     <div className="max-w-[1000px] mx-auto text-center relative z-10">
                         <h2 className="text-[clamp(32px,5vw,56px)] font-heading font-black text-white mb-8 leading-tight">

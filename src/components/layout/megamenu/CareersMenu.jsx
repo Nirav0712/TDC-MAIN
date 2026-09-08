@@ -26,7 +26,7 @@ const CareersMenu = ({ data, setActiveMenu }) => {
         <div className="flex w-full h-full min-h-[440px]">
             {/* Left Link List */}
             <div className="w-[340px] shrink-0 bg-white border-r border-brand-border p-6 flex flex-col gap-2 relative">
-                <h4 className="text-xs font-bold tracking-widest uppercase text-brand-text-muted mb-3 px-3">Careers</h4>
+                <h4 className="text-xs font-bold tracking-widest uppercase text-brand-text-muted mb-3 px-1">Careers</h4>
                 {data.items.map((item) => {
                     const isActive = activeId === item.id;
                     const Icon = icons[item.icon] || Briefcase;
@@ -36,7 +36,7 @@ const CareersMenu = ({ data, setActiveMenu }) => {
                             to={item.href}
                             onClick={() => setActiveMenu(null)}
                             onMouseEnter={() => setActiveId(item.id)}
-                            className={`group relative flex flex-col px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-brand-cyan/10' : 'hover:bg-brand-bg-light'}`}
+                            className={`group relative flex flex-col px-1 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-brand-cyan/10' : 'hover:bg-brand-bg-light'}`}
                         >
                             {/* Accent indicator bar */}
                             {isActive && (
@@ -99,7 +99,7 @@ const CareersMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to="/careers/open-positions"
                                 onClick={() => setActiveMenu(null)}
-                                className="inline-flex items-center gap-2 bg-brand-primary-navy text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-brand-deep-blue transition-all duration-300 shadow-md shadow-brand-primary-navy/10 group"
+                                className="inline-flex items-center gap-2 bg-brand-primary-navy text-white px-1 py-3.5 rounded-full font-bold text-sm hover:bg-brand-deep-blue transition-all duration-300 shadow-md shadow-brand-primary-navy/10 group"
                             >
                                 View Open Positions <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                             </Link>

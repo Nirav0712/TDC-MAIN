@@ -88,7 +88,7 @@ const Contact = () => {
       <GlowOrb className="w-[200px] md:w-[600px] h-[200px] md:h-[600px] bottom-[10%] left-[-10%] bg-brand-peach opacity-30 animate-blob pointer-events-none" style={{ animationDelay: '3s' }} />
 
       {/* Main Contact Section */}
-      <section className="py-24 px-5 relative z-10 w-full max-w-7xl mx-auto flex-grow flex items-center">
+      <section className="py-24 px-1 relative z-10 w-full max-w-7xl mx-auto flex-grow flex items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="flex flex-col justify-center">
             <span className="text-sm font-bold uppercase tracking-widest text-brand-cyan mb-6 block flex items-center gap-2">
@@ -151,28 +151,28 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-brand-primary-navy" htmlFor="name">Full Name *</label>
-                    <input required id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="John Doe" />
+                    <input required id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="John Doe" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-brand-primary-navy" htmlFor="company">Company</label>
-                    <input id="company" name="company" value={formData.company} onChange={handleChange} className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="Acme Inc." />
+                    <input id="company" name="company" value={formData.company} onChange={handleChange} className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="Acme Inc." />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-brand-primary-navy" htmlFor="email">Email Address *</label>
-                    <input required type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="john@example.com" />
+                    <input required type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="john@example.com" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-brand-primary-navy" htmlFor="phone">Phone / WhatsApp</label>
-                    <input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="+1 234 567 8900" />
+                    <input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" placeholder="+1 234 567 8900" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-brand-primary-navy" htmlFor="service">Core Service Required</label>
-                  <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all appearance-none cursor-pointer">
+                  <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all appearance-none cursor-pointer">
                     <option value="">Select an engineering service...</option>
                     <option value="web">Web Application Development</option>
                     <option value="mobile">Mobile App Development</option>
@@ -184,7 +184,7 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-brand-primary-navy" htmlFor="message">Project Requirements</label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="4" className="w-full px-4 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all resize-none" placeholder="Provide a brief overview of your business objectives..."></textarea>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="4" className="w-full px-1 py-3 md:py-4 rounded-xl bg-brand-off-white border border-brand-border focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all resize-none" placeholder="Provide a brief overview of your business objectives..."></textarea>
                 </div>
 
                 <Button type="submit" disabled={status === 'loading'} className="w-full shadow-lg bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan font-bold py-4 text-lg mt-4 h-auto">
@@ -198,7 +198,7 @@ const Contact = () => {
       </section>
 
       {/* Frequently Asked Questions */}
-      <section className="py-24 px-5 bg-white border-y border-brand-border relative z-10 w-full">
+      <section className="py-24 px-1 bg-white border-y border-brand-border relative z-10 w-full">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Clarifications</span>
@@ -223,7 +223,7 @@ const Contact = () => {
       </section>
 
       {/* Global Presence Section */}
-      <section className="py-24 px-5 bg-[#061B2E] relative overflow-hidden text-white mt-auto">
+      <section className="py-24 px-1 bg-[#061B2E] relative overflow-hidden text-white mt-auto">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#19B5D8]/50 via-[#061B2E] to-[#061B2E]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">

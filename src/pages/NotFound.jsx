@@ -6,7 +6,7 @@ import SEO from '../components/seo/SEO';
 
 const NotFound = () => {
   return (
-    <div className="w-full min-h-[85vh] flex items-center justify-center pt-[72px] bg-brand-primary-navy relative overflow-hidden px-5">
+    <div className="w-full min-h-[85vh] flex items-center justify-center pt-[72px] bg-brand-primary-navy relative overflow-hidden px-1">
       {/* Optional SEO tag to prevent indexing of 404s */}
       <SEO
         title="Page Not Found | The Digital Connect"

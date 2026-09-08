@@ -24,7 +24,7 @@ const ServiceDetailLayout = ({
             <section className={`relative pt-32 pb-24 overflow-hidden ${bg} border-b border-border/30 rounded-b-[40px] md:rounded-b-[60px]`}>
                 <div className="absolute inset-0 bg-white/20 backdrop-blur-[100px] z-0"></div>
 
-                <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-7xl mx-auto px-1 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const ServiceDetailLayout = ({
                             <span>{breadcrumb}</span>
                         </div>
 
-                        <span className={`inline-block py-1.5 px-4 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-sm text-sm font-bold mb-6 ${text}`}>
+                        <span className={`inline-block py-1.5 px-1 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-sm text-sm font-bold mb-6 ${text}`}>
                             {subtitle}
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
@@ -72,7 +72,7 @@ const ServiceDetailLayout = ({
             </section>
 
             {/* Overview & Benefits */}
-            <section className="py-24 max-w-7xl mx-auto px-6">
+            <section className="py-24 max-w-7xl mx-auto px-1">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
                     <div>
                         <h2 className="text-3xl font-heading font-extrabold mb-6">Overview</h2>
@@ -98,7 +98,7 @@ const ServiceDetailLayout = ({
                     <h2 className="text-3xl font-heading font-extrabold mb-10 text-center">Technologies We Use</h2>
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
                         {technologies.map((tech, i) => (
-                            <div key={i} className="px-6 py-3 bg-white border border-border rounded-full font-semibold text-sm shadow-sm hover:-translate-y-1 transition-all duration-300">
+                            <div key={i} className="px-1 py-3 bg-white border border-border rounded-full font-semibold text-sm shadow-sm hover:-translate-y-1 transition-all duration-300">
                                 {tech}
                             </div>
                         ))}
@@ -108,10 +108,10 @@ const ServiceDetailLayout = ({
 
             {/* Process CTA */}
             <section className={`py-24 ${bg} border-y border-border/30`}>
-                <div className="max-w-4xl mx-auto px-6 text-center">
+                <div className="max-w-4xl mx-auto px-1 text-center">
                     <h2 className="text-4xl font-heading font-extrabold mb-6">Ready to scale?</h2>
                     <p className="text-xl text-muted-foreground mb-10">We engineer solutions that push boundaries and drive real growth.</p>
-                    <Button to="/contact" variant="primary" className="text-base px-8 py-4">
+                    <Button to="/contact" variant="primary" className="text-base px-2 py-4">
                         Start the Conversation
                     </Button>
                 </div>

@@ -15,7 +15,7 @@ export const CRMVisual = () => (
                         <div className="text-slate-500 text-[10px] font-bold">Active Pipelines</div>
                     </div>
                 </div>
-                <div className="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs text-[#0A1024] font-bold shadow-sm">342 Leads</div>
+                <div className="px-1 py-1 bg-white border border-slate-200 rounded-full text-xs text-[#0A1024] font-bold shadow-sm">342 Leads</div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 flex-1 mt-2">
@@ -168,7 +168,7 @@ export const APIVisual = () => (
                     <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
-                <div className="px-3 py-1 bg-white border border-slate-200 rounded shadow-sm font-mono text-[10px] text-green-600 font-bold">POST /api/v1/auth/token</div>
+                <div className="px-1 py-1 bg-white border border-slate-200 rounded shadow-sm font-mono text-[10px] text-green-600 font-bold">POST /api/v1/auth/token</div>
             </div>
 
             <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-6 font-mono text-[10px] md:text-sm text-slate-300 overflow-hidden relative shadow-inner">
@@ -189,8 +189,8 @@ export const APIVisual = () => (
             </div>
 
             <div className="flex gap-4">
-                <div className="px-4 py-3 bg-cyan-50 border border-cyan-200 rounded-xl text-[#0A1024] text-xs font-bold flex items-center gap-2 flex-1 justify-center"><ShieldCheck size={16} className="text-cyan-600" /> OAUTH 2.0</div>
-                <div className="px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-xl text-[#0A1024] text-xs font-bold flex items-center gap-2 flex-1 justify-center"><Globe size={16} className="text-indigo-600" /> GRAPHQL</div>
+                <div className="px-1 py-3 bg-cyan-50 border border-cyan-200 rounded-xl text-[#0A1024] text-xs font-bold flex items-center gap-2 flex-1 justify-center"><ShieldCheck size={16} className="text-cyan-600" /> OAUTH 2.0</div>
+                <div className="px-1 py-3 bg-indigo-50 border border-indigo-200 rounded-xl text-[#0A1024] text-xs font-bold flex items-center gap-2 flex-1 justify-center"><Globe size={16} className="text-indigo-600" /> GRAPHQL</div>
             </div>
         </div>
     </div>
@@ -204,10 +204,10 @@ export const SEOVisual = () => (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col gap-6">
             <div className="flex justify-between items-center border-b border-slate-100 pb-4">
                 <div className="text-lg font-bold font-heading text-[#0A1024] flex items-center gap-2"><Search className="text-cyan-600 w-5 h-5" /> Organic Traffic</div>
-                <div className="px-3 py-1 bg-green-50 text-green-600 border border-green-100 rounded-full text-xs font-bold whitespace-nowrap">SERP #1</div>
+                <div className="px-1 py-1 bg-green-50 text-green-600 border border-green-100 rounded-full text-xs font-bold whitespace-nowrap">SERP #1</div>
             </div>
 
-            <div className="flex-1 bg-slate-50 border border-slate-100 rounded-xl flex items-end px-6 gap-2 pb-0 pt-10 relative overflow-hidden">
+            <div className="flex-1 bg-slate-50 border border-slate-100 rounded-xl flex items-end px-1 gap-2 pb-0 pt-10 relative overflow-hidden">
                 <div className="absolute top-4 left-6 text-3xl font-black text-[#0A1024]">482,000</div>
                 <div className="absolute top-14 left-6 text-[10px] font-bold text-green-500 uppercase flex items-center gap-1"><ArrowUpRight size={12} /> +245% YOY</div>
 
@@ -233,7 +233,7 @@ export const SEOVisual = () => (
 export const PPCVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
         <div className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col justify-between pt-8">
-            <div className="flex justify-between items-center mb-6 px-2">
+            <div className="flex justify-between items-center mb-6 px-1">
                 <div className="w-32 h-6 bg-slate-100 rounded-full"></div>
                 <div className="w-24 h-6 bg-green-50 border border-green-100 rounded-full flex items-center justify-center text-[10px] font-bold text-green-600">Active Campaign</div>
             </div>
@@ -242,7 +242,7 @@ export const PPCVisual = () => (
             <motion.div whileHover={{ scale: 1.02 }} className="w-full bg-white border border-slate-200 shadow-lg rounded-2xl p-5 cursor-pointer relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
                 <div className="flex gap-2 items-center mb-2">
-                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded border border-slate-200 text-[#0A1024]">Sponsored</span>
+                    <span className="text-[10px] font-bold bg-slate-100 px-1 py-0.5 rounded border border-slate-200 text-[#0A1024]">Sponsored</span>
                     <span className="text-xs text-slate-500 font-bold">https://yoursite.com</span>
                 </div>
                 <div className="text-lg font-bold text-blue-600 hover:underline mb-1">Enterprise Digital Marketing | Maximize Conversions</div>
@@ -274,7 +274,7 @@ export const SocialMediaVisual = () => (
                 <div className="h-40 bg-gradient-to-br from-indigo-500 to-cyan-500 relative flex items-center justify-center">
                     <div className="absolute inset-0 bg-black/10"></div>
                 </div>
-                <div className="px-6 relative pb-6 flex-1 flex flex-col justify-between">
+                <div className="px-1 relative pb-6 flex-1 flex flex-col justify-between">
                     <div className="w-16 h-16 bg-white rounded-2xl shadow-lg -mt-8 flex items-center justify-center overflow-hidden border-2 border-white border-dashed">
                         <User size={32} className="text-slate-300" />
                     </div>
@@ -342,8 +342,8 @@ export const ContentMarketingVisual = () => (
                 <div className="w-4/5 h-2 bg-slate-100 rounded-full mb-2"></div>
 
                 <div className="mt-auto flex justify-between items-center border-t border-slate-100 pt-4">
-                    <button className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 transition-colors text-white rounded-lg text-xs font-bold shadow-md">Publish</button>
-                    <div className="text-[10px] text-green-600 font-bold bg-green-50 border border-green-100 px-2 py-1 rounded">SEO: 98/100</div>
+                    <button className="px-1 py-2 bg-cyan-600 hover:bg-cyan-500 transition-colors text-white rounded-lg text-xs font-bold shadow-md">Publish</button>
+                    <div className="text-[10px] text-green-600 font-bold bg-green-50 border border-green-100 px-1 py-1 rounded">SEO: 98/100</div>
                 </div>
             </div>
         </motion.div>
@@ -355,7 +355,7 @@ export const PerformanceMarketingVisual = () => (
         <div className="w-full h-full bg-white rounded-3xl shadow-xl relative border border-slate-200 p-6 flex flex-col overflow-hidden">
             <div className="flex justify-between items-center mb-6">
                 <div className="text-[#0A1024] font-bold font-heading text-lg">Omnichannel Results</div>
-                <div className="px-3 py-1 bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-full text-xs font-bold">Live Data</div>
+                <div className="px-1 py-1 bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-full text-xs font-bold">Live Data</div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 relative z-10">

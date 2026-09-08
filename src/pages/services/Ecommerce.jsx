@@ -27,11 +27,11 @@ const EcommerceHeroVisual = () => (
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="h-20 border border-black/5 bg-white rounded-xl shadow-sm flex flex-col justify-center px-4">
+          <div className="h-20 border border-black/5 bg-white rounded-xl shadow-sm flex flex-col justify-center px-1">
             <div className="text-[10px] text-black/40 font-bold mb-1">REVENUE</div>
             <div className="w-16 h-4 bg-brand-mint/60 rounded"></div>
           </div>
-          <div className="h-20 border border-black/5 bg-white rounded-xl shadow-sm flex flex-col justify-center px-4">
+          <div className="h-20 border border-black/5 bg-white rounded-xl shadow-sm flex flex-col justify-center px-1">
             <div className="text-[10px] text-black/40 font-bold mb-1">ORDERS</div>
             <div className="w-12 h-4 bg-brand-peach/60 rounded"></div>
           </div>
@@ -87,7 +87,7 @@ const EcommerceHeroVisual = () => (
 );
 
 const EcommerceUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4">
+  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-1">
     <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">The Conversion Funnel</h3>
     <div className="flex flex-col md:flex-row items-center justify-between w-full relative h-[600px] md:h-auto">
       {/* Connecting line */}
@@ -123,7 +123,7 @@ const EcommerceUniqueVisual = () => (
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-2 text-center"
+            className="font-bold text-sm text-[#171717] px-1 text-center"
           >
             {step.title}
           </motion.span>

@@ -23,7 +23,7 @@ const Portfolio = () => {
 
   return (
     <div className="flex flex-col min-h-screen pt-20">
-      <section className="py-24 px-6 bg-brand-soft relative overflow-hidden text-center">
+      <section className="py-24 px-1 bg-brand-soft relative overflow-hidden text-center">
         <GlowOrb className="w-[800px] h-[800px] top-[-50%] left-[10%] bg-brand-lavender opacity-30 animate-blob" />
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight leading-tight">
@@ -32,7 +32,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-1 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -40,7 +40,7 @@ const Portfolio = () => {
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all ${activeFilter === f ? 'bg-primary text-white shadow-md' : 'bg-brand-soft text-muted-foreground hover:bg-border'}`}
+                className={`px-1 py-2.5 rounded-full text-sm font-bold transition-all ${activeFilter === f ? 'bg-primary text-white shadow-md' : 'bg-brand-soft text-muted-foreground hover:bg-border'}`}
               >
                 {f}
               </button>

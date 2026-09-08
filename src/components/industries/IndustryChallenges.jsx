@@ -2,7 +2,7 @@ import React from 'react';
 import { AlertCircle } from 'lucide-react';
 
 export const IndustryChallenges = ({ challenges, title = 'Industry Challenges' }) => (
-  <section className='py-16 lg:py-24 bg-[#03111F] text-white px-5 lg:px-8 relative overflow-hidden'>
+  <section className='py-16 lg:py-24 bg-[#03111F] text-white px-1 lg:px-1 relative overflow-hidden'>
     <div className='max-w-[1400px] mx-auto'>
       <div className='mb-12'>
         <h2 className='text-[clamp(32px,7vw,48px)] font-heading font-extrabold mb-4'>{title}</h2>

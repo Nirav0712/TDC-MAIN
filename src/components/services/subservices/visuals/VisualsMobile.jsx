@@ -7,7 +7,7 @@ export const IOSVisual = () => (
         <motion.div initial={{ y: 15 }} animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }} className="w-[85%] max-w-[280px] h-[520px] bg-slate-900 rounded-[40px] shadow-2xl p-2 relative z-20 border-[4px] border-slate-800">
             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-xl z-30"></div>
             <div className="w-full h-full bg-white rounded-[32px] overflow-hidden relative flex flex-col">
-                <div className="h-6 w-full flex justify-between items-center px-6 pt-2 text-[#0A1024]">
+                <div className="h-6 w-full flex justify-between items-center px-1 pt-2 text-[#0A1024]">
                     <div className="text-[10px] font-bold">9:41</div>
                     <div className="flex gap-1 items-center">
                         <div className="w-3 h-2 rounded-sm bg-[#0A1024]"></div>
@@ -38,7 +38,7 @@ export const IOSVisual = () => (
         </motion.div>
 
         {/* Floating Badges */}
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-10 -left-4 lg:-left-12 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-10 -left-4 lg:-left-12 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-cyan-50 text-cyan-600 p-2 rounded-xl"><Smartphone size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Native iOS UI</p>
@@ -46,7 +46,7 @@ export const IOSVisual = () => (
             </div>
         </motion.div>
 
-        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-20 -right-4 lg:-right-8 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-20 -right-4 lg:-right-8 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-green-50 text-green-600 p-2 rounded-xl"><CheckCircle size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">App Store Ready</p>
@@ -60,7 +60,7 @@ export const AndroidVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8">
         <motion.div initial={{ y: 20 }} animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }} className="w-[85%] max-w-[280px] h-[520px] bg-slate-800 rounded-[24px] shadow-2xl relative z-20 border-[3px] border-slate-700 flex items-center justify-center overflow-hidden">
             <div className="w-[98%] h-[99%] bg-white rounded-[20px] overflow-hidden relative flex flex-col">
-                <div className="h-6 w-full flex justify-between items-center px-4 text-[#0A1024] border-b border-slate-100 pt-1">
+                <div className="h-6 w-full flex justify-between items-center px-1 text-[#0A1024] border-b border-slate-100 pt-1">
                     <div className="text-[10px] font-bold">12:00</div>
                     <div className="flex gap-1">
                         <div className="w-2 h-2 rounded-full bg-[#0A1024]"></div>
@@ -85,7 +85,7 @@ export const AndroidVisual = () => (
             </div>
         </motion.div>
 
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-20 -left-2 lg:-left-6 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-20 -left-2 lg:-left-6 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-cyan-50 text-cyan-600 p-2 rounded-xl"><Layers size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Native Performance</p>
@@ -100,7 +100,7 @@ export const FlutterVisual = () => (
         <motion.div initial={{ y: 15 }} animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }} className="w-[85%] max-w-[280px] h-[520px] bg-cyan-900 rounded-[40px] shadow-2xl p-2 relative z-20 border-[4px] border-cyan-800">
             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-cyan-900 rounded-b-xl z-30"></div>
             <div className="w-full h-full bg-white rounded-[32px] overflow-hidden relative flex flex-col">
-                <div className="h-6 w-full flex justify-between items-center px-6 pt-2 text-[#0A1024]">
+                <div className="h-6 w-full flex justify-between items-center px-1 pt-2 text-[#0A1024]">
                     <div className="text-[10px] font-bold">10:00</div>
                     <div className="flex gap-1 items-center">
                         <div className="w-3 h-2 rounded-sm bg-[#0A1024]"></div>
@@ -126,14 +126,14 @@ export const FlutterVisual = () => (
                 </div>
             </div>
         </motion.div>
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-10 -left-6 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-10 -left-6 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-cyan-50 text-cyan-600 p-2 rounded-xl"><Terminal size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Flutter Powered</p>
                 <p className="text-[10px] text-slate-500">Cross-Platform</p>
             </div>
         </motion.div>
-        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-20 -right-6 bg-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-20 -right-6 bg-white px-1 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-blue-50 text-blue-600 p-2 rounded-xl"><Cpu size={20} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Fast Performance</p>
@@ -173,14 +173,14 @@ export const ReactNativeVisual = () => (
                 </div>
             </div>
         </motion.div>
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-24 -left-6 bg-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-24 -left-6 bg-white px-1 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-[#61DAFB]/10 text-cyan-500 p-2 rounded-lg"><Code size={18} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Cross-Platform</p>
                 <p className="text-[10px] text-slate-500">React Architecture</p>
             </div>
         </motion.div>
-        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-16 -right-4 bg-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 0.5 }} className="absolute top-16 -right-4 bg-white px-1 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-30">
             <div className="bg-blue-50 text-blue-500 p-2 rounded-lg"><Database size={18} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">API Data Card</p>
@@ -194,7 +194,7 @@ export const CrossPlatformVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4">
         {/* Desktop Screen */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="absolute top-12 left-4 w-64 h-40 bg-white rounded-lg shadow-2xl border-4 border-slate-800 z-10 flex flex-col overflow-hidden">
-            <div className="h-4 bg-slate-100 w-full flex items-center px-2 gap-1 border-b border-slate-200">
+            <div className="h-4 bg-slate-100 w-full flex items-center px-1 gap-1 border-b border-slate-200">
                 <div className="w-2 h-2 rounded-full bg-red-400"></div><div className="w-2 h-2 rounded-full bg-yellow-400"></div><div className="w-2 h-2 rounded-full bg-green-400"></div>
             </div>
             <div className="flex p-3 gap-3 w-full h-full">
@@ -216,14 +216,14 @@ export const CrossPlatformVisual = () => (
         {/* Mobile Screen */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 w-28 h-56 bg-white rounded-2xl shadow-2xl border-[3px] border-slate-800 z-30 flex flex-col overflow-hidden">
             <div className="h-3 w-12 bg-slate-800 rounded-b-xl mx-auto mb-2"></div>
-            <div className="px-3 flex-1 flex flex-col gap-2">
+            <div className="px-1 flex-1 flex flex-col gap-2">
                 <div className="w-full h-12 bg-purple-100 rounded-lg"></div>
                 <div className="w-full h-8 bg-slate-100 rounded flex items-center justify-center"><Apple size={12} className="text-slate-400" /></div>
                 <div className="w-full h-8 bg-slate-100 rounded flex items-center justify-center"><Smartphone size={12} className="text-slate-400" /></div>
             </div>
         </motion.div>
 
-        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-4 right-2 bg-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-40">
+        <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }} className="absolute bottom-4 right-2 bg-white px-1 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 z-40">
             <div className="bg-purple-100 text-purple-600 p-2 rounded-lg"><Layers size={18} /></div>
             <div>
                 <p className="text-xs font-bold text-[#0A1024]">Unified Product</p>

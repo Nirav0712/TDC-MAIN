@@ -25,7 +25,7 @@ const CompanyMenu = ({ data, setActiveMenu }) => {
         <div className="flex w-full h-full min-h-[440px]">
             {/* Left Nav Panel */}
             <div className="w-[340px] shrink-0 bg-white border-r border-brand-border p-6 flex flex-col gap-2">
-                <h4 className="text-xs font-bold tracking-widest uppercase text-brand-text-muted mb-4 px-3">Company</h4>
+                <h4 className="text-xs font-bold tracking-widest uppercase text-brand-text-muted mb-4 px-1">Company</h4>
                 {data.items.map((item) => {
                     const isActive = activeId === item.id;
                     const Icon = icons[item.id] || Info;
@@ -35,7 +35,7 @@ const CompanyMenu = ({ data, setActiveMenu }) => {
                             to={item.href}
                             onClick={() => setActiveMenu(null)}
                             onMouseEnter={() => setActiveId(item.id)}
-                            className={`flex flex-col relative px-4 py-3.5 rounded-xl transition-all duration-300 group ${isActive ? 'bg-brand-primary-navy shadow-md' : 'hover:bg-brand-bg-light'}`}
+                            className={`flex flex-col relative px-1 py-3.5 rounded-xl transition-all duration-300 group ${isActive ? 'bg-brand-primary-navy shadow-md' : 'hover:bg-brand-bg-light'}`}
                         >
                             <div className="flex items-center justify-between mb-1.5">
                                 <div className="flex items-center gap-3">
@@ -90,7 +90,7 @@ const CompanyMenu = ({ data, setActiveMenu }) => {
                             {currentItem.valueIndicators && (
                                 <div className="grid grid-cols-2 gap-3 mb-8">
                                     {currentItem.valueIndicators.map((val, idx) => (
-                                        <div key={idx} className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-brand-border">
+                                        <div key={idx} className="flex items-center gap-2 bg-white px-1 py-2.5 rounded-lg border border-brand-border">
                                             <CheckCircle2 className="w-4 h-4 text-brand-cyan shrink-0" />
                                             <span className="text-sm font-bold text-brand-primary-navy">{val}</span>
                                         </div>
@@ -102,7 +102,7 @@ const CompanyMenu = ({ data, setActiveMenu }) => {
                                 <Link
                                     to={currentItem.href}
                                     onClick={() => setActiveMenu(null)}
-                                    className="inline-flex items-center gap-2 text-sm font-bold text-white bg-brand-primary-navy px-6 py-3.5 rounded-full hover:bg-brand-deep-blue hover:shadow-lg hover:shadow-brand-primary-navy/20 transition-all duration-300 group"
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-white bg-brand-primary-navy px-1 py-3.5 rounded-full hover:bg-brand-deep-blue hover:shadow-lg hover:shadow-brand-primary-navy/20 transition-all duration-300 group"
                                 >
                                     {currentItem.cta} <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                 </Link>
@@ -127,7 +127,7 @@ const CompanyMenu = ({ data, setActiveMenu }) => {
                                         <div className="w-12 h-12 rounded-full bg-brand-primary-navy text-white flex items-center justify-center font-bold transform -translate-y-4 shadow-md">AR</div>
                                         <div className="w-12 h-12 rounded-full bg-white border border-brand-border text-brand-primary-navy flex items-center justify-center font-bold shadow-md">KL</div>
                                     </div>
-                                    <span className="text-sm font-bold text-brand-primary-navy z-10 px-4 py-1.5 bg-white rounded-full shadow-sm mt-2">40+ Experts</span>
+                                    <span className="text-sm font-bold text-brand-primary-navy z-10 px-1 py-1.5 bg-white rounded-full shadow-sm mt-2">40+ Experts</span>
                                 </div>
                             )}
                         </div>

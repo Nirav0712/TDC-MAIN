@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 export const IndustrySolutions = ({ solutions, variant }) => (
-  <section className='py-16 lg:py-32 bg-[#F7FAFC] px-5 lg:px-8'>
+  <section className='py-16 lg:py-32 bg-[#F7FAFC] px-1 lg:px-1'>
     <div className='max-w-[1400px] mx-auto'>
       <div className='mb-12 lg:mb-20'>
         <span className='text-[12px] md:text-[13px] font-bold tracking-[0.2em] uppercase mb-3 md:mb-4 block text-[#087EA4]'>Digital Solutions</span>

@@ -16,7 +16,7 @@ const SaaSAnalytics = () => {
             <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
                 
                 {/* BREADCRUMBS */}
-                <div className="pt-[90px] lg:pt-[100px] px-5 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
+                <div className="pt-[90px] lg:pt-[100px] px-1 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
                     <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
                     <ChevronRight size={14} />
                     <Link to="/industries" className="hover:text-[#08BFE8] transition-colors">Industries</Link>
@@ -27,7 +27,7 @@ const SaaSAnalytics = () => {
                 </div>
 
                 {/* HERO */}
-                <section className="py-10 md:py-12 lg:py-16 px-5 max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.95fr)] gap-10 lg:gap-16 items-center">
+                <section className="py-10 md:py-12 lg:py-16 px-1 max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.95fr)] gap-10 lg:gap-16 items-center">
                     <div className="flex flex-col gap-6 z-10 w-full min-w-0">
                         <motion.span initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} className="text-[#08BFE8] font-bold tracking-[0.2em] text-xs uppercase block">
                             SAAS ANALYTICS
@@ -39,7 +39,7 @@ const SaaSAnalytics = () => {
                             Capture precise user telemetry, retention metrics, and MRR movements to make informed operational SaaS decisions.
                         </motion.p>
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.3}} className="pt-2">
-                            <Link to="/contact" className="inline-flex bg-[#08BFE8] text-white px-8 py-4 rounded-xl font-bold items-center hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/20">
+                            <Link to="/contact" className="inline-flex bg-[#08BFE8] text-white px-2 py-4 rounded-xl font-bold items-center hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/20">
                                 Discuss Your Project <ArrowRight size={20} className="ml-2" />
                             </Link>
                         </motion.div>
@@ -75,7 +75,7 @@ const SaaSAnalytics = () => {
                 </section>
 
                 {/* WHY IT MATTERS / CHALLENGES */}
-                <section className="bg-[#061B2E] text-white py-16 lg:py-24 px-5 relative overflow-hidden">
+                <section className="bg-[#061B2E] text-white py-16 lg:py-24 px-1 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
                     <div className="max-w-[1320px] mx-auto relative z-10">
                         <div className="max-w-3xl mb-12">
@@ -94,7 +94,7 @@ const SaaSAnalytics = () => {
                 </section>
 
                 {/* EXPERTISE & CAPABILITIES */}
-                <section className="py-16 lg:py-24 px-5 max-w-[1320px] mx-auto">
+                <section className="py-16 lg:py-24 px-1 max-w-[1320px] mx-auto">
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <h2 className="text-[clamp(28px,4vw,42px)] font-heading font-black text-[#061B2E] mb-6 leading-tight">Analytics Depth</h2>
                         <p className="text-[#7F94A8] text-lg text-pretty">We deliver end-to-end digital excellence merging strategic foresight with flawless engineering.</p>
@@ -117,11 +117,11 @@ const SaaSAnalytics = () => {
                 </section>
 
                 {/* FINAL CTA */}
-                <section className="bg-gradient-to-br from-[#061B2E] to-[#08243A] py-16 lg:py-20 px-5 text-center relative overflow-hidden">
+                <section className="bg-gradient-to-br from-[#061B2E] to-[#08243A] py-16 lg:py-20 px-1 text-center relative overflow-hidden">
                      <div className="absolute inset-0 bg-[radial-gradient(#08BFE8_1px,transparent_1px)] opacity-[0.03] bg-[size:24px_24px]"></div>
                      <div className="max-w-2xl mx-auto relative z-10 text-white">
                          <h2 className="text-[clamp(28px,4vw,48px)] font-heading font-black mb-8 leading-tight text-balance">Ready to elevate your digital presence?</h2>
-                         <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
+                         <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-2 lg:px-1 py-4 lg:py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
                              Let's discuss your project <ArrowRight size={20} className="ml-2" />
                          </Link>
                      </div>

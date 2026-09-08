@@ -4,7 +4,7 @@ import logo from '../../assets/logo/TDC.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#03111F] text-white pt-16 md:pt-24 pb-10 md:pb-12 px-5 lg:px-8 overflow-hidden relative tech-grid-dark">
+    <footer className="bg-[#03111F] text-white pt-16 md:pt-24 pb-10 md:pb-12 px-1 lg:px-1 overflow-hidden relative tech-grid-dark">
       <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#063B63]/20 rounded-full blur-[100px] md:blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#00A9D6]/5 rounded-full blur-[80px] md:blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
 

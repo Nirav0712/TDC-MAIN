@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, to, variant = 'primary', className = '', ...props }) => {
-  const baseClasses = "inline-flex items-center justify-center px-8 py-4 text-sm font-bold transition-all rounded-full";
+  const baseClasses = "inline-flex items-center justify-center px-2 py-4 text-sm font-bold transition-all rounded-full";
   const variants = {
     primary: "bg-primary text-white hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5",
     secondary: "bg-white text-primary border border-border hover:border-primary/20 hover:shadow-md",

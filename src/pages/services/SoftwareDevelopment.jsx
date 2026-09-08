@@ -14,7 +14,7 @@ const SoftwareHeroVisual = () => (
       className="absolute top-[10%] w-[95%] h-[80%] bg-white rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] border border-black/5 flex flex-col overflow-hidden z-10"
     >
       {/* Header */}
-      <div className="h-12 border-b border-black/5 bg-[#FAF9F7] flex items-center px-6 justify-between">
+      <div className="h-12 border-b border-black/5 bg-[#FAF9F7] flex items-center px-1 justify-between">
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 bg-brand-lavender rounded-sm"></div>
           <div className="w-20 h-4 bg-black/10 rounded-full"></div>
@@ -95,7 +95,7 @@ const SoftwareHeroVisual = () => (
 );
 
 const SoftwareUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4">
+  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-1">
     <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">The Operational Workflow</h3>
     <div className="flex flex-col md:flex-row items-center justify-between w-full relative">
 
@@ -132,7 +132,7 @@ const SoftwareUniqueVisual = () => (
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-2 text-center"
+            className="font-bold text-sm text-[#171717] px-1 text-center"
           >
             {step.title}
           </motion.span>

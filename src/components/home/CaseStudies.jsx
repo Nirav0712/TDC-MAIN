@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const CaseStudies = () => {
   return (
     <section className="py-24 bg-secondary/30 border-y border-border">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-1">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
           <SectionHeading title="In-Depth Case Studies" subtitle="Our Impact" />
           <Button variant="outline" to="/case-studies" className="mb-12">Explore All Cases</Button>

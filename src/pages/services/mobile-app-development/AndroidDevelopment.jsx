@@ -59,7 +59,9 @@ export default function AndroidDevelopment() {
             icon: <Smartphone className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=1200",
             paragraphs: [
-                "Every business is unique. We build custom Android applications from scratch tailored strictly to your specific enterprise requirements, ensuring scalable architecture, robust performance, and a perfect product-market fit."
+                "As the penetration of mobile phones and the internet increases in the country, app development for businesses has become vital. And when it comes to mobile applications, Android is a market leader having more than a billion active mobile devices across the globe.",
+                "With custom Android app development, you can take your business to new heights of success in this digital age. Whether you’re a start-up or a well-established business, Android help can help you significantly increase your business. The Digital Connect is a leading Android app development agency with a dedicated Android application team to help you get the best app to thrive in the competitive smartphone market.",
+                "We efficiently meet your requirements and tailor customized applications for your business. Our certified app developers have expertise in developing mobile applications for different industries. We have clients from different domains, including e-commerce, IT, real estate, etc."
             ],
             cta: "Get Custom App Solution"
         },
@@ -68,7 +70,9 @@ export default function AndroidDevelopment() {
             icon: <PenTool className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200",
             paragraphs: [
-                "We design intuitive, stunning user experiences adhering strictly to Google's Material Design principles. Our interfaces guarantee maximum user retention, fluid animations, and absolute ease of navigation."
+                "Android Applications have the potential to help your business grow significantly in the digital world. This is not it; with a well-developed Android application, you can even ensure better reach and ROI for your business. The Digital Connect has experienced app developers who are certified by top institutions.",
+                "Being a leading UI/UX designing agency, we have expertise in creating the best mobile experiences for our clients. With a team of such expert developers, we ensure to provide you with an application with an excellent user-friendly interface and unmatchable experience. Innovation is the core value of our Android UI/UX organizing team.",
+                "No matter whether you’re looking for a dynamic application, tablet application, wearable, or TV application, our experienced team is well-versed in everything. From leveraging your application with advanced payment methods to providing a user-friendly interface, we provide you with the best Android applications."
             ],
             cta: "Design Your App"
         },
@@ -77,7 +81,11 @@ export default function AndroidDevelopment() {
             icon: <LineChart className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
             paragraphs: [
-                "Not sure where to begin? Our consultants analyze your business strategy, recommend the optimal tech stack, outline monetization strategies, and craft a meticulous product roadmap to ensure a highly successful deployment."
+                "Being in an online business brings a lot of challenges and opportunities to your door every day! But how to analyze and understand what is best for your business? Well! You can make that job more accessible with the help of a trusted Android app consulting agency.",
+
+                "If you’re also looking for a mobile app consultancy, you can connect with The Digital Connect. Here we have a dedicated team of consultants who offer tried and tested mobile methods for your business, ensuring that it leads to positive consequences.",
+
+                "Hire The Digital Connect consultancy services to achieve practical outcomes backed by research. Our Android consultants dedicatedly analyze data and statistics of your business, review its performance and offer the required solutions to support your business in the right direction. With us, you can enhance the performance of your overall business."
             ],
             cta: "Consult our Experts"
         },
@@ -86,7 +94,11 @@ export default function AndroidDevelopment() {
             icon: <Gamepad2 className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
             paragraphs: [
-                "We rigorously test Android games across thousands of device matrices, ensuring flawless frame rates, zero memory leaks, and perfect interactive responses, providing gamers an unmatched playing experience."
+                "There’s no doubt that Android is a widely accepted mobile platform all across the globe. Over the years, Android has brought a revolution to the mobile app development industry. Android has become a favorite platform for businesses from different verticals, especially in the gaming industry with its increasing popularity.",
+
+                "If you also own an Android gaming application or plan to develop one, you can connect with The Digital Connect. As a leading Android game app testing platform, we have tested several games successfully thriving in the industry today.",
+
+                "As a leading mobile game testing agency, we have expertise in all types of mobile games and designs. Whether you’re building an action game or a role-playing game, we have the proper infrastructure to test all kinds of games. We provide the world’s best environment for Android game testing with our proven strategies."
             ],
             cta: "Test Application"
         },
@@ -95,7 +107,11 @@ export default function AndroidDevelopment() {
             icon: <Settings2 className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
             paragraphs: [
-                "Post-launch reliability is critical. We provide 24/7 dedicated monitoring, rapid bug fixes, OS update compatibility, and continuous feature enhancements to guarantee your app never experiences costly downtime."
+                "With the increasing penetration of the internet worldwide, the usage of smartphone devices has also increased significantly. In today’s time, smartphone devices have become a necessity for humans. There’s an application for everything from making online payments, attending virtual classes, and selling products and services online.",
+
+                "This becomes essential for the app owners to ensure that their application excels among their competitors. The Digital Connect is a leader in providing Android App support and maintenance to businesses. With a smart-working team of Android app developers, we can optimize your applications as per your business requirements.",
+
+                "No matter whether you’re looking for an Android App Agency for hourly, daily or monthly support, we are always available for you. With our flexible support packages, you can choose the best suited for you. So if you want to be on the top in your business vertical, hire us today and get the proper app store optimization and support on time."
             ],
             cta: "Get Maintenance Support"
         }
@@ -115,7 +131,7 @@ export default function AndroidDevelopment() {
                 <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
                 <div className="absolute top-0 right-0 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] rounded-full blur-[100px] lg:blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/4 bg-cyan-100/50"></div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
+                <div className="max-w-7xl mx-auto px-1 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
 
                     {/* Breadcrumbs */}
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1, duration: 0.8 }} className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-semibold mb-6 md:mb-10 text-slate-500">
@@ -131,7 +147,7 @@ export default function AndroidDevelopment() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                         {/* Left Content */}
                         <motion.div initial="hidden" animate="visible" variants={fadeIn} className="flex flex-col space-y-6">
-                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-4 py-1.5 w-max">
+                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-1 py-1.5 w-max">
                                 <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
                                 <span className="text-cyan-700 text-sm font-bold tracking-wider uppercase">ANDROID APP DEVELOPMENT</span>
                             </motion.div>
@@ -145,7 +161,7 @@ export default function AndroidDevelopment() {
                             </motion.p>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }} className="pt-4 flex flex-col sm:flex-row gap-4">
-                                <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+                                <Link to="/contact" className="group relative inline-flex items-center justify-center px-2 py-4 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
                                     <span className="relative z-10 flex items-center">
                                         GET FREE QUOTE NOW
                                         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -164,7 +180,7 @@ export default function AndroidDevelopment() {
 
             {/* AGILE DEVELOPMENT PROCESS */}
             <section className="py-20 lg:py-32 bg-white overflow-hidden" id="process">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-1">
                     <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
                         <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Agile Development Process</h2>
                         <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Enhance Your Project with Risk Free Development Process</h3>
@@ -220,62 +236,82 @@ export default function AndroidDevelopment() {
             </section>
 
             {/* ANDROID DEVELOPMENT SERVICES */}
-            <section className="py-20 lg:py-32 bg-slate-50 relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                        <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Our Android App Development Services</h2>
-                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1024]">Empower Your Business with Our Services</h3>
-                        <p className="mt-4 text-slate-600">
+            <section>
+                {/* TOP HEADING AREA */}
+                <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="max-w-7xl mx-auto px-1 text-center flex flex-col items-center">
+                        <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-1 py-2 rounded-full mb-6">
+                            Empower Your Business with Our Services
+                        </div>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-4">
+                            Our Android App Development Services
+                        </h3>
+                        <p className="text-slate-600 max-w-3xl">
                             We offer end-to-end Android capabilities, translating your vision into incredibly robust, heavily tested applications perfectly tailored for the Android ecosystem.
                         </p>
                     </div>
-                    <div className="space-y-12 lg:space-y-24">
-                        {services.map((svc, i) => (
-                            <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeIn} className={`flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center lg:items-center py-4`}>
+                </div>
 
-                                {/* Text Content */}
-                                <div className="w-full lg:w-1/2 space-y-6">
-                                    <div className="w-16 h-16 bg-cyan-50 text-cyan-600 border border-cyan-100 rounded-2xl flex items-center justify-center">
-                                        {svc.icon}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-2xl md:text-3xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                        <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-cyan-500 rounded-full mt-4 mb-6"></div>
-                                    </div>
-                                    <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                                        {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
-                                    </div>
-                                    <div className="pt-4">
-                                        <Link to="/contact" className="inline-flex items-center text-cyan-600 font-bold hover:text-cyan-700 transition-colors group/link text-lg">
-                                            {svc.cta}
-                                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                        </Link>
-                                    </div>
-                                </div>
-
-                                {/* Image Card */}
+                {/* MAIN SERVICE CONTENT AREA */}
+                <div className="w-full bg-white py-12 md:py-16">
+                    <div className="max-w-7xl mx-auto px-1">
+                        <div className="space-y-12 lg:space-y-16">
+                            {services.map((svc, i) => (
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.95, x: i % 2 !== 0 ? -20 : 20 }}
-                                    whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    className="w-full lg:w-1/2 relative group"
+                                    key={i}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    variants={fadeIn}
+                                    className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
                                 >
-                                    <div className="absolute -inset-4 bg-cyan-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"></div>
-                                    <div className="relative w-full bg-slate-100 border border-slate-100 rounded-[18px] shadow-xl overflow-hidden group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]">
-                                        <img src={svc.imgUrl} alt={svc.title} className="w-full h-auto object-cover block" />
-                                    </div>
-                                </motion.div>
 
-                            </motion.div>
-                        ))}
+                                    {/* LEFT COLUMN: Height determined organically by paragraph text */}
+                                    <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                        <div>
+                                            <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                            <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                        </div>
+                                        <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                            {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                        </div>
+                                    </div>
+
+                                    {/* RIGHT COLUMN: Stretches matching left side through cascading flex layout */}
+                                    <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                        {/* Decorative Orange Shape (Absolute behind card) */}
+                                        <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+
+                                        {/* Outer Card (Given flex-1 to consume the full stretched column height) */}
+                                        <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                            {/* Image Space (Takes all remaining inner vertical height pushing CTA flush) */}
+                                            <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                            </div>
+
+                                            {/* Rigid CTA Link positioned below fluid image limit */}
+                                            <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <div className="text-orange-400 shrink-0">
+                                                    {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                </div>
+                                                <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                    {svc.cta}
+                                                </span>
+                                                <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* INDUSTRIES SECTION */}
             <section className="py-20 lg:py-32 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-1">
                     <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                         <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Industries</h2>
                         <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Custom IT Solutions for Varied Verticals</h3>
@@ -318,7 +354,7 @@ export default function AndroidDevelopment() {
                 {/* Subtle grid background */}
                 <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="max-w-7xl mx-auto px-1 relative z-10">
                     <div className="lg:flex lg:justify-between lg:items-end mb-12 lg:mb-16">
                         <div className="max-w-2xl">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose US</h2>
@@ -390,7 +426,7 @@ export default function AndroidDevelopment() {
 
             {/* GET A FREE QUOTE FORM SECTION */}
             <section className="py-16 md:py-24 lg:py-32 bg-[#F5FAFD] relative" id="quote">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="max-w-7xl mx-auto px-1 relative z-10">
                     <div className="bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row border border-slate-200">
 
                         {/* Left Info Side */}
@@ -424,28 +460,28 @@ export default function AndroidDevelopment() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                        <input required type="email" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                        <input required type="tel" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                    <textarea required rows={4} className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
                                 </div>
 
                                 <button type="submit" className="w-full py-4 mt-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group">

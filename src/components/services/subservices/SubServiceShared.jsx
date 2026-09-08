@@ -20,7 +20,7 @@ export const SubServiceShared = {
             <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
             <div className={`absolute top-0 right-0 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] rounded-full blur-[100px] lg:blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/4 ${theme.bg}`}></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
+            <div className="max-w-7xl mx-auto px-1 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
 
                 {/* Breadcrumbs */}
                 <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-semibold mb-6 md:mb-10 text-slate-500">
@@ -36,7 +36,7 @@ export const SubServiceShared = {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                     {/* Left Content */}
                     <motion.div initial="hidden" animate="visible" variants={fadeIn} className="flex flex-col space-y-6">
-                        <div className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-4 py-1.5 w-max">
+                        <div className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-1 py-1.5 w-max">
                             <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
                             <span className="text-cyan-700 text-sm font-bold tracking-wider uppercase">{eyebrow}</span>
                         </div>
@@ -52,13 +52,13 @@ export const SubServiceShared = {
                         </p>
 
                         <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-2 py-4 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
                                 <span className="relative z-10 flex items-center">
                                     {ctaText}
                                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
-                            <Link to="/portfolio" className="group hidden lg:inline-flex items-center justify-center px-8 py-4 font-bold text-[#0A1024] bg-white border border-slate-200 transition-all duration-300 rounded-full hover:border-cyan-300 hover:text-cyan-600">
+                            <Link to="/portfolio" className="group hidden lg:inline-flex items-center justify-center px-2 py-4 font-bold text-[#0A1024] bg-white border border-slate-200 transition-all duration-300 rounded-full hover:border-cyan-300 hover:text-cyan-600">
                                 View Work
                             </Link>
                         </div>
@@ -78,7 +78,7 @@ export const SubServiceShared = {
     ),
 
     Overview: ({ title, content, theme }) => (
-        <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+        <section className="py-16 md:py-24 bg-white px-1 border-b border-slate-100">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
                 <div className="lg:col-span-5 relative">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">Overview</span>
@@ -94,7 +94,7 @@ export const SubServiceShared = {
     ),
 
     Capabilities: ({ theme, capabilities, title = "What We Build", eyebrow = "Capabilities" }) => (
-        <section className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <section className="py-16 md:py-24 lg:py-32 px-1 bg-slate-50">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 lg:mb-20">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">{eyebrow}</span>
@@ -116,7 +116,7 @@ export const SubServiceShared = {
     ),
 
     Technology: ({ technologies, theme, title = "Technology Stack", eyebrow = "Engineering Core" }) => (
-        <section className="py-12 md:py-20 bg-white px-4 sm:px-6 lg:px-8 border-y border-slate-100 overflow-hidden">
+        <section className="py-12 md:py-20 bg-white px-1 border-y border-slate-100 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start text-center lg:text-left">
                 <div className="w-full lg:w-1/3 shrink-0">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">{eyebrow}</span>
@@ -125,7 +125,7 @@ export const SubServiceShared = {
                 </div>
                 <div className="w-full lg:w-2/3 flex flex-wrap gap-3 justify-center lg:justify-start">
                     {technologies.map((tech, i) => (
-                        <div key={i} className="px-5 py-2.5 rounded-full border border-slate-200 text-sm md:text-base font-bold text-slate-700 bg-slate-50 hover:bg-white hover:border-cyan-300 hover:text-cyan-700 hover:shadow-md transition-all cursor-default">
+                        <div key={i} className="px-1 py-2.5 rounded-full border border-slate-200 text-sm md:text-base font-bold text-slate-700 bg-slate-50 hover:bg-white hover:border-cyan-300 hover:text-cyan-700 hover:shadow-md transition-all cursor-default">
                             {tech}
                         </div>
                     ))}
@@ -135,7 +135,7 @@ export const SubServiceShared = {
     ),
 
     Process: ({ process, theme, title = "Methodology", eyebrow = "How We Work" }) => (
-        <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden px-4 sm:px-6 lg:px-8">
+        <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden px-1">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">{eyebrow}</span>
@@ -168,7 +168,7 @@ export const SubServiceShared = {
     ),
 
     Benefits: ({ benefits, theme }) => (
-        <section className="py-16 md:py-24 bg-slate-50 px-4 sm:px-6 lg:px-8 border-y border-slate-100">
+        <section className="py-16 md:py-24 bg-slate-50 px-1 border-y border-slate-100">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 lg:mb-16">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">Business Value</span>
@@ -192,7 +192,7 @@ export const SubServiceShared = {
     ),
 
     FAQ: ({ faqs, theme }) => (
-        <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <section className="py-16 md:py-24 bg-white px-1">
             <div className="max-w-3xl mx-auto">
                 <div className="mb-12 text-center">
                     <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">Common Questions</span>
@@ -207,7 +207,7 @@ export const SubServiceShared = {
                                     <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
-                            <p className="text-slate-600 px-6 pb-6 text-sm md:text-base font-medium leading-relaxed">
+                            <p className="text-slate-600 px-1 pb-6 text-sm md:text-base font-medium leading-relaxed">
                                 {faq.a}
                             </p>
                         </details>
@@ -218,7 +218,7 @@ export const SubServiceShared = {
     ),
 
     Related: ({ links, theme }) => (
-        <section className="py-16 md:py-24 bg-slate-50 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
+        <section className="py-16 md:py-24 bg-slate-50 px-1 border-t border-slate-100">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#0A1024] mb-8 text-center md:text-left">Related Services</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
@@ -234,7 +234,7 @@ export const SubServiceShared = {
     ),
 
     CTA: ({ theme }) => (
-        <section className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative bg-cyan-900 overflow-hidden">
+        <section className="py-16 md:py-24 lg:py-32 px-1 relative bg-cyan-900 overflow-hidden">
             <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
             <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[80px] bg-cyan-400/20 translate-x-1/2 -translate-y-1/2"></div>
 
@@ -244,7 +244,7 @@ export const SubServiceShared = {
                     Let's build something meaningful. Tell us what you're tracking and we'll engineer the solution collaboratively.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link to="/contact" className="bg-cyan-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-cyan-400 hover:-translate-y-1 transition-all flex justify-center items-center gap-3 w-full sm:w-auto">
+                    <Link to="/contact" className="bg-cyan-500 text-white px-2 py-4 rounded-full font-bold shadow-lg hover:bg-cyan-400 hover:-translate-y-1 transition-all flex justify-center items-center gap-3 w-full sm:w-auto">
                         Get a Free Quote <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>

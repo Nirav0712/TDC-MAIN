@@ -40,10 +40,10 @@ export const ModernServiceLayout = ({
 
                 {intro && (
                     <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-7xl mx-auto px-1 relative z-10">
                             <div className="max-w-4xl mx-auto text-center lg:text-left">
                                 {intro.eyebrow && <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">{intro.eyebrow}</h2>}
-                                <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1024] mb-8">
+                                <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                     {intro.title}
                                 </motion.h2>
                                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
@@ -67,50 +67,79 @@ export const ModernServiceLayout = ({
                 )}
 
                 {services && (
-                    <section className="py-20 lg:py-32 bg-slate-50 relative">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                                {services.eyebrow && <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">{services.eyebrow}</h2>}
-                                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1024]">{services.title}</h3>
+                    <section>
+                        {/* TOP HEADING AREA */}
+                        <div className="bg-white py-12 md:py-16 lg:py-20">
+                            <div className="max-w-7xl mx-auto px-1 text-center flex flex-col items-center">
+                                {services.eyebrow && (
+                                    <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-1 py-2 rounded-full mb-6">
+                                        {services.eyebrow}
+                                    </div>
+                                )}
+                                <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] ${services.description ? 'mb-4' : ''}`}>
+                                    {services.title}
+                                </h3>
+                                {services.description && (
+                                    <p className="text-slate-600 max-w-3xl">
+                                        {services.description}
+                                    </p>
+                                )}
                             </div>
-                            <div className="space-y-12 lg:space-y-24">
-                                {services.items.map((svc, i) => (
-                                    <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeIn} className={`flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center lg:items-stretch py-4`}>
-                                        <div className="flex-1 space-y-6 w-full lg:max-w-[560px]">
-                                            <div className="w-16 h-16 bg-cyan-50 text-cyan-600 border border-cyan-100 rounded-2xl flex items-center justify-center">
-                                                {svc.icon}
+                        </div>
+
+                        {/* MAIN SERVICE CONTENT AREA */}
+                        <div className="w-full bg-white py-12 md:py-16">
+                            <div className="max-w-7xl mx-auto px-1">
+                                <div className="space-y-12 lg:space-y-16">
+                                    {services.items.map((svc, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            variants={fadeIn}
+                                            className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                        >
+
+                                            {/* LEFT COLUMN: Height determined organically by paragraph text */}
+                                            <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                                <div>
+                                                    <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                    <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                                </div>
+                                                <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                    {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h4 className="text-2xl md:text-3xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                                <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-cyan-500 rounded-full mt-4 mb-6"></div>
-                                            </div>
-                                            <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
-                                            </div>
-                                            {svc.cta && (
-                                                <div className="pt-4">
-                                                    <Link to="/contact" className="inline-flex items-center text-cyan-600 font-bold hover:text-cyan-700 transition-colors group/link text-lg">
-                                                        {svc.cta}
-                                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
+                                            {/* RIGHT COLUMN: Stretches matching left side through cascading flex layout */}
+                                            <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                                {/* Decorative Orange Shape (Absolute behind card) */}
+                                                <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+
+                                                {/* Outer Card (Given flex-1 to consume the full stretched column height) */}
+                                                <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                    {/* Image Space (Takes all remaining inner vertical height pushing CTA flush) */}
+                                                    <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                        <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                    </div>
+
+                                                    {/* Rigid CTA Link positioned below fluid image limit */}
+                                                    <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                        <div className="text-orange-400 shrink-0">
+                                                            {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                        </div>
+                                                        <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                            {svc.cta || "Get Started"}
+                                                        </span>
+                                                        <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
                                                     </Link>
                                                 </div>
-                                            )}
-                                        </div>
-
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0.95, x: i % 2 !== 0 ? -20 : 20 }}
-                                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                                            viewport={{ once: true, margin: "-100px" }}
-                                            className="flex-1 w-full lg:max-w-[560px] relative group"
-                                        >
-                                            <div className="absolute -inset-4 bg-cyan-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"></div>
-                                            <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] bg-slate-100 border border-slate-100 rounded-[18px] shadow-xl overflow-hidden group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]">
-                                                <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover" />
                                             </div>
+
                                         </motion.div>
-                                    </motion.div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -118,7 +147,7 @@ export const ModernServiceLayout = ({
 
                 {industries && (
                     <section className="py-20 lg:py-32 bg-white">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-7xl mx-auto px-1">
                             <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                                 {industries.eyebrow && <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">{industries.eyebrow}</h2>}
                                 <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">{industries.title}</h3>
@@ -143,7 +172,7 @@ export const ModernServiceLayout = ({
 
                 {reasons && (
                     <section className="py-20 lg:py-32 bg-[#F5FAFD]">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-7xl mx-auto px-1">
                             <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                                 {reasons.eyebrow && <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">{reasons.eyebrow}</h2>}
                                 <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
@@ -166,7 +195,7 @@ export const ModernServiceLayout = ({
 
                 {contact && (
                     <section className="py-16 md:py-24 lg:py-32 bg-white relative">
-                        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto px-1 relative z-10">
                             <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
                                 <div className="text-center mb-10">
                                     <h3 className="text-3xl font-bold text-[#0A1024] mb-3">{contact.title || "GET A FREE QUOTE"}</h3>
@@ -176,29 +205,29 @@ export const ModernServiceLayout = ({
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                            <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                            <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                            <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                            <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                            <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                            <input required type="email" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                            <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                            <input required type="tel" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                        <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                        <textarea required rows={4} className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
                                     </div>
                                     <div className="pt-4">
-                                        <button type="submit" className="w-full md:w-auto px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        <button type="submit" className="w-full md:w-auto px-2 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
                                             Submit Request
                                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </button>

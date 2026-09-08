@@ -24,7 +24,7 @@ const MainServiceLayout = ({
             <div className="w-full bg-[#FAF9F7] min-h-screen font-sans overflow-hidden">
 
                 {/* 1. HERO SECTION */}
-                <section className="relative pt-[120px] pb-20 lg:pt-[160px] lg:pb-32 px-6 lg:px-8 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <section className="relative pt-[120px] pb-20 lg:pt-[160px] lg:pb-32 px-1 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="flex flex-col z-10">
                         <div className="flex items-center gap-2 text-sm font-semibold mb-8 text-[#171717]/60">
                             <Link to="/" className="hover:text-[#171717] transition-colors">Home</Link>
@@ -43,10 +43,10 @@ const MainServiceLayout = ({
                             {description}
                         </p>
                         <div className="flex flex-wrap items-center gap-4">
-                            <Link to="/contact" className="bg-[#171717] text-white px-8 py-4 rounded-full font-semibold text-sm hover:bg-black transition-all shadow-lg shadow-black/10 flex items-center gap-2">
+                            <Link to="/contact" className="bg-[#171717] text-white px-2 py-4 rounded-full font-semibold text-sm hover:bg-black transition-all shadow-lg shadow-black/10 flex items-center gap-2">
                                 Start a Project <ArrowRight className="w-4 h-4" />
                             </Link>
-                            <Link to="/portfolio" className="bg-white border border-black/10 text-[#171717] px-8 py-4 rounded-full font-semibold text-sm hover:border-black/30 transition-all flex items-center gap-2">
+                            <Link to="/portfolio" className="bg-white border border-black/10 text-[#171717] px-2 py-4 rounded-full font-semibold text-sm hover:border-black/30 transition-all flex items-center gap-2">
                                 Explore Our Work
                             </Link>
                         </div>
@@ -58,7 +58,7 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 3. OVERVIEW SECTION */}
-                <section className="py-24 bg-white px-6 lg:px-8">
+                <section className="py-24 bg-white px-1">
                     <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-[#171717] mb-6">
@@ -74,7 +74,7 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 4. CAPABILITIES SECTION */}
-                <section className="py-24 px-6 lg:px-8 bg-[#FAF9F7]">
+                <section className="py-24 px-1 bg-[#FAF9F7]">
                     <div className="max-w-[1400px] mx-auto">
                         <div className="mb-16">
                             <span className={`text-[13px] font-bold tracking-[0.2em] uppercase mb-4 block ${themeConfig.accentText}`}>What We Build</span>
@@ -108,7 +108,7 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 5. TECHNOLOGIES */}
-                <section className="py-24 bg-white px-6 lg:px-8 border-y border-black/5 overflow-hidden">
+                <section className="py-24 bg-white px-1 border-y border-black/5 overflow-hidden">
                     <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/3 shrink-0">
                             <h2 className="text-3xl font-heading font-extrabold text-[#171717] mb-4">Technologies</h2>
@@ -116,7 +116,7 @@ const MainServiceLayout = ({
                         </div>
                         <div className="w-full md:w-2/3 flex flex-wrap gap-3">
                             {technologies.map((tech, i) => (
-                                <span key={i} className={`px-5 py-2.5 rounded-full border border-black/10 text-sm font-medium ${themeConfig.accentText} bg-white shadow-sm`}>
+                                <span key={i} className={`px-1 py-2.5 rounded-full border border-black/10 text-sm font-medium ${themeConfig.accentText} bg-white shadow-sm`}>
                                     {tech}
                                 </span>
                             ))}
@@ -125,14 +125,14 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 6. UNIQUE VISUAL SECTION */}
-                <section className={`py-32 px-6 lg:px-8 ${themeConfig.bg} overflow-hidden`}>
+                <section className={`py-32 px-1 ${themeConfig.bg} overflow-hidden`}>
                     <div className="max-w-[1400px] mx-auto">
                         <UniqueVisual />
                     </div>
                 </section>
 
                 {/* 7. PROCESS */}
-                <section className="py-24 px-6 lg:px-8 bg-white">
+                <section className="py-24 px-1 bg-white">
                     <div className="max-w-[1400px] mx-auto">
                         <div className="mb-16">
                             <span className={`text-[13px] font-bold tracking-[0.2em] uppercase mb-4 block ${themeConfig.accentText}`}>How We Work</span>
@@ -156,7 +156,7 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 8. BENEFITS */}
-                <section className="py-24 px-6 lg:px-8 bg-[#FAF9F7]">
+                <section className="py-24 px-1 bg-[#FAF9F7]">
                     <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
                         <div className="lg:col-span-4">
                             <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-[#171717] mb-6">Why Partner With Us?</h2>
@@ -177,7 +177,7 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 10. FAQ */}
-                <section className="py-24 px-6 lg:px-8 bg-white border-t border-black/5">
+                <section className="py-24 px-1 bg-white border-t border-black/5">
                     <div className="max-w-[800px] mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-[#171717]">Frequently Asked Questions</h2>
@@ -189,7 +189,7 @@ const MainServiceLayout = ({
                                         {faq.q}
                                         <span className="text-2xl transition-transform group-open:rotate-45 block">+</span>
                                     </summary>
-                                    <div className="px-6 pb-6 text-[#171717]/60 leading-relaxed text-sm">
+                                    <div className="px-1 pb-6 text-[#171717]/60 leading-relaxed text-sm">
                                         {faq.a}
                                     </div>
                                 </details>
@@ -199,13 +199,13 @@ const MainServiceLayout = ({
                 </section>
 
                 {/* 11. FINAL CTA */}
-                <section className={`py-32 px-6 lg:px-8 ${themeConfig.bg}`}>
+                <section className={`py-32 px-1 ${themeConfig.bg}`}>
                     <div className="max-w-[1000px] mx-auto text-center flex flex-col items-center">
                         <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-[#171717] mb-6">Have a project in mind?</h2>
                         <p className="text-lg md:text-xl text-[#171717]/70 leading-relaxed max-w-2xl mb-12">
                             Tell us what you're building and we'll help you turn the idea into a digital experience that works.
                         </p>
-                        <Link to="/contact" className="bg-[#171717] text-white px-10 py-5 rounded-full font-bold text-sm hover:bg-black transition-all shadow-lg flex items-center gap-3">
+                        <Link to="/contact" className="bg-[#171717] text-white px-3 py-5 rounded-full font-bold text-sm hover:bg-black transition-all shadow-lg flex items-center gap-3">
                             Start a Project <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>

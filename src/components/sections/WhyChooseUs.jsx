@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
             <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-[#63D3E8]/5 blur-[100px] rounded-full pointer-events-none" />
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#0A263D 1px, transparent 1px), linear-gradient(90deg, #0A263D 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-            <div className="max-w-[1320px] mx-auto px-5 md:px-8 relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-10 md:gap-14 xl:gap-20">
+            <div className="max-w-[1320px] mx-auto px-1 md:px-1 relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-10 md:gap-14 xl:gap-20">
                 
                 {/* Left: Editorial Column */}
                 <div className="xl:col-span-4 self-start flex flex-col items-start xl:sticky xl:top-[120px]">

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const BlogPreview = () => {
   return (
     <section className="py-24 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-1">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
           <SectionHeading title="Latest Insights" subtitle="From Our Blog" />
           <Button variant="outline" to="/blog" className="mb-12">Read All Articles</Button>

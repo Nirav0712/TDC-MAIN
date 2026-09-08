@@ -72,7 +72,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                         aria-label="Mobile Navigation"
                     >
                         {/* Header */}
-                        <div className="flex justify-between items-center px-6 h-[72px] lg:h-[76px] shrink-0 border-b border-[#061A2E]/10 bg-[rgba(247,250,252,0.94)] backdrop-blur-md">
+                        <div className="flex justify-between items-center px-1 h-[72px] lg:h-[76px] shrink-0 border-b border-[#061A2E]/10 bg-[rgba(247,250,252,0.94)] backdrop-blur-md">
                             <Link to="/" className="flex items-center" onClick={onClose}>
                                 <img src={logo} alt="The Digital Connect" className="h-6 md:h-7 object-contain w-auto" />
                             </Link>
@@ -86,7 +86,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                         </div>
 
                         {/* Scrollable Nav Content & CTA Section */}
-                        <div className="flex-1 overflow-y-auto px-6 py-8 pb-[calc(2rem+env(safe-area-inset-bottom))]">
+                        <div className="flex-1 overflow-y-auto px-1 py-8 pb-[calc(2rem+env(safe-area-inset-bottom))]">
                             <nav className="flex flex-col w-full mb-12">
                                 {navOrder.map((nav, i) => {
                                     const sectionData = megaMenuData[nav.id];

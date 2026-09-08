@@ -17,7 +17,7 @@ const Services = () => {
   return (
     <section className="py-16 lg:py-24 bg-white relative">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-soft to-transparent opacity-50 h-[80px] lg:h-32 pointer-events-none"></div>
-      <div className="max-w-7xl mx-auto px-5 lg:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-1 lg:px-1 relative z-10">
         <SectionHeading title="What we do" subtitle="Our Services" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {servicesData.map((service, i) => {

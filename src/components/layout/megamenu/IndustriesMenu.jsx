@@ -21,7 +21,7 @@ const IndustriesMenu = ({ data, setActiveMenu }) => {
 
     return (
         <div className="flex w-full h-full min-h-[440px] flex-col bg-white">
-            <div className="px-10 py-6 border-b border-brand-border bg-brand-bg-light/50 flex items-center justify-between">
+            <div className="px-3 py-6 border-b border-brand-border bg-brand-bg-light/50 flex items-center justify-between">
                 <div>
                     <h3 className="text-xl font-heading font-extrabold text-brand-primary-navy">Industries We Serve</h3>
                     <p className="text-sm text-brand-text-muted mt-1">Domain expertise across key technological verticals.</p>

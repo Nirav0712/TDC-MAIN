@@ -10,7 +10,7 @@ const FeaturedWork = () => {
 
   return (
     <section className="py-16 lg:py-24 bg-brand-soft">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+      <div className="max-w-7xl mx-auto px-1 lg:px-1">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 md:mb-16">
           <SectionHeading title="Selected work" subtitle="Featured Portfolio" />
           <Button variant="outline" to="/portfolio" className="mb-12">View All Work</Button>
@@ -26,7 +26,7 @@ const FeaturedWork = () => {
             >
               <div className="w-full h-full p-6 md:p-8 flex flex-col justify-between">
                 <div className="flex justify-between items-start">
-                  <span className="px-4 py-1.5 rounded-full bg-brand-cyan/50 text-foreground text-sm font-bold tracking-wide">
+                  <span className="px-1 py-1.5 rounded-full bg-brand-cyan/50 text-foreground text-sm font-bold tracking-wide">
                     {project.category}
                   </span>
                   <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

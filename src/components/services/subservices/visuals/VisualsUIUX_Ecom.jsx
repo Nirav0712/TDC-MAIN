@@ -36,7 +36,7 @@ export const WireframingVisual = () => (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col">
             <h4 className="text-sm font-bold text-slate-400 mb-4 tracking-widest uppercase">Wireframe Prototype</h4>
             <div className="w-full h-full border-2 border-dashed border-slate-200 rounded-xl relative p-4 grid grid-rows-[auto_1fr_auto] gap-4">
-                <div className="w-full h-12 border border-slate-200 rounded-lg flex items-center justify-between px-4 bg-slate-50">
+                <div className="w-full h-12 border border-slate-200 rounded-lg flex items-center justify-between px-1 bg-slate-50">
                     <div className="w-8 h-8 rounded-full border border-slate-200 bg-white"></div>
                     <div className="flex gap-2">
                         <div className="w-12 h-3 bg-slate-200 rounded-full"></div>
@@ -63,7 +63,7 @@ export const PrototypingVisual = () => (
                 <motion.path d="M 0 20 Q 50% 0 100% 20" stroke="rgba(14, 165, 233, 0.4)" strokeWidth="3" fill="none" strokeDasharray="5 5" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }} />
             </svg>
             <motion.div initial={{ x: -20 }} animate={{ x: 0 }} className="w-[45%] h-full bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden flex flex-col">
-                <div className="h-10 bg-slate-100 flex items-center px-4"><span className="text-[10px] font-bold text-slate-400">Screen 1</span></div>
+                <div className="h-10 bg-slate-100 flex items-center px-1"><span className="text-[10px] font-bold text-slate-400">Screen 1</span></div>
                 <div className="p-4 flex-1 flex flex-col gap-3">
                     <div className="w-full h-24 bg-cyan-50 rounded-xl border border-cyan-200 cursor-pointer flex items-center justify-center font-bold text-cyan-600 text-xs">Tap Target</div>
                     <div className="w-full h-24 bg-slate-50 rounded-xl border border-slate-100"></div>
@@ -117,15 +117,15 @@ export const DesignSystemsVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4 w-full h-full relative z-20">
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }} className="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col items-center justify-center gap-3 hover:-translate-y-1 transition-transform">
-                <div className="px-4 py-2 bg-cyan-50 text-cyan-700 font-bold text-xs rounded-full border border-cyan-100">Design Token</div>
-                <code className="text-xs text-slate-500 bg-slate-50 px-3 py-1 rounded-md border border-slate-100">--color-primary</code>
+                <div className="px-1 py-2 bg-cyan-50 text-cyan-700 font-bold text-xs rounded-full border border-cyan-100">Design Token</div>
+                <code className="text-xs text-slate-500 bg-slate-50 px-1 py-1 rounded-md border border-slate-100">--color-primary</code>
             </motion.div>
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex items-center justify-center">
-                <button className="px-6 py-3 bg-[#0A1024] text-white rounded-xl shadow-md font-bold flex items-center gap-2 hover:scale-105 transition-transform"><Component size={16} /> Base Button</button>
+                <button className="px-1 py-3 bg-[#0A1024] text-white rounded-xl shadow-md font-bold flex items-center gap-2 hover:scale-105 transition-transform"><Component size={16} /> Base Button</button>
             </motion.div>
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }} className="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-center gap-3">
-                <div className="w-full h-10 bg-white border border-slate-200 rounded-lg flex items-center px-4 gap-2"> <div className="w-3 h-3 rounded-full bg-slate-300"></div> <span className="text-xs font-bold text-slate-400">Input Default</span></div>
-                <div className="w-full h-10 bg-cyan-50 border border-cyan-300 rounded-lg flex items-center px-4 gap-2 shadow-sm"> <div className="w-3 h-3 rounded-full bg-cyan-500"></div> <span className="text-xs font-bold text-cyan-700">Input Active</span></div>
+                <div className="w-full h-10 bg-white border border-slate-200 rounded-lg flex items-center px-1 gap-2"> <div className="w-3 h-3 rounded-full bg-slate-300"></div> <span className="text-xs font-bold text-slate-400">Input Default</span></div>
+                <div className="w-full h-10 bg-cyan-50 border border-cyan-300 rounded-lg flex items-center px-1 gap-2 shadow-sm"> <div className="w-3 h-3 rounded-full bg-cyan-500"></div> <span className="text-xs font-bold text-cyan-700">Input Active</span></div>
             </motion.div>
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} className="bg-slate-50 rounded-2xl shadow-inner border border-slate-200 p-6 flex flex-col items-center justify-center relative overflow-hidden">
                 <Layers className="text-slate-200 w-24 h-24 absolute -right-2 -bottom-2" />
@@ -138,14 +138,14 @@ export const DesignSystemsVisual = () => (
 export const ShopifyVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
         <motion.div initial={{ y: 5 }} animate={{ y: [-5, 5, -5] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 flex flex-col relative z-20">
-            <div className="h-16 border-b border-slate-100 flex justify-between items-center px-6 bg-slate-50">
+            <div className="h-16 border-b border-slate-100 flex justify-between items-center px-1 bg-slate-50">
                 <div className="font-bold text-sm text-[#0A1024]">Shopify Plus Store</div>
                 <div className="flex gap-3">
                     <div className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center"><Search size={14} className="text-slate-500" /></div>
                     <div className="w-8 h-8 rounded-full bg-cyan-600 flex items-center justify-center text-white shadow-sm"><ShoppingBag size={14} /></div>
                 </div>
             </div>
-            <div className="w-full h-40 bg-cyan-50 flex items-center px-8 relative overflow-hidden border-b border-cyan-100">
+            <div className="w-full h-40 bg-cyan-50 flex items-center px-2 relative overflow-hidden border-b border-cyan-100">
                 <div className="absolute right-0 top-0 w-64 h-64 bg-cyan-200/50 rounded-full blur-3xl opacity-50 translate-x-1/2"></div>
                 <div className="z-10">
                     <div className="w-32 h-4 bg-cyan-600/20 rounded-full mb-3"></div>
@@ -174,13 +174,13 @@ export const WooCommerceVisual = () => (
             <div className="w-[140px] bg-slate-50 p-4 flex flex-col gap-2 border-r border-slate-200">
                 <div className="w-full h-8 mb-4 flex items-center gap-2 text-[#0A1024] font-black"><Store size={20} className="text-indigo-600" /> WOO</div>
                 {['Dashboard', 'Orders', 'Products', 'Analytics', 'Marketing'].map((t, i) => (
-                    <div key={i} className={`w-full py-2 px-3 rounded-lg text-xs font-bold ${i === 1 ? 'bg-indigo-50 text-indigo-700 border border-indigo-100' : 'text-slate-500 hover:bg-slate-100'} cursor-pointer`}>{t}</div>
+                    <div key={i} className={`w-full py-2 px-1 rounded-lg text-xs font-bold ${i === 1 ? 'bg-indigo-50 text-indigo-700 border border-indigo-100' : 'text-slate-500 hover:bg-slate-100'} cursor-pointer`}>{t}</div>
                 ))}
             </div>
             <div className="flex-1 p-6 flex flex-col gap-6 bg-white">
                 <div className="flex justify-between items-center">
                     <h3 className="text-lg font-bold text-[#0A1024]">Orders Overview</h3>
-                    <div className="px-3 py-1 bg-slate-50 rounded-full text-xs text-slate-500 border border-slate-200 flex items-center gap-1 font-bold cursor-pointer">Today <ChevronRight size={14} /></div>
+                    <div className="px-1 py-1 bg-slate-50 rounded-full text-xs text-slate-500 border border-slate-200 flex items-center gap-1 font-bold cursor-pointer">Today <ChevronRight size={14} /></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-sm relative overflow-hidden">
@@ -194,7 +194,7 @@ export const WooCommerceVisual = () => (
                         <div className="text-green-500 text-xs font-bold">+5% vs yesterday</div>
                     </div>
                 </div>
-                <div className="flex-1 bg-slate-50 border border-slate-200 rounded-2xl flex items-end px-4 gap-2 pb-0 pt-8 relative overflow-hidden">
+                <div className="flex-1 bg-slate-50 border border-slate-200 rounded-2xl flex items-end px-1 gap-2 pb-0 pt-8 relative overflow-hidden">
                     <div className="absolute top-4 left-4 text-xs font-bold text-slate-400">Revenue Trend</div>
                     {[30, 70, 50, 90, 60, 40, 80].map((h, i) => (
                         <motion.div key={i} initial={{ height: 0 }} animate={{ height: `${h}%` }} transition={{ delay: i * 0.1, duration: 0.5 }} className="flex-1 bg-gradient-to-t from-indigo-500 to-indigo-300 rounded-t-sm"></motion.div>
@@ -242,7 +242,7 @@ export const PaymentIntegrationVisual = () => (
                 <div className="text-3xl font-extrabold text-[#0A1024]">$1,450.00</div>
             </div>
             <div className="p-6 flex flex-col gap-4 bg-white">
-                <div className="w-full h-14 bg-white border border-cyan-200 shadow-sm rounded-xl flex items-center px-4 gap-3">
+                <div className="w-full h-14 bg-white border border-cyan-200 shadow-sm rounded-xl flex items-center px-1 gap-3">
                     <CreditCard size={20} className="text-cyan-600" />
                     <div>
                         <div className="text-sm font-bold text-[#0A1024]">•••• •••• •••• 4242</div>
@@ -284,7 +284,7 @@ export const MarketplaceVisual = () => (
                 </motion.div>
             </div>
 
-            <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity }} className="absolute bottom-10 bg-white px-4 py-2 rounded-full shadow-md border border-slate-200 text-xs font-bold text-slate-500 flex items-center gap-2">
+            <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity }} className="absolute bottom-10 bg-white px-1 py-2 rounded-full shadow-md border border-slate-200 text-xs font-bold text-slate-500 flex items-center gap-2">
                 <ChartBar size={14} className="text-green-500" /> Revenue Split Core
             </motion.div>
         </div>

@@ -60,7 +60,7 @@ const Team = () => {
         <PageTransition>
             <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
                 {/* HERO */}
-                <section className="bg-[#08243A] pt-[120px] pb-[80px] lg:pt-[160px] lg:pb-[120px] px-5 relative overflow-hidden text-center z-10 border-b border-[#08BFE8]/10">
+                <section className="bg-[#08243A] pt-[120px] pb-[80px] lg:pt-[160px] lg:pb-[120px] px-1 relative overflow-hidden text-center z-10 border-b border-[#08BFE8]/10">
                     <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
                     <div className="max-w-[1200px] mx-auto relative z-10">
                         <span className="text-[#08BFE8] font-bold tracking-[0.2em] text-xs uppercase mb-6 block">Our Team</span>
@@ -76,7 +76,7 @@ const Team = () => {
 
                 {/* STICKY NAV FOR TEAM */}
                 <div className="sticky top-[72px] lg:top-[76px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
-                    <div className="max-w-[1320px] mx-auto px-5">
+                    <div className="max-w-[1320px] mx-auto px-1">
                         <div className="flex overflow-x-auto no-scrollbar gap-6 md:gap-10 py-4">
                             {teamData.map((team, i) => {
                                 const isActive = activeSection === team.id;
@@ -87,7 +87,7 @@ const Team = () => {
                                         onClick={(e) => handleScrollClick(e, team.id)}
                                         className={`flex items-center gap-2 whitespace-nowrap shrink-0 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-40 hover:opacity-100'}`}
                                     >
-                                        <span className={`text-xs font-bold px-2 py-1 rounded-md ${isActive ? 'bg-[#08BFE8] text-white' : 'bg-gray-100 text-gray-500'}`}>{team.number}</span>
+                                        <span className={`text-xs font-bold px-1 py-1 rounded-md ${isActive ? 'bg-[#08BFE8] text-white' : 'bg-gray-100 text-gray-500'}`}>{team.number}</span>
                                         <span className={`font-heading font-bold text-sm md:text-base ${isActive ? 'text-[#061B2E]' : 'text-gray-800'}`}>{team.title}</span>
                                     </a>
                                 )
@@ -97,7 +97,7 @@ const Team = () => {
                 </div>
 
                 {/* 4 CARDS TILE NAVIGATION */}
-                <section className="relative z-20 py-16 lg:py-24 px-5 max-w-[1320px] mx-auto w-full">
+                <section className="relative z-20 py-16 lg:py-24 px-1 max-w-[1320px] mx-auto w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {teamData.map((team, i) => {
                             const Icon = team.icon;
@@ -128,7 +128,7 @@ const Team = () => {
                 </section>
 
                 {/* CONTENT SECTIONS */}
-                <div className="max-w-[1320px] mx-auto px-5 pb-24 lg:pb-32">
+                <div className="max-w-[1320px] mx-auto px-1 pb-24 lg:pb-32">
 
                     {/* Leadership */}
                     <section id="leadership" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">
@@ -180,7 +180,7 @@ const Team = () => {
                             </div>
                             <div className="bg-[#08243A] rounded-[40px] p-6 md:p-8 lg:p-10 relative overflow-hidden text-sm md:text-base font-mono text-[#08BFE8] shadow-2xl h-[350px] md:h-[400px] flex flex-col justify-center">
                                 <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(8,191,232,1)_1px,transparent_1px),linear-gradient(90deg,rgba(8,191,232,1)_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
-                                <div className="relative z-10 space-y-3 px-4 md:px-6">
+                                <div className="relative z-10 space-y-3 px-1 md:px-1">
                                     <div className="text-[#7F94A8]">{'// The foundation of our digital products'}</div>
                                     <div className="flex flex-wrap break-all"><span className="text-[#159ED9] mr-2">const</span> <span className="text-white">engineeringTeam</span> <span className="text-white mx-2">=</span> {'{'}</div>
                                     <div className="pl-6">focus: <span className="text-[#EAF8FC]">'Scalability'</span>,</div>
@@ -221,7 +221,7 @@ const Team = () => {
 
                     {/* Growth */}
                     <section id="growth" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px] border-t border-gray-200">
-                        <div className="bg-[#061B2E] rounded-[40px] px-6 py-12 md:px-8 md:py-16 lg:p-20 relative overflow-hidden shadow-2xl">
+                        <div className="bg-[#061B2E] rounded-[40px] px-1 py-12 md:px-1 md:py-16 lg:p-20 relative overflow-hidden shadow-2xl">
                             <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-[#08BFE8]/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none"></div>
 
                             <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">

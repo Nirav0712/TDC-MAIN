@@ -19,12 +19,12 @@ const Leadership = () => {
         <PageTransition>
             <div className="w-full bg-[#FFFFFF] min-h-screen font-sans flex flex-col">
                 <CompanySubNavigation />
-                <section className="pt-24 pb-16 px-5 md:px-8 bg-[#061B2E] text-center w-full">
+                <section className="pt-24 pb-16 px-1 md:px-1 bg-[#061B2E] text-center w-full">
                     <h1 className="text-[clamp(40px,8vw,72px)] font-heading font-black text-white mb-6">People Behind The Vision</h1>
                     <p className="text-[#DDF7FC] text-lg max-w-2xl mx-auto mb-16">The executives directing our global technical and creative strategies.</p>
                 </section>
 
-                <section className="py-24 max-w-[1320px] mx-auto px-5 md:px-8 w-full">
+                <section className="py-24 max-w-[1320px] mx-auto px-1 md:px-1 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {leaders.map((leader, i) => (
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} key={i} className="flex flex-col sm:flex-row bg-[#F4FAFC] rounded-3xl overflow-hidden border border-[#DDF7FC] group">
@@ -46,7 +46,7 @@ const Leadership = () => {
                 </section>
 
                 <section className="py-24 bg-[#F4FAFC]">
-                    <div className="max-w-[1320px] mx-auto px-5 md:px-8 text-center">
+                    <div className="max-w-[1320px] mx-auto px-1 md:px-1 text-center">
                         <h2 className="text-4xl font-black text-[#061B2E] mb-16">How We Lead</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-4 gap-6">
                             {['Vision', 'Ownership', 'Collaboration', 'Innovation'].map(val => (

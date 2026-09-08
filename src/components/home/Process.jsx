@@ -16,7 +16,7 @@ const Process = () => {
 
   return (
     <section className="py-32 bg-white" ref={containerRef}>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-1">
         <div className="mb-20 text-center max-w-3xl mx-auto">
           <SectionHeading title="Our Process" subtitle="How We Work" centered />
           <p className="text-muted-foreground text-xl">A proven methodology designed to deliver exceptional digital products on time and on budget.</p>

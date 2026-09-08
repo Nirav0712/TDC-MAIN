@@ -4,7 +4,7 @@ const ClientLogos = () => {
   const logos = ['Acme Corp', 'GlobalBank', 'TechNova', 'HealthPlus', 'Zenith Logistics', 'Quantum'];
   return (
     <section className="py-12 border-b border-border bg-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
+      <div className="max-w-7xl mx-auto px-1 mb-8 text-center">
         <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Trusted by ambitious businesses</p>
       </div>
       <div className="flex w-full overflow-hidden">

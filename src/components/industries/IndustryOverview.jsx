@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const IndustryOverview = ({ title, content }) => (
-  <section className='py-16 lg:py-32 bg-white px-5 lg:px-8 relative overflow-hidden'>
+  <section className='py-16 lg:py-32 bg-white px-1 lg:px-1 relative overflow-hidden'>
     <div className='max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 relative z-10'>
       <div className='lg:col-span-5 relative'>
         <span className='text-[12px] md:text-[13px] font-bold tracking-[0.2em] uppercase mb-3 md:mb-4 block text-[#18C5E8]'>Overview</span>

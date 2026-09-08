@@ -20,7 +20,7 @@ const HireTeamMenu = ({ data, setActiveMenu }) => {
         <div className="flex w-full h-[520px]">
             {/* Left Category Selection */}
             <div className="w-[340px] shrink-0 bg-brand-primary-navy p-6 flex flex-col gap-1 shadow-lg relative z-20">
-                <h4 className="text-[11px] font-bold tracking-widest uppercase text-white/50 mb-4 px-3">Hire Dedicated Experts</h4>
+                <h4 className="text-[11px] font-bold tracking-widest uppercase text-white/50 mb-4 px-1">Hire Dedicated Experts</h4>
 
                 {data.items.map((item, index) => {
                     const isActive = activeId === item.id;
@@ -35,7 +35,7 @@ const HireTeamMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={item.href}
                                 onClick={() => setActiveMenu(null)}
-                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${isActive ? 'bg-brand-cyan text-brand-primary-navy shadow-md' : 'text-white hover:bg-white/10'}`}
+                                className={`flex items-center gap-3 px-1 py-3 rounded-xl transition-all duration-300 ${isActive ? 'bg-brand-cyan text-brand-primary-navy shadow-md' : 'text-white hover:bg-white/10'}`}
                             >
                                 <Icon className={`w-5 h-5 ${isActive ? 'text-brand-primary-navy' : 'text-brand-cyan opacity-70'}`} />
                                 <span className="text-sm font-semibold">
@@ -47,7 +47,7 @@ const HireTeamMenu = ({ data, setActiveMenu }) => {
                     );
                 })}
 
-                <div className="mt-auto px-4 py-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="mt-auto px-1 py-4 bg-white/5 rounded-xl border border-white/10">
                     <p className="text-xs text-white/70 mb-3 leading-relaxed">
                         Scale your delivery capacity with our pre-vetted senior engineering talent.
                     </p>
@@ -85,7 +85,7 @@ const HireTeamMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={currentItem.href}
                                 onClick={() => setActiveMenu(null)}
-                                className="px-5 py-2.5 bg-brand-bg-light border border-brand-border rounded-full text-sm font-bold text-brand-primary-navy hover:bg-brand-primary-navy hover:text-white hover:border-brand-primary-navy transition-all"
+                                className="px-1 py-2.5 bg-brand-bg-light border border-brand-border rounded-full text-sm font-bold text-brand-primary-navy hover:bg-brand-primary-navy hover:text-white hover:border-brand-primary-navy transition-all"
                             >
                                 View All Category Roles
                             </Link>

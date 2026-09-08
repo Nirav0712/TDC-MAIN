@@ -87,7 +87,7 @@ const Process = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(24,197,232,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(24,197,232,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-deep-blue rounded-full blur-[120px] opacity-50 mix-blend-screen pointer-events-none"></div>
 
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-1 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,12 +103,12 @@ const Process = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
-                <Button className="w-full sm:w-auto text-lg h-14 px-8 bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan shadow-[0_0_20px_rgba(24,197,232,0.3)]">
+                <Button className="w-full sm:w-auto text-lg h-14 px-2 bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan shadow-[0_0_20px_rgba(24,197,232,0.3)]">
                   Start a Project <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" className="w-full sm:w-auto text-lg h-14 px-8 border-white/20 text-white hover:bg-white/10">
+                <Button variant="outline" className="w-full sm:w-auto text-lg h-14 px-2 border-white/20 text-white hover:bg-white/10">
                   Talk to Our Team
                 </Button>
               </Link>
@@ -119,7 +119,7 @@ const Process = () => {
 
       {/* PROCESS JOURNEY */}
       <section className="py-24 bg-white relative relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-1 relative z-10">
           <div className="text-center mb-20">
             <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Step-by-Step</span>
             <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight">
@@ -180,7 +180,7 @@ const Process = () => {
 
       {/* STRATEGY SECTION */}
       <section className="py-24 bg-brand-off-white relative">
-        <div className="max-w-[1400px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-1">
           <div className="mb-16">
             <span className="text-brand-light-blue font-bold tracking-widest uppercase text-sm mb-3 block">Methodology</span>
             <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy max-w-2xl leading-tight">
@@ -214,14 +214,14 @@ const Process = () => {
 
       {/* COLLABORATION SECTION */}
       <section className="py-24 bg-white relative border-y border-brand-border">
-        <div className="max-w-[1400px] mx-auto px-6 text-center">
+        <div className="max-w-[1400px] mx-auto px-1 text-center">
           <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Collaboration</span>
           <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy max-w-3xl mx-auto leading-tight mb-16">
             One Team. One Clear Direction.
           </h2>
 
           <div className="overflow-x-auto pb-8 hide-scrollbar">
-            <div className="flex items-center justify-between min-w-[800px] relative px-4">
+            <div className="flex items-center justify-between min-w-[800px] relative px-1">
               {/* Line connecting */}
               <div className="absolute top-1/2 left-8 right-8 h-1 bg-brand-border -translate-y-1/2 z-0"></div>
 
@@ -232,7 +232,7 @@ const Process = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="relative z-10 flex flex-col items-center gap-4 bg-white px-2"
+                  className="relative z-10 flex flex-col items-center gap-4 bg-white px-1"
                 >
                   <div className="w-16 h-16 rounded-full bg-brand-primary-navy text-brand-cyan flex items-center justify-center shadow-lg border-4 border-white font-bold text-xl cursor-default hover:scale-110 transition-transform">
                     {idx + 1}
@@ -248,7 +248,7 @@ const Process = () => {
       {/* CTA SECTION */}
       <section className="relative py-24 bg-brand-primary-navy text-white overflow-hidden m-4 md:m-8 rounded-3xl">
         <div className="absolute inset-0 bg-brand-deep-blue opacity-50 mix-blend-multiply"></div>
-        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
+        <div className="max-w-4xl mx-auto px-1 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 leading-tight">
             Ready to build what's next?
           </h2>
@@ -256,7 +256,7 @@ const Process = () => {
             Let's turn your idea into a digital experience designed for real business impact.
           </p>
           <Link to="/contact">
-            <Button className="h-16 px-10 text-lg bg-brand-cyan text-brand-primary-navy hover:bg-white shadow-[0_0_30px_rgba(24,197,232,0.4)] transition-all">
+            <Button className="h-16 px-3 text-lg bg-brand-cyan text-brand-primary-navy hover:bg-white shadow-[0_0_30px_rgba(24,197,232,0.4)] transition-all">
               Discuss Your Project <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

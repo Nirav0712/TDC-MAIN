@@ -34,7 +34,7 @@ const Careers = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-deep-blue/60 via-brand-primary-navy to-brand-primary-navy"></div>
         <div className="absolute right-0 bottom-0 w-full h-[500px] bg-gradient-to-t from-brand-primary-navy/80 to-transparent pointer-events-none"></div>
 
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-1 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,12 +50,12 @@ const Careers = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#open-positions">
-                <Button className="w-full sm:w-auto text-lg h-14 px-8 bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan">
+                <Button className="w-full sm:w-auto text-lg h-14 px-2 bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan">
                   View Open Positions <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
               <Link to="/about/team">
-                <Button variant="outline" className="w-full sm:w-auto text-lg h-14 px-8 border-white/20 text-white hover:bg-white/10">
+                <Button variant="outline" className="w-full sm:w-auto text-lg h-14 px-2 border-white/20 text-white hover:bg-white/10">
                   Meet Our Team
                 </Button>
               </Link>
@@ -66,7 +66,7 @@ const Careers = () => {
 
       {/* WHY WORK WITH US */}
       <section className="py-24 bg-brand-off-white relative">
-        <div className="max-w-[1400px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-1">
           <div className="text-center mb-16">
             <span className="text-brand-light-blue font-bold tracking-widest uppercase text-sm mb-3 block">Benefits</span>
             <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight">
@@ -97,7 +97,7 @@ const Careers = () => {
 
       {/* OUR CULTURE */}
       <section className="py-24 bg-white relative border-y border-brand-border overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-1">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/3">
               <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Our Culture</span>
@@ -128,7 +128,7 @@ const Careers = () => {
 
       {/* CAREER JOURNEY */}
       <section className="py-24 bg-brand-off-white relative">
-        <div className="max-w-[1400px] mx-auto px-6 text-center">
+        <div className="max-w-[1400px] mx-auto px-1 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-primary-navy leading-tight mb-16">
             Your Growth Journey
           </h2>
@@ -141,7 +141,7 @@ const Careers = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: idx * 0.1 }}
-                  className="bg-white border-2 border-brand-cyan/20 text-brand-primary-navy px-6 py-3 rounded-full font-bold shadow-sm"
+                  className="bg-white border-2 border-brand-cyan/20 text-brand-primary-navy px-1 py-3 rounded-full font-bold shadow-sm"
                 >
                   {step}
                 </motion.div>
@@ -158,7 +158,7 @@ const Careers = () => {
 
       {/* OPEN POSITIONS */}
       <section id="open-positions" className="py-24 bg-white relative">
-        <div className="max-w-[1400px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-1">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight mb-4">
@@ -188,13 +188,13 @@ const Careers = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3 py-1 rounded-full text-brand-text-muted">
+                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-1 py-1 rounded-full text-brand-text-muted">
                     {job.dept}
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3 py-1 rounded-full text-brand-text-muted inline-flex items-center gap-1">
+                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-1 py-1 rounded-full text-brand-text-muted inline-flex items-center gap-1">
                     <MapPin size={12} /> {job.location}
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3 py-1 rounded-full text-brand-text-muted">
+                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-1 py-1 rounded-full text-brand-text-muted">
                     {job.exp}
                   </span>
                 </div>
@@ -215,7 +215,7 @@ const Careers = () => {
       {/* CAREERS CTA */}
       <section className="relative py-24 bg-brand-primary-navy text-white overflow-hidden m-4 md:m-8 rounded-3xl text-center">
         <div className="absolute inset-0 bg-brand-light-blue opacity-10"></div>
-        <div className="max-w-3xl mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mx-auto px-1 relative z-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 leading-tight">
             Don't See Your Role?
           </h2>
@@ -223,7 +223,7 @@ const Careers = () => {
             We're always interested in meeting talented people who can bring new perspectives to our team.
           </p>
           <Link to="/contact">
-            <Button className="h-16 px-10 text-lg bg-brand-cyan text-brand-primary-navy hover:bg-white shadow-[0_0_30px_rgba(24,197,232,0.4)] transition-all">
+            <Button className="h-16 px-3 text-lg bg-brand-cyan text-brand-primary-navy hover:bg-white shadow-[0_0_30px_rgba(24,197,232,0.4)] transition-all">
               Send Your Profile <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

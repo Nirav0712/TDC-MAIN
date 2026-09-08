@@ -13,7 +13,7 @@ const navItems = [
 export const CompanySubNavigation = () => {
   return (
     <div className="w-full bg-[#061B2E] border-b border-white/10 relative z-20">
-      <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <div className="max-w-[1320px] mx-auto px-1 md:px-1">
         <ul className="flex overflow-x-auto gap-3 md:gap-6 no-scrollbar py-4 md:py-6">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -22,7 +22,7 @@ export const CompanySubNavigation = () => {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all duration-300 ${
+                    `flex items-center gap-2 px-1 py-2.5 rounded-xl border transition-all duration-300 ${
                       isActive 
                         ? 'bg-[#19B5D8]/10 border-[#19B5D8]/50 text-white shadow-[0_0_15px_rgba(25,181,216,0.15)]' 
                         : 'bg-white/5 border-transparent text-[#64748B] hover:bg-white/10 hover:text-white'

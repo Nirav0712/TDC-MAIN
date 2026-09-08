@@ -60,7 +60,7 @@ const Values = () => {
         <PageTransition>
             <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
                 {/* HERO */}
-                <section className="bg-[#061B2E] pt-[120px] pb-[80px] lg:pt-[160px] lg:pb-[120px] px-5 relative overflow-hidden text-center z-10 border-b border-[#08BFE8]/10">
+                <section className="bg-[#061B2E] pt-[120px] pb-[80px] lg:pt-[160px] lg:pb-[120px] px-1 relative overflow-hidden text-center z-10 border-b border-[#08BFE8]/10">
                     <div className="absolute inset-0 bg-[#061B2E] opacity-90 layer-1 pointer-events-none"></div>
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#159ED9]/5 rounded-full blur-[120px] pointer-events-none"></div>
                     <div className="max-w-[1200px] mx-auto relative z-10">
@@ -75,7 +75,7 @@ const Values = () => {
                 </section>
 
                 {/* 4 CARDS TILE NAVIGATION */}
-                <section className="relative z-20 -mt-16 pb-16 lg:pb-24 px-5 max-w-[1320px] mx-auto w-full">
+                <section className="relative z-20 -mt-16 pb-16 lg:pb-24 px-1 max-w-[1320px] mx-auto w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {valuesData.map((val, i) => {
                             const Icon = val.icon;
@@ -109,7 +109,7 @@ const Values = () => {
                 </section>
 
                 {/* CONTENT SECTIONS */}
-                <div className="max-w-[1320px] mx-auto px-5 pb-24 lg:pb-32">
+                <div className="max-w-[1320px] mx-auto px-1 pb-24 lg:pb-32">
 
                     {/* Innovation First */}
                     <section id="innovation" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">

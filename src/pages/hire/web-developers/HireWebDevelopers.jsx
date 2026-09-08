@@ -12,14 +12,14 @@ const HireWebDevelopers = () => {
             <SEO title="${cat.name} | The Digital Connect" description="${cat.desc}" />
             <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
                 {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-5 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
+                <div className="pt-[90px] md:pt-[100px] px-1 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
                     <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
                     <ChevronRight size={14} />
                     <span className="text-[#061B2E] font-bold min-w-0 truncate">Hire Web Developers</span>
                 </div>
 
                 {/* HERO */}
-                <section className="py-10 md:py-16 px-5 max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <section className="py-10 md:py-16 px-1 max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div className="flex flex-col gap-6 z-10 w-full min-w-0">
                         <motion.span initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} className="text-[#08BFE8] font-bold tracking-[0.2em] text-xs uppercase block">
                             HIRE EXPERTS
@@ -31,10 +31,10 @@ const HireWebDevelopers = () => {
                             Build scalable, high-performance websites and web applications with experienced developers who understand modern architecture, user experience and business goals.
                         </motion.p>
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.3}} className="pt-4 flex flex-wrap gap-4">
-                            <Link to="/contact" className="inline-flex bg-[#08BFE8] text-white px-8 py-4 rounded-xl font-bold items-center hover:bg-[#159ED9] transition-all shadow-lg shadow-[#08BFE8]/20">
+                            <Link to="/contact" className="inline-flex bg-[#08BFE8] text-white px-2 py-4 rounded-xl font-bold items-center hover:bg-[#159ED9] transition-all shadow-lg shadow-[#08BFE8]/20">
                                 Hire Developers <ArrowRight size={20} className="ml-2" />
                             </Link>
-                            <Link to="/contact" className="inline-flex bg-white text-[#061B2E] border border-gray-200 px-8 py-4 rounded-xl font-bold items-center hover:bg-gray-50 transition-colors">
+                            <Link to="/contact" className="inline-flex bg-white text-[#061B2E] border border-gray-200 px-2 py-4 rounded-xl font-bold items-center hover:bg-gray-50 transition-colors">
                                 Discuss Your Project
                             </Link>
                         </motion.div>
@@ -58,7 +58,7 @@ const HireWebDevelopers = () => {
 
                 {/* EXPERTISE GRID */}
                 <section className="py-16 bg-white border-y border-gray-100">
-                    <div className="max-w-[1320px] mx-auto px-5">
+                    <div className="max-w-[1320px] mx-auto px-1">
                         <div className="text-center max-w-2xl mx-auto mb-12">
                             <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-4">Our Web Developers Expertise</h2>
                             <p className="text-[#7F94A8] text-lg">Select a specialization below to learn more about our dedicated resources.</p>
@@ -181,7 +181,7 @@ const HireWebDevelopers = () => {
                 </section>
 
                 {/* WHY HIRE WITH US */}
-                <section className="py-16 lg:py-24 max-w-[1320px] mx-auto px-5">
+                <section className="py-16 lg:py-24 max-w-[1320px] mx-auto px-1">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Why partner with our team?</h2>
@@ -217,12 +217,12 @@ const HireWebDevelopers = () => {
                 </section>
 
                 {/* FINAL CTA */}
-                <section className="bg-gradient-to-br from-[#061B2E] to-[#08243A] py-16 lg:py-24 px-5 text-center relative overflow-hidden">
+                <section className="bg-gradient-to-br from-[#061B2E] to-[#08243A] py-16 lg:py-24 px-1 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(#08BFE8_1px,transparent_1px)] opacity-[0.05] bg-[size:24px_24px]"></div>
                     <div className="max-w-2xl mx-auto relative z-10 text-white">
                         <h2 className="text-[clamp(28px,4vw,48px)] font-heading font-black mb-6 leading-tight">Need the right talent for your next project?</h2>
                         <p className="text-[#B9CAD7] text-lg mb-8">Scale your operations instantly with pre-vetted engineers.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
+                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-2 lg:px-1 py-4 lg:py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
                             Let's Build Your Team <ArrowRight size={20} className="ml-2" />
                         </Link>
                     </div>

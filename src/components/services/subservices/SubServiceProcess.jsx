@@ -1,6 +1,6 @@
 import React from 'react';
 export const SubServiceProcess = ({ process, theme }) => (
-    <section className="py-24 px-6 lg:px-8 bg-white">
+    <section className="py-24 px-1 bg-white">
         <div className="max-w-[1400px] mx-auto">
             <div className="mb-16">
                 <span className={"text-[13px] font-bold tracking-[0.2em] uppercase mb-4 block " + theme.accent}>Workflow</span>

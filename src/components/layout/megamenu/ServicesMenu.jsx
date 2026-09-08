@@ -23,7 +23,7 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
         <div className="flex w-full h-full min-h-[460px]">
             {/* Left Services Nav */}
             <div className="w-[340px] shrink-0 bg-brand-primary-navy p-6 flex flex-col gap-2 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.2)] relative z-20">
-                <h4 className="text-xs font-bold tracking-widest uppercase text-white/50 mb-4 px-3">Our Services</h4>
+                <h4 className="text-xs font-bold tracking-widest uppercase text-white/50 mb-4 px-1">Our Services</h4>
                 {data.items.map((item) => {
                     const isActive = activeId === item.id;
                     const Icon = icons[item.icon] || Code;
@@ -36,7 +36,7 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={item.href}
                                 onClick={() => setActiveMenu(null)}
-                                className={`flex items-center justify-between px-4 py-3.5 rounded-xl transition-all duration-300 relative overflow-hidden group ${isActive ? 'bg-white/10' : 'hover:bg-white/5'}`}
+                                className={`flex items-center justify-between px-1 py-3.5 rounded-xl transition-all duration-300 relative overflow-hidden group ${isActive ? 'bg-white/10' : 'hover:bg-white/5'}`}
                             >
                                 <div className="flex items-center gap-3 relative z-10">
                                     <div className={`p-1.5 rounded-lg transition-colors ${isActive ? 'bg-brand-cyan text-brand-primary-navy' : 'bg-white/5 text-white/70 group-hover:bg-white/10 group-hover:text-white'}`}>
@@ -101,7 +101,7 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={currentItem.href}
                                 onClick={() => setActiveMenu(null)}
-                                className="inline-flex items-center gap-2 text-sm font-bold text-brand-primary-navy border-2 border-brand-primary-navy px-6 py-3 rounded-full hover:bg-brand-primary-navy hover:text-white transition-all duration-300"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-brand-primary-navy border-2 border-brand-primary-navy px-1 py-3 rounded-full hover:bg-brand-primary-navy hover:text-white transition-all duration-300"
                             >
                                 Explore {currentItem.label} <ArrowRight className="w-4 h-4" />
                             </Link>

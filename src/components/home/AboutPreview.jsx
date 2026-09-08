@@ -18,7 +18,7 @@ const AboutPreview = () => {
   return (
     <section className="py-16 lg:py-32 bg-[#03111F] relative overflow-hidden" ref={ref}>
       <div className="absolute right-0 top-0 w-1/2 h-full bg-[#061A2E]/50 -z-10 rounded-l-[100px]"></div>
-      <div className="max-w-7xl mx-auto px-5 lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-1 lg:px-1 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <h2 className="text-[clamp(36px,10vw,60px)] font-heading font-extrabold tracking-tight leading-tight text-[#FFFFFF]">
             Technology <span className="text-[#18C5E8] italic">meets</span> creativity.
