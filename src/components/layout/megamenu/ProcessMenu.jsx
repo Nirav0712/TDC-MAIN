@@ -107,7 +107,7 @@ const ProcessMenu = ({ data, setActiveMenu }) => {
             <Link
                 to="/contact"
                 onClick={() => setActiveMenu(null)}
-                className="absolute top-6 right-10 bg-brand-cyan text-brand-primary-navy px-1 py-2.5 rounded-full text-sm font-bold hover:bg-white hover:text-brand-primary-navy hover:shadow-lg transition-all"
+                className="absolute top-6 right-10 bg-brand-cyan text-brand-primary-navy px-3.5 py-2.5 rounded-full text-sm font-bold hover:bg-white hover:text-brand-primary-navy hover:shadow-lg transition-all"
             >
                 Start a Project &rarr;
             </Link>

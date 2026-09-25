@@ -131,7 +131,7 @@ export default function AndroidDevelopment() {
                 <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
                 <div className="absolute top-0 right-0 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] rounded-full blur-[100px] lg:blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/4 bg-cyan-100/50"></div>
 
-                <div className="max-w-7xl mx-auto px-1 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
 
                     {/* Breadcrumbs */}
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1, duration: 0.8 }} className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-semibold mb-6 md:mb-10 text-slate-500">
@@ -147,7 +147,7 @@ export default function AndroidDevelopment() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                         {/* Left Content */}
                         <motion.div initial="hidden" animate="visible" variants={fadeIn} className="flex flex-col space-y-6">
-                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-1 py-1.5 w-max">
+                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-3.5 py-1.5 w-max">
                                 <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
                                 <span className="text-cyan-700 text-sm font-bold tracking-wider uppercase">ANDROID APP DEVELOPMENT</span>
                             </motion.div>
@@ -161,7 +161,7 @@ export default function AndroidDevelopment() {
                             </motion.p>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }} className="pt-4 flex flex-col sm:flex-row gap-4">
-                                <Link to="/contact" className="group relative inline-flex items-center justify-center px-2 py-4 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+                                <Link to="/contact" className="group relative inline-flex items-center justify-center px-6 py-3.5 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
                                     <span className="relative z-10 flex items-center">
                                         GET FREE QUOTE NOW
                                         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -180,7 +180,7 @@ export default function AndroidDevelopment() {
 
             {/* AGILE DEVELOPMENT PROCESS */}
             <section className="py-20 lg:py-32 bg-white overflow-hidden" id="process">
-                <div className="max-w-7xl mx-auto px-1">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
                         <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Agile Development Process</h2>
                         <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Enhance Your Project with Risk Free Development Process</h3>
@@ -239,8 +239,8 @@ export default function AndroidDevelopment() {
             <section>
                 {/* TOP HEADING AREA */}
                 <div className="bg-white py-12 md:py-16 lg:py-20">
-                    <div className="max-w-7xl mx-auto px-1 text-center flex flex-col items-center">
-                        <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-1 py-2 rounded-full mb-6">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                        <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                             Empower Your Business with Our Services
                         </div>
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-4">
@@ -254,7 +254,7 @@ export default function AndroidDevelopment() {
 
                 {/* MAIN SERVICE CONTENT AREA */}
                 <div className="w-full bg-white py-12 md:py-16">
-                    <div className="max-w-7xl mx-auto px-1">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="space-y-12 lg:space-y-16">
                             {services.map((svc, i) => (
                                 <motion.div
@@ -311,7 +311,7 @@ export default function AndroidDevelopment() {
 
             {/* INDUSTRIES SECTION */}
             <section className="py-20 lg:py-32 bg-white">
-                <div className="max-w-7xl mx-auto px-1">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                         <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Industries</h2>
                         <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Custom IT Solutions for Varied Verticals</h3>
@@ -354,7 +354,7 @@ export default function AndroidDevelopment() {
                 {/* Subtle grid background */}
                 <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
 
-                <div className="max-w-7xl mx-auto px-1 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="lg:flex lg:justify-between lg:items-end mb-12 lg:mb-16">
                         <div className="max-w-2xl">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose US</h2>
@@ -426,7 +426,7 @@ export default function AndroidDevelopment() {
 
             {/* GET A FREE QUOTE FORM SECTION */}
             <section className="py-16 md:py-24 lg:py-32 bg-[#F5FAFD] relative" id="quote">
-                <div className="max-w-7xl mx-auto px-1 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row border border-slate-200">
 
                         {/* Left Info Side */}
@@ -460,28 +460,28 @@ export default function AndroidDevelopment() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                        <input required type="email" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                        <input required type="tel" className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                    <textarea required rows={4} className="w-full px-1 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
                                 </div>
 
                                 <button type="submit" className="w-full py-4 mt-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group">

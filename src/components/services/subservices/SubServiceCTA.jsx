@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 export const SubServiceCTA = ({ theme }) => (
-    <section className={"py-32 px-1 " + theme.softBg}>
+    <section className={"py-32 px-4 sm:px-6 " + theme.softBg}>
         <div className="max-w-[1000px] mx-auto text-center flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-[#171717] mb-6">Have a project in mind?</h2>
             <p className="text-lg md:text-xl text-[#171717]/70 leading-relaxed max-w-2xl mb-12">

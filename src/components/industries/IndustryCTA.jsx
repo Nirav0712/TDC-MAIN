@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const IndustryCTA = ({ title, variant }) => (
-  <section className='py-20 lg:py-32 px-1 lg:px-1 relative overflow-hidden bg-[#061A2E] text-white'>
+  <section className='py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[#061A2E] text-white'>
     <div className='absolute inset-0 opacity-10' style={{ backgroundImage: 'radial-gradient(#18C5E8 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
     <div className='max-w-[1000px] mx-auto text-center relative z-10'>
       <h2 className='text-[clamp(36px,9vw,64px)] font-heading font-extrabold text-white mb-6 md:mb-8 tracking-tight'>{title}</h2>

@@ -17,7 +17,7 @@ const industries = [
 const Industries = () => {
   return (
     <section className="py-16 lg:py-24 bg-white md:bg-secondary/50">
-      <div className="max-w-7xl mx-auto px-1 lg:px-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Industries We Serve" subtitle="Domain Expertise" centered />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10 md:mt-12">
           {industries.map((ind, i) => {
