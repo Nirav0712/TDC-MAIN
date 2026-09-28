@@ -26,54 +26,88 @@ const LaravelDevelopment = () => {
 
     const services = [
         {
-            title: "Custom Laravel Web Application Engineering",
+            title: "Laravel Migration",
             icon: <Cpu className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Build Laravel Application",
             paragraphs: [
-                "Architect enterprise-grade SaaS platforms, complex data processing systems, and custom web portals using Laravel 11. The Digital Connect leverages Eloquent ORM, Blade templating, and asynchronous queue workers to build high-performance applications.",
-                "We implement domain-driven design (DDD), modular microservices, and reactive full-stack frontends using Inertia.js, Vue.js, or React for frictionless user interactions."
-            ]
+                "Do you want to use Laravel to build a high-performance, feature-rich and scalable web application? You will need a senior developer to lead a PHP team in transitioning a monolithic application to a microservice architecture based on a PHP foundation. Our Laravel web development experts can help you convert your current PHP/MySQL website to the Laravel-based platform.",
+
+                "Your existing application’s structure will be rebuilt in Laravel utilizing the tools and syntax provided by Laravel, including blade templating. With the help of our Laravel data migration solutions, we can help you transition from one Laravel framework to another.",
+
+                "With Laravel 5.6 now available, you can take advantage of new features and improved performance. We migrate databases, seed them, publish package assets, and generate boilerplate code using Artisan’s CLI. Using Laravel’s Bcrypt technique for database password encryption, developers don’t have to re-create the database for every update made."
+            ],
         },
         {
-            title: "High-Throughput RESTful & GraphQL APIs",
+            title: "Customized Laravel Development",
             icon: <Server className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Develop Laravel APIs",
             paragraphs: [
-                "Power your mobile applications, external partner integrations, and headless frontends with secure, ultra-fast Laravel API backends using Laravel Sanctum and Passport.",
-                "We implement Redis rate limiting, automatic pagination, automated OpenAPI/Swagger documentation, and sub-50ms query caching for maximum concurrency."
-            ]
+                "In terms of PHP frameworks, Laravel ranks as one of the most widely used and the preferred choice of many renowned developers. Because it is an open-source framework based on the MVC style of architecture, Laravel website development is so popular nowadays. Laravel is an excellent platform for building web apps and websites quickly and efficiently. Innovative and Depending on the project’s requirements, the workforce size can be increased or decreased at short notice. You can expect the new Laravel-based custom website to have the same functionality, usability on mobile devices, and features as the old site. distinctive designs are a speciality of our very skilled team of Laravel developers.",
+
+                "Moreover, they attempt to incorporate elements that enhance the user’s experience. Our Laravel development services can help you create the perfect website for your company. Contact us today! Our offshore Laravel developers in India provide excellent web app development services that are secure, reliable, and flexible at a reasonable rate for your company’s requirements.",
+
+                "Depending on the project’s requirements, the workforce size can be increased or decreased at short notice. You can expect the new Laravel-based custom website to have the same functionality, usability on mobile devices, and features as the old site."
+            ],
         },
         {
-            title: "Laravel SaaS & Multi-Tenant Platforms",
+            title: "Laravel Extension Development",
             icon: <Layers className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Build SaaS Platform",
             paragraphs: [
-                "Launch scalable subscription software products with isolated multi-tenant databases, role-based access control (RBAC), and automated recurring billing via Laravel Cashier (Stripe/Paddle).",
-                "Our SaaS architectures feature automated tenant provisioning, custom domain routing, and comprehensive usage telemetry dashboards."
-            ]
+                "As a bespoke Laravel web development company, we create add-ons to assist customers in meeting their ever-changing business needs and goals. Laravel includes a diverse set of packages that make it easy to add new functionality to your app without affecting the foundation already in place. Using their subject experience, our trained developers assist customers in achieving their long-term objectives.",
+
+                "Our Laravel development company programmers are proficient at providing a wide range of extension development services, including eCommerce integration, CMS customization, and highly dynamic forums. With The Digital Connect’s Laravel developers, you can be sure that your project will be bolstered with extensions that will meet your business needs.",
+
+                "Each of our application developers is an expert in their field. We adhere to international standards and coding techniques for Laravel framework development and are thus able to produce apps that meet worldwide benchmarks in this regard. As a leading Laravel web development company, we go the extra mile to provide our clients with complete PHP web solutions that are both secure and scalable."
+            ],
         },
         {
-            title: "Laravel Modernization, Auditing & Horizon Queues",
+            title: "Laravel APIs Development",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Audit & Upgrade Laravel",
             paragraphs: [
-                "Modernize your legacy Laravel applications to Laravel 11 with PHP 8.3 optimizations, strict typing, and comprehensive PHPUnit test suites.",
-                "We implement Laravel Horizon for real-time Redis queue monitoring, automated background job retries, and comprehensive security vulnerability scanning."
-            ]
+                "Laravel web development is becoming increasingly popular as a result of its simple coding syntax, low learning curve, and developmental flexibility. We use Laravel’s built-in product development capabilities to build web apps quickly and provide you extra time to market your product.",
+
+                "It is possible to integrate any Laravel project or third-party app using Laravel’s well-organized APIs, making them more accessible, flexible, and compatible with each other. Our RESTful API integration services provide an affordable way for customers to customize their legacy systems and make them more user-friendly, dynamic, and competitive.",
+
+                "From customizing pre-defined templates to creating Laravel features that are simple to install, the programmers at The Digital Connect Laravel development company excel at optimizing any Laravel service you worry about."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Architecture & Schema Modeling", desc: "Defining domain entities, database relationships, API contracts, and queue processing requirements." },
-        { title: "Artisan Scaffolding & DB Migrations", desc: "Setting up Laravel 11 boilerplate, strict typed migrations, seeders, and factory data generators." },
-        { title: "Core Business Logic & API Layer", desc: "Writing clean service classes, repositories, Eloquent model scopes, and Sanctum token guards." },
-        { title: "Frontend Integration & Livewire/React", desc: "Connecting reactive UI components with Inertia.js, React, or Livewire for instant SPA feel." },
-        { title: "Automated Testing & Load Stressing", desc: "Executing PHPUnit test suites, Pest assertions, SQL query optimization, and concurrency load tests." },
-        { title: "CI/CD Cloud Deployment & Monitoring", desc: "Deploying to AWS / Laravel Forge / Vapor with Redis caching, Horizon monitoring, and zero-downtime releases." }
+        {
+            title: "Strategy",
+            desc: "The first step in our Laravel website development process is to identify the best plan for monetizing your unique ideas."
+        },
+        {
+            title: "Development of Prototype",
+            desc: "Our Laravel developers produce highly functional prototypes with specific designs to enhance user experience and workflows."
+        },
+        {
+            title: "Web App Wireframe",
+            desc: "Wireframes (also known as blueprints) are visual representations of how an app will look and function before it is built."
+        },
+        {
+            title: "Application Design",
+            desc: "In our role as a leading Laravel development company, we work together with our clients to produce user-friendly apps that are both engaging and functional."
+        },
+        {
+            title: "Application Development",
+            desc: "Our Laravel web development team uses the best practices and standard code to create the app that matches your requirements."
+        },
+        {
+            title: "Testing",
+            desc: "Laravel applications that are tested thoroughly during the development process are more likely to be secure, functional, and reliable."
+        },
+        {
+            title: "Deployment",
+            desc: "We distribute the application across all the relevant platforms. Get in touch with us to have our industry specialists launch your app more swiftly."
+        }
     ];
 
     const industries = [
@@ -143,15 +177,15 @@ const LaravelDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Comprehensive Laravel Engineering Capabilities
+                                Reliable Laravel Development Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom SaaS platforms, RESTful APIs, and enterprise web solutions.</p>
+                            {/* <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom SaaS platforms, RESTful APIs, and enterprise web solutions.</p> */}
                         </div>
                     </div>
 

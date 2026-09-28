@@ -26,54 +26,88 @@ const WebflowDevelopment = () => {
 
     const services = [
         {
-            title: "Figma to Webflow Pixel-Perfect Development",
+            title: "Building Websites With Fast Load Times",
             icon: <Layout className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Convert Figma to Webflow",
             paragraphs: [
-                "Transform your Figma designs into fully responsive, production-ready Webflow websites. The Digital Connect utilizes the industry-standard Client-First (Relume/Finsweet) naming convention to write clean, scalable HTML5 and CSS structures.",
-                "Every page is structured with responsive fluid grids, accessible color contrast, and optimized typography for desktop, tablet, and mobile breakpoints."
-            ]
+                "When it comes to minimizing a website’s load time, our Webflow CMS team is unrivaled. They have extensive experience with a wide range of performance measurements and hence know how to incorporate these features effectively.",
+
+                "Our professionals are well-versed in keeping a website’s loading time constant to keep customers returning. We will deliver a custom webflow website design that is complete with modern conveniences and SEO-friendly architecture.",
+
+                "Webflow plays a vital role for the website as it is. We are developing websites that are clean with high responsive time. Moreover, we use Webflow’s lazy load settings to speed up your website."
+            ],
         },
         {
-            title: "Advanced Webflow Interactions & 3D Motion",
+            title: "Customized & High-End Theme Design Service",
             icon: <Sparkles className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
             cta: "Explore Motion Webflow",
             paragraphs: [
-                "Create immersive, award-winning user experiences with custom scroll-based animations, micro-interactions, and 3D Spline / Three.js embeds.",
-                "We implement custom JavaScript and GSAP animations that execute smoothly at 60 FPS without degrading page load times or mobile responsiveness."
-            ]
+                "Both consumers and business owners are increasingly turning to online mediums, realizing that doing so can expand their customer bases and, ultimately, their profits. Being a renowned Webflow web development company, we ensure to deliver high-end and customized theme designs for your project.",
+
+                "Our designer team will create a Figma file according to your idea and depending on the Figma file our experience developer will develop the customized theme for your website.",
+
+                "Our webflow developers are professionals in providing the best solution for implementing websites in any company sector. Reach out to us if you’re interested in getting expert assistance for Webflow website development."
+            ],
         },
         {
-            title: "Dynamic Webflow CMS & Multi-Language Architecture",
+            title: "Efficient Webflow Migration Service",
             icon: <Layers className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Build Webflow CMS",
             paragraphs: [
-                "Empower your marketing team to publish case studies, blog posts, careers, and team profiles without touching code. We configure dynamic CMS collections with custom reference fields and automated filtering.",
-                "We leverage Webflow Localization and Weglot to create seamless multi-regional portals with localized SEO and currency switching."
-            ]
+                "Are the webflow and its offerings impressive so far? If yes, then it’s time to implement our Webflow projects to reap the benefits of this modern technology. In addition, we help you improve your company’s growth to new heights by taking advantage of our Webflow migration services.",
+
+                "At The Digital Connect, we’ve helped lots of businesses successfully migrate from WordPress, Squarespace, Joomla, and Drupal over to Webflow. When it comes to migration, we make sure your 301 redirects are in place, so there are no floating or broken links.",
+
+                "After carefully analyzing your business needs, our expert developers will provide you tailor-made Webflow migration solution."
+            ],
         },
         {
-            title: "Enterprise Webflow Integrations & Webflow Apps",
+            title: "Consultation on Webflow Projects",
             icon: <Zap className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Integrate Webflow",
             paragraphs: [
-                "Connect your Webflow site to your broader sales and marketing stack. We integrate HubSpot, Salesforce, Zapier, Make, Memberstack (user auth & paywalls), and custom REST APIs.",
-                "Capture and route leads automatically, automate gated content, and track conversion analytics in real time."
-            ]
+                "We offer expert consulting services, during which we’ll listen to your questions, needs, and worries concerning the Webflow services you’re trying to find. Then, our specialists will propose a tailor-made solution to meet your specific company requirements.",
+
+                "The Digital Connect is not a typical web design & development agency. Our Webflow development service can build anything from a simple site to a high-quality website with custom animations.",
+
+                "We also focus on Webflow innovation to provide the most seamless UI possible. Feel free to contact us if you’re thinking of launching an online business, and we’ll give you a comprehensive quote based on our years of experience in webflow implementation."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Design Audit & Client-First Setup", desc: "Analyzing Figma components, typography scales, global style tokens, and Relume class naming." },
-        { title: "Semantic HTML & CSS Structure", desc: "Building semantic, responsive layouts utilizing Webflow's native visual canvas." },
-        { title: "CMS Collections & Dynamic Data", desc: "Structuring blog, team, case study, and product collections with automated filtering." },
-        { title: "Motion Design & Custom JS Code", desc: "Crafting GSAP animations, custom form logic, and interactive interactive widgets." },
-        { title: "Technical SEO & Speed Optimization", desc: "Setting OpenGraph tags, schema markup, 301 redirects, and WebP asset optimization." },
-        { title: "Custom Domain Publish & Handover", desc: "Deploying to Webflow's global Tier 1 AWS/Fastly CDN and providing video tutorial handover." }
+        {
+            title: "Process We Follow",
+            desc: "Being a renowned Webflow web development company, we follow an agile approach to creating excellent, scalable, and market-ready products."
+        },
+        {
+            title: "Project Strategy",
+            desc: "We make a well-defined and reliable strategy to create value-driven products per your specifications and objectives."
+        },
+        {
+            title: "Analysis and Planning",
+            desc: "We perform an in-depth and precise analysis of your idea. We identify the technical architecture of your webflow website."
+        },
+        {
+            title: "UI/UX Design",
+            desc: "Our expert UI/UX designers have extensive knowledge in drafting impressive and eye-catching UI/UX for your project."
+        },
+        {
+            title: "Website Development",
+            desc: "Our skilled and expert developers use their experience to create superior, secure, and scalable webflow products."
+        },
+        {
+            title: "Quality Assurance",
+            desc: "We follow a robust zero-error policy to ensure product quality. As a result, we deliver secure, stable, and usable webflow websites."
+        },
+        {
+            title: "Project Launch",
+            desc: "Launching a website should be done by professionals. So, we facilitate your project launch with our expertise."
+        }
     ];
 
     const industries = [
@@ -135,7 +169,7 @@ const WebflowDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Webflow Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Engineering Workflow"
                     description="From Figma design audit to Client-First semantic build, CMS collections, and global CDN launch."
                     process={processSteps}
@@ -143,15 +177,15 @@ const WebflowDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Comprehensive Webflow Capabilities
+                                Effective Webflow Development Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom Webflow development, CMS architectures, and enterprise marketing sites.</p>
+                            {/* <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom Webflow development, CMS architectures, and enterprise marketing sites.</p> */}
                         </div>
                     </div>
 

@@ -26,54 +26,76 @@ const WordPressDevelopment = () => {
 
     const services = [
         {
-            title: "Custom Gutenberg Block & Theme Development",
+            title: "Custom WordPress Development",
             icon: <Layout className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Build Custom Theme",
             paragraphs: [
-                "Give your editorial and marketing teams complete design freedom without breaking brand guidelines. The Digital Connect builds 100% bespoke WordPress themes and custom Gutenberg blocks tailored to your design system in Figma.",
-                "Zero bloated page builders (Elementor, Divi) — our custom themes achieve 95+ Google PageSpeed scores, clean semantic HTML5, and lightning-fast Core Web Vitals."
-            ]
+                "Your project needs a strong group of developers who can create highly-customized and reliable websites. Our clients recognize us as one of the best WordPress website development services providers. We help you to make your business sustainable among your competitors.",
+
+                "We focus on your core project requirements and bring the best solution to you. With an expert team of developers, our clients have achieved great existence in creating custom websites. In our custom WordPress development services, we include developing SEO-friendly websites, multi-faced themes, and different plugins as well.",
+
+                "Our motto is to keep you a step ahead in today’s highly challenging market. We aim to develop responsive and clean websites in a process-driven manner. Being a renowned WordPress development company, we use the right tools and strategies to offer flexible and reliable web development solutions."
+            ],
         },
         {
-            title: "Headless WordPress & Next.js Frontends",
+            title: "Themes Development & Customization Services",
             icon: <Code className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Build Headless WordPress",
             paragraphs: [
-                "Pair the familiar content editing experience of WordPress with the ultra-fast speed and security of a modern headless frontend (Next.js, Remix, React).",
-                "We implement WPGraphQL, Faust.js, and static site generation (SSG) with incremental static regeneration (ISR) for instant page loads and bank-grade security."
-            ]
+                "The requirement for WordPress theme customization is increasing rapidly due to the rise in unique-looking websites to make a distinctive identity. The pre-build options offered in themes are insufficient to get the website’s remarkable and desired look. That’s why people hire our custom WordPress website development services.",
+
+                "We use our coding talent and years of experience to bring uniqueness to your project. Our experts keep mobile-first orientation in mind and create highly responsive websites. We assist our clients with custom theme development and PSD to WordPress theme conversion services.",
+
+                "We create innovative and intuitive websites for different industry verticals with a proficient team of developers. We invest our full efforts to ensure the quality and versatility of your site."
+            ],
         },
         {
-            title: "Custom WooCommerce & Payment Solutions",
+            title: "WordPress Website Plugins Development Services",
             icon: <ShoppingCart className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
             cta: "Build WooCommerce Store",
             paragraphs: [
-                "Turn WordPress into a high-converting digital storefront. We customize WooCommerce with bespoke product configurators, one-page checkouts, multi-currency pricing, and subscriptions.",
-                "We integrate Stripe, PayPal, Authorize.Net, and connect your inventory directly with enterprise ERPs and warehouse management systems."
-            ]
+                "WordPress plugin development is challenging and demanding as it has endless possibilities for the key platform. Our highly skilled WordPress developers offer the most innovative and dedicated WordPress plugin development services.",
+
+                "A WordPress development agency like The Digital Connect enables you to add many rich plugin features to your website. Our professional developers keep your requirements in mind and know how to add value to your websites using powerful plugins. The Digital Connect’s experienced WordPress developers are experts in plugin development and customization.",
+
+                "We enhance your website’s functionality through our tailor-made plugins, components, and modules. Our expert team has expertise in custom plugin development and configuration according to your business needs. We increase the vitality and functionality of your website in no time."
+            ],
         },
         {
-            title: "WordPress Security, Speed & Enterprise Maintenance",
+            title: "WordPress Migration Services",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Secure WordPress Site",
             paragraphs: [
-                "Keep your high-traffic WordPress platform protected, blazing fast, and always online. We implement Redis Object Caching, Cloudflare Enterprise CDN, WAF rules, and automated database optimization.",
-                "Our enterprise SLA packages provide real-time malware monitoring, automated daily offsite backups, core/plugin regression testing, and 24/7 priority support."
-            ]
+                "Data and safety are the major concerns while migrating between technologies and platforms. As a leading WordPress development agency, we have expertise in complex migration and moving your existing website into a smooth and easy-to-manage WordPress website. We execute the migration with full data security without affecting your current website’s core functionality and features.",
+
+                "Our proven track record is sufficient to showcase our expertise in migration services. You can trust us for data security.No content will be deleted from your existing website as we take full care of it. We maintain 100% data integrity.",
+
+                "All the data is well checked before migrating the website and making it live. We know how to make your website unique and feature-full. Big brands trust us for well-suited migration services as per their business requirements. We always follow an agile approach to ensure the successful migration of your site."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Architecture & Content Strategy", desc: "Auditing content schemas, editorial workflows, taxonomies, and custom field requirements." },
-        { title: "Custom Gutenberg Block Design", desc: "Building modular React-based Gutenberg blocks matching your Figma design system perfectly." },
-        { title: "Theme Engineering & WP Hooks", desc: "Writing clean, performant PHP 8.3 template files, custom post types (CPT), and REST API endpoints." },
-        { title: "WooCommerce & Third-Party Sync", desc: "Connecting payment gateways, CRMs (HubSpot, Salesforce), and marketing automation tools." },
-        { title: "Speed & Security Hardening", desc: "Configuring Redis object cache, image WebP compression, Cloudflare CDN, and security headers." },
-        { title: "Live Launch & Editor Training", desc: "Conducting zero-downtime DNS cutovers, sitemap verification, and recorded team training." }
+        {
+            title: "Discover",
+            desc: "With a few discovery sessions, we will make a detailed scope of the project document with all essential processes, business goals, challenges, & workflows. Relied on this discussion, we will also present an estimated time & cost of project development."
+        },
+        {
+            title: "WordPress Development",
+            desc: "The Digital Connect experts start project development according to the project plan. We use the best tools and modern web development technologies to deliver top-notch solutions to our clients."
+        },
+        {
+            title: "Project Launch",
+            desc: "After completing the website development, and testing process, we make it ready to launch. We take care of all essential factors and follow the steps to make the launch successful."
+        },
+        {
+            title: "Support & Maintenance",
+            desc: "Our partnership with you doesn’t end with the project delivery and launch. As a leading WordPress development company, we offer 24*7 support & maintenance services to resolve all clients’ queries."
+        }
     ];
 
     const industries = [
@@ -135,7 +157,7 @@ const WordPressDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our WordPress Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Engineering Workflow"
                     description="From architecture modeling and custom Gutenberg block coding to speed optimization and live launch."
                     process={processSteps}
@@ -143,13 +165,13 @@ const WordPressDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Comprehensive WordPress Capabilities
+                                WordPress Website Development Services
                             </h3>
                             <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom themes, headless architectures, and enterprise WooCommerce.</p>
                         </div>

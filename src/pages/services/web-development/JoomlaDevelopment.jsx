@@ -26,54 +26,84 @@ const JoomlaDevelopment = () => {
 
     const services = [
         {
-            title: "Custom Joomla Portal & Website Development",
+            title: "Joomla Web Development",
             icon: <Globe className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
             cta: "Build Joomla Portal",
             paragraphs: [
-                "Create dynamic community portals, corporate intranets, and content-rich websites with Joomla 5. The Digital Connect utilizes Joomla's native Access Control Lists (ACL) and multi-language support to develop powerful web solutions.",
-                "Our Joomla architectures allow complex user permission hierarchies, member directories, and multi-tier publication workflows without bloated third-party dependencies."
-            ]
+                "The Digital Connect provides a wide range of Joomla services, including, but not limited to, the creation of templates, extensions, modules, components, eCommerce, and CMS. For those who prefer PHP as a web platform, Joomla is an excellent alternative because of its object-oriented programming structure.",
+
+                "Using the power of social technology, our Joomla developers can take your website to a new level. Keeping an eye on current developments in the world of Joomla allows us to give a highly sophisticated Joomla development company.",
+
+                "We ensure that our clients are satisfied with our Joomla development services and return to us for the creation of further apps and websites based on this framework, thanks to our unwavering assistance throughout and after the development process. Since it is used to create dynamic and inventive websites, Joomla is the most popular online CMS."
+            ],
         },
         {
-            title: "Custom Component & Module Engineering",
+            title: "Joomla eCommerce Development",
             icon: <Layers className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Develop Custom Extensions",
             paragraphs: [
-                "When off-the-shelf extensions fall short, we build custom Joomla components, modules, and plugins from scratch. From interactive directories to custom reservation systems, we tailor the functionality to your business workflow.",
-                "Every custom extension is built according to Joomla MVC standards for seamless future version upgrades and clean database management."
-            ]
+                "Joomla shopping cart/eCommerce systems are adaptable and expandable so that you can sell anything, anywhere. You may even re-create your e-commerce website. The team comprises experienced Joomla developers who can provide high-quality solutions. An internet presence is one of the company’s primary goals for its customers. When you spend your hard-earned money with The Digital Connect, you can be certain you’ll get your money’s worth.",
+
+                "The Digital Connect provides high-quality services at reasonable pricing, allowing consumers to get the most out of their money. We have a team of motivated programmers ready and able to complete projects on time and within budget.",
+
+                "With our extremely configurable and adaptable Joomla shopping cart/eCommerce systems, we let you sell anything, anywhere. Using Joomla, we can even re-create your webshop. We’re aware of this and are here to provide solutions tailored to their specific requirements and provide them with the greatest Joomla website possible."
+            ],
         },
         {
-            title: "Joomla Migration & Version Upgrades",
+            title: "Joomla Theme Development",
             icon: <Zap className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Upgrade to Joomla 5",
             paragraphs: [
-                "Upgrade your outdated Joomla 3.x or 4.x portals to the ultra-modern Joomla 5 framework. We migrate your content articles, user accounts, custom fields, and media assets with 100% data integrity.",
-                "Unlock modern PHP 8.2+ compatibility, enhanced SEO metadata control, and modern caching engines for drastic speed improvements."
-            ]
+                "Joomla has a wide range of user-friendly and mobile-friendly capabilities. With the help of our website design experts, updating your content is a cinch. Using our speedy 72-hour turnaround, we’ve helped Joomla clients transform their websites into dynamic content management systems.",
+
+                "Our staff helps you choose the finest Joomla themes that fit your company’s image and identity and then customizes the elements vital for your website’s effective operation. At The Digital Connect’s Joomla theme, developers assist customers in reducing operating costs, increasing sales, and increasing their return on investment. The Digital Connect’s highly skilled Joomla development services are dedicated to providing their valued customers with the best possible service.",
+
+                "With our help, you can take your website to a new level. If you’re interested in learning more about our Joomla website design services or hiring Joomla specialists, kindly contact us."
+            ],
         },
         {
-            title: "Joomla Security Hardening & Maintenance",
+            title: "Joomla Extension Development",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Secure Joomla Website",
             paragraphs: [
-                "Protect your digital portal with proactive vulnerability patching, Web Application Firewall (WAF) integration, and two-factor authentication (2FA).",
-                "Our ongoing support packages include automated off-site cloud backups, database indexing, core updates, and 24/7 emergency response."
-            ]
+                "The Joomla platform is user-friendly, extensible, responsive, multilingual, search engine optimized, and accessible. Web developers widely use it throughout the world. Only a few extensions are included by default, but many more may be found in the Directory and used to enhance a site’s functionality. Your website’s internet position may be updated and converted through extensions.",
+
+                "For your online company, we provide specialized Joomla extension development. First, we meet with our clients to get a clear understanding of their needs, then we provide the best possible solution and execute a successful strategy for your website. While working on Joomla extensions, we always strive to make them more useful.",
+
+                "Having worked with Joomla for a long time, our developers are highly qualified, successful, and experienced. Our competent and dedicated experts who employ the most up-to-date technology enhance web design and development services."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Portal Architecture & Permissions Audit", desc: "Defining user roles, access control levels (ACL), content categories, and extension requirements." },
-        { title: "Joomla 5 Setup & Database Structuring", desc: "Configuring clean core installation, relational database tables, and multilingual translation routing." },
-        { title: "Custom Module & Component Build", desc: "Coding custom Joomla MVC extensions, plugins, and custom field overrides." },
-        { title: "Responsive Template Customization", desc: "Designing mobile-first, lightweight Joomla templates with fast Core Web Vitals scores." },
-        { title: "Security Hardening & QA Audit", desc: "Implementing Two-Factor Auth, SSL enforcement, brute-force mitigation, and cross-browser testing." },
-        { title: "Live Launch & Editorial Training", desc: "Zero-downtime server deployment, sitemap submission, and administrator training sessions." }
+        {
+            title: "Analyzing Requirements",
+            desc: "A prominent Joomla development company analyses your project objectives and develops a customized strategy to fit your business’s specific requirements."
+        },
+        {
+            title: "Designing a Website",
+            desc: "Our designers will design your website user-friendly and dynamic."
+        },
+        {
+            title: "Website Development",
+            desc: "At this point, we begin developing your website according to the specifications of your project and the design components you’ve provided."
+        },
+        {
+            title: "Testing",
+            desc: "Quality analysts and testers on our professional team verify that the website’s code is bug-free and ready to be delivered."
+        },
+        {
+            title: "Project Development",
+            desc: "In the hands of The Digital Connect, you can be certain that your product will be available to everyone who needs it. We optimize your website for speed and user experience."
+        },
+        {
+            title: "Prompt Service",
+            desc: "Don’t worry; we’ll be here for you even after the job is completed. As a result, we are prepared to respond quickly to any problem or mishap."
+        }
     ];
 
     const industries = [
@@ -109,7 +139,7 @@ const JoomlaDevelopment = () => {
                     parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
                     eyebrow="Joomla Development Services"
-                    title="Custom Joomla Web Development & Portal Solutions"
+                    title="Joomla Development Company"
                     description="Build flexible, content-rich corporate portals, community websites, and multilingual platforms with Joomla. The Digital Connect engineers bespoke extensions, templates, and enterprise CMS setups."
                     theme={theme}
                     visual={JoomlaVisual}
@@ -135,21 +165,22 @@ const JoomlaDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Joomla Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Engineering Workflow"
-                    description="From permissions audit to custom component build, security hardening, and production launch."
+                    description="We are devoted to ensuring openness throughout the whole Joomla website construction. With our simplified procedure, you can count on us to meet your web development demands."
                     process={processSteps}
                 />
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-12">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Comprehensive Joomla Capabilities
+                                Our Joomla Development Services
+
                             </h3>
                             <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom components, portals, and migration services for global enterprises.</p>
                         </div>

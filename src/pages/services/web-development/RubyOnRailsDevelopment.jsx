@@ -26,54 +26,93 @@ const RubyOnRailsDevelopment = () => {
 
     const services = [
         {
-            title: "Custom Ruby on Rails Web Application Development",
+            title: "RoR MVP Development",
             icon: <Rocket className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Build Rails Application",
             paragraphs: [
-                "Accelerate your product launch from zero to market leadership with Ruby on Rails 7+. The Digital Connect engineers high-velocity SaaS products, marketplaces, and data-dense enterprise applications.",
-                "We leverage Rails' convention-over-configuration paradigm, Active Record ORM, and Hotwire (Turbo/Stimulus) to build ultra-responsive full-stack web platforms with minimal JavaScript fatigue."
-            ]
+                "Ruby on Rails is a framework that helps developers decrease their time on projects. Because it allows them to stay flexible and adaptable in shifting market circumstances, it is well recognized and routinely employed by many startups.",
+
+                "We can help you get your MVP up and running quickly by using Ruby on Rails, a popular framework for rapid application development. We also build web infrastructures that can handle the traffic of hundreds of millions of visitors at a time if your product becomes more successful over time.",
+
+                "If you need assistance getting your product up and running fast, our programmers can help you do it so that you can spend more time selling your product. We develop an MVP to establish whether or not our product is viable for commercialization."
+            ],
         },
         {
-            title: "Rails API Backend & Headless Services",
+            title: "RoR eCommerce Development",
             icon: <Server className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Develop Rails APIs",
             paragraphs: [
-                "Power your React, Vue, iOS, and Android clients with lightweight, ultra-fast Rails API mode backends. We implement JWT authentication, GraphQL with graphql-ruby, and serializer optimizations for low-latency JSON responses.",
-                "Our Rails backends handle thousands of concurrent requests seamlessly with Redis caching and Sidekiq background job orchestration."
-            ]
+                "Making eCommerce apps using Ruby on Rails is a fantastic way to get your feet immersed in web development when you first start. Integration of your application with The Digital Connect is essential to benefit from their services and products to the fullest extent possible, as shown below.",
+
+                "Ruby on Rails is the most appropriate framework for bespoke eCommerce development because of its user-friendly features and modular approach to development. With years of expertise in the sector, our Rails eCommerce development specialists at The Digital Connect can deliver a broad range of Rails eCommerce services to meet the different demands of our clients.",
+
+                "This fantastic programming language enables us to provide you with unique and cost-effective solutions to the challenges that your company is now encountering due to our efforts. With our support, it is possible to create e-commerce websites that are user-friendly and attractive to a wider variety of clients."
+            ],
         },
         {
-            title: "Rails Modernization, Upgrades & Performance Auditing",
+            title: "RoR CMS Development",
             icon: <Zap className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Upgrade Rails App",
             paragraphs: [
-                "Upgrade your legacy Rails 4.x, 5.x, or 6.x codebases to Rails 7+ and modern Ruby 3.3 with YJIT compilation. We resolve deprecations, eliminate N+1 queries, and improve background worker performance.",
-                "Our Rails performance audits identify memory bloat, database bottlenecks, and caching gaps, drastically reducing your cloud hosting costs."
-            ]
+                "Businesses all around the globe utilize CMS systems to manage better, alter, and sell their websites’ content. Business processes, collaboration, communication, and information distribution through interdependent online systems and apps are all made easier with our content management system (CMS) services.",
+
+                "Custom web app development, including PWA and SPA, has typically relied on Ruby on Rails, which is still the case today. Application development using Ruby on Rails is the way to go if you want highly dependable online apps. To meet your particular business requirements, The Digital Connect integrates pre-built software.",
+
+                "We add custom functionality to your current mobile or web-based apps depending on your specific company needs. In this way, you’ll be able to achieve your company objectives. Thanks to our innovative workflow platform, we’ve orchestrated RoR CMS development solutions perfectly tailored to our client’s businesses and needs."
+            ],
         },
         {
-            title: "Enterprise Rails Scaling & Maintenance",
+            title: "RoR Web Apps Development",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Scale Rails System",
             paragraphs: [
-                "Scale your existing Rails infrastructure to handle millions of active users. We architect multi-database configurations, read/write replicas, Redis cluster caching, and containerized Docker/Kubernetes deployments.",
-                "We provide continuous security vulnerability monitoring (Brakeman, Bundler Audit) and 24/7 mission-critical uptime support."
-            ]
+                "In only a few weeks, you may have a working prototype. With Ruby on Rails, you’re allowed to do so. Ready-to-use modules and generators are provided by this web framework, allowing you to create your MVP quickly. Because of the Convention over Configuration philosophy in Ruby on Rails, rapid application development is possible without creating code.",
+
+                "If a web app developed on the Rails framework does not work out, or if you need to add additional engineers to your team, it is simple to swap projects. Hire us to create your Ruby on Rails prototype in weeks.",
+
+                "Using our Ruby on Rails professionals, you can have your application up and running in a few weeks. Our Ruby on Rails web development services can help you get the job done no matter your industry. Create your product from scratch using RubyGems, modules, and generators."
+            ],
+        },
+        {
+            title: "RoR Support & Maintenance",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Scale Rails System",
+            paragraphs: [
+                "We’ll take care of your current applications, so you can relax and have peace of mind. Your concept, objectives, and needs are considered by our Ruby on Rails consulting experts to assist you in choosing the best framework for your project.",
+
+                "Continuous improvement is critical for companies operating in today’s global economy. Since the beginning, The Digital Connect has focused on creating the best, most reliable, and result-driven digital solutions for clients. We know how to assess an RoR developer’s skill set, onboard new employees, and keep track of the project’s resources.",
+
+                "Your website will always be up and running if you outsource your Ruby on Rails development to us. We provide excellent 24/7 maintenance and support services. Even if you’re thinking of adding new features or migrating data, you’ll receive the greatest RoR support and maintenance."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Product Discovery & Domain Architecture", desc: "Defining business domain models, entity relationships, API schemas, and sprint roadmap." },
-        { title: "Rails 7 Setup & Database Modeling", desc: "Scaffolding Rails 7 app, Active Record migrations, database indexes, and Hotwire Turbo integration." },
-        { title: "Core Business Logic & API Layer", desc: "Writing clean service objects, concerns, GraphQL endpoints, and Devise/Doorkeeper auth." },
-        { title: "Async Workers & Sidekiq Queues", desc: "Implementing Redis queue processors for async background tasks, emails, and data sync." },
-        { title: "RSpec & Capybara Automated Testing", desc: "Comprehensive automated test coverage ensuring rock-solid regression resistance." },
-        { title: "Cloud Deployment & Production Scaling", desc: "Deploying to AWS, Render, Heroku, or Fly.io with YJIT tuning and Datadog monitoring." }
+        {
+            title: "Creating a Roadmap",
+            desc: "You must handle the project's direction and identify the web application's objectives and purposes. Let's take a look at your program's overall structure and functionality."
+        },
+        {
+            title: "Define The Target Audience",
+            desc: "The following information should be included in the analytics report: the kind of audience, age, gender, education, online access capabilities, and degree of security."
+        },
+        {
+            title: "Aesthetics and Interaction Design",
+            desc: "Design implementation begins when the interface and interaction models have been authorized. The magic comes when a well-designed user experience draws the audience in."
+        },
+        {
+            title: "Web App Development",
+            desc: "When designing an application's structure and architecture, begin with the database. Once the model, classes, and libraries have been created, you must implement all of the features detailed in the specs."
+        },
+        {
+            title: "Support & Maintenance",
+            desc: "Post-deployment, you can count on us for technical support and maintenance to keep your web applications up to date and error-free."
+        }
     ];
 
     const industries = [
@@ -135,7 +174,7 @@ const RubyOnRailsDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Ruby on Rails Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Engineering Workflow"
                     description="From domain discovery to Rails scaffolding, async workers, RSpec testing, and cloud deployment."
                     process={processSteps}
@@ -143,13 +182,13 @@ const RubyOnRailsDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Complete Ruby on Rails Capabilities
+                                Ruby on Rails Development Services
                             </h3>
                             <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom SaaS platforms, high-throughput APIs, and performance upgrades.</p>
                         </div>
