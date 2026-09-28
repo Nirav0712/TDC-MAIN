@@ -26,54 +26,97 @@ const DrupalDevelopment = () => {
 
     const services = [
         {
-            title: "Enterprise Drupal CMS Architecture",
+            title: "Drupal Web Development & Designing Services",
             icon: <Globe className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Architect Drupal Platform",
             paragraphs: [
-                "Build scalable content ecosystems capable of serving millions of monthly visits across dozens of global regions. The Digital Connect develops customized Drupal 10/11 solutions for healthcare networks, higher education institutions, government bodies, and Fortune 500 enterprises.",
-                "We structure custom taxonomy systems, complex content types, and multi-site architectures governed from a single unified Drupal core."
-            ]
+                "With Drupal web development, you can enjoy a smooth performance in the digital space. We allow our customers to use the powerful Drupal features and make the best of the easy-to-use interface. With this, clients can also manage their websites with an in-house team.",
+
+                "If they wish to opt for professional service, there could be nothing better than that. Along with Drupal web development, we provide support after project deployment and delivery so that our clients feel comfortable even without a professional developer.",
+
+                "At the same time, we have a certified team to provide you with the best-updated look and feel and help you build a complete end-to-end Drupal website with minimal effort and reasonable cost. With our comprehensive Drupal web development and designing services, you can take your business to new heights, securing the top Google ranking."
+            ],
         },
         {
-            title: "Headless & Decoupled Drupal Development",
+            title: "Drupal eCommerce Development",
             icon: <Cpu className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Build Decoupled Drupal",
             paragraphs: [
-                "Combine Drupal's best-in-class content authoring and editorial workflows with blazing-fast modern frontend frameworks like Next.js, Remix, and React.",
-                "We implement GraphQL and JSON:API standards to deliver omnichannel content across websites, native mobile applications, smart displays, and customer kiosks."
-            ]
+                "E-commerce is the need of the time. With the increasing competition in the ecommerce sector, it has become essential for businesses to have the right e-commerce service provider to support their business online. At The Digital Connect, we offer highly customized and advanced e-commerce solutions for all kinds of businesses indulged in online commerce.",
+
+                "From helping your business with a secure, scalable, and easy-to-maintain Drupal e-commerce environment to helping you reach the top Google ranking, we provide dedicated assistance for all your e-commerce requirements. We have a loyal customer base because we provide quick and cost-effective services. We are a preferred choice for businesses looking for e-commerce solutions under tight deadlines.",
+
+                "Being in this business for years, we have the best tried and tested ecommerce development solutions for businesses. Our team is trained with the latest technology-based solutions to meet clients’ expectations. As a leading Drupal Module Development agency, we never miss any IT trends. We provide you with on-time assistance, a dedicated team to customize the idea as per your needs, a team to look after the smooth performance of your website 24/7, and support."
+            ],
         },
         {
-            title: "Custom Drupal Module & Theme Development",
-            icon: <Layers className="w-8 h-8" />,
+            title: "Drupal Module Development",
+            icon: < Layers className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
             cta: "Develop Custom Modules",
             paragraphs: [
-                "Tailor Drupal to your precise operational requirements with custom module development and bespoke Twig themes. We build custom authentication hooks, automated content syndication pipelines, and enterprise search integration with Apache Solr and Elasticsearch.",
-                "All code adheres strictly to Drupal Coding Standards and is thoroughly documented for long-term scalability."
-            ]
+                "Are you confused as to which Drupal module will suit your business? Are you seeking a new module? If yes, hire our professional Drupal Module Development service right away. Just bring in your ideas, and our experts will guide you best. With our efficient staff, we are efficient at developing Drupal modules from the basics.",
+
+                "Just bring your basic idea to us, and we will convert it into a full-fledged module to take your business in the right direction. We have a team of dedicated professionals capable of creating different modules. Our professionals help you make the best out of the module you opt for with years of experience working with Drupal modules.",
+
+                "We also help you with professional tips and tricks to ensure you get maximum benefits from the chosen module with top-notch services. In addition, we provide development services in Drupal 8 & 9, offering advanced features like high speed, multilingual functions, etc."
+            ],
         },
         {
-            title: "Drupal Migration (Drupal 7/8/9 to Drupal 10/11)",
+            title: "Drupal Migration Services",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Migrate to Drupal 10",
             paragraphs: [
-                "End-of-life legacy Drupal versions pose major security vulnerabilities and performance bottlenecks. We execute complete migrations to Drupal 10 and Drupal 11.",
-                "Our migration engineers preserve all historical content, URL hierarchies, taxonomies, user roles, and SEO backlinks without operational downtime."
-            ]
+                "Drupal 7 will end in November 2022; hence it is time to migrate or upgrade to the relevant version right now! If you’re looking for a Drupal migration, feel free to connect with us. We are an expert team of Drupal migrations and upgrades. With a dedicated team to look after the migration and updates for each client, we offer tailored solutions according to your business requirements.",
+
+                "Our certified team of developers is quite efficient in managing Drupal web development, migration, data handling, and hassle-free content migration of all sizes. Our migration process is well supported by advanced methods that help us deliver Drupal Migration projects quickly and efficiently.",
+
+                "With our proven working model, we ensure that our clients enjoy a seamless transition without having any effect on their regular business. In addition, our experienced team is here to help you get the migration done at an affordable price."
+            ],
+        },
+        {
+            title: "Drupal Support & Maintenance",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Migrate to Drupal 10",
+            paragraphs: [
+                "Your Drupal system works even more efficiently when supported by the proper support and maintenance experts. Our customizable support and maintenance packages help you meet your business needs. Our team helps you with timely reviews, performance testing, tuning, upgrades, migrations, development and design updates, etc.",
+
+                "While we look after your Drupal assets, we take care of occasional issues and keep an active eye on them 24/7 to ensure a smooth performance. Being a trusted Drupal web development service provider, we look after all types of businesses and offer them effective solutions to grow in the digital world.",
+
+                "As a part of the support and maintenance program, we also look out for competitors and ensure our client’s business performs at the top. For people looking for Drupal maintenance, we have customized packages; choose your package today and have a dedicated team of experts to take care of your Drupal assets."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Discovery & Content Modeling", desc: "Auditing content schemas, editorial workflows, role permissions, and integration endpoints." },
-        { title: "Drupal Architecture & Multi-Site Setup", desc: "Configuring Drupal core, multi-domain ecosystems, Drush tooling, and Composer dependency management." },
-        { title: "Module & API Engineering", desc: "Developing custom modules, JSON:API endpoints, custom entities, and third-party integrations." },
-        { title: "Responsive Twig Theme Design", desc: "Building accessible, fast, and responsive UI components conforming to WCAG 2.1 AA standards." },
-        { title: "Performance & Security Auditing", desc: "Varnish caching, Redis object caching, Memcached configuration, and vulnerability audits." },
-        { title: "Enterprise Deployment & 24/7 SLA", desc: "Automated Acquia / Pantheon / AWS cloud CI/CD pipelines and proactive security updates." }
+        {
+            title: "Requirement Analysis",
+            desc: "As a leading Drupal web development company, we analyze your project requirements and create a perfect plan to meet your business needs."
+        },
+        {
+            title: "Website Design",
+            desc: "We have a strong team of experienced designers who know how to make your website user-friendly and highly interactive."
+        },
+        {
+            title: "Website Development",
+            desc: "At this stage, we start website development as per your project requirements and design modules. Then, we make your website functional and valuable with our standard coding practices."
+        },
+        {
+            title: "Testing",
+            desc: "Our professional team has expert quality analysts and testers who review the website’s code and ensure it is bug-free and ready to deliver."
+        },
+        {
+            title: "Project Deployment",
+            desc: "At The Digital Connect, we know how to deploy and make the product accessible to its users. We make your website quick and efficient."
+        },
+        {
+            title: "Quick Support",
+            desc: "Don’t worry; we will always be with you after project delivery. Therefore, we will provide quick support and resolution to any issue or error."
+        }
     ];
 
     const industries = [
@@ -109,7 +152,7 @@ const DrupalDevelopment = () => {
                     parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
                     eyebrow="Drupal Development Services"
-                    title="Enterprise Drupal CMS Development & Headless Solutions"
+                    title="Expert Drupal Web Development Company"
                     description="Architect secure, high-scale, and multilingual digital platforms with Drupal. The Digital Connect engineers enterprise content ecosystems, decoupled architectures, and high-security web portals."
                     theme={theme}
                     visual={DrupalVisual}
@@ -135,7 +178,7 @@ const DrupalDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Drupal Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Enterprise Workflow"
                     description="From content modeling and multi-site architecture to custom module coding and enterprise deployment."
                     process={processSteps}
@@ -143,15 +186,15 @@ const DrupalDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-12">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Complete Drupal Engineering Capabilities
+                                Our Drupal Web Development Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Enterprise CMS, decoupled architectures, and migration services.</p>
+                            {/* <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">We are committed to keeping transparency during overall Drupal website development. We will be available for your web development needs with our streamlined process.</p> */}
                         </div>
                     </div>
 

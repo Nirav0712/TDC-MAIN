@@ -26,54 +26,88 @@ const CodeigniterDevelopment = () => {
 
     const services = [
         {
-            title: "Custom CodeIgniter Web Application Development",
+            title: "CodeIgniter CMS Development",
             icon: <Zap className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
             cta: "Build CodeIgniter App",
             paragraphs: [
-                "Engineer blazing-fast web solutions with minimal server footprint. The Digital Connect develops customized business portals, real-time analytics platforms, and enterprise data backends using CodeIgniter 4.",
-                "CodeIgniter delivers exceptional execution speed and near-zero configuration complexity, allowing us to build high-concurrency systems that outshine bloated enterprise stacks."
-            ]
+                "The CodeIgniter CMS development is the responsive, easy-to-use, and responsive system built with the most effective MVC framework. It simplifies users’ tasks to create a simple yet clean and better website with all pages. Those pages are a portfolio, service, event, news, etc.",
+
+                "Through CodeIgniter CMS development, you can quickly build any website, such as a fitness website, education website, lawyer website, and much more, based on your choice. The CMS (Content Management System) is easy to develop with the extraordinary PHP framework CodeIgniter.",
+
+                "It can be easily customized with the help of developers or programmers. Our programmers can easily understand the codes that are used in it. Then they can modify the files and database when it is required. You can do it based on your needs. The CodeIgniter CMS will have solid security-based and admin-level security to protect from SQL injection attacks, XSS attacks, etc."
+            ],
         },
         {
-            title: "CodeIgniter Migration to CI4 & PHP 8.x",
+            title: "CodeIgniter Portal Development",
             icon: <Server className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Upgrade CodeIgniter",
             paragraphs: [
-                "Modernize your legacy CodeIgniter 2.x or 3.x systems to the modern CodeIgniter 4 framework with complete namespaces, entity models, and strict typing.",
-                "We migrate your existing databases, optimize legacy SQL queries, and implement PHP 8.2+ performance improvements while guaranteeing zero data loss or service disruption."
-            ]
+                "Generally, web portals go beyond websites based on their usability as they depend on information and services based on the user’s interest. Web portals will be futuristic business tools since they bring together vital business information and data at a specific location.",
+
+                "Therefore, organizations invest in web portal development to strengthen their foundation and expand their horizons. Looking for a dependable framework based on creating a complex application is essential. CodeIgniter, the practical PHP-based web development framework, is the best choice as they are empowered with extraordinary features. Such features are simplicity, speed, security, and flexibility.",
+
+                "The Digital Connect is the trusted firm for availing the best web portals for various enterprises. We have professional and skilled CodeIgniter portal developers acclaimed for developing a responsive and fully functional portal to increase value to the business enterprise. Our developers can build portals based on SEO-friendly."
+            ],
         },
         {
-            title: "Custom Module & API Development",
+            title: "CodeIgniter Web Apps Development",
             icon: <Database className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Develop REST APIs",
             paragraphs: [
-                "Build lightweight, high-throughput RESTful API microservices that power mobile applications and dynamic frontend interfaces. We utilize CodeIgniter's ResourceController and API Response traits.",
-                "Every endpoint includes automated JWT token authentication, input sanitization, and structured JSON responses for effortless developer integration."
-            ]
+                "CodeIgniter is the effectively used PHP-based web application framework that is the right choice to create top-notch web apps. This user-friendly platform has a highly interactive interface with easy-to-use tools. They also have additional features such as flexibility, simplicity, and security to make CodeIgniter the right choice.",
+
+                "We at The Digital Connect offer the best CodeIgniter web apps development service and have the best track record in the technology domain. We are using this prolific framework to develop exceptional web applications within the client’s budget and within a short span.",
+
+                "Our group of skilled team is composed of certified developers. They are highly specialized in developing rich and dynamic custom web apps using the extraordinary features of the framework. We have a wide range of experience in the CodeIgniter framework attending a lot of successful projects for clients in different industries. We are the right choice to offer our customers tailor-made custom web app solutions."
+            ],
         },
         {
-            title: "Enterprise Maintenance & Security Hardening",
+            title: "CodeIgniter eCommerce Solution",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Secure CodeIgniter App",
             paragraphs: [
-                "Protect your digital platform with proactive CodeIgniter security auditing and performance tuning. We implement advanced CSRF guards, XSS filtering, Content Security Policies (CSP), and query caching.",
-                "Our ongoing support packages include uptime monitoring, PHP security patches, database index optimization, and emergency bug fixing."
-            ]
+                "Now you can scale up your online business with the CodeIgniter eCommerce solution. The increased popularity of the ecommerce business has increased the massive demand for professional ecommerce websites. Such websites must be visually appealing and offer buyers a seamless and smooth checkout experience.",
+
+                "Therefore choosing a suitable framework for ecommerce solutions is essential. During that time, the CodeIgniter eCommerce solution was the right choice. It serves as the best choice for building compelling and rich ecommerce solutions. At The Digital Connect, we combine ecommerce expertise with practical CodeIgniter skills for an ecommerce solution to promote business online.",
+
+                "We are the best to use an extraordinarily flexible and secure PHP-based framework to build robust e-commerce web applications. We ensure that such applications can provide you with high-end user experiences, easy shipping integration, easy browsing, secure payments, hassle-free checkout, etc. We enhance your business value by adding custom functionalities."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Architecture & Needs Analysis", desc: "Assessing system throughput targets, data models, third-party dependencies, and business logic." },
-        { title: "CodeIgniter 4 Environment Setup", desc: "Configuring environment files (.env), routing maps, PSR autoloaders, and database connection pools." },
-        { title: "MVC Core Logic Engineering", desc: "Writing clean models, custom validation rules, controller handlers, and modular view components." },
-        { title: "API & Payment Integration", desc: "Connecting payment gateways (Stripe, PayPal), SMS notification providers, and cloud services." },
-        { title: "Performance Stress Testing", desc: "Benchmarking execution time, memory usage, load concurrency, and security vulnerability scans." },
-        { title: "Zero-Downtime Deployment", desc: "Deploying to production cloud servers with OPcache acceleration and continuous log tracking." }
+        {
+            title: "Requirement Gathering",
+            desc: "Initially, we will gather all the requirements from our clients to meet their needs and goals without fail. Our experts will get in touch with you."
+        },
+        {
+            title: "UI/UX Designing",
+            desc: "Our CodeIgniter development will follow the UI/UX designing process to create highly functional PHP-based apps and websites on MVC architecture."
+        },
+        {
+            title: "Prototype",
+            desc: "We follow the proper prototype and traditional methods to create web applications to the next level."
+        },
+        {
+            title: "Product Development",
+            desc: "Product development is an essential process. The product will get its proper shape and almost get ready to execute."
+        },
+        {
+            title: "Quality Testing",
+            desc: "We have a group of quality testing teams to test whether the developed web apps are proper or not. Call us for error-free products."
+        },
+        {
+            title: "Deployment",
+            desc: "Finally, after passing the quality testing, the web application will be ready to deploy, and our clients can use it without hesitation."
+        },
+        {
+            title: "Support & Maintenance",
+            desc: "You can immediately contact our support and maintenance if you have any issues after deployment. They are available 24/7 and ready to answer anytime you want."
+        }
     ];
 
     const industries = [
@@ -109,7 +143,7 @@ const CodeigniterDevelopment = () => {
                     parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
                     eyebrow="CodeIgniter Development Services"
-                    title="High-Speed CodeIgniter Web Application Development"
+                    title="CodeIgniter Development Company"
                     description="Build ultra-fast, lightweight, and scalable PHP web applications with CodeIgniter. The Digital Connect delivers high-performance portals and custom web backends with zero framework bloat."
                     theme={theme}
                     visual={CodeigniterVisual}
@@ -135,15 +169,15 @@ const CodeigniterDevelopment = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our CodeIgniter Development Process"
+                    title="Agile Development Process"
                     eyebrow="Our Engineering Workflow"
-                    description="From architecture modeling to lean MVC implementation, stress testing, and production launch."
+                    description="As a leading CodeIgniter development company, we follow some of the best processes to offer 100% successful solutions for our customers. Check out the process we follow."
                     process={processSteps}
                 />
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-8">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services

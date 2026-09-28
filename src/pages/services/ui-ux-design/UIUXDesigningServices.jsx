@@ -26,54 +26,97 @@ const UIUXDesigningServices = () => {
 
     const services = [
         {
-            title: "User Experience (UX) Research & Analysis",
+            title: "UI/UX Design Consulting",
             icon: <Users className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
             cta: "Explore UX Research",
             paragraphs: [
-                "Uncover deep behavioral insights about your end users. The Digital Connect conducts qualitative interviews, quantitative surveys, competitor benchmarking, and journey mapping.",
-                "Our empirical UX research eliminates guesswork, pinpointing user friction points and prioritizing product features that directly drive adoption and retention."
-            ]
+                "If you’re looking for a team that has a well-defined design process, adheres to deadlines, and produces a flawless product, look no further. Make use of the UI and UX services provided by The Digital Connect. Using our design team, you may rapidly and simply create an interesting product inside a major software firm.",
+
+                "Companies benefit from UI/UX consulting by applying the correct procedures, methodologies, and tools to enhance their product’s overall usability and save costs. To ensure your company has the most up-to-date knowledge of user interface and user experience (UI/UX) best practices, we provide comprehensive product evaluations, product strategy consultations, workshop facilitation, and training.",
+
+                "Our UI/UX experts can help you at any point in the product development cycle, from product discovery and prototype validation through post-release support. With agile methodologies and a focus on the needs of your customers, we can help your business develop and evolve inside."
+            ],
         },
         {
-            title: "Wireframing & Information Architecture",
+            title: "Android App UI/UX",
             icon: <Layers className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800",
             cta: "View Wireframing Services",
             paragraphs: [
-                "Establish clear structural blueprints for your digital products before committing to final code. We organize navigation flows, data hierarchies, and interface layouts.",
-                "Low-fidelity and high-fidelity wireframes ensure stakeholder alignment and prevent costly structural revisions during backend engineering."
-            ]
+                "When it comes to iOS app UI/UX design, the legibility of the text and layouts are something we look for more than anything else. Moreover, it doesn’t matter how useful an app is if it doesn’t have a decent user experience. We at The Digital Connect know the importance of having a decent, creative, and eye-catching UI/UX for iOS apps.",
+
+                "Our professional iOS apps UI/UX designers are capable of creating cutting-edge user interfaces that enhance the overall experience for our clients. iOS apps app UI/UX designs that are appealing to the eye are the result of our high-quality services and years of expertise.",
+
+                "We create meaningful, relevant, and user-friendly iOS app UI/UX design that is most conducive to business success and benefits both your organization and your end consumers. We are a one-stop solution for all your iOS app design needs."
+            ],
         },
         {
-            title: "Modern User Interface (UI) Design",
+            title: "Cross-Platform App UI/UX Design",
             icon: <Layout className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Design User Interfaces",
             paragraphs: [
-                "Craft stunning, accessible interfaces that captivate users. We design bespoke visual themes, cohesive typography systems, micro-interactions, and dark/light modes.",
-                "Every interface adheres strictly to Apple Human Interface Guidelines and Google Material Design 3 standards for seamless native feel on all platforms."
-            ]
+                "The quality of the cross-platform app UI/UX design is directly related to its user experience. So we do. The Digital Connect believes in creating perfect UI/UX designs for cross-platform apps. Based on data and user behavior, we develop cutting-edge solutions. We have a unique approach to cross-platform UI/UX design that includes extensive planning and the frame of an innovative product from the start.",
+
+                "Our professional designers use a user-centered approach to create cross-platform applications that meet the particular demands of our clients. We are the industry leader in UI/UX designs, and our products are popular for their quality and effectiveness.",
+
+                "The cross-platform UI/UX designs we frame greatly impact your brand’s presence, visibility, and connection with the intended audience. We use cutting-edge tools and technologies to create the best-in-class and intuitive UI/UX for your cross-platform app. In this way, we help you increase the number of users and the efficiency of your app on different platforms."
+            ],
         },
         {
-            title: "Design Systems & Component Libraries",
+            title: "Web Apps UI/UX Design",
             icon: <Sparkles className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Build Design Systems",
             paragraphs: [
-                "Scale your digital products effortlessly with unified component libraries in Figma and React. We define reusable design tokens, buttons, form inputs, modals, and navigation patterns.",
-                "Design systems maintain brand cohesion across multiple product teams while reducing development time by over 40%."
-            ]
+                "The only thing that separates your mobile app from your competition is a fantastic user experience. Good User Interface design may have a significant impact on the success of your business. Every project we develop is informed by the knowledge we’ve gained through building hundreds of successful applications. We are well-known in the field of User Experience for our straightforward but very successful approach.",
+
+                "Simple and clear user interfaces and user experience (UX) design are the most effective ways to keep clients engaged and committed. The Digital Connect’s web App UI design and development team is focused on making our clients’ consumers happier. This naturally has a long-term influence on the connection we have with our clients.",
+
+                "Our top-notch designers are capable of working in a variety of industries, no matter what your previous experience is. We have a long-term relationship with our clients because of our dedication to quality-based web app interface design and attention to detail."
+            ],
+        },
+        {
+            title: "iOS Apps UI/UX Design",
+            icon: <Sparkles className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Design Systems",
+            paragraphs: [
+                "When it comes to iOS app UI/UX design, the legibility of the text and layouts are something we look for more than anything else. Moreover, it doesn’t matter how useful an app is if it doesn’t have a decent user experience. We at The Digital Connect know the importance of having a decent, creative, and eye-catching UI/UX for iOS apps.",
+
+                "Our professional iOS apps UI/UX designers are capable of creating cutting-edge user interfaces that enhance the overall experience for our clients. iOS apps app UI/UX designs that are appealing to the eye are the result of our high-quality services and years of expertise.",
+
+                "We create meaningful, relevant, and user-friendly iOS app UI/UX design that is most conducive to business success and benefits both your organization and your end consumers. We are a one-stop solution for all your iOS app design needs."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "User Research & Empathy", desc: "Conducting user interviews, building personas, and mapping journey touchpoints." },
-        { title: "Information Architecture", desc: "Organizing logical user flows, hierarchy, and intuitive sitemaps." },
-        { title: "Wireframes & Schematics", desc: "Crafting structural layout blueprints to optimize navigation and spatial flow." },
-        { title: "Visual UI Design", desc: "Applying modern color palettes, typography, iconography, and responsive grid layouts in Figma." },
-        { title: "Interactive Prototyping", desc: "Simulating live app interactions, micro-animations, and gestures." },
-        { title: "Design System & Handoff", desc: "Delivering unified design tokens, component libraries, and detailed developer specs." }
+        {
+            title: "User Research & Empathy",
+            desc: "Conducting user interviews, building personas, and mapping journey touchpoints."
+        },
+        {
+            title: "Information Architecture",
+            desc: "Organizing logical user flows, hierarchy, and intuitive sitemaps."
+        },
+        {
+            title: "Wireframes & Schematics",
+            desc: "Crafting structural layout blueprints to optimize navigation and spatial flow."
+        },
+        {
+            title: "Visual UI Design",
+            desc: "Applying modern color palettes, typography, iconography, and responsive grid layouts in Figma."
+        },
+        {
+            title: "Interactive Prototyping",
+            desc: "Simulating live app interactions, micro-animations, and gestures."
+        },
+        {
+            title: "Design System & Handoff",
+            desc: "Delivering unified design tokens, component libraries, and detailed developer specs."
+        }
     ];
 
     const industries = [
@@ -109,8 +152,8 @@ const UIUXDesigningServices = () => {
                     parentTitle="Designing Services"
                     parentRoute="/services/ui-ux-design"
                     eyebrow="UI & UX Designing Services"
-                    title="User-Centered UI & UX Designing Services"
-                    description="Transform complex digital ideas into effortless, intuitive user experiences. The Digital Connect combines deep behavioral research with cutting-edge UI design to build products people love to use."
+                    title="Creative UI/UX Design Company"
+                    description="UI and UX development services that combine cutting-edge technology, creativity, and customisation may help you create a really unique digital experience. Customers’ happiness, brand value, and conversions all improve as a result of our user-friendly designs."
                     theme={theme}
                     visual={UIUXDesignVisual}
                     ctaText="GET FREE QUOTE NOW"
@@ -143,15 +186,16 @@ const UIUXDesigningServices = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-12 lg:py-6">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Comprehensive UI/UX Designing Services
+                                Our Interactive UI/UX Design Services
+
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Product strategy, interface design, and component systems for digital leaders.</p>
+                            {/* <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Product strategy, interface design, and component systems for digital leaders.</p> */}
                         </div>
                     </div>
 

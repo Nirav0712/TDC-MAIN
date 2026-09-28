@@ -68,14 +68,31 @@ const LogoDesign = () => {
     ];
 
     const processSteps = [
-        { title: "Brand Discovery & Brief", desc: "Uncovering your mission, target demographics, brand personality, and competitive differentiators." },
-        { title: "Market & Aesthetic Research", desc: "Analyzing industry visual trends, color psychology, and symbolic associations to find a unique whitespace." },
-        { title: "Concept Sketching & Ideation", desc: "Generating dozens of raw thumbnail concepts exploring geometric, abstract, and typographic directions." },
-        { title: "Vector Drafting & Golden Ratio", desc: "Refining select concepts into scalable vector geometry with precise balance and custom font tuning." },
-        { title: "Real-World Mockups & Review", desc: "Presenting logo marks mapped onto realistic 3D products, signage, mobile screens, and stationery." },
-        { title: "Final Deliverables & Ownership", desc: "Handing over complete vector master files, responsive formats, brand guide, and copyright certificates." }
+        {
+            title: "Brand Discovery & Brief",
+            desc: "Uncovering your mission, target demographics, brand personality, and competitive differentiators."
+        },
+        {
+            title: "Market & Aesthetic Research",
+            desc: "Analyzing industry visual trends, color psychology, and symbolic associations to find a unique whitespace."
+        },
+        {
+            title: "Concept Sketching & Ideation",
+            desc: "Generating dozens of raw thumbnail concepts exploring geometric, abstract, and typographic directions."
+        },
+        {
+            title: "Vector Drafting & Golden Ratio",
+            desc: "Refining select concepts into scalable vector geometry with precise balance and custom font tuning."
+        },
+        {
+            title: "Real-World Mockups & Review",
+            desc: "Presenting logo marks mapped onto realistic 3D products, signage, mobile screens, and stationery."
+        },
+        {
+            title: "Final Deliverables & Ownership",
+            desc: "Handing over complete vector master files, responsive formats, brand guide, and copyright certificates."
+        }
     ];
-
     const industries = [
         { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
         { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
@@ -122,11 +139,10 @@ const LogoDesign = () => {
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Brand Identity & Logo Craftsmanship</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Timeless Logo Design Rooted in Strategy and Precision
+                                Top-rated Business Logo Creator
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>A powerful logo is more than just an attractive symbol; it is the visual anchor of your entire business. It embodies your corporate values, builds instant customer trust, and establishes credibility in competitive markets.</p>
-                                <p>At The Digital Connect, our design approach combines strategic brand positioning with master-level vector craftsmanship. We ensure your logo performs seamlessly whether rendered on a 16px browser favicon or a 50-foot outdoor billboard.</p>
+                                <p>A designer logo will assist the audience in becoming more familiar with you. In a world with billions of people, an innovative look carved on a particular color, along with an everlasting font style, can catch the attention of those who see your product tags. If you have an actual, interactive logo, your customers will be able to recognize your brand immediately when they use any of your services, regardless of where they are in the world. Logo designers at our logo design agency make sure that they create a distinctive logo for you and effectively express your organization’s personality, grandeur, and atmosphere to the general public and other stakeholders.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -142,7 +158,7 @@ const LogoDesign = () => {
                 />
 
                 {/* Empower Your Business with Our Services */}
-                <section>
+                {/* <section>
                     <div className="bg-white py-12 md:py-16 lg:py-20">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
@@ -199,7 +215,7 @@ const LogoDesign = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Technologies Section */}
                 {technologies && technologies.length > 0 && (

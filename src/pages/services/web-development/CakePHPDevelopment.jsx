@@ -26,54 +26,114 @@ const CakePHPDevelopment = () => {
 
     const services = [
         {
-            title: "Custom CakePHP Web Application Development",
+            title: "CakePHP Migration",
             icon: <Box className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
             cta: "Build CakePHP Web App",
             paragraphs: [
-                "Build scalable, clean, and maintainable web applications using CakePHP's proven Model-View-Controller (MVC) framework. The Digital Connect engineers tailored business portals, SaaS platforms, and enterprise data backends.",
-                "We leverage CakePHP's flexible database abstraction layer, integrated validation rules, and built-in caching mechanisms to achieve sub-second page rendering and reliable high-traffic throughput."
-            ]
+                "Since its inception, CakePHP has been ruling the web application development arena. It offers greater stability and flexibility in decent ways. The globally used CMSs such as Joomla, Drupal, WordPress, Magento, etc., were created using it. Therefore, we can say that hiring CakePHP development services is the best bet if you need a unique and highly interactive application for your business needs.",
+
+                "We at The Digital Connect offer reliable and efficient CakePHP development and migration services to all businesses. If you want to migrate your existing website to the CakePHP framework, we will assist you with our huge expertise and extensive experience.",
+
+                "With our in-depth knowledge and skills, we help you leverage the full potential of this modern web app development framework. Even if you are using an older version of this framework and want to migrate your app to the latest versions of CakePHP, then we can help you out."
+            ],
         },
         {
-            title: "CakePHP Migration & Version Upgrades",
+            title: "CakePHP Web App Development",
             icon: <Zap className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
             cta: "Upgrade CakePHP Version",
             paragraphs: [
-                "Upgrade your legacy CakePHP applications (v2.x / v3.x) to the latest CakePHP 4.x/5.x releases with zero downtime and total data integrity. We refactor deprecated methods, optimize SQL queries, and modernize PHP versions to PHP 8.2+.",
-                "Our migration protocol ensures full backwards compatibility with external APIs while unlocking massive performance speedups and state-of-the-art security patches."
-            ]
+                "Whether you are a small business owner or an established organization, CakePHP can help you fulfill your tech needs. It is a perfect solution for all enterprise-level needs. Our enthusiastic and expert CakePHP developer is knowledgeable and has rich industry experience. We deliver robust CakePHP development services for different industry domains.",
+
+                "We use our expert resources who ensure database access, validations, translations, build-in caching, and authentication. Moreover, our team is known for maintaining your application’s quality and making it profitable. We are committed to delivering result-oriented CakePHP application development services in less time.",
+
+                "The motto of our expert designers, developers, and solution architects is to offer higher performance, rapid development, agile workflow, and simplified codes. As a renowned CakePHP development company, we have a proven track record of creating innovative and creative solutions with complete support and better engagement."
+            ],
         },
         {
-            title: "CakePHP Plugin & Extension Development",
+            title: "CakePHP Plugin Development",
             icon: <Server className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
             cta: "Develop CakePHP Plugins",
             paragraphs: [
-                "Extend the out-of-the-box functionality of your existing web platform with bespoke CakePHP plugins. We develop modular packages for third-party payment processors, custom CRM connectors, and complex business logic.",
-                "Every plugin is developed following CakePHP Bake conventions, ensuring clean separation of concerns and effortless long-term maintainability."
-            ]
+                "Since its inception, CakePHP has been ruling the web application development arena. It offers greater stability and flexibility in decent ways. The globally used CMSs such as Joomla, Drupal, WordPress, Magento, etc., were created using it. Therefore, we can say that hiring CakePHP development services is the best bet if you need a unique and highly interactive application for your business needs.",
+
+                "We at The Digital Connect offer reliable and efficient CakePHP development and migration services to all businesses. If you want to migrate your existing website to the CakePHP framework, we will assist you with our huge expertise and extensive experience.",
+
+                "With our in-depth knowledge and skills, we help you leverage the full potential of this modern web app development framework. Even if you are using an older version of this framework and want to migrate your app to the latest versions of CakePHP, then we can help you out."
+            ],
         },
         {
-            title: "Enterprise CakePHP API & Backend Services",
+            title: "CakePHP Web App Development",
             icon: <ShieldCheck className="w-8 h-8" />,
             imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
             cta: "Build CakePHP APIs",
             paragraphs: [
-                "Connect your mobile applications, IoT devices, and frontend SPAs (React, Vue, Angular) to a rock-solid CakePHP RESTful API backend. We implement JWT authentication, OAuth2, rate limiting, and automated Swagger/OpenAPI documentation.",
-                "Our API architectures are engineered to handle high concurrent user loads with minimal memory footprint and bulletproof CSRF/XSS protection."
-            ]
+                "Whether you are a small business owner or an established organization, CakePHP can help you fulfill your tech needs. It is a perfect solution for all enterprise-level needs. Our enthusiastic and expert CakePHP developer is knowledgeable and has rich industry experience. We deliver robust CakePHP development services for different industry domains.",
+
+                "We use our expert resources who ensure database access, validations, translations, build-in caching, and authentication. Moreover, our team is known for maintaining your application’s quality and making it profitable. We are committed to delivering result-oriented CakePHP application development services in less time.",
+
+                "The motto of our expert designers, developers, and solution architects is to offer higher performance, rapid development, agile workflow, and simplified codes. As a renowned CakePHP development company, we have a proven track record of creating innovative and creative solutions with complete support and better engagement."
+            ],
+        },
+        {
+            title: "Custom CakePHP Web Development",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Build CakePHP APIs",
+            paragraphs: [
+                "CakePHP is a newly built PHP 5.4+ framework. With its safety and security features, it turns out to be an ideal option for all business types. The Digital Connect is a leading CakePHP Development Agency with a team of highly experienced PHP developers who effectively develop custom web applications and dynamic websites.",
+
+                "With years of experience and expertise in web development, we have emerged as a one-stop solution for all PHP development requirements, dealing with customers across various business types. We have a dedicated PHP development team who ensures to go the extra mile to provide the best web development solutions to our clients.",
+
+                "We efficiently provide customized, ensuring that the outcome is tailored to the client’s needs. With a vast knowledge of different aspects of web development, including excellent MVC architecture programming skills, we deliver the most effective CakePHP applications. In addition, we are experts in building customized CakePHP web apps."
+            ],
+        },
+        {
+            title: "CakePHP Maintenance & Support",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Build CakePHP APIs",
+            paragraphs: [
+                "CakePHP maintenance and support are not as easy as it sounds! But you can make this task easier with the help of professional CakePHP service providers like The Digital Connect. We help manage it 360, from upgrading security features to complete enhancement. We have hands-on experience in web development such as CMS to portals, business websites, and e-commerce websites.",
+
+                "We also offer a user-friendly content management system, CMS, which allows website owners to easily manage and control the content on their website, leveraging the CakePHP framework. Our trained professionals ensure that your applications and website run throughout without challenges.",
+
+                "Our certified PHP development service efficiently manages simple and complex websites and applications. Whether designing or developing, our team has a trusted solution for both. This is not it; we also provide expert assistance in deploying CakePHP websites and applications. Our team ensures that your platform runs smoothly with minimal complications."
+            ],
         }
     ];
 
     const processSteps = [
-        { title: "Architecture & Requirement Discovery", desc: "Analyzing database schema, business rules, entity models, and technical requirements." },
-        { title: "Database Modeling & Bake Scaffolding", desc: "Structuring relational databases and generating initial CakePHP MVC scaffolding with Bake CLI." },
-        { title: "Custom Logic & Business Implementation", desc: "Writing clean controllers, reusable behaviors, custom view helpers, and secure components." },
-        { title: "API & Third-Party Integration", desc: "Connecting payment gateways, shipping providers, enterprise ERPs, and cloud storage." },
-        { title: "Rigorous QA & Security Auditing", desc: "Automated PHPUnit test suites, SQL injection scans, CSRF token validation, and load stress testing." },
-        { title: "Deployment & Continuous Monitoring", desc: "CI/CD automated release pipelines, OPcache tuning, and ongoing 24/7 server maintenance." }
+        {
+            title: "Planning",
+            desc: "As a renowned CakePHP web development company, we collect and analyze your tech needs and create a perfect app design and development plan."
+        },
+        {
+            title: "Design",
+            desc: "We design your CakePHP application development with essential tools and create the perfect UI & UX for it. Ensuring user-friendly interfaces with our designing capabilities."
+        },
+        {
+            title: "Development",
+            desc: "Our expert developers start CakePHP development using the agile process. We are dedicated to creating highly efficient and relevant apps for your business."
+        },
+        {
+            title: "QA & Testing",
+            desc: "Our QA & the testing process includes executing several test cases, finding errors, and fixing bugs. As a result, get quality products in less time."
+        },
+        {
+            title: "Deployment",
+            desc: "Now we deploy your app and launch it in the market so the users can leverage its benefits according to their business needs."
+        },
+        {
+            title: "Post-deployment Support",
+            desc: "We ensure the consistent and uninterrupted functionality of your CakePHP app. Hire us to get professional CakePHP development solutions!"
+        },
+        {
+            title: "Go to Market",
+            desc: "We utilize our extensive experience to make your app market-ready and launch it with a quick deployment process."
+        }
     ];
 
     const industries = [
@@ -109,8 +169,8 @@ const CakePHPDevelopment = () => {
                     parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
                     eyebrow="CakePHP Development Services"
-                    title="Enterprise CakePHP Web Application Development"
-                    description="Build secure, scalable, and high-performance web applications using the robust CakePHP framework. The Digital Connect turns complex business logic into rapid, maintainable digital solutions."
+                    title="Most Reliable CakePHP Development Company"
+                    description="Since its inception, CakePHP has proven its vitality in web development. Moreover, it has a significant impact on modern programming concepts."
                     theme={theme}
                     visual={CakePHPVisual}
                     ctaText="GET FREE QUOTE NOW"
@@ -143,7 +203,7 @@ const CakePHPDevelopment = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-6 md:py-10 lg:py-8">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services
