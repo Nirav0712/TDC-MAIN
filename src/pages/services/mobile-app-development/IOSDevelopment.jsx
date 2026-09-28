@@ -148,10 +148,10 @@ const IOSDevelopment = () => {
                     eyebrow="Enhance Your Project with Risk Free Development Process"
                     description="We follow the agile process for iOS app development. In this way, we ensure the app's performance and functionality."
                     process={[
-                        { "title": "Planning", "desc": "21Twelve Interactive is a renowned iOS application development company; collect your app requirements to create a roadmap for development." },
+                        { "title": "Planning", "desc": "The Digital Connect collects your comprehensive app requirements to create a robust roadmap for development." },
                         { "title": "iOS App Designing", "desc": "In this step, we start designing the app using modular structures. We ensure to design a user-friendly and interactive iOS app." },
                         { "title": "iOS App Development", "desc": "Now we start the app development stage according to your business needs. Our developers ensure the app’s functionality and smooth flow." },
-                        { "title": "Quality Assurance", "desc": "As a professional iPhone application development company, our quality analysts are committed to delivering quality bug-free and high-performing apps." },
+                        { "title": "Quality Assurance", "desc": "As a professional iPhone application development team, our quality analysts are committed to delivering bug-free and high-performing apps." },
                         { "title": "Deployment", "desc": "We know how to launch your app on the App Store. Our efficient developers are devoted to boosting your market and making it market-ready." },
                         { "title": "Support & Maintenance", "desc": "Our veteran iOS app developers keep track of your app’s performance and functionality. We keep you working and active all the time." }
                     ]}

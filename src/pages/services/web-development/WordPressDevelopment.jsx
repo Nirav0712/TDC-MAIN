@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { WordPressVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Globe, Layout, ShieldCheck, Zap, Layers, Code
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,109 +16,103 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const WordPressDevelopment = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "WordPress Web Development Company & Services | The Digital Connect",
+        description: "Transform your online presence with custom WordPress development services by The Digital Connect. We build bespoke Gutenberg block themes, WooCommerce stores, and headless WordPress solutions."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-blue-700", bg: "bg-blue-600/20", softBg: "bg-blue-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Custom Gutenberg Block & Theme Development",
+            icon: <Layout className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Custom Theme",
+            paragraphs: [
+                "Give your editorial and marketing teams complete design freedom without breaking brand guidelines. The Digital Connect builds 100% bespoke WordPress themes and custom Gutenberg blocks tailored to your design system in Figma.",
+                "Zero bloated page builders (Elementor, Divi) — our custom themes achieve 95+ Google PageSpeed scores, clean semantic HTML5, and lightning-fast Core Web Vitals."
+            ]
+        },
+        {
+            title: "Headless WordPress & Next.js Frontends",
+            icon: <Code className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Headless WordPress",
+            paragraphs: [
+                "Pair the familiar content editing experience of WordPress with the ultra-fast speed and security of a modern headless frontend (Next.js, Remix, React).",
+                "We implement WPGraphQL, Faust.js, and static site generation (SSG) with incremental static regeneration (ISR) for instant page loads and bank-grade security."
+            ]
+        },
+        {
+            title: "Custom WooCommerce & Payment Solutions",
+            icon: <ShoppingCart className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Build WooCommerce Store",
+            paragraphs: [
+                "Turn WordPress into a high-converting digital storefront. We customize WooCommerce with bespoke product configurators, one-page checkouts, multi-currency pricing, and subscriptions.",
+                "We integrate Stripe, PayPal, Authorize.Net, and connect your inventory directly with enterprise ERPs and warehouse management systems."
+            ]
+        },
+        {
+            title: "WordPress Security, Speed & Enterprise Maintenance",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Secure WordPress Site",
+            paragraphs: [
+                "Keep your high-traffic WordPress platform protected, blazing fast, and always online. We implement Redis Object Caching, Cloudflare Enterprise CDN, WAF rules, and automated database optimization.",
+                "Our enterprise SLA packages provide real-time malware monitoring, automated daily offsite backups, core/plugin regression testing, and 24/7 priority support."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Architecture & Content Strategy", desc: "Auditing content schemas, editorial workflows, taxonomies, and custom field requirements." },
+        { title: "Custom Gutenberg Block Design", desc: "Building modular React-based Gutenberg blocks matching your Figma design system perfectly." },
+        { title: "Theme Engineering & WP Hooks", desc: "Writing clean, performant PHP 8.3 template files, custom post types (CPT), and REST API endpoints." },
+        { title: "WooCommerce & Third-Party Sync", desc: "Connecting payment gateways, CRMs (HubSpot, Salesforce), and marketing automation tools." },
+        { title: "Speed & Security Hardening", desc: "Configuring Redis object cache, image WebP compression, Cloudflare CDN, and security headers." },
+        { title: "Live Launch & Editor Training", desc: "Conducting zero-downtime DNS cutovers, sitemap verification, and recorded team training." }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & Retail", desc: "High-volume WooCommerce stores, customized checkout funnels, and subscription boxes.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant healthcare clinics, wellness media publications, and telehealth blogs.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Destination travel guides, hotel booking portals, and luxury resort websites.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "LearnDash LMS platforms, member academies, and educational resource hubs.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Editorial lookbooks, designer portfolios, and international eCommerce stores.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Athletic clubs, fitness coaching memberships, and sports news portals.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Law firm corporate websites, legal blog publications, and case intake forms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Corporate financial institutions, investor relations hubs, and wealth blogs.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Freight brokerage websites, shipment inquiry tools, and carrier portal hubs.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "IDX / MLS property listing websites, luxury development showcases, and broker portals.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "High-converting corporate marketing websites, product changelogs, and resource libraries.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Automotive dealerships, product spec catalogs, and industrial equipment showcases.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "100% custom Gutenberg block themes — zero slow, bloated visual builders",
+        "Exceptional 95+ Google PageSpeed and Core Web Vitals performance scores",
+        "Expertise in Headless WordPress with Next.js, Remix, and WPGraphQL",
+        "Advanced WooCommerce engineering with custom checkout flows and ERP sync",
+        "Enterprise-grade security hardening preventing brute-force attacks and malware",
+        "Dedicated WordPress specialists delivering transparent weekly sprint updates"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["WordPress 6+", "WooCommerce", "Gutenberg Block API", "PHP 8.3", "WPGraphQL", "Next.js", "MySQL", "Redis", "Cloudflare", "Docker", "Roots Bedrock", "Tailwind CSS"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
+                    parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    eyebrow="WordPress Development Services"
+                    title="Custom WordPress Web Development & Headless Solutions"
+                    description="Transform your digital presence with enterprise WordPress development. The Digital Connect engineers bespoke Gutenberg themes, high-converting WooCommerce storefronts, and ultra-fast headless WordPress setups."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={WordPressVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +120,13 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom WordPress Engineering Excellence</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Empower Your Marketing Team with Blazing-Fast, Custom WordPress Solutions
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>Powering over 43% of all websites on the internet, WordPress is the undisputed leader in content management. However, poorly coded commercial themes and excessive plugins often leave businesses with sluggish load times, security vulnerabilities, and brittle editing experiences.</p>
+                                <p>At The Digital Connect, we do things differently. We build lightweight, bespoke WordPress solutions from the ground up using custom Gutenberg blocks and modern headless architectures that give your marketing team complete creative control while maintaining peak performance and impenetrable security.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +135,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our WordPress Development Process"
+                    eyebrow="Our Engineering Workflow"
+                    description="From architecture modeling and custom Gutenberg block coding to speed optimization and live launch."
                     process={processSteps}
                 />
 
@@ -159,9 +149,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive WordPress Capabilities
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom themes, headless architectures, and enterprise WooCommerce.</p>
                         </div>
                     </div>
 
@@ -193,7 +183,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +207,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our WordPress Tech Stack"
                     />
                 )}
 
@@ -251,10 +241,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for WordPress Development
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Transform your web presence with our custom WordPress engineering team:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +306,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default WordPressDevelopment;

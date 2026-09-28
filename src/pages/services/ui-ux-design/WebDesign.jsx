@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { WebDesignVisual } from '../../../components/services/subservices/visuals/VisualsUIUX_Ecom';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Monitor, Layout, Zap, Sparkles
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,68 +16,111 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const WebDesign = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "Web Design Company & Custom Web Design Services | The Digital Connect",
+        description: "Transform your online presence with conversion-focused, responsive web design by The Digital Connect. We build sleek corporate websites, custom landing pages, and interactive digital experiences."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-cyan-600", bg: "bg-cyan-500/20", softBg: "bg-cyan-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "eCommerce Website Designing",
+            icon: <Monitor className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Custom Website",
+            paragraphs: [
+                "The Digital Connect is the ultimate and feature-rich e-commerce web development expert. We work with undisputed excellence spanning across the world. Our team is well versed in offering you a full suite of e-commerce web development services. It is helpful to automatically build a brand and garner the best Return on Investment.",
+
+                "With years of experience in the e-commerce industry, our team at The Digital Connect is equipped with the best expertise. We are ready to assist you in choosing the right platform suitable for your eCommerce business. We ensure that your eCommerce website enriches your brand effectively and quickly allows you to identify the market to target.",
+
+                "As a reliable, professional web design company, The Digital Connect offers you the best ecommerce services at reasonable prices. Our mission is to guide you and support you extensively, strengthening your market presence. It is also helpful to easily reach out to your business targets and goals with eCommerce website designing."
+            ],
+        },
+        {
+            title: "Responsive Web Designing",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Landing Pages",
+            paragraphs: [
+                "Creating the best Responsive Web Designing is most important for attracting mobile and web users worldwide. The Digital Connect brings you the complete splendid e-cart responsive web designing solutions more innovatively. These can be easily accessed with multiple platforms such as smartphones, Desktop, Tablets, iPad, etc.",
+
+                "We know and act according to your priorities, backed by a quick response team. Our responsive web designs would automatically ensure that your website is adaptable, trendy, and easy to navigate. We are the best web design company ready to bring you the best responsive features suitable for your website. It would automatically provide 100% satisfaction for your business uniquely.",
+
+                "Our team makes your responsive website enabled with usability and global compatibility. Our responsive web design combines the efforts of robust, ingenious, and visionary web design experts. We are simply skilled in what we do. Responsive web design achieves easy access on Mobiles, Tablets, Laptops, and desktops."
+            ],
+        },
+        {
+            title: "Custom Web Designing Services",
+            icon: <Layout className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Redesign Corporate Site",
+            paragraphs: [
+                "Our team is well versed in designing customized E-commerce websites. Availing our website designing services lets you get flawless payment gateway integrations. It is equipped with hassle-free, secure transactions. We live in a technologically driven world well versed in achieving a lasting online presence.",
+
+                "We aim to bring your business to the top position to pursue success. Our team at The Digital Connect is a skilled team of full-stack web designers. It is a convenient option for employing years of expertise in building secure, high-performing, and feature-packed websites.",
+
+                "We also bring you tailor-made products that meet your specific industry needs. Our team ensures a smooth digital transformation with custom web designing without hassle. The Digital Connect develops unique customized e-commerce solutions with the latest technologies such as Shopify, Magento, WooCommerce, BigCommerce, and more for your business with innovation."
+            ],
+        },
+        {
+            title: "Landing Page Designing",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Connect with us to get a landing page designing service!",
+            paragraphs: [
+                "Our team understands website needs first and assures us with determining the exclusive needs of the website. We design a perfect landing page for your e-commerce web page, which allows you to attract more numbers of people quickly. We offer you the best clear-cut idea about your website and help to look and feel like it.",
+
+                "With the data and information developing daily by the hour, our team would automatically recognize the necessity for dynamic website design with the appropriate landing page. The Digital Connect crafts interactive websites that come fully loaded with an attractive landing page. These WebPages would automatically provide the complete customizable pages, integrated CMS, and personalized user experiences.",
+
+                "We would give the go-ahead for bringing you creative heads for embarking on the website development. Our excellent website will be sent to you for review so that they will provide you the better results. We would eliminate even the slightest error and finally test for removing any bugs."
+            ],
+        },
+        {
+            title: "Corporate/Small Business Website Designing",
+            icon: <Layout className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+            cta: "Let's create intuitive web designs for you!",
+            paragraphs: [
+                "A corporate website is more than just a medium for showcasing the product and services. Whether you are a corporation, big or small, it is essential to portray the business with bright light tops with the best online requirements. The Digital Connect guarantees with every patron of ours no matter your products or services.",
+
+                "Our proven corporate web design services help organizations use the internet to propagate the mission and establish thought-leadership. It is also suitable for creating sales-ready corporate/small business website design opportunities. Powerful features are equipped with the business website design.",
+
+                "We constantly endeavor to develop professional websites that especially gain repeat customers. The Digital Connect is a top in creating attractive and unique-looking websites. It is 100% functional and easy to use, which would automatically reflect your brand to the world. We serve startups, SMBs, or large corporations! We build a corporate/small business website that works for you!"
+            ],
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        {
+            title: "Increase Search Ranking",
+            desc: "Responsive design and interactive website help to increase your keywords search ranking in Google SERP."
+        },
+        {
+            title: "Enhance Brand Reputation",
+            desc: "Having a strong brand reputation is an essential need for a business. Therefore, you can get it done quickly with our interactive designs."
+        },
+        {
+            title: "Attract New Visitors",
+            desc: "Indeed when your website contains good designs, it becomes easy to attract new visitors. It also helps you turn your visitors into potential customers."
+        },
+        {
+            title: "Increase Leads & Conversions",
+            desc: "We are a professional web design company dedicated to making your brand profitable and successful. In this way, we assist you in increasing the leads and conversions."
+        },
+        {
+            title: "User-Friendly",
+            desc: "Creating a user-friendly design is our expertise. We have become the first choice of several clients to frame a user-friendly and attractive web design."
+        },
+        {
+            title: "Reduce Maintenance",
+            desc: "We trust in creating the first perfect design. In this manner, we reduce the maintenance cost of web designs. Hire us to leverage reduced maintenance benefits."
+        },
+        {
+            title: "Reduce Bounce Rate",
+            desc: "If you have robust, impressive, relevant, and eye-catching designs on your website, users stay on this for sufficient time. Our designs are good at reducing the bounce rate."
+        }
     ];
 
     const industries = [
@@ -100,29 +139,27 @@ const APIIntegration = () => {
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Pixel-perfect responsive designs tailored for 100% device compatibility",
+        "Built-in Conversion Rate Optimization (CRO) with strategic UI pathways",
+        "Mobile-first architecture ensuring lightning-fast load times and SEO advantage",
+        "Accessibility-first approach complying with WCAG 2.1 AA standards",
+        "Interactive Figma prototypes with comprehensive developer handoff specs",
+        "Proven track record delivering award-winning digital experiences"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["Figma", "Adobe XD", "Webflow", "HTML5/CSS3", "Tailwind CSS", "Framer Motion", "GSAP", "Lottie Animations", "Next.js"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
-                    parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    parentTitle="Designing Services"
+                    parentRoute="/services/ui-ux-design"
+                    eyebrow="Web Design Company"
+                    title="Professional Web Design Company"
+                    description="The Digital Connect is the leading professional web design company offering full-spectrum service from mobile app development to digital marketing."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={WebDesignVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +167,12 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
-                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom Web Design Excellence</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-2">
+                                Process We Follow
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>Being a renowned web designing company, we assist our clients in leveraging the top benefits of interactive web designs with our expertise. Get in touch with us.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,24 +181,23 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our Web Design Process"
+                    eyebrow="Our Design Workflow"
+                    description="From strategy and information architecture to high-fidelity UI design and developer handoff."
                     process={processSteps}
                 />
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
-                                Empower Your Business with Our Services
-                            </div>
-                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
-                            </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                    <div className="bg-white py-8 md:py-12 lg:py-16">                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                        <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                            Empower Your Business with Our Services
                         </div>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                            Our Offered Web Design Services
+                        </h3>
+                        {/* <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom responsive websites and landing pages engineered to convert.</p> */}
+                    </div>
                     </div>
 
                     <div className="w-full bg-white py-12 md:py-16">
@@ -193,7 +228,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +252,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our Design Suite"
                     />
                 )}
 
@@ -251,10 +286,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect as Your Web Design Company
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Transform your online growth with custom web design:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +351,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default WebDesign;

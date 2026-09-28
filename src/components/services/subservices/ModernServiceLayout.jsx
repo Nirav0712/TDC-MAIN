@@ -13,14 +13,15 @@ const fadeIn = {
 
 export const ModernServiceLayout = ({
     seo,
-    theme,
+    theme = { accent: "text-cyan-600", bg: "bg-cyan-500/20", softBg: "bg-cyan-50" },
     hero,
     intro,
     process,
     services,
+    technologies,
     industries,
     reasons,
-    contact
+    contact = { title: "GET A FREE QUOTE", description: "We will get back to you within 24 hours" }
 }) => {
     useSEO(seo);
 
@@ -143,6 +144,15 @@ export const ModernServiceLayout = ({
                             </div>
                         </div>
                     </section>
+                )}
+
+                {technologies && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={Array.isArray(technologies) ? technologies : (technologies.items || [])}
+                        title={technologies.title || "Technologies We Work On"}
+                        eyebrow={technologies.eyebrow || "Our Tech Stack"}
+                    />
                 )}
 
                 {industries && (

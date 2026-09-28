@@ -1,204 +1,319 @@
 import React from 'react';
 import useSEO from '../../hooks/useSEO';
+import PageTransition from '../../components/common/PageTransition';
+import { SubServiceShared } from '../../components/services/subservices/SubServiceShared';
+import { CRMVisual } from '../../components/services/subservices/visuals/VisualsSoftware_Marketing';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import MainServiceLayout from '../../components/services/MainServiceLayout';
-import { Code2, Cog, LayoutDashboard, Terminal, Briefcase, FileSpreadsheet, UserCheck, HardDrive, Cpu, LineChart } from 'lucide-react';
 
-const SoftwareHeroVisual = () => (
-  <div className="relative w-full max-w-[600px] h-[500px] flex items-center justify-center z-20">
-
-    {/* Main SaaS Dashboard Container */}
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      className="absolute top-[10%] w-[95%] h-[80%] bg-white rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] border border-black/5 flex flex-col overflow-hidden z-10"
-    >
-      {/* Header */}
-      <div className="h-12 border-b border-black/5 bg-[#FAF9F7] flex items-center px-4 sm:px-6 justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-4 bg-brand-lavender rounded-sm"></div>
-          <div className="w-20 h-4 bg-black/10 rounded-full"></div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="w-6 h-6 bg-brand-yellow/30 rounded-full"></div>
-          <div className="w-6 h-6 bg-brand-blue/30 rounded-full"></div>
-        </div>
-      </div>
-
-      <div className="flex flex-1">
-        {/* Sidebar */}
-        <div className="w-[20%] border-r border-black/5 hidden md:flex flex-col gap-4 p-4">
-          <div className="w-full h-3 bg-brand-lavender/30 rounded"></div>
-          <div className="w-3/4 h-3 bg-black/5 rounded"></div>
-          <div className="w-4/5 h-3 bg-black/5 rounded"></div>
-          <div className="w-2/3 h-3 bg-black/5 rounded"></div>
-          <div className="w-full h-3 bg-black/5 rounded mt-auto"></div>
-        </div>
-
-        {/* Main Content Area */}
-        <div className="flex-1 p-6 flex flex-col gap-6 bg-[#FAF9F7]/50 relative overflow-hidden">
-          <div className="flex justify-between items-center">
-            <div className="w-32 h-6 bg-black/10 rounded-lg"></div>
-            <div className="w-24 h-6 bg-brand-blue/20 rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <motion.div whileHover={{ scale: 1.05 }} className="h-20 bg-white rounded-xl shadow-sm border border-black/5 p-4 flex flex-col justify-center">
-              <div className="text-[9px] font-bold text-black/40 mb-2">REVENUE</div>
-              <div className="w-3/4 h-3 bg-brand-lavender/60 rounded flex-1"></div>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} className="h-20 bg-white rounded-xl shadow-sm border border-black/5 p-4 flex flex-col justify-center">
-              <div className="text-[9px] font-bold text-black/40 mb-2">USERS</div>
-              <div className="w-1/2 h-3 bg-brand-yellow/60 rounded flex-1"></div>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} className="h-20 bg-white rounded-xl shadow-sm border border-black/5 p-4 flex flex-col justify-center">
-              <div className="text-[9px] font-bold text-black/40 mb-2">TASKS</div>
-              <div className="w-full h-3 bg-brand-blue/60 rounded flex-1"></div>
-            </motion.div>
-          </div>
-
-          <div className="flex-1 bg-white rounded-xl shadow-sm border border-black/5 p-4 flex flex-col gap-4">
-            <div className="w-full h-4 bg-black/5 rounded-full mb-2"></div>
-
-            {/* Animated List */}
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ x: -10, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.5 + (i * 0.2), repeat: Infinity, repeatDelay: 5 }}
-                className="flex items-center gap-4 border-b border-black/5 pb-2"
-              >
-                <div className="w-6 h-6 rounded bg-brand-lavender/20 shrink-0"></div>
-                <div className="w-1/3 h-2 bg-black/10 rounded-full"></div>
-                <div className="w-1/4 h-2 bg-brand-blue/30 rounded-full ml-auto"></div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </motion.div>
-
-    {/* Floating Code Snippet */}
-    <motion.div
-      animate={{ y: [0, 15, 0], x: [0, 10, 0] }}
-      transition={{ duration: 7, delay: 1, repeat: Infinity, ease: 'easeInOut' }}
-      className="absolute bottom-[2%] -right-[5%] w-[220px] bg-[#171717] text-white p-5 rounded-2xl shadow-2xl overflow-hidden z-20 border border-white/10"
-    >
-      <div className="text-[10px] font-mono text-brand-yellow/80 mb-2">import {'{ automation }'} from './core';</div>
-      <div className="text-[10px] font-mono text-brand-blue/80 mb-2">const sys = new BusinessLogic();</div>
-      <div className="text-[10px] font-mono text-white mb-2 ml-4">await sys.optimizeWorkflow();</div>
-      <div className="text-[10px] font-mono text-brand-mint/80 mt-4">&gt; Process deployed successfully</div>
-    </motion.div>
-
-  </div>
-);
-
-const SoftwareUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">The Operational Workflow</h3>
-    <div className="flex flex-col md:flex-row items-center justify-between w-full relative">
-
-      {/* Animated Data Stream */}
-      <div className="hidden md:block absolute top-[40%] left-0 w-full h-1 bg-black/5 -translate-y-1/2 -z-10 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full w-1/4 bg-brand-lavender/50 rounded-full"
-          animate={{ left: ['-25%', '125%'] }}
-          transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-          style={{ position: 'relative' }}
-        />
-      </div>
-
-      {[
-        { title: "User Input", icon: <UserCheck />, color: "text-blue-500", delay: 0 },
-        { title: "Application", icon: <LayoutDashboard />, color: "text-brand-lavender", delay: 0.2 },
-        { title: "Automation", icon: <Cpu />, color: "text-yellow-500", delay: 0.4 },
-        { title: "Data Storage", icon: <HardDrive />, color: "text-brand-blue", delay: 0.6 },
-        { title: "Output/Reports", icon: <LineChart />, color: "text-green-500", delay: 0.8 }
-      ].map((step, i) => (
-        <div key={i} className="flex flex-col flex-1 items-center gap-4 relative group">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ delay: step.delay, duration: 0.4 }}
-            className="w-20 h-20 rounded-2xl bg-white border border-black/10 shadow-xl flex items-center justify-center relative z-10"
-          >
-            {React.cloneElement(step.icon, { className: `w-8 h-8 mx-auto ${step.color}` })}
-          </motion.div>
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-4 sm:px-6 text-center"
-          >
-            {step.title}
-          </motion.span>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const SoftwareDevelopment = () => {
-  useSEO({
-    title: "Custom Software Development Services | The Digital Connect",
-    description: "We develop custom software that simplifies complex workflows, automates repetitive processes and gives teams better control over their operations."
-  });
+    useSEO({
+        "title": "Custom Software Development Company | The Digital Connect",
+        "description": "The Digital Connect delivers enterprise custom software development, SaaS engineering, CRM/ERP systems, and business automation solutions."
+});
 
-  return (
-    <MainServiceLayout
-      breadcrumb="Software Development"
-      title="Software Built Around Your Business."
-      subtitle="Custom Systems Engineering"
-      description="We develop custom software that simplifies complex workflows, automates repetitive processes and gives teams better control over their operations."
-      themeConfig={{
-        bg: 'bg-brand-lavender/10',
-        accentText: 'text-purple-700',
-        glowColor: 'bg-brand-lavender'
-      }}
-      HeroVisual={SoftwareHeroVisual}
-      overview={{
-        title: "Stop conforming to your software.",
-        content: "Off-the-shelf software rarely fits a unique business perfectly. You end up bending your operational processes to fit the tool. We reverse that paradigm. We architect custom SaaS platforms, CRMs, ERPs, and internal dashboards meticulously engineered to map exactly to your operations, streamlining massive logistics workflows and providing deep proprietary analytics."
-      }}
-      capabilities={[
-        { icon: <LayoutDashboard />, title: "Custom Software", desc: "Bespoke platforms designed from absolute scratch locking into your specific needs." },
-        { icon: <Code2 />, title: "SaaS Platforms", desc: "Subscription-ready architectures built for massive multi-tenant scalability." },
-        { icon: <Briefcase />, title: "CRM Systems", desc: "Sales and relationship trackers tailored to your unique sales funnel." },
-        { icon: <FileSpreadsheet />, title: "ERP Software", desc: "Total enterprise resource planning mapping operations holistically." },
-        { icon: <Cog />, title: "Business Automation", desc: "Crushing repetitive manual tasks via intelligent background jobs and APIs." },
-        { icon: <Terminal />, title: "Internal Tools", desc: "Private dashboard components heavily boosting team output metrics." }
-      ]}
-      technologies={['React', 'Node.js', 'Python', 'PHP', 'Laravel', '.NET', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker']}
-      UniqueVisual={SoftwareUniqueVisual}
-      processSteps={[
-        { title: "Business Analysis", desc: "Deeply auditing your existing manual processes and operational bottlenecks." },
-        { title: "Architecture", desc: "Drafting robust server infrastructure, database models, and API logic." },
-        { title: "UX/UI Design", desc: "Structuring massive data into clean, frictionless dashboard interfaces." },
-        { title: "Development", desc: "Sprinting through frontend SPA construction and deep backend systems logic." },
-        { title: "Testing", desc: "Rigorous continuous integration evaluating edge cases and security holes." },
-        { title: "Deployment", desc: "Seamless onboarding and hosting migration into strict cloud environments." },
-        { title: "Maintenance", desc: "Constant scaling, data backups, and feature iterative releases." }
-      ]}
-      benefits={[
-        { title: "Custom Workflows", desc: "Code entirely reflecting how your specific staff functions naturally." },
-        { title: "Scalable Architecture", desc: "Systems that perform flawlessly whether you have 10 employees or 10,000." },
-        { title: "Hyper Automation", desc: "Saving hundreds of labor-hours by delegating tasks to scheduled scripts." },
-        { title: "Data Visibility", desc: "Live unified reporting granting absolute executive oversight instantly." },
-        { title: "Strict Security", desc: "Role-based access hierarchies locking down exact data visibility." },
-        { title: "Tight Integration", desc: "Syncing natively with your current tools (Stripe, Slack, AWS)." },
-      ]}
-      faqs={[
-        { q: "Is custom software worth the high initial investment?", a: "Off-the-shelf software incurs infinite scaling subscription costs and immense labor waste from inefficiencies. Custom software is an asset you own 100%, providing immediate ROI via massive operational efficiency and eliminating per-seat SaaS bloat." },
-        { q: "How do you ensure data security?", a: "We utilize robust authentication (OAuth/JWT), enterprise-grade encryption for Data-in-Transit and Data-at-Rest, alongside rigorous penetration testing before launch." },
-        { q: "Can we integrate this with our current accounting tools?", a: "Yes. Practically all Custom Software we develop integrates natively with tools like QuickBooks, Xero, Stripe, or any platform supporting a REST/GraphQL API." },
-        { q: "Who owns the software once it's built?", a: "You do. We provide unparalleled transparency and transfer 100% of the Intellectual Property and raw Source Code to your organization." }
-      ]}
-    />
-  );
+    const theme = {"accent":"text-brand-blue","bg":"bg-brand-blue/20","softBg":"bg-brand-cyan/10"};
+
+    const services = [
+            {
+                title: "Custom CRM Development",
+                icon: <Users className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore CRM Services",
+                link: "/services/software-development/crm",
+                paragraphs: [
+                    "Ditch generic, expensive per-seat CRM tools. We build custom Customer Relationship Management platforms tailored to your exact sales pipelines.",
+                    "Enjoy proprietary lead-scoring algorithms, automated outreach workflows, and comprehensive deal-tracking analytics dashboards."
+]
+            },
+            {
+                title: "Enterprise Resource Planning (ERP)",
+                icon: <Building2 className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore ERP Services",
+                link: "/services/software-development/erp",
+                paragraphs: [
+                    "Eliminate organizational silos by unifying accounting, inventory, human resources, supply chain, and procurement into a singular real-time hub.",
+                    "Our custom ERP software gives executive leadership absolute operational visibility across distributed corporate entities."
+]
+            },
+            {
+                title: "SaaS Product Engineering",
+                icon: <Cloud className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore SaaS Services",
+                link: "/services/software-development/saas",
+                paragraphs: [
+                    "Turn your product vision into a scalable, revenue-generating SaaS business. We engineer multi-tenant cloud architectures with automated billing.",
+                    "We handle tenant data isolation, user seat management, automated onboarding flows, and granular role-based permissions."
+]
+            },
+            {
+                title: "Business Workflow Automation",
+                icon: <Zap className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore Automation Services",
+                link: "/services/software-development/business-automation",
+                paragraphs: [
+                    "Replace error-prone manual spreadsheets and redundant data entry with intelligent, programmatic workflow automation pipelines.",
+                    "Connect distinct third-party platforms to trigger automated notifications, report generation, and multi-tier approval flows."
+]
+            }
+    ];
+
+    const processSteps = [
+            { title: "Domain Discovery & Architecture", desc: "Analyzing your business logic, compliance mandates, data models, and integration targets." },
+            { title: "System & Database Design", desc: "Modeling normalized database schemas, microservice boundaries, and strict API contracts." },
+            { title: "Iterative Sprint Development", desc: "Writing clean, maintainable, and typed code in two-week agile sprints with working demos." },
+            { title: "Automated QA & Security Audits", desc: "Executing unit, integration, performance load, and penetration testing across all layers." },
+            { title: "Cloud Deployment & DevOps", desc: "Deploying to high-availability AWS/Azure cloud environments with automated CI/CD pipelines." },
+            { title: "Continuous SLA Support", desc: "24/7 infrastructure monitoring, security patch management, database backups, and feature rollouts." }
+    ];
+
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
+
+    const reasons = [
+        "100% custom software architecture tailored to your proprietary business logic",
+        "Zero per-seat licensing fees — your enterprise completely owns the software IP",
+        "Enterprise-grade security adhering to SOC 2, HIPAA, and GDPR standards",
+        "Modern microservices architecture designed to scale with your transaction growth",
+        "Two-week agile sprints with transparent progress demos and clear deliverables",
+        "Seamless integration with your legacy databases and modern third-party cloud APIs",
+        "Comprehensive automated test suites ensuring zero regression bugs",
+        "Dedicated post-launch maintenance, monitoring, and continuous technical support"
+    ];
+
+    const technologies = ["React","Node.js","TypeScript","Python","FastAPI","PostgreSQL","MongoDB","Redis","Docker","Kubernetes","AWS","Azure","GraphQL"];
+
+    return (
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="Home"
+                    parentRoute="/"
+                    eyebrow="Software Development Services"
+                    title="Enterprise Custom Software Development Services"
+                    description="We architect, engineer, and scale bespoke enterprise software, SaaS platforms, and intelligent automation systems tailored to solve your most complex operational challenges."
+                    theme={theme}
+                    visual={CRMVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Enterprise Engineering Mastery</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Building Scalable Custom Software to Power Your Competitive Advantage
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>Every organization possesses unique operational bottlenecks, specialized workflows, and proprietary domain knowledge that off-the-shelf software simply cannot support. At The Digital Connect, we build bespoke software systems engineered from the ground up to support your specific business model.</p>
+                                <p>From complex multi-tenant SaaS products and bespoke CRM/ERP platforms to workflow automation and high-throughput API engines, our full-stack software engineers build secure, modular, and cloud-native solutions that eliminate operational friction and scale effortlessly with your enterprise growth.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Software Engineering Methodology"
+                    eyebrow="Our Engineering Process"
+                    description="A disciplined agile software development lifecycle designed for transparency, reliability, and security."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Software Development Capabilities
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore our comprehensive software engineering services crafted for enterprise reliability.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Software Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Partner with dedicated software engineers committed to building robust enterprise assets:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
+    );
 };
 
 export default SoftwareDevelopment;

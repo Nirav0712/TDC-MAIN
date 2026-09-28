@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { WebflowVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Globe, Sparkles, Layout, Zap, Layers, Code
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,109 +16,103 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const WebflowDevelopment = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "Enterprise Webflow Development Company & Services | The Digital Connect",
+        description: "Accelerate your marketing agility with custom Webflow development services by The Digital Connect. We build award-winning, responsive Webflow websites with clean semantic code."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-blue-600", bg: "bg-blue-500/20", softBg: "bg-blue-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Figma to Webflow Pixel-Perfect Development",
+            icon: <Layout className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Convert Figma to Webflow",
+            paragraphs: [
+                "Transform your Figma designs into fully responsive, production-ready Webflow websites. The Digital Connect utilizes the industry-standard Client-First (Relume/Finsweet) naming convention to write clean, scalable HTML5 and CSS structures.",
+                "Every page is structured with responsive fluid grids, accessible color contrast, and optimized typography for desktop, tablet, and mobile breakpoints."
+            ]
+        },
+        {
+            title: "Advanced Webflow Interactions & 3D Motion",
+            icon: <Sparkles className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Motion Webflow",
+            paragraphs: [
+                "Create immersive, award-winning user experiences with custom scroll-based animations, micro-interactions, and 3D Spline / Three.js embeds.",
+                "We implement custom JavaScript and GSAP animations that execute smoothly at 60 FPS without degrading page load times or mobile responsiveness."
+            ]
+        },
+        {
+            title: "Dynamic Webflow CMS & Multi-Language Architecture",
+            icon: <Layers className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Webflow CMS",
+            paragraphs: [
+                "Empower your marketing team to publish case studies, blog posts, careers, and team profiles without touching code. We configure dynamic CMS collections with custom reference fields and automated filtering.",
+                "We leverage Webflow Localization and Weglot to create seamless multi-regional portals with localized SEO and currency switching."
+            ]
+        },
+        {
+            title: "Enterprise Webflow Integrations & Webflow Apps",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+            cta: "Integrate Webflow",
+            paragraphs: [
+                "Connect your Webflow site to your broader sales and marketing stack. We integrate HubSpot, Salesforce, Zapier, Make, Memberstack (user auth & paywalls), and custom REST APIs.",
+                "Capture and route leads automatically, automate gated content, and track conversion analytics in real time."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Design Audit & Client-First Setup", desc: "Analyzing Figma components, typography scales, global style tokens, and Relume class naming." },
+        { title: "Semantic HTML & CSS Structure", desc: "Building semantic, responsive layouts utilizing Webflow's native visual canvas." },
+        { title: "CMS Collections & Dynamic Data", desc: "Structuring blog, team, case study, and product collections with automated filtering." },
+        { title: "Motion Design & Custom JS Code", desc: "Crafting GSAP animations, custom form logic, and interactive interactive widgets." },
+        { title: "Technical SEO & Speed Optimization", desc: "Setting OpenGraph tags, schema markup, 301 redirects, and WebP asset optimization." },
+        { title: "Custom Domain Publish & Handover", desc: "Deploying to Webflow's global Tier 1 AWS/Fastly CDN and providing video tutorial handover." }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & Retail", desc: "Webflow eCommerce stores, bespoke DTC lookbooks, and luxury merchandise sites.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "Modern wellness platforms, clinic showcase sites, and fitness brand portals.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Boutique hotel websites, luxury travel agency platforms, and resort showcases.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Online bootcamps, academy landing pages, and student curriculum hubs.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "High-end fashion editorial showcases, designer portfolios, and seasonal collections.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Athletic lifestyle brands, sports agency websites, and outdoor recreation portals.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Corporate law firm websites, practice area hubs, and professional attorney bios.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Venture-backed fintech marketing websites, investor decks, and product showcases.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Freight brokerage websites, supply chain technology platforms, and B2B hubs.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Luxury real estate development showcases, architectural portfolio hubs, and leasing.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "High-converting B2B SaaS marketing websites, product tour hubs, and interactive pricing.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "EV automaker showcases, automotive technology platforms, and product spec hubs.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Certified Webflow Experts using the industry standard Client-First style framework",
+        "Lightning-fast AWS & Fastly global CDN hosting with 99.99% uptime guarantee",
+        "Zero backend maintenance, zero plugin security vulnerabilities, and instant publishing",
+        "Advanced custom JavaScript, GSAP animations, and Three.js 3D interactivity",
+        "Seamless integration with HubSpot, Salesforce, Zapier, and Memberstack",
+        "Comprehensive video training enabling your marketing team to edit with total confidence"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["Webflow", "Client-First (Relume)", "Finsweet Attributes", "GSAP", "Three.js", "Memberstack", "Wized", "HubSpot", "Zapier", "Make", "HTML5/CSS3", "JavaScript"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
+                    parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    eyebrow="Webflow Development Services"
+                    title="Enterprise Webflow Development & Custom CMS Solutions"
+                    description="Launch lightning-fast, visually stunning, and conversion-focused websites with Webflow. The Digital Connect turns Figma designs into scalable, award-winning Webflow experiences for high-growth brands."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={WebflowVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +120,13 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Modern Visual Development Platform</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Unrivaled Marketing Agility with Clean, Production-Grade Code
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>Webflow has revolutionized web engineering by combining the visual speed of a design tool with the clean, standards-compliant HTML, CSS, and JavaScript of a full-stack engineering team. For marketing teams, Webflow delivers unmatched publishing autonomy while eliminating plugin bloat and server maintenance.</p>
+                                <p>At The Digital Connect, our certified Webflow developers build scalable enterprise websites using the Client-First design framework, complex CMS data models, custom JavaScript integrations, and smooth 60 FPS GSAP animations that captivate visitors and drive conversions.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +135,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our Webflow Development Process"
+                    eyebrow="Our Engineering Workflow"
+                    description="From Figma design audit to Client-First semantic build, CMS collections, and global CDN launch."
                     process={processSteps}
                 />
 
@@ -159,9 +149,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive Webflow Capabilities
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom Webflow development, CMS architectures, and enterprise marketing sites.</p>
                         </div>
                     </div>
 
@@ -193,7 +183,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +207,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our Webflow Ecosystem"
                     />
                 )}
 
@@ -251,10 +241,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for Webflow Development
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Elevate your brand presence with certified Webflow experts:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +306,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default WebflowDevelopment;

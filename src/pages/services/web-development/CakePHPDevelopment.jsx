@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { CakePHPVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Box, Server, ShieldCheck, Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,109 +16,103 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const CakePHPDevelopment = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "CakePHP Web Development Company & Services | The Digital Connect",
+        description: "Scale your business with custom CakePHP development services by The Digital Connect. We build robust MVC web applications, portal solutions, and custom extensions with CakePHP."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-red-600", bg: "bg-red-500/20", softBg: "bg-red-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Custom CakePHP Web Application Development",
+            icon: <Box className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+            cta: "Build CakePHP Web App",
+            paragraphs: [
+                "Build scalable, clean, and maintainable web applications using CakePHP's proven Model-View-Controller (MVC) framework. The Digital Connect engineers tailored business portals, SaaS platforms, and enterprise data backends.",
+                "We leverage CakePHP's flexible database abstraction layer, integrated validation rules, and built-in caching mechanisms to achieve sub-second page rendering and reliable high-traffic throughput."
+            ]
+        },
+        {
+            title: "CakePHP Migration & Version Upgrades",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Upgrade CakePHP Version",
+            paragraphs: [
+                "Upgrade your legacy CakePHP applications (v2.x / v3.x) to the latest CakePHP 4.x/5.x releases with zero downtime and total data integrity. We refactor deprecated methods, optimize SQL queries, and modernize PHP versions to PHP 8.2+.",
+                "Our migration protocol ensures full backwards compatibility with external APIs while unlocking massive performance speedups and state-of-the-art security patches."
+            ]
+        },
+        {
+            title: "CakePHP Plugin & Extension Development",
+            icon: <Server className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Develop CakePHP Plugins",
+            paragraphs: [
+                "Extend the out-of-the-box functionality of your existing web platform with bespoke CakePHP plugins. We develop modular packages for third-party payment processors, custom CRM connectors, and complex business logic.",
+                "Every plugin is developed following CakePHP Bake conventions, ensuring clean separation of concerns and effortless long-term maintainability."
+            ]
+        },
+        {
+            title: "Enterprise CakePHP API & Backend Services",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Build CakePHP APIs",
+            paragraphs: [
+                "Connect your mobile applications, IoT devices, and frontend SPAs (React, Vue, Angular) to a rock-solid CakePHP RESTful API backend. We implement JWT authentication, OAuth2, rate limiting, and automated Swagger/OpenAPI documentation.",
+                "Our API architectures are engineered to handle high concurrent user loads with minimal memory footprint and bulletproof CSRF/XSS protection."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Architecture & Requirement Discovery", desc: "Analyzing database schema, business rules, entity models, and technical requirements." },
+        { title: "Database Modeling & Bake Scaffolding", desc: "Structuring relational databases and generating initial CakePHP MVC scaffolding with Bake CLI." },
+        { title: "Custom Logic & Business Implementation", desc: "Writing clean controllers, reusable behaviors, custom view helpers, and secure components." },
+        { title: "API & Third-Party Integration", desc: "Connecting payment gateways, shipping providers, enterprise ERPs, and cloud storage." },
+        { title: "Rigorous QA & Security Auditing", desc: "Automated PHPUnit test suites, SQL injection scans, CSRF token validation, and load stress testing." },
+        { title: "Deployment & Continuous Monitoring", desc: "CI/CD automated release pipelines, OPcache tuning, and ongoing 24/7 server maintenance." }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & Retail", desc: "Scalable product catalogs, custom cart checkout, and ERP inventory syncing.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant patient portals, doctor scheduling, and telehealth records.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Dynamic booking engines, itinerary management, and multi-currency portals.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Student grading dashboards, course material repositories, and interactive exams.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Omnichannel inventory control, B2B wholesale portals, and customer rewards.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Tournament bracket generators, athletic membership management, and live scores.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Encrypted case management, automated document assembly, and client portals.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Multi-layered encryption, micro-lending platforms, and secure transaction logs.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Fleet routing management, warehouse scanning systems, and shipment tracking.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "MLS / IDX property feeds, mortgage calculators, and lead management CRM.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant subscriptions, metered billing, and automated customer onboarding.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Assembly line telemetry tracking, dealer management, and parts catalog systems.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Proven expertise in CakePHP 4.x and CakePHP 5.x enterprise application development",
+        "Clean, maintainable MVC code structure adhering strictly to PSR standards",
+        "Deep knowledge of CakePHP ORM optimization, query caching, and entity validation",
+        "Flawless migration strategies from older CakePHP versions without data downtime",
+        "Built-in security protection against CSRF, SQL injection, and XSS attacks",
+        "Transparent agile sprints with daily standup updates and dedicated project leadership"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["CakePHP 5", "CakePHP 4", "PHP 8.3", "MySQL", "PostgreSQL", "Redis", "Composer", "Docker", "Apache", "Nginx", "PHPUnit", "REST APIs"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
+                    parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    eyebrow="CakePHP Development Services"
+                    title="Enterprise CakePHP Web Application Development"
+                    description="Build secure, scalable, and high-performance web applications using the robust CakePHP framework. The Digital Connect turns complex business logic into rapid, maintainable digital solutions."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={CakePHPVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +120,13 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Rapid MVC Application Engineering</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Scalable CakePHP Solutions Built for Business Performance
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>CakePHP is one of the most reliable and mature PHP frameworks in the industry, renowned for its convention-over-configuration philosophy, clean MVC design pattern, and built-in security features. At The Digital Connect, our senior CakePHP developers leverage these advantages to build custom enterprise web applications faster and with higher precision.</p>
+                                <p>From high-volume transaction processing systems to complex corporate intranets and SaaS backends, our CakePHP development team ensures your web architecture is scalable, rock-solid, and ready for long-term growth.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +135,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our CakePHP Development Process"
+                    eyebrow="Our Engineering Workflow"
+                    description="From architecture discovery to database scaffolding, custom logic build, and automated test deployment."
                     process={processSteps}
                 />
 
@@ -159,9 +149,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive CakePHP Development Capabilities
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Tailored CakePHP development services for ambitious companies.</p>
                         </div>
                     </div>
 
@@ -193,7 +183,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +207,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our PHP & Framework Stack"
                     />
                 )}
 
@@ -251,10 +241,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for CakePHP Development
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Accelerate development with our certified PHP engineers:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +306,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default CakePHPDevelopment;

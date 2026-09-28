@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { JoomlaVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Layers, Globe, ShieldCheck, Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,109 +16,103 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const JoomlaDevelopment = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "Joomla Web Development Company & Services | The Digital Connect",
+        description: "Build flexible, multilingual corporate portals and community websites with Joomla development services by The Digital Connect. Custom components, modules, and templates."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-amber-600", bg: "bg-amber-500/20", softBg: "bg-amber-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Custom Joomla Portal & Website Development",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Joomla Portal",
+            paragraphs: [
+                "Create dynamic community portals, corporate intranets, and content-rich websites with Joomla 5. The Digital Connect utilizes Joomla's native Access Control Lists (ACL) and multi-language support to develop powerful web solutions.",
+                "Our Joomla architectures allow complex user permission hierarchies, member directories, and multi-tier publication workflows without bloated third-party dependencies."
+            ]
+        },
+        {
+            title: "Custom Component & Module Engineering",
+            icon: <Layers className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Develop Custom Extensions",
+            paragraphs: [
+                "When off-the-shelf extensions fall short, we build custom Joomla components, modules, and plugins from scratch. From interactive directories to custom reservation systems, we tailor the functionality to your business workflow.",
+                "Every custom extension is built according to Joomla MVC standards for seamless future version upgrades and clean database management."
+            ]
+        },
+        {
+            title: "Joomla Migration & Version Upgrades",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Upgrade to Joomla 5",
+            paragraphs: [
+                "Upgrade your outdated Joomla 3.x or 4.x portals to the ultra-modern Joomla 5 framework. We migrate your content articles, user accounts, custom fields, and media assets with 100% data integrity.",
+                "Unlock modern PHP 8.2+ compatibility, enhanced SEO metadata control, and modern caching engines for drastic speed improvements."
+            ]
+        },
+        {
+            title: "Joomla Security Hardening & Maintenance",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Secure Joomla Website",
+            paragraphs: [
+                "Protect your digital portal with proactive vulnerability patching, Web Application Firewall (WAF) integration, and two-factor authentication (2FA).",
+                "Our ongoing support packages include automated off-site cloud backups, database indexing, core updates, and 24/7 emergency response."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Portal Architecture & Permissions Audit", desc: "Defining user roles, access control levels (ACL), content categories, and extension requirements." },
+        { title: "Joomla 5 Setup & Database Structuring", desc: "Configuring clean core installation, relational database tables, and multilingual translation routing." },
+        { title: "Custom Module & Component Build", desc: "Coding custom Joomla MVC extensions, plugins, and custom field overrides." },
+        { title: "Responsive Template Customization", desc: "Designing mobile-first, lightweight Joomla templates with fast Core Web Vitals scores." },
+        { title: "Security Hardening & QA Audit", desc: "Implementing Two-Factor Auth, SSL enforcement, brute-force mitigation, and cross-browser testing." },
+        { title: "Live Launch & Editorial Training", desc: "Zero-downtime server deployment, sitemap submission, and administrator training sessions." }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & Retail", desc: "VirtueMart and HikaShop digital storefronts with multi-currency checkout.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "Medical clinic portals, health wellness blogs, and patient appointment systems.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Tourism board portals, hotel reservation systems, and destination directories.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "School portals, member-only lesson repositories, and student alumni networks.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Lookbook media galleries, fashion magazine publications, and retailer portals.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Club membership portals, league schedules, and community sports forums.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Law firm knowledge hubs, client access areas, and regulatory publication portals.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Corporate investor portals, financial news publishing, and branch locators.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Vendor extranets, shipment inquiry portals, and regional depot directories.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Property directory portals, agent profiles, and neighborhood guides.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Corporate knowledgebases, community support forums, and user documentation.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Dealership portal ecosystems, product spec sheets, and warranty registries.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Mastery of Joomla 5 modern architecture, native web services, and schema tools",
+        "Deep expertise in complex Access Control Lists (ACL) and multi-tier permissions",
+        "Native multilingual implementation supporting 70+ languages out of the box",
+        "Zero license fees — full open-source ownership of your codebase and content",
+        "Rigorous security hardening eliminating common CMS vulnerabilities and spam",
+        "Dedicated maintenance SLAs with daily backups and priority bug resolution"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["Joomla 5", "Joomla 4", "PHP 8.3", "MySQL", "PostgreSQL", "VirtueMart", "HikaShop", "Bootstrap 5", "Docker", "Apache", "Nginx", "Redis"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
+                    parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    eyebrow="Joomla Development Services"
+                    title="Custom Joomla Web Development & Portal Solutions"
+                    description="Build flexible, content-rich corporate portals, community websites, and multilingual platforms with Joomla. The Digital Connect engineers bespoke extensions, templates, and enterprise CMS setups."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={JoomlaVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +120,13 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Versatile Content & Portal Engineering</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Modular, Multilingual, and Scalable Digital Experiences with Joomla
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>Joomla bridges the sweet spot between content management simplicity and enterprise-grade structural power. With native support for multi-language translations, granular user access levels, and an extensible MVC architecture, Joomla powers millions of corporate extranets, community hubs, and publishing platforms worldwide.</p>
+                                <p>At The Digital Connect, our Joomla developers build customized, responsive, and secure portals tailored to your organization's exact editorial workflows and customer engagement goals.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +135,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our Joomla Development Process"
+                    eyebrow="Our Engineering Workflow"
+                    description="From permissions audit to custom component build, security hardening, and production launch."
                     process={processSteps}
                 />
 
@@ -159,9 +149,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive Joomla Capabilities
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Custom components, portals, and migration services for global enterprises.</p>
                         </div>
                     </div>
 
@@ -193,7 +183,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +207,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our Joomla Tech Stack"
                     />
                 )}
 
@@ -251,10 +241,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for Joomla Development
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Build high-impact portals with our certified Joomla specialists:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +306,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default JoomlaDevelopment;

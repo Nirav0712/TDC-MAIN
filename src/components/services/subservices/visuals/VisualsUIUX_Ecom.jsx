@@ -1,6 +1,223 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, User, Target, Pointer, Palette, Component, Layers, Zap, ShoppingBag, ChevronRight, Store, ShoppingCart, CreditCard, Database, LockKeyhole, ChartBar, LayoutDashboard } from 'lucide-react';
+import { Search, User, Target, Pointer, Palette, Component, Layers, Zap, ShoppingBag, ChevronRight, Store, ShoppingCart, CreditCard, Database, LockKeyhole, ChartBar, LayoutDashboard, PenTool, Sparkles, Monitor, Smartphone, Globe, Compass, CheckCircle2, ShieldCheck, Brush } from 'lucide-react';
+
+export const GraphicDesignVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ y: 0 }} animate={{ y: [-6, 6, -6] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col justify-between">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-600">
+                        <Palette size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">Creative Canvas</h4>
+                        <p className="text-[10px] text-slate-500">Vector & Visual Artboard</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2.5 py-1 bg-pink-50 text-pink-700 border border-pink-100 rounded-full flex items-center gap-1">
+                    <Sparkles size={10} /> 300 DPI Export
+                </span>
+            </div>
+
+            {/* Artboard Canvas */}
+            <div className="w-full flex-1 my-3 bg-gradient-to-br from-pink-50/50 via-purple-50/40 to-slate-50 rounded-2xl border border-dashed border-pink-200 p-4 relative flex flex-col justify-between overflow-hidden">
+                <div className="flex justify-between items-center">
+                    <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-pink-400"></div>
+                        <div className="w-3 h-3 rounded-full bg-purple-400"></div>
+                        <div className="w-3 h-3 rounded-full bg-indigo-400"></div>
+                        <div className="w-3 h-3 rounded-full bg-cyan-400"></div>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400 bg-white/80 px-2 py-0.5 rounded border border-slate-100">CMYK / RGB</span>
+                </div>
+
+                <div className="flex items-center justify-center py-4 relative">
+                    <motion.div animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 8, repeat: Infinity }} className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-400 shadow-xl flex items-center justify-center text-white relative">
+                        <Brush size={36} />
+                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }} className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-400 text-yellow-950 font-bold text-[9px] flex items-center justify-center shadow">
+                            HD
+                        </motion.div>
+                    </motion.div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-white/90 p-2 rounded-lg border border-slate-100 text-[10px] font-bold text-[#0A1024]">
+                        <span className="text-pink-500">Typography:</span> Outfit & Inter
+                    </div>
+                    <div className="bg-white/90 p-2 rounded-lg border border-slate-100 text-[10px] font-bold text-[#0A1024]">
+                        <span className="text-purple-500">Asset Pack:</span> Vector Assets
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-2">
+                <span className="text-[11px] font-bold text-slate-600">Brand Collateral Ready</span>
+                <span className="text-[10px] font-bold text-pink-600">Print & Digital</span>
+            </div>
+        </motion.div>
+    </div>
+);
+
+export const LogoDesignVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col justify-between">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600">
+                        <PenTool size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">Brand Mark Studio</h4>
+                        <p className="text-[10px] text-slate-500">Golden Ratio Construction</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2 py-0.5 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-full">
+                    Vector Master
+                </span>
+            </div>
+
+            {/* Geometric Grid Showcase */}
+            <div className="w-full flex-1 my-3 bg-slate-900 rounded-2xl p-4 relative flex flex-col justify-between overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:16px_16px] opacity-40"></div>
+                
+                <div className="flex justify-between relative z-10">
+                    <span className="text-[9px] font-mono text-cyan-400">φ = 1.618 (Golden Ratio)</span>
+                    <span className="text-[9px] font-mono text-slate-400">100% Scalable SVG</span>
+                </div>
+
+                <div className="flex items-center justify-center relative z-10 py-3">
+                    <div className="relative flex items-center justify-center">
+                        <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: 'linear' }} className="w-28 h-28 rounded-full border border-dashed border-cyan-400/40 absolute"></motion.div>
+                        <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 4, repeat: Infinity }} className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-2xl flex items-center justify-center text-white font-black text-2xl tracking-tighter">
+                            TDC
+                        </motion.div>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 relative z-10">
+                    <div className="bg-slate-800/80 p-2 rounded-lg border border-slate-700 text-center">
+                        <span className="text-[9px] text-slate-400 block">Iconic Mark</span>
+                        <span className="text-[10px] font-bold text-white">Monogram</span>
+                    </div>
+                    <div className="bg-slate-800/80 p-2 rounded-lg border border-slate-700 text-center">
+                        <span className="text-[9px] text-slate-400 block">Lockup</span>
+                        <span className="text-[10px] font-bold text-white">Horizontal</span>
+                    </div>
+                    <div className="bg-slate-800/80 p-2 rounded-lg border border-slate-700 text-center">
+                        <span className="text-[9px] text-slate-400 block">Guideline</span>
+                        <span className="text-[10px] font-bold text-cyan-400">Stylebook</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1">
+                <span className="text-[11px] font-bold text-slate-600">Trademark & Copyright Ready</span>
+                <span className="text-[10px] font-bold text-indigo-600 flex items-center gap-1">
+                    <CheckCircle2 size={12} /> Full Ownership
+                </span>
+            </div>
+        </motion.div>
+    </div>
+);
+
+export const WebDesignVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ y: 0 }} animate={{ y: [-5, 5, -5] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex flex-col justify-between">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-600">
+                        <Monitor size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">Responsive Web View</h4>
+                        <p className="text-[10px] text-slate-500">Desktop & Mobile Optimized</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-full flex items-center gap-1">
+                    <CheckCircle2 size={10} /> 99+ PageSpeed
+                </span>
+            </div>
+
+            {/* Desktop Mockup Frame */}
+            <div className="w-full flex-1 my-3 bg-slate-50 rounded-2xl border border-slate-200 p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+                {/* Browser bar */}
+                <div className="flex items-center gap-1.5 pb-2 border-b border-slate-200">
+                    <div className="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                    <div className="flex-1 max-w-[200px] h-4 bg-white rounded border border-slate-200 ml-2 px-2 flex items-center">
+                        <span className="text-[8px] text-slate-400">https://yourbrand.com</span>
+                    </div>
+                </div>
+
+                {/* Web content wireframe */}
+                <div className="flex-1 py-2 flex flex-col gap-2 justify-center">
+                    <div className="w-3/4 h-5 bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-md"></div>
+                    <div className="w-1/2 h-2.5 bg-slate-200 rounded"></div>
+                    <div className="w-2/3 h-2 bg-slate-200 rounded"></div>
+
+                    <div className="grid grid-cols-3 gap-2 mt-1">
+                        <div className="h-12 bg-white rounded-lg border border-slate-200 p-1.5 flex flex-col justify-between">
+                            <div className="w-4 h-4 rounded bg-cyan-100"></div>
+                            <div className="w-full h-1.5 bg-slate-100 rounded"></div>
+                        </div>
+                        <div className="h-12 bg-white rounded-lg border border-slate-200 p-1.5 flex flex-col justify-between">
+                            <div className="w-4 h-4 rounded bg-indigo-100"></div>
+                            <div className="w-full h-1.5 bg-slate-100 rounded"></div>
+                        </div>
+                        <div className="h-12 bg-white rounded-lg border border-slate-200 p-1.5 flex flex-col justify-between">
+                            <div className="w-4 h-4 rounded bg-pink-100"></div>
+                            <div className="w-full h-1.5 bg-slate-100 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex justify-between items-center pt-2 border-t border-slate-200">
+                    <span className="text-[9px] font-bold text-slate-500">Fluid Grid & Auto-Layout</span>
+                    <button className="px-3 py-1 bg-[#0A1024] text-white font-bold text-[9px] rounded-lg">Live Preview</button>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1">
+                <span className="text-[11px] font-bold text-slate-600">Cross-Device Pixel Perfect</span>
+                <span className="text-[10px] font-bold text-cyan-600">High-Conversion UX</span>
+            </div>
+        </motion.div>
+    </div>
+);
+
+export const UIUXDesignVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden relative border border-slate-200 p-6 flex gap-6">
+            <div className="w-1/3 flex flex-col gap-4">
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-cyan-500"></div>
+                    <span className="font-bold text-xs text-[#0A1024]">Primary</span>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#0A1024]"></div>
+                    <span className="font-bold text-xs text-[#0A1024]">Dark</span>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 flex flex-col gap-1 items-start">
+                    <div className="font-serif font-bold text-lg text-[#0A1024]">Inter</div>
+                    <span className="font-bold text-[10px] text-slate-500">Typography</span>
+                </div>
+            </div>
+            <div className="flex-1 bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col justify-between">
+                <div className="w-full p-5 bg-white rounded-xl shadow-lg border border-slate-100">
+                    <div className="w-12 h-12 bg-cyan-50 rounded-full flex items-center justify-center text-cyan-600 mb-4"><Palette size={20} /></div>
+                    <div className="text-sm font-bold text-[#0A1024] mb-2">Design Tokens</div>
+                    <div className="w-full h-2 bg-slate-100 rounded-full mb-2"></div>
+                    <div className="w-2/3 h-2 bg-slate-100 rounded-full"></div>
+                </div>
+                <button className="w-full py-4 bg-cyan-600 text-white rounded-xl shadow-lg font-bold text-sm hover:scale-105 transition-transform">
+                    Interactive Button
+                </button>
+            </div>
+        </motion.div>
+    </div>
+);
 
 export const UXResearchVisual = () => (
     <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
@@ -288,5 +505,168 @@ export const MarketplaceVisual = () => (
                 <ChartBar size={14} className="text-green-500" /> Revenue Split Core
             </motion.div>
         </div>
+    </div>
+);
+
+export const MagentoVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ y: 0 }} animate={{ y: [-5, 5, -5] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 flex flex-col relative z-20 p-5 justify-between">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-600 font-black text-sm">
+                        M
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">Magento 2 / Adobe Commerce</h4>
+                        <p className="text-[10px] text-slate-500">Enterprise B2B & B2C Engine</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2.5 py-1 bg-orange-50 text-orange-700 border border-orange-200 rounded-full flex items-center gap-1">
+                    <Sparkles size={10} /> PWA Studio
+                </span>
+            </div>
+
+            <div className="w-full flex-1 my-3 bg-gradient-to-br from-orange-50/40 via-amber-50/30 to-slate-50 rounded-2xl border border-orange-100 p-4 flex flex-col justify-between overflow-hidden relative">
+                <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold text-orange-800 bg-white/90 px-2.5 py-0.5 rounded shadow-sm">Multi-Store Catalog</span>
+                    <span className="text-[10px] font-mono text-slate-500">Varnish Cache 99.4%</span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 my-2">
+                    <div className="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">SKU Volume</span>
+                        <span className="text-lg font-black text-[#0A1024]">500,000+</span>
+                        <span className="text-[9px] text-emerald-600 font-semibold mt-0.5">Instant ElasticSearch</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Checkout Load</span>
+                        <span className="text-lg font-black text-[#0A1024]">0.42s</span>
+                        <span className="text-[9px] text-orange-600 font-semibold mt-0.5">High-Concurrency Ready</span>
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-between bg-slate-900 text-white p-2.5 rounded-xl text-xs font-bold">
+                    <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                        <span className="text-[11px]">B2B Custom Pricing & Tiered Quotes</span>
+                    </div>
+                    <span className="text-[10px] text-orange-400 font-mono">REST / GraphQL</span>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1 text-[11px]">
+                <span className="font-bold text-slate-600">Headless Adobe Commerce</span>
+                <span className="font-bold text-orange-600">Enterprise SLA</span>
+            </div>
+        </motion.div>
+    </div>
+);
+
+export const OpencartVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ y: 0 }} animate={{ y: [4, -4, 4] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 flex flex-col relative z-20 p-5 justify-between">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-600 font-bold">
+                        <Store size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">OpenCart Engine</h4>
+                        <p className="text-[10px] text-slate-500">Lightweight MVC Storefront</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2.5 py-1 bg-cyan-50 text-cyan-700 border border-cyan-200 rounded-full">
+                    OCMOD / VQMOD
+                </span>
+            </div>
+
+            <div className="w-full flex-1 my-3 bg-gradient-to-br from-cyan-50/50 via-sky-50/30 to-slate-50 rounded-2xl border border-cyan-100 p-4 flex flex-col justify-between overflow-hidden relative">
+                <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold text-cyan-800 bg-white px-2 py-0.5 rounded shadow-sm">Multi-Currency & Tax</span>
+                    <span className="text-[10px] font-mono text-slate-500">14,000+ Extensions</span>
+                </div>
+
+                <div className="space-y-2 my-2">
+                    <div className="p-2.5 bg-white rounded-xl border border-slate-100 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                            <ShoppingCart size={15} className="text-cyan-600" />
+                            <span className="text-xs font-bold text-[#0A1024]">Global Order Management</span>
+                        </div>
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Synced</span>
+                    </div>
+                    <div className="p-2.5 bg-white rounded-xl border border-slate-100 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                            <CreditCard size={15} className="text-indigo-600" />
+                            <span className="text-xs font-bold text-[#0A1024]">Multi-Gateway Payment Checkout</span>
+                        </div>
+                        <span className="text-[10px] font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded">Active</span>
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-between bg-slate-900 text-white p-2.5 rounded-xl text-xs font-bold">
+                    <span className="text-[11px] text-slate-300">Fast Lightweight Performance</span>
+                    <span className="text-[10px] text-cyan-400 font-mono">PHP / MySQL</span>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1 text-[11px]">
+                <span className="font-bold text-slate-600">Open Source Agility</span>
+                <span className="font-bold text-cyan-600">Custom Modules</span>
+            </div>
+        </motion.div>
+    </div>
+);
+
+export const BigcommerceVisual = () => (
+    <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center p-4 lg:p-8 z-20">
+        <motion.div initial={{ y: 0 }} animate={{ y: [-6, 6, -6] }} transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }} className="w-full h-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 flex flex-col relative z-20 p-5 justify-between">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-600 font-black text-sm">
+                        B
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-[#0A1024]">BigCommerce Enterprise</h4>
+                        <p className="text-[10px] text-slate-500">SaaS Scalability & Stencil Engine</p>
+                    </div>
+                </div>
+                <span className="text-[10px] font-bold px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full flex items-center gap-1">
+                    <Zap size={10} /> B2B Edition
+                </span>
+            </div>
+
+            <div className="w-full flex-1 my-3 bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-slate-50 rounded-2xl border border-blue-100 p-4 flex flex-col justify-between overflow-hidden relative">
+                <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold text-blue-900 bg-white px-2 py-0.5 rounded shadow-sm">Multi-Storefront (MSF)</span>
+                    <span className="text-[10px] font-mono text-slate-500">99.99% Uptime SLA</span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 my-2">
+                    <div className="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Catalyst Next.js</span>
+                        <span className="text-base font-black text-[#0A1024]">Headless API</span>
+                        <span className="text-[9px] text-blue-600 font-semibold mt-0.5">GraphQL Storefront</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Zero Host Fees</span>
+                        <span className="text-base font-black text-[#0A1024]">PCI Tier 1</span>
+                        <span className="text-[9px] text-emerald-600 font-semibold mt-0.5">Auto-Scaling Cloud</span>
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-between bg-slate-900 text-white p-2.5 rounded-xl text-xs font-bold">
+                    <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+                        <span className="text-[11px]">Wholesale Portals & Custom Price Lists</span>
+                    </div>
+                    <span className="text-[10px] text-blue-400 font-mono">B2B Core</span>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1 text-[11px]">
+                <span className="font-bold text-slate-600">Enterprise Composability</span>
+                <span className="font-bold text-blue-600">Certified Partner</span>
+            </div>
+        </motion.div>
     </div>
 );

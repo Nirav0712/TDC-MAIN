@@ -42,17 +42,20 @@ export const megaMenuData = {
         items: [
             {
                 id: "web-development",
-                label: "Web Development",
-                heading: "Web Development",
+                label: "Web & CMS Development",
+                heading: "Web & CMS Development",
                 description: "Build fast, scalable and high-performing digital experiences designed around your business goals.",
                 icon: "Code",
                 href: "/services/web-development",
                 subServices: [
-                    { title: "Frontend Development", href: "/services/web-development/frontend-development" },
-                    { title: "Backend Development", href: "/services/web-development/backend-development" },
-                    { title: "CMS Development", href: "/services/web-development/cms-development" },
-                    { title: "API Integration", href: "/services/web-development/api-integration" },
-                    { title: "Custom Web Applications", href: "/services/web-development/custom-web-applications" }
+                    { title: "CakePHP Development", href: "/services/web-development/cakephp-development" },
+                    { title: "Codeigniter Development", href: "/services/web-development/codeigniter-development" },
+                    { title: "Drupal Development", href: "/services/web-development/drupal-development" },
+                    { title: "Joomla Development", href: "/services/web-development/joomla-development" },
+                    { title: "Laravel Development", href: "/services/web-development/laravel-development" },
+                    { title: "Ruby on Rails Development", href: "/services/web-development/ruby-on-rails-development" },
+                    { title: "WordPress Development", href: "/services/web-development/wordpress-development" },
+                    { title: "Webflow Development", href: "/services/web-development/webflow-development" }
                 ]
             },
             {
@@ -70,45 +73,44 @@ export const megaMenuData = {
             },
             {
                 id: "ui-ux-design",
-                label: "UI/UX Design",
-                heading: "UI/UX Design",
-                description: "Design intuitive digital experiences that users love.",
+                label: "Designing Services",
+                heading: "Designing Services",
+                description: "Create memorable brands, captivating graphics, and intuitive digital experiences that convert.",
                 icon: "PenTool",
                 href: "/services/ui-ux-design",
                 subServices: [
-                    { title: "UX Research", href: "/services/ui-ux-design/ux-research" },
-                    { title: "UI Design", href: "/services/ui-ux-design/ui-design" },
-                    { title: "Design Systems", href: "/services/ui-ux-design/design-systems" },
-                    { title: "Prototyping", href: "/services/ui-ux-design/prototyping" },
-                    { title: "Usability Testing", href: "/services/ui-ux-design/usability-testing" }
+                    { title: "Graphic Designing Services", href: "/services/ui-ux-design/graphic-design" },
+                    { title: "Web Design Company", href: "/services/ui-ux-design/web-design" },
+                    { title: "Logo Designing Services", href: "/services/ui-ux-design/logo-design" },
+                    { title: "UI & UX Designing Services", href: "/services/ui-ux-design/ui-ux-designing-services" }
                 ]
             },
             {
                 id: "ecommerce-development",
-                label: "Ecommerce Development",
-                heading: "Ecommerce Development",
-                description: "Create high-converting ecommerce experiences designed for growth.",
+                label: "eCommerce Development",
+                heading: "eCommerce Development",
+                description: "Create high-converting eCommerce storefronts and marketplace solutions.",
                 icon: "ShoppingCart",
                 href: "/services/ecommerce-development",
                 subServices: [
-                    { title: "Shopify", href: "/services/ecommerce-development/shopify" },
-                    { title: "WooCommerce", href: "/services/ecommerce-development/woocommerce" },
-                    { title: "Custom Ecommerce", href: "/services/ecommerce-development/custom-ecommerce" },
-                    { title: "Payment Integration", href: "/services/ecommerce-development/payment-integration" },
-                    { title: "Marketplace Development", href: "/services/ecommerce-development/marketplace-development" }
+                    { title: "Magento Development", href: "/services/ecommerce-development/magento-development" },
+                    { title: "Opencart Development", href: "/services/ecommerce-development/opencart-development" },
+                    { title: "WooCommerce Development", href: "/services/ecommerce-development/woocommerce-development" },
+                    { title: "Bigcommerce Development", href: "/services/ecommerce-development/bigcommerce-development" },
+                    { title: "Shopify Development", href: "/services/ecommerce-development/shopify-development" }
                 ]
             },
             {
                 id: "software-development",
                 label: "Software Development",
                 heading: "Custom Software Development",
-                description: "Build scalable software solutions around complex business requirements.",
+                description: "Build scalable software solutions, SaaS products, and custom enterprise tools.",
                 icon: "Monitor",
                 href: "/services/software-development",
                 subServices: [
-                    { title: "CRM", href: "/services/software-development/crm" },
-                    { title: "ERP", href: "/services/software-development/erp" },
-                    { title: "SaaS", href: "/services/software-development/saas" },
+                    { title: "CRM Development", href: "/services/software-development/crm" },
+                    { title: "ERP Solutions", href: "/services/software-development/erp" },
+                    { title: "SaaS Product Engineering", href: "/services/software-development/saas" },
                     { title: "Business Automation", href: "/services/software-development/business-automation" },
                     { title: "API Development", href: "/services/software-development/api-development" }
                 ]
@@ -117,13 +119,13 @@ export const megaMenuData = {
                 id: "digital-marketing",
                 label: "Digital Marketing",
                 heading: "Digital Marketing",
-                description: "Grow your digital presence with data-driven marketing strategies.",
+                description: "Grow your online presence with data-driven marketing, SEO, and paid campaigns.",
                 icon: "TrendingUp",
                 href: "/services/digital-marketing",
                 subServices: [
-                    { title: "SEO", href: "/services/digital-marketing/seo" },
-                    { title: "PPC", href: "/services/digital-marketing/ppc" },
-                    { title: "Social Media", href: "/services/digital-marketing/social-media" },
+                    { title: "SEO Services", href: "/services/digital-marketing/seo" },
+                    { title: "PPC Services", href: "/services/digital-marketing/ppc" },
+                    { title: "Social Media Marketing", href: "/services/digital-marketing/social-media" },
                     { title: "Content Marketing", href: "/services/digital-marketing/content-marketing" }
                 ]
             }

@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { CodeigniterVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Zap, Server, ShieldCheck, Database
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,109 +16,103 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const CodeigniterDevelopment = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "CodeIgniter Web Development Company & Services | The Digital Connect",
+        description: "Build ultra-fast, lightweight, and secure PHP web applications with CodeIgniter development services from The Digital Connect. High performance with zero unnecessary framework bloat."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-orange-600", bg: "bg-orange-500/20", softBg: "bg-orange-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Custom CodeIgniter Web Application Development",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Build CodeIgniter App",
+            paragraphs: [
+                "Engineer blazing-fast web solutions with minimal server footprint. The Digital Connect develops customized business portals, real-time analytics platforms, and enterprise data backends using CodeIgniter 4.",
+                "CodeIgniter delivers exceptional execution speed and near-zero configuration complexity, allowing us to build high-concurrency systems that outshine bloated enterprise stacks."
+            ]
+        },
+        {
+            title: "CodeIgniter Migration to CI4 & PHP 8.x",
+            icon: <Server className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Upgrade CodeIgniter",
+            paragraphs: [
+                "Modernize your legacy CodeIgniter 2.x or 3.x systems to the modern CodeIgniter 4 framework with complete namespaces, entity models, and strict typing.",
+                "We migrate your existing databases, optimize legacy SQL queries, and implement PHP 8.2+ performance improvements while guaranteeing zero data loss or service disruption."
+            ]
+        },
+        {
+            title: "Custom Module & API Development",
+            icon: <Database className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Develop REST APIs",
+            paragraphs: [
+                "Build lightweight, high-throughput RESTful API microservices that power mobile applications and dynamic frontend interfaces. We utilize CodeIgniter's ResourceController and API Response traits.",
+                "Every endpoint includes automated JWT token authentication, input sanitization, and structured JSON responses for effortless developer integration."
+            ]
+        },
+        {
+            title: "Enterprise Maintenance & Security Hardening",
+            icon: <ShieldCheck className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            cta: "Secure CodeIgniter App",
+            paragraphs: [
+                "Protect your digital platform with proactive CodeIgniter security auditing and performance tuning. We implement advanced CSRF guards, XSS filtering, Content Security Policies (CSP), and query caching.",
+                "Our ongoing support packages include uptime monitoring, PHP security patches, database index optimization, and emergency bug fixing."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Architecture & Needs Analysis", desc: "Assessing system throughput targets, data models, third-party dependencies, and business logic." },
+        { title: "CodeIgniter 4 Environment Setup", desc: "Configuring environment files (.env), routing maps, PSR autoloaders, and database connection pools." },
+        { title: "MVC Core Logic Engineering", desc: "Writing clean models, custom validation rules, controller handlers, and modular view components." },
+        { title: "API & Payment Integration", desc: "Connecting payment gateways (Stripe, PayPal), SMS notification providers, and cloud services." },
+        { title: "Performance Stress Testing", desc: "Benchmarking execution time, memory usage, load concurrency, and security vulnerability scans." },
+        { title: "Zero-Downtime Deployment", desc: "Deploying to production cloud servers with OPcache acceleration and continuous log tracking." }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & Retail", desc: "Ultra-fast product catalogs, customized shopping carts, and live order tracking.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-ready appointment portals, medical records storage, and patient tracking.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "High-speed reservation engines, flight search aggregators, and tour booking.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Lightweight student management systems, attendance logs, and online quiz engines.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Wholesale ordering platforms, supply chain portals, and regional distribution.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Club management platforms, tournament schedulers, and athletic portals.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Confidential document repositories, client intake forms, and case billing.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Secure transaction processing, ledger systems, and merchant payment gateways.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Dispatch management, shipment tracking backends, and warehouse APIs.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Property listing syndication, broker portals, and client lead management.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Lightweight SaaS backend engines designed for minimal server memory consumption.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Dealer inventory databases, warranty claims portals, and parts lookups.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Unrivaled PHP execution speed and ultra-low server resource consumption",
+        "Deep expertise in CodeIgniter 3.x to 4.x seamless modernization and upgrades",
+        "Zero boilerplate clutter — lean, focused codebase tailored precisely to your needs",
+        "Built-in protection against SQL injection, cross-site scripting (XSS), and CSRF",
+        "Transparent project management with dedicated technical leads and agile sprints",
+        "Post-launch SLA support, automated backup monitoring, and performance tuning"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["CodeIgniter 4", "CodeIgniter 3", "PHP 8.3", "MySQL", "PostgreSQL", "SQLite", "Composer", "Docker", "Apache", "Nginx", "Redis", "REST APIs"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
+                    parentTitle="Web & CMS Development"
                     parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    eyebrow="CodeIgniter Development Services"
+                    title="High-Speed CodeIgniter Web Application Development"
+                    description="Build ultra-fast, lightweight, and scalable PHP web applications with CodeIgniter. The Digital Connect delivers high-performance portals and custom web backends with zero framework bloat."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={CodeigniterVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +120,13 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Lightweight & High-Velocity PHP Engineering</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Exceptional Performance and Minimal Server Overhead
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>When raw execution speed, simplicity, and low server resource footprint are paramount, CodeIgniter stands out as the premier PHP development framework. Unlike heavy enterprise frameworks that require vast memory configurations, CodeIgniter provides an agile MVC architecture that executes requests in fractions of a second.</p>
+                                <p>At The Digital Connect, our CodeIgniter developers craft robust, high-traffic digital platforms, secure REST APIs, and database-intensive backends engineered for speed and stability.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +135,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our CodeIgniter Development Process"
+                    eyebrow="Our Engineering Workflow"
+                    description="From architecture modeling to lean MVC implementation, stress testing, and production launch."
                     process={processSteps}
                 />
 
@@ -159,9 +149,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive CodeIgniter Capabilities
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">High-speed PHP solutions tailored for performance-focused enterprises.</p>
                         </div>
                     </div>
 
@@ -193,7 +183,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +207,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our PHP & Database Stack"
                     />
                 )}
 
@@ -251,10 +241,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for CodeIgniter Development
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Power your business applications with our agile engineering team:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +306,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default CodeigniterDevelopment;

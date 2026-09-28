@@ -1,189 +1,318 @@
 import React from 'react';
-import { Search, Map, Layout, Zap, Pointer, Target, Layers, Component, Maximize, Database, Server, Cog, Workflow, BarChart2, MessageSquare, Megaphone, ArrowUpRight, MousePointerClick, ShieldCheck, Mail, LineChart, Cpu, Cloud, Building2, TerminalSquare, LayoutDashboard, LockKeyhole, Globe, Store, ShoppingCart, HeartPulse, Navigation, GraduationCap, Shirt, Dumbbell, Scale, Bitcoin, Landmark, Paintbrush, Building, CheckCircle2, CreditCard, Code, RefreshCw, Palette } from 'lucide-react';
+import useSEO from '../../../hooks/useSEO';
+import PageTransition from '../../../components/common/PageTransition';
+import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
 import { ShopifyVisual } from '../../../components/services/subservices/visuals/VisualsUIUX_Ecom';
-import { ModernServiceLayout } from '../../../components/services/subservices/ModernServiceLayout';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const Shopify = () => {
-    const seoData = {
-        title: "Powerful Shopify Development Solutions for Growing Businesses | The Digital Connect",
-        description: "Custom headless Shopify architectures maximizing absolute storefront versatility mapping strictly to high-conversion checkout optimization."
-    };
+    useSEO({
+        "title": "Custom Shopify & Shopify Plus Development | The Digital Connect",
+        "description": "The Digital Connect crafts custom Shopify themes, private Shopify apps, and high-converting Shopify Plus stores engineered for growth."
+});
 
-    const theme = { "accent": "text-brand-cyan", "bg": "bg-brand-cyan/20", "softBg": "bg-brand-gold/10" };
+    const theme = {"accent":"text-emerald-600","bg":"bg-emerald-500/20","softBg":"bg-emerald-50"};
 
-    const hero = {
-        parentTitle: "eCommerce Development",
-        parentRoute: "/services/ecommerce-development",
-        eyebrow: "SHOPIFY DEVELOPMENT",
-        title: "Powerful Shopify Development Solutions for Growing Businesses",
-        description: "Standard Shopify themes destroy conversion momentum identically. If your storefront looks exactly like ten thousand other generic dropshipping businesses, consumer trust heavily falters. We engineer highly bespoke Shopify environments scaling securely with your enterprise.",
-        visual: ShopifyVisual,
-        ctaText: "Start Your Shopify Project"
-    };
-
-    const intro = {
-        eyebrow: "OUR SHOPIFY DEVELOPMENT SERVICES",
-        title: "Escaping the Generic Template Ecosystem",
-        paragraphs: [
-            "We replace basic templates entirely with custom Liquid operations or headless architectures. By deploying custom Shopify Plus headless solutions utilizing Next.js or React on the frontend, we bypass native Shopify rendering limitations instantly.",
-            "This explicitly delivers hyper-fast, millisecond page-loading speeds which mathematically correlate to intense revenue increases directly.",
-            "We optimize absolutely everything: customizing complex filtering algorithms, executing robust ERP integrations, and redesigning the checkout process to heavily reduce cart abandonment."
-        ]
-    };
-
-    const process = {
-        eyebrow: "HOW WE WORK",
-        title: "Our Shopify Methodology",
-        description: "We deploy rigorous engineering systems customizing every facet of your Shopify ecosystem.",
-        steps: [
-            { title: "Platform Auditing", desc: "Diagnosing heavy bottleneck applications dragging native server performance directly killing active conversions." },
-            { title: "Custom Architecture Build", desc: "Writing clean minimal logic rendering unique catalog experiences functioning fundamentally better." },
-            { title: "UI/UX Store Design", desc: "Crafting immaculate, branded eCommerce fronts ensuring intuitive customer journeys." },
-            { title: "Third-Party Webhooks", desc: "Integrating aggressive multi-platform tools synchronizing exact analytics securely." },
-            { title: "Migation Execution", desc: "Safely transferring entire historical catalogs and consumer databases onto Shopify reliably." },
-            { title: "Conversion Calibration", desc: "Auditing exact funnel metrics continuously to refine sales-driving elements seamlessly." }
-        ]
-    };
-
-    const services = {
-        eyebrow: "COMPREHENSIVE ECOMMERCE",
-        title: "Shopify Development Services",
-        items: [
+    const services = [
             {
-                title: "Custom Shopify Store Development",
+                title: "Custom Shopify Theme Development",
                 icon: <Store className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
+                imgUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Custom Theme",
+                
                 paragraphs: [
-                    "A Shopify shop comprises a wide range of features and functions that allow merchants to sell their items online and provide them with cloud-based systems and themes. Regarding e-commerce, the Shopify app is inevitable in terms of its relevance and role in the overall success of a business.",
-
-                    "We can’t overlook the Shopify applications when it comes to expanding the functionality of a Shopify shop and adding new features and services. We realize that no two internet businesses are alike, even if they offer the same things. You can rely on our staff to develop a Shopify website design that matches your unique needs, no matter what they may be.",
-
-                    "Our Shopify developers are proficient in the most recent versions of the Shopify and Shopify Plus platforms, so hire them at reasonable rates. With the most recent Shopify improvements, our team has constantly adapted to provide our clients with the best possible Shopify websites."
-                ],
-                cta: "Build Your Store"
+                    "Say goodbye to slow, bloated commercial themes. We develop lightweight, custom Online Store 2.0 themes tailored specifically to your branding.",
+                    "Enjoy full control with modular drag-and-drop sections in the Shopify Customizer for effortless marketing updates."
+]
             },
             {
-                title: "Shopify Migration",
+                title: "Shopify Plus Enterprise Solutions",
+                icon: <Building2 className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Upgrade to Shopify Plus",
+                
+                paragraphs: [
+                    "Scale enterprise volume with Shopify Plus features: customizable checkout extensions, automated Shopify Flow workflows, and wholesale B2B portals.",
+                    "We handle multi-currency, multi-language international storefront expansions seamlessly."
+]
+            },
+            {
+                title: "Custom Shopify App Development",
                 icon: <Code className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
+                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Custom Apps",
+                
                 paragraphs: [
-                    "A new storefront is far easier to set up than a platform transfer. The process is complicated to migrate a traditional online store to Shopify. To avoid damaging your store’s data and rating throughout the Shopify migration process, you must ensure it is done the first time correctly.",
-
-                    "At The Digital Connect, we help you migrate all of your online store’s items, orders, customers, data, and content without any hassles or chance of losing data. Your online shop items, content, photos, order data, and customers’ data might be difficult to migrate if the engineers are skilled. Over the years, we’ve helped several companies migrate their e-commerce operations from various e-commerce platforms to Shopify.",
-
-                    "It includes Magento, WooCommerce, BigCommerce, and more. Our Shopify ecommerce website building firm has a team of experts that can help you migrate to the platform without any issues. We provide a worry-free migration solution from other eCommerce platforms to Shopify and Shopify to Shopify Plus."
-                ],
-                cta: "Design Custom Theme"
+                    "When public app store solutions fail to meet your needs, we engineer private and custom public Shopify apps using Node.js and Remix.",
+                    "Integrate proprietary legacy databases, custom subscription billing, and complex product configuration calculators."
+]
             },
             {
-                title: "Shopify Apps Development",
-                icon: <Layout className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
+                title: "Platform Migration to Shopify",
+                icon: <ArrowRightLeft className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
+                cta: "Migrate to Shopify",
+                
                 paragraphs: [
-                    "Creating an eCommerce website for your business is the best bet to increase your customers and improve sales. Besides our excellent technological skills, we also know a lot about the ins and outs of every e-commerce specialty and sector and the business processes that go along with them.",
+                    "Seamlessly migrate from Magento, WooCommerce, BigCommerce, or custom platforms to Shopify with 100% data integrity.",
+                    "We transfer customer accounts, order histories, product variants, reviews, and 301 SEO redirects with zero data loss."
+]
+            }
+    ];
 
-                    "Our expert and experienced developers will help you to develop various Shopify apps to enhance your Shopify eCommerce store. Our experts not only design and develop Shopify apps, but we also provide Shopify app maintenance and upgradation services. Also, our marketing experts will help you to optimize your app in the market and increase your app installation in the app market.",
+    const processSteps = [
+            { title: "Store Architecture & Planning", desc: "Auditing catalog requirements, variant limits, tax rules, and international shipping setups." },
+            { title: "Bespoke UI/UX Design", desc: "Designing responsive, conversion-tested storefront mockups tailored to your brand identity." },
+            { title: "Custom Liquid Coding", desc: "Building lightweight Online Store 2.0 sections with zero unnecessary third-party scripts." },
+            { title: "App & Gateway Integration", desc: "Connecting payment providers, Klaviyo email marketing, 3PL logistics, and ERPs." },
+            { title: "End-to-End QA Testing", desc: "Simulating live checkouts, discount codes, mobile responsive behavior, and load capacity." },
+            { title: "Launch & Growth Support", desc: "Zero-downtime domain cutover, SEO redirection preservation, and ongoing store optimization." }
+    ];
 
-                    "As an expert Shopify development company, we deeply understand the technology and can help you choose the ideal recruiting strategy for your organization. Our Shopify developers will be available and willing to assist you in creating and transforming your Shopify website if you select this dedicated Shopify development model."
-                ],
-                cta: "Customize Your Theme"
-            },
-            {
-                title: "Themes Development & Customization",
-                icon: <Layers className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "Shopify themes are fantastic because they meet the demands of e-commerce businesses and the expectations of their consumers. However, they may need to meet your expectations since you want something more to make them ideal for your company. You may modify the Shopify theme with the help of our design specialists.",
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
 
-                    "We are one of the best Shopify developers and designers globally. We will completely redesign your Shopify store’s user interface. Our designers have worked on various projects for small and large enterprises alike. We adhere to industry best practices to provide the most incredible theme architecture.",
+    const reasons = [
+        "Bespoke theme engineering with exceptional Google PageSpeed scores",
+        "Deep experience with Shopify Plus enterprise B2B and internationalization",
+        "Zero reliance on slow, redundant third-party apps that degrade store speed",
+        "Flawless catalog and customer data migration with full SEO preservation",
+        "Conversion-tested product page layouts engineered to increase Average Order Value",
+        "Complete integration with ERPs, CRMs, Klaviyo, and 3PL shipping providers",
+        "Dedicated sprint management and transparent weekly milestone tracking",
+        "Ongoing Shopify maintenance, conversion rate audits, and priority support"
+    ];
 
-                    "We’re here to help you every step of the way as a trusted theme development specialist. With our universal and engaging themes, you can give your online business a facelift. If you’re looking for the most remarkable e-commerce website design, go no further than our team of UX/UI designers."
-                ],
-                cta: "Integrate Powerful Apps"
-            },
-            {
-                title: "Shopify Support & Maintenance",
-                icon: <RefreshCw className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "If you ask us here at The Digital Connect, our work continues once your site is live. In addition to creating and hosting, we provide comprehensive Shopify maintenance. Our team of professionals will deal with any issues or malfunctions swiftly.",
-
-                    "There is no difference in the level of service we provide whether you have a brand new Shopify shop or are migrating from an older site to a hosting plan. We at The Digital Connect know how critical it is for your business to have a fully functional location at all times. We’re here to help you get there with our round-the-clock customer service and maintenance.",
-
-                    "To maintain your e-commerce site running at its best functionality, we work around the clock to handle any difficulties you have daily. We’ve worked with eCommerce sites of all shapes and sizes for over a decade. All Shopify shops are included in this, and we guarantee to keep them up to date for you and your customers."
-                ],
-                cta: "Migrate to Shopify"
-            },
-            // {
-            //     title: "Shopify Performance Optimization",
-            //     icon: <Zap className="w-8 h-8" />,
-            //     imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-            //     paragraphs: [
-            //         "Implementing rapid checkout customization aggressively reducing cart abandonment metrics explicitly."
-            //     ],
-            //     cta: "Optimize Performance"
-            // },
-            // {
-            //     title: "Shopify Maintenance & Support",
-            //     icon: <Database className="w-8 h-8" />,
-            //     imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
-            //     paragraphs: [
-            //         "Continuously projecting massive updates providing robust security sweeps keeping your entire framework perfectly intact."
-            //     ],
-            //     cta: "Get Ongoing Support"
-            // }
-        ]
-    };
-
-    const industries = {
-        eyebrow: "Custom Analytics Tracking",
-        title: "Industries",
-        description: "A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline and improve customers' engagement.",
-        items: [
-            { name: "Fashion & Apparel", desc: "Robust fashion apps to improve your brand's presence", icon: <Shirt /> },
-            { name: "eCommerce & Retail", desc: "Improve the brand presence and sales with an online marketplace", icon: <ShoppingCart /> },
-            { name: "Health & Fitness", desc: "Perfect solutions for transformational health & fitness care", icon: <HeartPulse /> },
-            { name: "Food & Grocery", desc: "Rapidly develop functional storefronts selling inventory seamlessly", icon: <Store /> },
-            { name: "Travel & Hospitality", desc: "Integrate your travel experience with robust digital platforms", icon: <Navigation /> },
-            { name: "Sports Industry", desc: "Creating modern websites and apps for the sports industry", icon: <Dumbbell /> },
-            { name: "Beauty & Cosmetics", desc: "Visually stunning Shopify stores driving cosmetic retail heavily", icon: <Palette /> },
-            { name: "Home & Lifestyle", desc: "Intelligent digital solutions for lifestyle catalog ecosystems", icon: <Building2 /> }
-        ]
-    };
-
-    const reasons = {
-        eyebrow: "REASON TO CHOOSE US",
-        title: "Why Businesses Choose Our Shopify Agency",
-        description: "We combine technical expertise, creative thinking and business-focused practices to accelerate your digital growth.",
-        items: [
-            "Custom Shopify Development",
-            "Conversion-Focused Store Design",
-            "Shopify App Integration",
-            "Secure Payment Integration",
-            "Store Performance Optimization",
-            "Mobile-Friendly Experiences",
-            "Complex Data Migration",
-            "Ongoing Server Maintenance"
-        ]
-    };
-
-    const contact = {
-        title: "Ready to Build Your Shopify Store?",
-        description: "We will get back to you within 24 hours"
-    };
+    const technologies = ["Shopify OS 2.0","Shopify Plus","Liquid","Shopify CLI","GraphQL Admin API","Storefront API","Node.js","Remix","Hydrogen","Tailwind CSS"];
 
     return (
-        <ModernServiceLayout
-            seo={seoData}
-            theme={theme}
-            hero={hero}
-            intro={intro}
-            process={process}
-            services={services}
-            industries={industries}
-            reasons={reasons}
-            contact={contact}
-        />
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="eCommerce Development"
+                    parentRoute="/services/ecommerce-development"
+                    eyebrow="Shopify Development"
+                    title="Custom Shopify & Shopify Plus Store Development"
+                    description="Scale your direct-to-consumer (DTC) or B2B brand with bespoke Shopify themes, custom apps, and lightning-fast checkout experiences."
+                    theme={theme}
+                    visual={ShopifyVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Shopify Engineering Excellence</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Turn Visitors into Buyers with Bespoke Shopify Storefronts
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>Shopify powers millions of the world's most successful eCommerce brands, but generic themes often lead to sluggish load times and cookie-cutter experiences. At The Digital Connect, we build bespoke Shopify stores from scratch using Shopify's modern Online Store 2.0 architecture and custom Liquid code.</p>
+                                <p>From custom private apps and advanced product filtering to headless Shopify architectures using Hydrogen or Next.js, our developers unlock the full potential of Shopify to maximize your store's conversion rate.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Shopify Development Process"
+                    eyebrow="Our Shopify Workflow"
+                    description="From concept design to live checkout testing and post-launch optimization."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Shopify Development Capabilities
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Tailored Shopify engineering services for high-growth digital brands.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Shopify Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Grow your online sales with our specialized Shopify engineering team:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
     );
 };
 

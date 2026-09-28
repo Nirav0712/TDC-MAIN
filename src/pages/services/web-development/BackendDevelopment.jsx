@@ -3,23 +3,314 @@ import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
 import { BackendVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
-import { PenTool, Database, Zap, Sparkles, Eye, Cloud, Lock, Layers, Webhook, Box, Server, Boxes, GitMerge, LayoutTemplate, ArrowRightLeft, Globe, Languages, Network, RadioReceiver, ShieldCheck, LayoutDashboard, Users, Repeat, Radio, LineChart } from 'lucide-react';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const BackendDevelopment = () => {
-    useSEO({ title: "Bulletproof Cloud Infrastructure & APIs | The Digital Connect", description: "The invisible engine powering your platforms. We architect hyper-scalable microservices, secure databases, and sub-millisecond API endpoints handling millions of requests." });
-    const theme = {"accent":"text-brand-cyan","bg":"bg-brand-cyan/20","softBg":"bg-brand-soft-blue/20"};
+    useSEO({
+        "title": "Custom Backend Development & Cloud Services | The Digital Connect",
+        "description": "The Digital Connect builds scalable, secure, and high-concurrency backend architectures, microservices, and databases using Node.js, Python, and cloud infrastructure."
+});
+
+    const theme = {"accent":"text-emerald-500","bg":"bg-emerald-500/20","softBg":"bg-emerald-50"};
+
+    const services = [
+            {
+                title: "Microservices Architecture",
+                icon: <Server className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Microservices",
+                
+                paragraphs: [
+                    "Decompose monolithic applications into independent, self-healing microservices. Improve development velocity and allow individual service scaling.",
+                    "The Digital Connect utilizes Docker, Kubernetes, and gRPC to build loosely coupled systems that withstand extreme operational loads."
+]
+            },
+            {
+                title: "Database Design & Optimization",
+                icon: <Database className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=800",
+                cta: "Optimize Your Databases",
+                
+                paragraphs: [
+                    "Prevent database bottlenecks with expert query optimization, indexing strategies, read-replicas, and Redis memory caching layers.",
+                    "We architect PostgreSQL, MySQL, MongoDB, and DynamoDB instances tailored to your precise read/write distribution profiles."
+]
+            },
+            {
+                title: "Cloud Infrastructure & DevOps",
+                icon: <Cloud className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+                cta: "Scale on Cloud",
+                
+                paragraphs: [
+                    "Leverage AWS, Google Cloud, and Azure with automated infrastructure as code (IaC). Implement auto-scaling groups and global serverless functions.",
+                    "Our DevOps specialists configure automated CI/CD pipelines ensuring continuous deployment without risk of service disruption."
+]
+            },
+            {
+                title: "Real-Time Systems & WebSockets",
+                icon: <Zap className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Real-Time Apps",
+                
+                paragraphs: [
+                    "Deliver instantaneous data updates with WebSocket connections and event-driven architectures powered by Apache Kafka and RabbitMQ.",
+                    "Ideal for real-time messaging, live tracking, financial trading tickers, and collaborative multiplayer interfaces."
+]
+            }
+    ];
+
+    const processSteps = [
+            { title: "Database Modeling", desc: "Designing normalized, high-performance relational and document database schemas." },
+            { title: "API Contract Definition", desc: "Establishing strict OpenAPI/Swagger and GraphQL schema specifications." },
+            { title: "Microservice Engineering", desc: "Building modular, containerized services with comprehensive error handling and logging." },
+            { title: "Security & Auth Hardening", desc: "Implementing OAuth2, JWT, role-based access control, and bank-grade data encryption." },
+            { title: "Load & Concurrency QA", desc: "Simulating heavy traffic spikes to verify rate limiting, caching, and auto-scaling." },
+            { title: "CI/CD & Cloud Launch", desc: "Automating cloud provisioning via Terraform with zero-downtime blue/green deployment." }
+    ];
+
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
+
+    const reasons = [
+        "Proven track record building systems handling high-concurrency traffic",
+        "Zero-trust security approach with end-to-end data encryption",
+        "High availability architectures designed for 99.99% uptime SLAs",
+        "Expert database optimization reducing cloud computing expenses",
+        "Comprehensive automated test suites for continuous reliability",
+        "Clear API documentation conforming to OpenAPI standards",
+        "Proactive server monitoring and real-time anomaly alerting",
+        "Flexible engagement models tailored to your technical requirements"
+    ];
+
+    const technologies = ["Node.js","Express","Python","FastAPI","Django","PostgreSQL","MongoDB","Redis","Docker","Kubernetes","AWS","Google Cloud","GraphQL","REST"];
+
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
-                <SubServiceShared.Hero parentTitle="Web Development" parentRoute="/services/web-development" eyebrow="Backend Development" title="Bulletproof Cloud Infrastructure & APIs" description="The invisible engine powering your platforms. We architect hyper-scalable microservices, secure databases, and sub-millisecond API endpoints handling millions of requests." theme={theme} visual={BackendVisual} />
-                <SubServiceShared.Overview title="The invisible backbone of scalable software" content={["Backend development is the critical foundation that determines whether your application can survive tremendous viral growth or collapse under pressure. Our backend architectures are strictly engineered to be entirely stateless, horizontally scalable, and ferociously secure.","Instead of building monolithic liabilities, we frequently deploy microservice architectures using Node.js, Python, or Go, leveraging AWS or Google Cloud to automatically scale processing power instantly based on real-time traffic spikes.","Data integrity is paramount. We design highly normalized PostgreSQL databases for structured operational logic, while deploying Redis for sub-millisecond caching environments. Whether you need a simple RESTful backend or a massive real-time WebSocket infrastructure, we build it to last permanently."]} theme={theme} />
-                <SubServiceShared.Capabilities theme={theme} capabilities={[{title: "API Architecture", desc: "RESTful and GraphQL interfaces providing strictly typed data layers for multiple clients.", icon: <Webhook />}, {title: "Database Engineering", desc: "Complex PostgreSQL, MongoDB, and Redis schemas optimized for extreme read/write velocities.", icon: <Database />}, {title: "Secure Authentication", desc: "OAuth2, JWT, and SSO implementations protecting user data against malicious payloads.", icon: <Lock />}, {title: "Cloud Infrastructure", desc: "AWS, GCP, and Azure serverless deployments running on isolated Docker containers.", icon: <Cloud />}, {title: "Microservices", desc: "Decoupled logic domains allowing independent team development and zero-downtime scaling.", icon: <Layers />}, {title: "Real-Time Systems", desc: "WebSocket and Server-Sent Events driving instant chat, notifications, and live dashboards.", icon: <Zap />}]} />
-                <SubServiceShared.Technology theme={theme} technologies={["Node.js","Python","Go","PostgreSQL","MongoDB","Redis","Docker","AWS","GraphQL","Kubernetes"]} />
-                <SubServiceShared.Process theme={theme} process={[{"title":"Schema Design","desc":"Architecting the database structure and relational models to fundamentally prevent data anomalies."},{"title":"API Specification","desc":"Drafting strictly typed Swagger/OpenAPI documentation for frontend teams to consume instantly."},{"title":"Business Logic","desc":"Engineering the core processing algorithms, payment handling, and third-party middleware."},{"title":"Load Testing","desc":"Simulating vast concurrent user traffic to expose and patch bottlenecks before production."}]} />
-                <SubServiceShared.FAQ theme={theme} faqs={[{"q":"What backend languages do you use?","a":"We primarily utilize Node.js (TypeScript) for immense concurrency, Python for data-heavy/AI tasks, and Go for extreme low-latency microservices."},{"q":"How do you secure user data?","a":"We utilize bcrypt for password hashing, strict CORS policies, JWT for stateless sessions, and deploy API gateways that filter out DDoS and SQL injection attempts."},{"q":"Can you scale an existing backend?","a":"Yes. We frequently audit legacy monolithic backends, extract heavy continuous processes into serverless functions, and optimize slow SQL queries."},{"q":"Do you use AWS or Google Cloud?","a":"We leverage both. We build cloud-agnostic containerized applications (Docker) so you are never permanently vendor-locked."}]} />
-                <SubServiceShared.Related theme={theme} links={[{"title":"Frontend Development","href":"/services/web-development/frontend-development"},{"title":"API Integration","href":"/services/web-development/api-integration"},{"title":"Cloud Automation","href":"/services/software-development/business-automation"},{"title":"React Native","href":"/services/mobile-app-development/react-native-development"}]} />
-                <SubServiceShared.CTA theme={theme} />
+                <SubServiceShared.Hero
+                    parentTitle="Web Development"
+                    parentRoute="/services/web-development"
+                    eyebrow="Backend Development"
+                    title="Scalable Backend & Cloud Engineering Services"
+                    description="Power your applications with high-throughput microservices, secure database architectures, and sub-millisecond API endpoints."
+                    theme={theme}
+                    visual={BackendVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">The Core of Your Digital Ecosystem</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Architecting Resilient, High-Throughput Server Systems
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>The backend is the invisible engine powering every transaction, authentication request, and data pipeline in your business. At The Digital Connect, we engineer robust backend systems capable of processing millions of concurrent requests while maintaining strict data integrity and zero unplanned downtime.</p>
+                                <p>Whether you are migrating from a monolithic architecture to cloud-native microservices or building a real-time event-driven data pipeline, our engineers use Node.js, Python, PostgreSQL, and AWS to create future-proof server infrastructure.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Backend Development Lifecycle"
+                    eyebrow="Backend Engineering Methodology"
+                    description="A disciplined approach to data modeling, API design, security, and cloud scalability."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Backend Engineering Capabilities
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Enterprise backend solutions designed for extreme scalability and fault tolerance.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Backend Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Benefit from secure, scalable server architecture crafted by seasoned engineers:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </PageTransition>
     );

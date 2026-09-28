@@ -1,178 +1,318 @@
 import React from 'react';
-import { Search, Map, Layout, Zap, Pointer, Target, Layers, Component, Maximize, Database, Server, Cog, Workflow, BarChart2, MessageSquare, Megaphone, ArrowUpRight, MousePointerClick, ShieldCheck, Mail, LineChart, Cpu, Cloud, Building2, TerminalSquare, LayoutDashboard, LockKeyhole, Globe, Store, ShoppingCart, HeartPulse, Navigation, GraduationCap, Shirt, Dumbbell, Scale, Bitcoin, Landmark, Paintbrush, Building, CheckCircle2, PenTool } from 'lucide-react';
+import useSEO from '../../../hooks/useSEO';
+import PageTransition from '../../../components/common/PageTransition';
+import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
 import { ContentMarketingVisual } from '../../../components/services/subservices/visuals/VisualsSoftware_Marketing';
-import { ModernServiceLayout } from '../../../components/services/subservices/ModernServiceLayout';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const ContentMarketing = () => {
-    const seoData = {
-        title: "Content Marketing That Builds Brands & Drives Growth | The Digital Connect",
-        description: "Producing elite long-form educational ecosystems explicitly capturing high-intent prospects entirely before they are ready to transact physically."
-    };
+    useSEO({
+        "title": "Content Marketing & SEO Copywriting | The Digital Connect",
+        "description": "The Digital Connect creates authoritative, SEO-optimized content marketing strategies, blog articles, whitepapers, and lead generation copy."
+});
 
-    const theme = { "accent": "text-brand-blue", "bg": "bg-brand-blue/20", "softBg": "bg-brand-cyan/10" };
+    const theme = {"accent":"text-orange-500","bg":"bg-orange-500/20","softBg":"bg-orange-50"};
 
-    const hero = {
-        parentTitle: "content writing services",
-        parentRoute: "/services/digital-marketing/content-marketing",
-        eyebrow: "The Best Solution For Your Business",
-        title: "Result-Driven Content Writing Agency",
-        description: "",
-        visual: ContentMarketingVisual,
-        ctaText: "GET FREE QUOTE NOW"
-    };
-
-    const intro = {
-        eyebrow: "",
-        title: "Hire Professional Content Writers",
-        paragraphs: [
-            "The content market is largely unorganized in this online world. Several businesses want SEO-friendly, relevant, and traffic-driving content but cannot find professional content writers. We’re here to help you bridge the gap. Our goal at 21Twelve Interactive is to deliver high-quality content that will improve the online presence of all companies while also bringing in high-quality clients and generating cash through the internet. We offer our reputed clients an expansive range of the best content writing services.",
-            "Our responsibility is to deliver the best service for building a brand and recognition by creating targeted content. A group of young and creative writers is dedicated to giving the top content marketing services possible. Blog Posts, Website Content, Service Pages, Location-Specific Pages, Landing Pages, Social Media Content, Ad Copy, Case Studies, Press Releases, Email Marketing, Newsletters, and Translation services are just a few areas in which we specialize. Our mission at 21Twelve Interactive is to assist all businesses, start-ups, or established corporations. We help clients develop a significant and better presence across all digital channels with content. We want to reduce the number of money businesses spend on maintaining a professional online presence through content. We also strongly emphasize upholding high standards of work ethics, timeliness, professionalism, and creating a pleasant working environment."
-        ]
-    };
-
-    const process = {
-        eyebrow: "Enhance Your Project with Risk Free Development Process",
-        title: "Process We Follow",
-        description: "We follow a reliable and effective process to create unique, compelling content tailored to meet your specific goals. Our experienced writers bring together creativity and technique, combining research and storytelling for maximum impact.",
-        steps: [
-            { title: "Groundwork", desc: "Researching and analyzing the clients’ industry & their competitors to know KPIs & project management to ensure the project success." },
-            { title: "Objective & Scope", desc: "We communicate with our clients, know their needs, and suggest the best solution to get the desired results. In addition, our SEO experts help you know the overall scope of your tasks." },
-            { title: "Planning & Scheduling", desc: "We analyze every detail of the project schedule, like the required number of resources, tasks, challenges, and associated milestones. We identify keywords optimize content and the website." },
-            { title: "Submission to Search Engines", desc: "We submit the optimized pages to the search engines. Our experienced SEO experts implement the best strategies to rank your website on different search engines." },
-            { title: "QA & Testing", desc: "We test everything before and after submitting the website to the search engines. Furthermore, our team always makes required enhancements per the search engine’s algorithm." },
-            { title: "Help & Support", desc: "Being a professional SEO company, we offer consistent support to our clients and resolve all their issues in no time. We review the ranking continuously and work to improve it." }
-        ]
-    };
-
-    const services = {
-        eyebrow: "Empower Your Business with Our Services",
-        title: "Our Creative Content Writing Services",
-        items: [
+    const services = [
             {
-                title: "White Papers",
-                icon: <Target className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
+                title: "SEO Blog Article Writing",
+                icon: <FileText className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+                cta: "Write SEO Articles",
+                
                 paragraphs: [
-                    "White papers are long-form content publications professionally produced to offer knowledge while building trust among your target audience. These papers show what your organization offers to answer a specific issue. At The Digital Connect, we provide our clients with excellent white paper writing services at a low cost.",
-
-                    "We have access to a diverse spectrum of knowledge because we have a workforce scattered throughout the world. Our staff is prepared to begin the research necessary and SEO content writing service to put together your white paper as soon as possible. White papers may take on a variety of formats; our professional content writers of white papers are adaptable and well-organized.",
-
-                    "Whitepapers help you develop your thought leadership & reputation in the market by demonstrating your expertise. As a result, the content of the whitepaper will be produced in a unique manner that will have an impact on decision-making in your industry."
-                ],
-                cta: "Give us a call today to frame effective white papers!"
+                    "Publish comprehensive, long-form articles (1,500+ words) that answer user queries thoroughly and satisfy Google's E-E-A-T quality guidelines.",
+                    "We incorporate clear headings, original takeaways, and strategic internal links to elevate your overall domain authority."
+]
             },
             {
-                title: "Case Studies Writing",
-                icon: <PenTool className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
+                title: "Whitepapers, eBooks & Lead Magnets",
+                icon: <BookOpen className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
+                cta: "Create Lead Magnets",
+                
                 paragraphs: [
-                    "The Case study is indeed a persistent marketing tactic used by many companies. A decent case study can create a lasting impact on your consumer, increasing the likelihood of a long-term relationship and partnership between you. More than that, the company will increase the number of new clients seeking your services. To accomplish this, we develop case studies that are both visible and persuasive.",
-
-                    "It is set against futuristic backgrounds; highlights your product’s ability to deal with potential obstacles. Through our work with businesses, organizations, and even entire corporations, we have gathered a wealth of knowledge and experience in effective case study writing, allowing us to present our clients with services that will astound even the most jaded of them.",
-
-                    "Case study writing is something that we take extremely seriously, and we make use of all of our capabilities, expertise, and service capabilities to ensure that we provide amazing services to all of our clients on every occasion."
-                ],
-                cta: "We can offer you the best, call us now!"
+                    "Capture qualified email leads with comprehensive industry whitepapers, downloadable guides, and actionable checklists.",
+                    "We handle end-to-end writing, data visual formatting, and landing page gated download integrations."
+]
             },
             {
-                title: "eBooks Writing",
-                icon: <Layout className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
+                title: "Customer Case Studies & Success Stories",
+                icon: <CheckCircle className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+                cta: "Publish Case Studies",
+                
                 paragraphs: [
-                    "Whether you intend for the eBook to be a stand-alone product or a promotional tool to promote your company’s products and services, it must strike the right emotional chord with the reader. Our eBook writers possess the knowledge and the ability to produce high-quality content ebooks.",
-
-                    "Hire our eBook content writer & make your eBook project succeed. Online content is the future medium of information, entertainment, and marketing. In addition to being a part of the future, electronic books are also a logical development of printed books.",
-
-                    "Because of the ease with which ebooks can be shared or distributed, they are an excellent medium for various reasons, including marketing. We write content for eBooks that are of actual value to readers and, as a result, help grow your business. If you require further changes, we will offer you as many as you require."
-                ],
-                cta: "Get your eBooks now. Contact us to know more!"
+                    "Provide compelling social proof with structured client case studies highlighting client challenges, solutions implemented, and measurable ROI results.",
+                    "Equip your sales team with persuasive collateral that closes high-ticket deals faster."
+]
             },
             {
-                title: "Video & Animation Script",
-                icon: <MessageSquare className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop",
+                title: "Email Newsletter & Nurture Sequences",
+                icon: <Mail className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Email Sequences",
+                
                 paragraphs: [
-                    "A scriptwriter creates commercials, webinars, videos, television shows, and film scripts. Having a thorough understanding of the ins & outs of screenwriting, our writers can craft natural-sounding, captivating scripts on virtually any subject matter.",
-
-                    "Whether you have a concept for a movie but lack the experience to turn it into a script, require a plot for gameplay you’re developing, need a refined narration for a webinar the company is hosting, or require a script for your organization’s first TV commercial, there is a writer at The Digital Connect who can best help.",
-
-                    "We are well-versed in the various copy formats and can combine the most relevant option for the client. Apart from that, we make certain that the substance of the ad copy is relevant to the readers by conducting the appropriate research before generating these materials. We simplify the text to make it easier to understand and integrate the brand’s personality into the materials."
-                ],
-                cta: "Hire us for video & animation script writing services now!"
-            },
-            {
-                title: "Website Content & Blog Writing",
-                icon: <LockKeyhole className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "We are your go-to resource for all types of web material. Our professional content writers are highly skilled and trained to develop entirely personalized copies for the online audience, whether for a blog, website, or article marketing campaign. Most users of a website glance over the information rather than reading it from beginning to end.",
-
-                    "Because of this, our web content writers are well aware of the need to maintain the structure & format of articles, blogs, and websites so that readers find it easy to read them. We are committed to exceeding your expectations. The task of writing good blog content is to understand both the expectations of the client and the expectations of the customer’s audience before starting.",
-
-                    "Our blog writers are experienced in writing about various topics and themes and know SEO content writing services. This adaptability enables us to meet the blog writing requirements of a wide range of clients. Furthermore, our content writing agency ensures that the blog articles are written at a level of comprehension appropriate for the typical reader, allowing them to absorb the information thoroughly."
-                ],
-                cta: "Get website content & blog writing services quotes now!"
+                    "Nurture leads from initial download to sales call with automated multi-step email drip campaigns.",
+                    "We write engaging newsletter copy with high open rates, compelling subject lines, and strong calls to action."
+]
             }
-        ]
-    };
+    ];
 
-    const industries = {
-        eyebrow: "Custom IT Solutions for Varied Verticals",
-        title: "Industries",
-        description: "A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline and improve customers’ engagement.",
-        items: [
-            { name: "eCommerce & Retail", desc: "Improve the brand presence and sales with an online marketplace", icon: <ShoppingCart /> },
-            { name: "Health & Fitness", desc: "Perfect solutions for transformational health & fitness care", icon: <HeartPulse /> },
-            { name: "Travel & Hospitality", desc: "Integrate your travel experience with robust digital platforms", icon: <Navigation /> },
-            { name: "Education & e-Learning", desc: "Blending technology to bring seamless experience into education", icon: <GraduationCap /> },
-            { name: "Fashion & Apparel", desc: "Robust fashion apps to improve your brand's presence", icon: <Shirt /> },
-            { name: "Sports Industry", desc: "Creating modern websites and apps for the sports industry", icon: <Dumbbell /> },
-            { name: "Legal Industry", desc: "New generation websites and apps for modern law firms", icon: <Scale /> },
-            { name: "Blockchain & Crypto", desc: "Perfect apps for blockchain & crypto industry vertical", icon: <Bitcoin /> },
-            { name: "Finance & Share Marketing", desc: "Trustworthy & next-gen mobile solutions for finance organizations", icon: <Landmark /> },
-            { name: "Home Interior & Exterior", desc: "Rapidly develop a fully-functional home decor storefront", icon: <Paintbrush /> },
-            { name: "Real-Estate Industry", desc: "Intelligent digital solutions for the real estate industry", icon: <Building /> },
-            { name: "Hotel Industry", desc: "Smoothen your hotel processes with our digital solution", icon: <Building2 /> }
-        ]
-    };
+    const processSteps = [
+            { title: "Topic & Search Intent Research", desc: "Identifying content gaps, competitor topics, and high-intent informational search queries." },
+            { title: "Editorial Calendar Planning", desc: "Scheduling a strategic mix of top-of-funnel educational articles and bottom-of-funnel case studies." },
+            { title: "In-Depth Research & Writing", desc: "Drafting comprehensive, well-researched content incorporating original insights and data." },
+            { title: "SEO Optimization & Fact Checking", desc: "Optimizing header structures, keyword density, internal linking, and metadata schemas." },
+            { title: "Design & Media Formatting", desc: "Adding custom diagrams, infographics, callout boxes, and conversion lead magnets." },
+            { title: "Distribution & Performance Review", desc: "Promoting content via newsletters and social channels while tracking organic traffic metrics." }
+    ];
 
-    const reasons = {
-        eyebrow: "Reason to Choose US",
-        title: "Our Key Features",
-        description: "We always prioritize the happiness of our clients with our best content writing services. Here are some key points which prove why you should hire us.",
-        items: [
-            "In-house highly-skilled writers",
-            "Offers round-the-clock support",
-            "Thorough understanding of writings concept",
-            "Always write meaningful articles",
-            "Promise quality and affordable content",
-            "Offers proof-reading and editing",
-            "Write fresh & original content",
-            "Every project is given a quality rating"
-        ]
-    };
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
 
-    const contact = {
-        title: "GET A FREE QUOTE",
-        description: "We will get back to you within 24 hours"
-    };
+    const reasons = [
+        "100% original, deeply researched content written by domain-expert copywriters",
+        "Strict adherence to Google's E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)",
+        "Strategic keyword integration that ranks organically without feeling stuffed",
+        "End-to-end content production including custom visual graphics and lead magnets",
+        "Compelling storytelling that moves prospects smoothly through the sales funnel",
+        "Full editorial calendar management with reliable, on-time content delivery",
+        "Seamless collaboration with your internal marketing and subject matter experts",
+        "Transparent tracking of organic search traffic, time-on-page, and lead generation"
+    ];
 
-    // Dummy icon component for PenTool that isn't cleanly passing through lucide
-    // Wait, PenTool is actually valid in lucide-react, I will verify it's exported.
-    // Actually, I imported many icons but PenTool is missing in the list. I'll just use a generic icon (Layers) in the JSX above if needed, but I'll add PenTool import.
+    const technologies = ["SurferSEO","Ahrefs","Grammarly","Google Docs","Clearscope","HubSpot","Mailchimp","Klaviyo","WordPress","Figma"];
 
     return (
-        <ModernServiceLayout
-            seo={seoData}
-            theme={theme}
-            hero={hero}
-            intro={intro}
-            process={process}
-            services={services}
-            industries={industries}
-            reasons={reasons}
-            contact={contact}
-        />
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="Digital Marketing"
+                    parentRoute="/services/digital-marketing"
+                    eyebrow="Content Marketing"
+                    title="Authoritative Content Marketing & SEO Copywriting"
+                    description="Educate your market, earn search engine trust, and drive high-intent inbound leads with compelling, research-backed content marketing strategies."
+                    theme={theme}
+                    visual={ContentMarketingVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Content That Converts</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Establish Market Authority and Drive Inbound Customer Acquisition
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>Modern buyers conduct extensive independent research before ever speaking with a sales representative. High-quality content marketing establishes your brand as the definitive authority in your industry, answering user questions and guiding prospects through every stage of the evaluation funnel.</p>
+                                <p>At The Digital Connect, our content strategists and copywriters craft in-depth, research-backed blog articles, comprehensive whitepapers, customer case studies, and automated email nurturing sequences that educate prospects and convert them into paying clients.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Content Marketing Methodology"
+                    eyebrow="Content Creation Lifecycle"
+                    description="A research-driven content production framework built for SEO and conversion."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Content Marketing Offerings
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Full-service content strategy and copywriting solutions for growing businesses.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Content Marketing
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Earn market trust with our specialized content strategy and copywriting team:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
     );
 };
 

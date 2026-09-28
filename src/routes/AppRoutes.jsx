@@ -69,6 +69,14 @@ import BlogTemplate from '../components/blog/BlogTemplate';
 import CaseStudyTemplate from '../components/caseStudies/CaseStudyTemplate';
 import ScrollToTop from '../components/common/ScrollToTop';
 
+import CakePHPDevelopment from '../pages/services/web-development/CakePHPDevelopment';
+import CodeigniterDevelopment from '../pages/services/web-development/CodeigniterDevelopment';
+import DrupalDevelopment from '../pages/services/web-development/DrupalDevelopment';
+import JoomlaDevelopment from '../pages/services/web-development/JoomlaDevelopment';
+import LaravelDevelopment from '../pages/services/web-development/LaravelDevelopment';
+import RubyOnRailsDevelopment from '../pages/services/web-development/RubyOnRailsDevelopment';
+import WordPressDevelopment from '../pages/services/web-development/WordPressDevelopment';
+import WebflowDevelopment from '../pages/services/web-development/WebflowDevelopment';
 import FrontendDevelopment from '../pages/services/web-development/FrontendDevelopment';
 import BackendDevelopment from '../pages/services/web-development/BackendDevelopment';
 import CMSDevelopment from '../pages/services/web-development/CMSDevelopment';
@@ -78,11 +86,18 @@ import IOSDevelopment from '../pages/services/mobile-app-development/IOSDevelopm
 import AndroidDevelopment from '../pages/services/mobile-app-development/AndroidDevelopment';
 import HybridAppDevelopment from '../pages/services/mobile-app-development/HybridAppDevelopment';
 import { Navigate } from 'react-router-dom';
+import GraphicDesign from '../pages/services/ui-ux-design/GraphicDesign';
+import WebDesign from '../pages/services/ui-ux-design/WebDesign';
+import LogoDesign from '../pages/services/ui-ux-design/LogoDesign';
+import UIUXDesigningServices from '../pages/services/ui-ux-design/UIUXDesigningServices';
 import UXResearch from '../pages/services/ui-ux-design/UXResearch';
 import Wireframing from '../pages/services/ui-ux-design/Wireframing';
 import Prototyping from '../pages/services/ui-ux-design/Prototyping';
 import UIDesign from '../pages/services/ui-ux-design/UIDesign';
 import DesignSystems from '../pages/services/ui-ux-design/DesignSystems';
+import MagentoDevelopment from '../pages/services/ecommerce-development/MagentoDevelopment';
+import OpencartDevelopment from '../pages/services/ecommerce-development/OpencartDevelopment';
+import BigcommerceDevelopment from '../pages/services/ecommerce-development/BigcommerceDevelopment';
 import Shopify from '../pages/services/ecommerce-development/Shopify';
 import WooCommerce from '../pages/services/ecommerce-development/WooCommerce';
 import CustomEcommerce from '../pages/services/ecommerce-development/CustomEcommerce';
@@ -166,6 +181,14 @@ const AppRoutes = () => {
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/terms-and-conditions" element={<Terms />} />
 
+                    <Route path="/services/web-development/cakephp-development" element={<CakePHPDevelopment />} />
+                    <Route path="/services/web-development/codeigniter-development" element={<CodeigniterDevelopment />} />
+                    <Route path="/services/web-development/drupal-development" element={<DrupalDevelopment />} />
+                    <Route path="/services/web-development/joomla-development" element={<JoomlaDevelopment />} />
+                    <Route path="/services/web-development/laravel-development" element={<LaravelDevelopment />} />
+                    <Route path="/services/web-development/ruby-on-rails-development" element={<RubyOnRailsDevelopment />} />
+                    <Route path="/services/web-development/wordpress-development" element={<WordPressDevelopment />} />
+                    <Route path="/services/web-development/webflow-development" element={<WebflowDevelopment />} />
                     <Route path="/services/web-development/frontend-development" element={<FrontendDevelopment />} />
                     <Route path="/services/web-development/backend-development" element={<BackendDevelopment />} />
                     <Route path="/services/web-development/cms-development" element={<CMSDevelopment />} />
@@ -177,13 +200,25 @@ const AppRoutes = () => {
                     <Route path="/services/mobile-app-development/flutter-development" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
                     <Route path="/services/mobile-app-development/react-native-development" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
                     <Route path="/services/mobile-app-development/cross-platform-apps" element={<Navigate to="/services/mobile-app-development/hybrid-app-development" replace />} />
+                    <Route path="/services/ui-ux-design/graphic-design" element={<GraphicDesign />} />
+                    <Route path="/services/ui-ux-design/web-design" element={<WebDesign />} />
+                    <Route path="/services/ui-ux-design/logo-design" element={<LogoDesign />} />
+                    <Route path="/services/ui-ux-design/ui-ux-designing-services" element={<UIUXDesigningServices />} />
                     <Route path="/services/ui-ux-design/ux-research" element={<UXResearch />} />
                     <Route path="/services/ui-ux-design/wireframing" element={<Wireframing />} />
                     <Route path="/services/ui-ux-design/prototyping" element={<Prototyping />} />
                     <Route path="/services/ui-ux-design/ui-design" element={<UIDesign />} />
                     <Route path="/services/ui-ux-design/design-systems" element={<DesignSystems />} />
-                    <Route path="/services/ecommerce-development/shopify" element={<Shopify />} />
+                    <Route path="/services/ecommerce-development/magento-development" element={<MagentoDevelopment />} />
+                    <Route path="/services/ecommerce-development/magento" element={<Navigate to="/services/ecommerce-development/magento-development" replace />} />
+                    <Route path="/services/ecommerce-development/opencart-development" element={<OpencartDevelopment />} />
+                    <Route path="/services/ecommerce-development/opencart" element={<Navigate to="/services/ecommerce-development/opencart-development" replace />} />
+                    <Route path="/services/ecommerce-development/woocommerce-development" element={<WooCommerce />} />
                     <Route path="/services/ecommerce-development/woocommerce" element={<WooCommerce />} />
+                    <Route path="/services/ecommerce-development/bigcommerce-development" element={<BigcommerceDevelopment />} />
+                    <Route path="/services/ecommerce-development/bigcommerce" element={<Navigate to="/services/ecommerce-development/bigcommerce-development" replace />} />
+                    <Route path="/services/ecommerce-development/shopify-development" element={<Shopify />} />
+                    <Route path="/services/ecommerce-development/shopify" element={<Shopify />} />
                     <Route path="/services/ecommerce-development/custom-ecommerce" element={<CustomEcommerce />} />
                     <Route path="/services/ecommerce-development/payment-integration" element={<PaymentIntegration />} />
                     <Route path="/services/ecommerce-development/marketplace-development" element={<MarketplaceDev />} />

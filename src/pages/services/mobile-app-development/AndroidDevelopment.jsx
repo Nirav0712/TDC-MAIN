@@ -1,462 +1,282 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import useSEO from '../../../hooks/useSEO';
+import PageTransition from '../../../components/common/PageTransition';
+import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
+import { AndroidVisual } from '../../../components/services/subservices/visuals/VisualsMobile';
 import {
-    ArrowRight,
-    CheckCircle2,
-    Smartphone,
-    PenTool,
-    LineChart,
-    Gamepad2,
-    Settings2,
-    Building2,
-    HeartPulse,
-    Landmark,
-    GraduationCap,
-    ShoppingCart,
-    Truck,
-    MonitorPlay,
-    Briefcase,
-    Code2,
-    CreditCard,
-    Banknote,
-    Repeat,
-    Bug,
-    Layout,
-    Globe2,
-    Send,
-    Loader2,
-    ChevronRight
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AndroidVisual } from '../../../components/services/subservices/visuals/VisualsMobile';
+import { motion } from 'framer-motion';
 
 const fadeIn = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const stagger = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-};
+const AndroidDevelopment = () => {
+    useSEO({
+        "title": "Custom Android App Development Company | The Digital Connect",
+        "description": "The Digital Connect provides custom Android application development services using Kotlin and Java for smartphones, tablets, TV, and wearables."
+});
 
-// Dummy image placeholders to represent standard assets
-const Images = {
-    hero: "https://images.unsplash.com/photo-1607252654015-f85df1fac051?auto=format&fit=crop&q=80&w=1200",
-    agile: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-    customApp: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=1200",
-    uiux: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200",
-};
-
-export default function AndroidDevelopment() {
-    const { scrollYProgress } = useScroll();
-    const yHero = useTransform(scrollYProgress, [0, 1], [0, 200]);
+    const theme = {"accent":"text-emerald-500","bg":"bg-emerald-500/20","softBg":"bg-emerald-50"};
 
     const services = [
-        {
-            title: "Custom Android App Development",
-            icon: <Smartphone className="w-8 h-8" />,
-            imgUrl: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=1200",
-            paragraphs: [
-                "As the penetration of mobile phones and the internet increases in the country, app development for businesses has become vital. And when it comes to mobile applications, Android is a market leader having more than a billion active mobile devices across the globe.",
-                "With custom Android app development, you can take your business to new heights of success in this digital age. Whether you’re a start-up or a well-established business, Android help can help you significantly increase your business. The Digital Connect is a leading Android app development agency with a dedicated Android application team to help you get the best app to thrive in the competitive smartphone market.",
-                "We efficiently meet your requirements and tailor customized applications for your business. Our certified app developers have expertise in developing mobile applications for different industries. We have clients from different domains, including e-commerce, IT, real estate, etc."
-            ],
-            cta: "Get Custom App Solution"
-        },
-        {
-            title: "Android UI/UX Designing",
-            icon: <PenTool className="w-8 h-8" />,
-            imgUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200",
-            paragraphs: [
-                "Android Applications have the potential to help your business grow significantly in the digital world. This is not it; with a well-developed Android application, you can even ensure better reach and ROI for your business. The Digital Connect has experienced app developers who are certified by top institutions.",
-                "Being a leading UI/UX designing agency, we have expertise in creating the best mobile experiences for our clients. With a team of such expert developers, we ensure to provide you with an application with an excellent user-friendly interface and unmatchable experience. Innovation is the core value of our Android UI/UX organizing team.",
-                "No matter whether you’re looking for a dynamic application, tablet application, wearable, or TV application, our experienced team is well-versed in everything. From leveraging your application with advanced payment methods to providing a user-friendly interface, we provide you with the best Android applications."
-            ],
-            cta: "Design Your App"
-        },
-        {
-            title: "Android App Consulting",
-            icon: <LineChart className="w-8 h-8" />,
-            imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-            paragraphs: [
-                "Being in an online business brings a lot of challenges and opportunities to your door every day! But how to analyze and understand what is best for your business? Well! You can make that job more accessible with the help of a trusted Android app consulting agency.",
-
-                "If you’re also looking for a mobile app consultancy, you can connect with The Digital Connect. Here we have a dedicated team of consultants who offer tried and tested mobile methods for your business, ensuring that it leads to positive consequences.",
-
-                "Hire The Digital Connect consultancy services to achieve practical outcomes backed by research. Our Android consultants dedicatedly analyze data and statistics of your business, review its performance and offer the required solutions to support your business in the right direction. With us, you can enhance the performance of your overall business."
-            ],
-            cta: "Consult our Experts"
-        },
-        {
-            title: "Android Game App Testing",
-            icon: <Gamepad2 className="w-8 h-8" />,
-            imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-            paragraphs: [
-                "There’s no doubt that Android is a widely accepted mobile platform all across the globe. Over the years, Android has brought a revolution to the mobile app development industry. Android has become a favorite platform for businesses from different verticals, especially in the gaming industry with its increasing popularity.",
-
-                "If you also own an Android gaming application or plan to develop one, you can connect with The Digital Connect. As a leading Android game app testing platform, we have tested several games successfully thriving in the industry today.",
-
-                "As a leading mobile game testing agency, we have expertise in all types of mobile games and designs. Whether you’re building an action game or a role-playing game, we have the proper infrastructure to test all kinds of games. We provide the world’s best environment for Android game testing with our proven strategies."
-            ],
-            cta: "Test Application"
-        },
-        {
-            title: "Android App Support & Maintenance",
-            icon: <Settings2 className="w-8 h-8" />,
-            imgUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
-            paragraphs: [
-                "With the increasing penetration of the internet worldwide, the usage of smartphone devices has also increased significantly. In today’s time, smartphone devices have become a necessity for humans. There’s an application for everything from making online payments, attending virtual classes, and selling products and services online.",
-
-                "This becomes essential for the app owners to ensure that their application excels among their competitors. The Digital Connect is a leader in providing Android App support and maintenance to businesses. With a smart-working team of Android app developers, we can optimize your applications as per your business requirements.",
-
-                "No matter whether you’re looking for an Android App Agency for hourly, daily or monthly support, we are always available for you. With our flexible support packages, you can choose the best suited for you. So if you want to be on the top in your business vertical, hire us today and get the proper app store optimization and support on time."
-            ],
-            cta: "Get Maintenance Support"
-        }
+            {
+                title: "Custom Android App Development",
+                icon: <Smartphone className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1607252654015-f85df1fac051?auto=format&fit=crop&q=80&w=800",
+                cta: "Hire Android Developers",
+                
+                paragraphs: [
+                    "Every business has unique workflows and audience expectations. The Digital Connect creates custom Android apps designed specifically around your operational goals.",
+                    "Whether you are launching a consumer service, an on-demand marketplace, or a fintech product, our engineers ensure secure transactions, low latency, and robust offline caching."
+]
+            },
+            {
+                title: "Android UI/UX Design",
+                icon: <PenTool className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
+                cta: "Design Your Android App",
+                
+                paragraphs: [
+                    "User retention is driven by intuitive navigation and rapid responsiveness. Our UI/UX designers create engaging interfaces using Google Material Design principles.",
+                    "We craft custom interactive widgets, dark mode themes, fluid micro-interactions, and accessibility standards that keep users actively engaged within your app."
+]
+            },
+            {
+                title: "Android Tablet & Wearable Apps",
+                icon: <MonitorPlay className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Multi-Screen Apps",
+                
+                paragraphs: [
+                    "Expand your brand ecosystem with apps tailored for Android tablets, Android TV, and Wear OS smartwatches.",
+                    "The Digital Connect develops adaptive layouts that intelligently resize and reposition elements across large displays and compact wearable interfaces seamlessly."
+]
+            },
+            {
+                title: "Android App Migration & Modernization",
+                icon: <Briefcase className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+                cta: "Upgrade Your Android App",
+                
+                paragraphs: [
+                    "Modernize legacy Java applications into high-performance Kotlin codebases. We optimize legacy code, eliminate technical debt, and integrate modern Jetpack libraries.",
+                    "Our migration process guarantees zero downtime for existing active users while significantly reducing app crash rates and improving overall Play Store ratings."
+]
+            }
     ];
 
+    const processSteps = [
+            { title: "Requirement Gathering", desc: "Analyzing your target demographics, hardware target profiles, and key business KPIs." },
+            { title: "Material UI/UX Design", desc: "Creating intuitive interfaces that adhere strictly to Google's Material 3 design system." },
+            { title: "Architecture & Coding", desc: "Developing clean, testable codebases using Kotlin, Coroutines, and MVVM/MVI architectures." },
+            { title: "Device Fragmentation QA", desc: "Rigorous testing across real Samsung, Pixel, OnePlus, and Xiaomi devices for stability." },
+            { title: "Play Store Publishing", desc: "Managing Android App Bundles, Play Console setup, and store listing optimization." },
+            { title: "Support & Updates", desc: "Routine security patches, performance analytics monitoring, and new Android OS adaptations." }
+    ];
+
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
+
+    const reasons = [
+        "Proficiency in modern Kotlin and Jetpack Compose ecosystems",
+        "Extensive testing across 100+ physical hardware configurations",
+        "Strict adherence to Google Play developer policies and security protocols",
+        "Smooth offline mode and intelligent local data caching",
+        "Transparent sprint tracking with direct developer access",
+        "Continuous performance profiling to minimize battery and memory consumption",
+        "End-to-end publishing, ASO, and store launch assistance",
+        "Dependable long-term maintenance and version upgrade support"
+    ];
+
+    const technologies = ["Kotlin","Java","Android Jetpack","Coroutines","Flow","Retrofit","Room DB","Dagger Hilt","Jetpack Compose","Firebase","Android Studio","Google Play Services"];
+
     return (
-        <div className="w-full bg-slate-50 min-h-screen font-sans text-slate-900 overflow-x-hidden">
-            <Helmet>
-                <title>Android App Development Company | The Digital Connect</title>
-                <meta name="description" content="Most Trusted Android App Development Agency offering custom Android app development services, UI/UX design, consulting, and support." />
-                <link rel="canonical" href="/services/mobile-app-development/android-development" />
-            </Helmet>
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="Mobile App Development"
+                    parentRoute="/services/mobile-app-development"
+                    eyebrow="Android App Development"
+                    title="High-Performance Android App Development Services"
+                    description="Reach billions of global Android users with feature-rich, high-performance, and scalable Android applications crafted with Kotlin and modern Google architecture."
+                    theme={theme}
+                    visual={AndroidVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
 
-            {/* HERO SECTION */}
-            <section className="relative min-h-[90vh] lg:min-h-[85vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-[#F5FAFD]">
-                {/* Subtle grid background */}
-                <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-                <div className="absolute top-0 right-0 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] rounded-full blur-[100px] lg:blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/4 bg-cyan-100/50"></div>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col pt-12 lg:pt-6">
-
-                    {/* Breadcrumbs */}
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1, duration: 0.8 }} className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-semibold mb-6 md:mb-10 text-slate-500">
-                        <Link to="/" className="hover:text-cyan-600 transition-colors shrink-0">Home</Link>
-                        <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-                        <Link to="/services" className="hover:text-cyan-600 transition-colors shrink-0">Services</Link>
-                        <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-                        <Link to="/services/mobile-app-development" className="hover:text-cyan-600 transition-colors shrink-0 whitespace-nowrap">Mobile App Development</Link>
-                        <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-                        <span className="text-cyan-600 font-bold shrink-0">Android App Development</span>
-                    </motion.div>
-
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-                        {/* Left Content */}
-                        <motion.div initial="hidden" animate="visible" variants={fadeIn} className="flex flex-col space-y-6">
-                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="inline-flex items-center space-x-2 border border-cyan-200 bg-white shadow-sm rounded-full px-3.5 py-1.5 w-max">
-                                <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
-                                <span className="text-cyan-700 text-sm font-bold tracking-wider uppercase">ANDROID APP DEVELOPMENT</span>
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reach Global Android Audiences</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Empower Your Business with Custom Android Applications
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>With Android operating on more than 70% of the world's smartphones, building an optimized Android application is crucial for maximizing brand reach and driving customer acquisition. At The Digital Connect, we build bespoke Android applications that provide consistent, smooth, and secure experiences across the entire spectrum of Android smartphones, tablets, smart TVs, and wearable devices.</p>
+                                <p>Our certified Android engineers write concise, null-safe Kotlin code and leverage Android Jetpack architecture components to ensure fast boot times, fluid scrolling, and optimal memory management. We help businesses of all sizes unlock the power of Google Play with high-retention applications.</p>
                             </motion.div>
-
-                            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A1024] leading-[1.15]">
-                                Most Trusted Android App <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Development Agency</span>
-                            </motion.h1>
-
-                            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                                We are a top-tier Android app development company recognized universally for crafting custom, high-performance, and feature-packed Android applications. Our skilled developers utilize the latest technologies to bring your innovative concepts to life on the world's most popular mobile platform.
-                            </motion.p>
-
-                            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }} className="pt-4 flex flex-col sm:flex-row gap-4">
-                                <Link to="/contact" className="group relative inline-flex items-center justify-center px-6 py-3.5 font-bold text-white transition-all duration-300 bg-cyan-600 rounded-full hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
-                                    <span className="relative z-10 flex items-center">
-                                        GET FREE QUOTE NOW
-                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </span>
-                                </Link>
-                            </motion.div>
-                        </motion.div>
-
-                        {/* Right Visual */}
-                        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative w-full h-full flex items-center justify-center">
-                            <AndroidVisual />
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* AGILE DEVELOPMENT PROCESS */}
-            <section className="py-20 lg:py-32 bg-white overflow-hidden" id="process">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
-                        <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Agile Development Process</h2>
-                        <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Enhance Your Project with Risk Free Development Process</h3>
-                        <p className="mt-4 text-slate-600">
-                            We employ a standard agile methodology ensuring complete transparency, regular milestones, and rapid iteration, keeping you fully in control of your project's lifecycle from conception to launch.
-                        </p>
-                    </div>
-
-                    {/* Timeline Layout */}
-                    <div className="relative">
-                        {/* Horizontal Line for Desktop */}
-                        <div className="hidden lg:block absolute top-[120px] left-0 w-full h-1 bg-slate-100"></div>
-                        {/* Vertical Line for Mobile */}
-                        <div className="lg:hidden absolute top-0 left-[28px] md:left-[44px] h-full w-1 bg-slate-100"></div>
-
-                        <motion.div
-                            variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-                            className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:space-y-0"
-                        >
-                            {[
-                                { num: "01", title: "Ideation", icon: <Globe2 /> },
-                                { num: "02", title: "Planning", icon: <Building2 /> },
-                                { num: "03", title: "Android App Design", icon: <PenTool /> },
-                                { num: "04", title: "Android App Development", icon: <Code2 /> },
-                                { num: "05", title: "Testing", icon: <Bug /> },
-                                { num: "06", title: "App Deployment", icon: <Send /> },
-                                { num: "07", title: "Support & Maintenance", icon: <Settings2 /> }
-                            ].map((step, idx) => (
-                                <motion.div key={idx} variants={fadeIn} className="relative flex lg:flex-col items-center lg:w-48 group">
-                                    {/* Step Number Bubble (Mobile: Left side, Desktop: Top) */}
-                                    <div className="z-10 bg-white border-4 border-slate-50 w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:border-cyan-100 transition-colors duration-300 flex-shrink-0 lg:mb-8 text-cyan-600 font-black text-xl lg:w-20 lg:h-20 lg:text-2xl shrink-0">
-                                        {step.num}
-                                    </div>
-
-                                    {/* Mobile Connector (Optional detail for connection mapping) */}
-                                    <div className="hidden lg:block absolute top-[40px] left-[50%] w-full h-1 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 delay-100 z-0"></div>
-
-                                    {/* Content */}
-                                    <div className="ml-6 lg:ml-0 text-left lg:text-center">
-                                        <div className="text-[#0A1024] p-3 rounded-lg bg-slate-50 inline-block mb-3 lg:mb-4 group-hover:bg-cyan-50 group-hover:text-cyan-600 transition-colors">
-                                            {step.icon}
-                                        </div>
-                                        <h4 className="font-bold text-[#0A1024] text-lg lg:text-xl lg:max-w-xs">{step.title}</h4>
-                                        <p className="mt-2 text-sm text-slate-500 lg:hidden">
-                                            Executing phase {step.num} effectively guaranteeing high standard delivery for {step.title.toLowerCase()}.
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ANDROID DEVELOPMENT SERVICES */}
-            <section>
-                {/* TOP HEADING AREA */}
-                <div className="bg-white py-12 md:py-16 lg:py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                        <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
-                            Empower Your Business with Our Services
-                        </div>
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-4">
-                            Our Android App Development Services
-                        </h3>
-                        <p className="text-slate-600 max-w-3xl">
-                            We offer end-to-end Android capabilities, translating your vision into incredibly robust, heavily tested applications perfectly tailored for the Android ecosystem.
-                        </p>
-                    </div>
-                </div>
-
-                {/* MAIN SERVICE CONTENT AREA */}
-                <div className="w-full bg-white py-12 md:py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="space-y-12 lg:space-y-16">
-                            {services.map((svc, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true, margin: "-50px" }}
-                                    variants={fadeIn}
-                                    className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
-                                >
-
-                                    {/* LEFT COLUMN: Height determined organically by paragraph text */}
-                                    <div className="w-full lg:w-[49%] flex flex-col justify-center">
-                                        <div>
-                                            <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                            <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
-                                        </div>
-                                        <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
-                                            {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
-                                        </div>
-                                    </div>
-
-                                    {/* RIGHT COLUMN: Stretches matching left side through cascading flex layout */}
-                                    <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
-                                        {/* Decorative Orange Shape (Absolute behind card) */}
-                                        <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
-
-                                        {/* Outer Card (Given flex-1 to consume the full stretched column height) */}
-                                        <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
-                                            {/* Image Space (Takes all remaining inner vertical height pushing CTA flush) */}
-                                            <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
-                                                <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
-                                            </div>
-
-                                            {/* Rigid CTA Link positioned below fluid image limit */}
-                                            <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
-                                                <div className="text-orange-400 shrink-0">
-                                                    {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
-                                                </div>
-                                                <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
-                                                    {svc.cta}
-                                                </span>
-                                                <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                </motion.div>
-                            ))}
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* INDUSTRIES SECTION */}
-            <section className="py-20 lg:py-32 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                        <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Industries</h2>
-                        <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">Custom IT Solutions for Varied Verticals</h3>
-                        <p className="mt-4 text-slate-600">
-                            We leverage our extensive Android expertise across multiple global industries, delivering precision-engineered platforms tailored to the distinct operational realities of your vertical.
-                        </p>
-                    </div>
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Android App Development Process"
+                    eyebrow="Agile Engineering Workflow"
+                    description="From concept refinement to Google Play launch, we ensure precision and quality at every stage."
+                    process={processSteps}
+                />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { name: "Real Estate", icon: <Building2 />, desc: "Property portals & broker dashboards." },
-                            { name: "Healthcare", icon: <HeartPulse />, desc: "Telemedicine & patient management." },
-                            { name: "Finance", icon: <Landmark />, desc: "Fintech, trading & banking apps." },
-                            { name: "Education", icon: <GraduationCap />, desc: "E-learning & LMS solutions." },
-                            { name: "E-Commerce", icon: <ShoppingCart />, desc: "B2B/B2C marketplace applications." },
-                            { name: "Logistics", icon: <Truck />, desc: "Fleet tracking & supply chain." },
-                            { name: "Entertainment", icon: <MonitorPlay />, desc: "Streaming & media platforms." },
-                            { name: "Enterprise", icon: <Briefcase />, desc: "Internal workflow & SaaS mobile." }
-                        ].map((industry, i) => (
-                            <motion.div
-                                key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}
-                                className="group p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col"
-                            >
-                                <div className="w-12 h-12 bg-white border border-slate-200 text-slate-700 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
-                                    {React.cloneElement(industry.icon, { className: 'w-6 h-6' })}
-                                </div>
-                                <h5 className="font-bold text-[#0A1024] text-lg mb-2">{industry.name}</h5>
-                                <p className="text-sm text-slate-500 mb-4 flex-grow">{industry.desc}</p>
-                                <div className="mt-auto flex justify-end">
-                                    <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-cyan-500 group-hover:-rotate-45 transition-all" />
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* KEY FEATURES SECTION */}
-            <section className="py-16 md:py-24 lg:py-32 bg-[#F5FAFD] relative overflow-hidden">
-                {/* Subtle grid background */}
-                <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="lg:flex lg:justify-between lg:items-end mb-12 lg:mb-16">
-                        <div className="max-w-2xl">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose US</h2>
-                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight">
-                                Hire Dedicated Developers to Passionately <br className="hidden md:block" /> Lead Your Business Vision to Reality
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Android Development Offerings
                             </h3>
-                        </div>
-                        <div className="mt-6 lg:mt-0 pt-4 border-t border-slate-200 lg:border-t-0 lg:border-l lg:pl-10">
-                            <p className="text-slate-600 max-w-sm">
-                                Key Features that distinctly separate us from standard development shops. We prioritize code excellence and business outcomes.
-                            </p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Tailored Android engineering services built for performance, security, and global scale.</p>
                         </div>
                     </div>
 
-                    {/* Mixed Editorial Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
 
-                        {/* Featured Box */}
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="lg:col-span-2 bg-gradient-to-br from-cyan-50 to-white rounded-3xl p-8 lg:p-12 shadow-xl border border-cyan-100 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform duration-700">
-                                <Code2 className="w-48 h-48 text-cyan-600" />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="inline-flex items-center justify-center p-3 rounded-xl bg-white border border-cyan-100 shadow-sm mb-6">
-                                    <Code2 className="w-6 h-6 text-cyan-600" />
-                                </div>
-                                <h4 className="text-2xl font-bold text-[#0A1024] mb-4">Latest programming languages knowledge</h4>
-                                <p className="text-slate-600 text-lg max-w-md">
-                                    We stay on the bleeding edge of the ecosystem. Our teams flawlessly execute Kotlin, Java, and modern Jetpack libraries, guaranteeing you receive an industry-leading, future-proofed application architecture.
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        {/* Standard Boxes */}
-                        {[
-                            { title: "Easy payment options", icon: <CreditCard />, desc: "Flexible engagement and billing models suitable for varying budgets." },
-                            { title: "Competitive prices for app development", icon: <Banknote />, desc: "Top-tier quality development services without inflated enterprise costs." },
-                            { title: "Agile app development methodology", icon: <Repeat />, desc: "Rapid iterations protecting your ROI through continuous functional delivery." },
-                            { title: "Knowledge in testing and debugging", icon: <Bug />, desc: "Strict QA protocols hunting down memory leaks and UI malfunctions." },
-                            { title: "Cross-platform and native app solutions", icon: <Smartphone />, desc: "Advising and executing the perfect architectural paradigm." },
-                            { title: "Experience in creating rich user interface", icon: <Layout />, desc: "Flawless UX/UI perfectly mapped to human-centered design principles." }
-                        ].map((feature, i) => (
-                            <motion.div
-                                key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
-                                className="bg-white border border-slate-200 rounded-3xl p-6 lg:p-8 hover:border-cyan-200 hover:shadow-lg transition-all flex flex-col"
-                            >
-                                <div className="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-500 flex items-center justify-center mb-6">
-                                    {React.cloneElement(feature.icon, { className: 'w-6 h-6' })}
-                                </div>
-                                <h4 className="text-xl font-bold text-[#0A1024] mb-3">{feature.title}</h4>
-                                <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
-                            </motion.div>
-                        ))}
-
-                        {/* Final Highlight Box */}
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="lg:col-span-2 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-center gap-6">
-                            <div className="w-16 h-16 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center flex-shrink-0">
-                                <Send className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-bold text-[#0A1024] mb-2">Proficient in deploying Android apps</h4>
-                                <p className="text-slate-600 text-sm">Navigating Google Play Console guidelines perfectly to guarantee quick, seamless approvals and store rollouts.</p>
-                            </div>
-                        </motion.div>
-
-                    </div>
-                </div>
-            </section>
-
-            {/* GET A FREE QUOTE FORM SECTION */}
-            <section className="py-16 md:py-24 lg:py-32 bg-[#F5FAFD] relative" id="quote">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row border border-slate-200">
-
-                        {/* Left Info Side */}
-                        <div className="bg-cyan-50 lg:w-2/5 p-8 lg:p-16 flex flex-col justify-center">
-                            <div>
-                                <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#0A1024]">Ready to Build Your Android App?</h2>
-                                <p className="text-slate-600 text-lg mb-8">
-                                    Fill out the form to request a free quote. Our technical experts will get back to you within 24 hours to discuss your app idea.
-                                </p>
-                                <ul className="space-y-4">
-                                    {[
-                                        "100% Confidential Consultation",
-                                        "Signed NDA for Protection",
-                                        "Detailed Cost Breakdown",
-                                        "Technical Feasibility Check"
-                                    ].map((benefit, i) => (
-                                        <li key={i} className="flex items-center text-slate-700 font-medium">
-                                            <CheckCircle2 className="w-6 h-6 text-cyan-600 mr-3 shrink-0" />
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Right Form Side */}
-                        <div className="lg:w-3/5 p-8 lg:p-16">
-                            <h3 className="text-2xl font-bold text-[#0A1024] mb-8">GET A FREE QUOTE</h3>
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
 
-                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Form submitted smoothly!"); }}>
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Android Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Partner with dedicated Android developers committed to your business success:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
@@ -467,7 +287,6 @@ export default function AndroidDevelopment() {
                                         <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                     </div>
                                 </div>
-
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
@@ -478,21 +297,23 @@ export default function AndroidDevelopment() {
                                         <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
                                     </div>
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
                                     <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
                                 </div>
-
-                                <button type="submit" className="w-full py-4 mt-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group">
-                                    Submit Request
-                                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </PageTransition>
     );
-}
+};
+
+export default AndroidDevelopment;

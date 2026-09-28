@@ -1,161 +1,319 @@
 import React from 'react';
 import useSEO from '../../hooks/useSEO';
+import PageTransition from '../../components/common/PageTransition';
+import { SubServiceShared } from '../../components/services/subservices/SubServiceShared';
+import { IOSVisual } from '../../components/services/subservices/visuals/VisualsMobile';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import MainServiceLayout from '../../components/services/MainServiceLayout';
-import { Smartphone, Apple, Wifi, ShieldCheck, Gamepad2, Settings, Server, BellRing, Combine } from 'lucide-react';
 
-const MobileHeroVisual = () => (
-  <div className="relative w-full max-w-[500px] h-[500px] flex items-center justify-center z-20">
-
-    <motion.div
-      animate={{ y: [0, -20, 0] }}
-      transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-      className="w-[220px] h-[450px] bg-white rounded-[40px] shadow-2xl border-4 border-[#171717] overflow-hidden relative z-20"
-    >
-      {/* Notch */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[#171717] rounded-b-xl z-30"></div>
-
-      <div className="p-4 pt-10 h-full flex flex-col gap-3 bg-brand-mint/5">
-        <div className="w-full flex justify-between items-center mb-2">
-          <div className="w-8 h-8 rounded-full bg-brand-blue/20"></div>
-          <div className="w-16 h-3 bg-black/5 rounded-full"></div>
-        </div>
-        <div className="h-24 w-full bg-brand-mint/20 rounded-xl mb-4"></div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="aspect-square bg-white rounded-xl shadow-sm"></div>
-          <div className="aspect-square bg-white rounded-xl shadow-sm"></div>
-        </div>
-
-        <motion.div
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="mt-auto h-12 w-full bg-brand-blue rounded-xl flex items-center justify-center text-white text-xs font-bold shadow-lg"
-        >
-          Launch App
-        </motion.div>
-      </div>
-    </motion.div>
-
-    {/* Floating Notification */}
-    <motion.div
-      animate={{ x: [0, -10, 0], opacity: [0, 1, 0.8, 0] }}
-      transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-      className="absolute top-[30%] -right-8 lg:-right-16 bg-white px-4 sm:px-6 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-30 border border-black/5"
-    >
-      <div className="w-8 h-8 rounded-full bg-brand-peach flex items-center justify-center">
-        <BellRing className="w-4 h-4 text-white" />
-      </div>
-      <div className="flex flex-col gap-1">
-        <div className="h-2 w-16 bg-black/10 rounded-full"></div>
-        <div className="h-2 w-24 bg-black/5 rounded-full"></div>
-      </div>
-    </motion.div>
-
-    {/* Floating Code block */}
-    <motion.div
-      animate={{ y: [0, 15, 0] }}
-      transition={{ duration: 6, repeat: Infinity, delay: 0.5 }}
-      className="absolute bottom-[10%] -left-4 lg:-left-12 bg-[#171717] text-white p-4 rounded-2xl shadow-xl z-30 border border-white/10"
-    >
-      <div className="flex items-center gap-2 mb-2">
-        <div className="w-2 h-2 rounded-full bg-red-500"></div>
-        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-      </div>
-      <div className="text-[10px] font-mono text-brand-mint">&lt;App.Mobile /&gt;</div>
-      <div className="text-[10px] font-mono text-brand-blue ml-2">compile: success</div>
-    </motion.div>
-
-  </div>
-);
-
-const MobileUniqueVisual = () => (
-  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 w-full max-w-4xl mx-auto py-16">
-    {/* iOS Phone */}
-    <motion.div whileHover={{ scale: 1.05 }} className="w-48 h-[360px] bg-white rounded-[32px] shadow-2xl flex flex-col items-center justify-center border-[6px] border-[#171717] z-10 relative overflow-hidden">
-      <div className="absolute top-0 w-24 h-4 bg-[#171717] rounded-b-xl z-20"></div>
-      <Apple className="w-12 h-12 text-[#171717] mb-3 opacity-20" />
-      <span className="font-bold text-sm tracking-widest uppercase">iOS</span>
-    </motion.div>
-
-    {/* Connection flow */}
-    <div className="flex flex-col items-center gap-4 relative w-32 shrink-0">
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-        className="w-16 h-16 border-2 border-dashed border-brand-mint rounded-full flex items-center justify-center bg-white shadow-lg relative z-10"
-      >
-        <Server className="w-6 h-6 text-brand-blue" />
-      </motion.div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[2px] bg-gradient-to-r from-brand-lavender via-brand-mint to-brand-blue -z-10 blur-[1px]"></div>
-    </div>
-
-    {/* Android Phone */}
-    <motion.div whileHover={{ scale: 1.05 }} className="w-48 h-[360px] bg-white rounded-[32px] shadow-2xl flex flex-col items-center justify-center border-4 border-gray-300 z-10 relative overflow-hidden">
-      {/* Punch hole */}
-      <div className="absolute top-3 w-3 h-3 bg-[#171717] rounded-full z-20"></div>
-      <Smartphone className="w-12 h-12 text-brand-mint mb-3 opacity-80" />
-      <span className="font-bold text-sm tracking-widest uppercase">Android</span>
-    </motion.div>
-  </div>
-);
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const MobileDevelopment = () => {
-  useSEO({
-    title: "Mobile App Development Services | The Digital Connect",
-    description: "We build intuitive, reliable and scalable mobile applications that turn ideas into meaningful digital products."
-  });
+    useSEO({
+        "title": "Custom Mobile App Development Company | The Digital Connect",
+        "description": "The Digital Connect delivers full-cycle mobile app development services for iOS, Android, and cross-platform applications with scalable architectures."
+});
 
-  return (
-    <MainServiceLayout
-      breadcrumb="Mobile App Development"
-      title="Mobile Experiences People Love to Use."
-      subtitle="Transforming ideas into apps"
-      description="We build intuitive, reliable and scalable mobile applications for iOS and Android that turn ideas into meaningful digital products."
-      themeConfig={{
-        bg: 'bg-brand-mint/10',
-        accentText: 'text-emerald-700',
-        glowColor: 'bg-brand-mint'
-      }}
-      HeroVisual={MobileHeroVisual}
-      overview={{
-        title: "Engineering engaging mobile ecosystems.",
-        content: "People spend over 4 hours a day on their smartphones. To capture that attention, your app needs to be flawless. We engineer high-performance native and cross-platform mobile apps that deliver stunning interfaces, buttery-smooth animations, and robust backend integrations. We don't just write code; we design experiences that drive retention and build loyalty."
-      }}
-      capabilities={[
-        { icon: <Apple />, title: "iOS Development", desc: "Build secure, intuitive, and high-performance iOS applications designed around your business goals and customer needs.", href: "/services/mobile-app-development/ios-development", ctaText: "Explore iOS Development" },
-        { icon: <Smartphone />, title: "Android Development", desc: "Create scalable, secure, and feature-rich Android applications that deliver seamless experiences across modern devices.", href: "/services/mobile-app-development/android-development", ctaText: "Explore Android Development" },
-        { icon: <Combine />, title: "Hybrid App Development", desc: "Develop cost-effective, scalable mobile applications that provide seamless experiences across iOS and Android through a shared hybrid approach.", href: "/services/mobile-app-development/hybrid-app-development", ctaText: "Explore Hybrid App Development" }
-      ]}
-      technologies={['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'Firebase', 'GraphQL', 'SQLite', 'Redux', 'AWS Mobile']}
-      UniqueVisual={MobileUniqueVisual}
-      processSteps={[
-        { title: "Research & Validation", desc: "Validating the core concept against market demands and user behavior." },
-        { title: "Product Strategy", desc: "Defining feature sets, MVP scope, and long-term monetization." },
-        { title: "UX/UI Design", desc: "Crafting finger-friendly interfaces ensuring maximum usability." },
-        { title: "Development", desc: "Writing clean, scalable code for frontend UI and backend infrastructure." },
-        { title: "QA Testing", desc: "Comprehensive testing on physical devices for crashes and bugs." },
-        { title: "App Store Launch", desc: "Handling Apple App Store and Google Play submissions smoothly." },
-        { title: "Continuous Growth", desc: "Monitoring analytics, crash reports, and releasing seamless updates." }
-      ]}
-      benefits={[
-        { title: "Smooth UX", desc: "Fluid 60fps animations bridging interactions perfectly." },
-        { title: "Reliable Performance", desc: "Highly optimized memory management preventing crashes." },
-        { title: "Scalable Backend", desc: "Server architectures built to handle millions of active users." },
-        { title: "Secure Architecture", desc: "Encrypted data storage and highly secure API authentications." },
-        { title: "Cross-Platform Capability", desc: "Reduce time-to-market dramatically utilizing shared codebases." },
-        { title: "Offline Support", desc: "Intelligent local data caching allowing usage without internet." },
-      ]}
-      faqs={[
-        { q: "Should I build Native or Cross-Platform?", a: "It depends on your app's requirements. If you need heavy 3D rendering or deep OS integrations, Native (Swift/Kotlin) is best. For 90% of business apps, Cross-Platform (React Native/Flutter) offers native-like performance at a fraction of the cost and time." },
-        { q: "How much does it cost to build an app?", a: "Costs vary wildly based on complexity, ranging from $15,000 for a simple MVP to over $100,000 for enterprise systems. We provide accurate scopes after a brief discovery call." },
-        { q: "Do you handle App Store submissions?", a: "Yes, we handle all compliance, Developer Account setups, asset generation, and final submissions for both the Apple App Store and Google Play Store." },
-        { q: "Can my app connect to my existing website?", a: "Absolutely. We build headless architectures and custom APIs that allow your mobile app and website to share the exact same real-time database seamlessly." },
-        { q: "Will I own the source code?", a: "Yes. Once the project is completed and paid, you retain 100% ownership of all IP and source code." }
-      ]}
-    />
-  );
+    const theme = {"accent":"text-brand-electric-cyan","bg":"bg-brand-electric-cyan/20","softBg":"bg-brand-periwinkle/20"};
+
+    const services = [
+            {
+                title: "iOS Application Development",
+                icon: <Apple className="w-8 h-8" />,
+                imgUrl: "/images/ios_custom_dev.png",
+                cta: "Explore iOS App Services",
+                link: "/services/mobile-app-development/ios-development",
+                paragraphs: [
+                    "iOS applications represent the highest benchmark of performance, security, and consumer loyalty. At The Digital Connect, we build native iPhone, iPad, Apple Watch, and Apple TV applications utilizing Swift and SwiftUI.",
+                    "Our developers follow Apple's Human Interface Guidelines strictly, ensuring your mobile application delivers smooth 120Hz interactions, seamless biometric authentication, and deep integration with native Apple frameworks such as CoreML, HealthKit, and ARKit."
+]
+            },
+            {
+                title: "Android Application Development",
+                icon: <Smartphone className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1607252654015-f85df1fac051?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore Android App Services",
+                link: "/services/mobile-app-development/android-development",
+                paragraphs: [
+                    "Android commands the largest global smartphone market share across thousands of unique device manufacturers. The Digital Connect engineers robust Kotlin applications designed to navigate hardware fragmentation effortlessly.",
+                    "By implementing modern Material Design systems and asynchronous Kotlin Coroutines, we build responsive Android solutions that offer consistent performance on both flagship smartphones and budget devices."
+]
+            },
+            {
+                title: "Hybrid & Cross-Platform Apps",
+                icon: <Combine className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore Hybrid App Services",
+                link: "/services/mobile-app-development/hybrid-app-development",
+                paragraphs: [
+                    "Reduce your time to market and development expenses with cross-platform frameworks like Flutter and React Native. The Digital Connect builds unified mobile applications sharing a single codebase across iOS and Android.",
+                    "Our hybrid applications provide near-native compilation speeds, fluid 60fps graphical rendering, and seamless native module bridging without compromising user experience or brand integrity."
+]
+            },
+            {
+                title: "Enterprise Mobile Solutions",
+                icon: <Briefcase className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Consult Our Mobile Architects",
+                link: "/contact",
+                paragraphs: [
+                    "Modern enterprises require robust mobile platforms for internal workforce productivity, remote field operations, and real-time operational oversight. The Digital Connect crafts secure enterprise mobile platforms.",
+                    "We implement single sign-on (SSO), end-to-end data encryption, role-based access control (RBAC), and custom enterprise API integrations that keep your corporate data secure while empowering your distributed teams."
+]
+            }
+    ];
+
+    const processSteps = [
+            { title: "Discovery & Strategy", desc: "We evaluate your business goals, target audience, and functional requirements to craft an actionable product roadmap." },
+            { title: "UI/UX Prototyping", desc: "Our design team crafts intuitive wireframes and interactive prototypes that follow platform-specific design guidelines." },
+            { title: "Agile Development", desc: "Experienced engineers write modular, secure, and clean code to bring application features to life incrementally." },
+            { title: "Comprehensive QA", desc: "Rigorous automated and manual testing across real devices guarantees bug-free performance and stability." },
+            { title: "Store Launch & Deployment", desc: "We handle complete App Store and Google Play submission protocols, ensuring rapid approval." },
+            { title: "Continuous Optimization", desc: "Ongoing monitoring, feature enhancements, OS compatibility upgrades, and 24/7 technical support." }
+    ];
+
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
+
+    const reasons = [
+        "Native and cross-platform expertise across iOS & Android",
+        "Human-centered UI/UX designed for high user retention",
+        "Strict adherence to App Store & Google Play guidelines",
+        "Enterprise-grade security and data encryption standards",
+        "Agile sprints with weekly demos and clear milestones",
+        "Continuous post-launch maintenance, monitoring, and updates",
+        "Transparent pricing models with zero hidden charges",
+        "Proven track record delivering scalable mobile architectures"
+    ];
+
+    const technologies = ["Swift","SwiftUI","Kotlin","Java","Flutter","React Native","Objective-C","Xcode","Android Studio","Firebase","GraphQL","REST APIs","SQLite","Realm","TestFlight"];
+
+    return (
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="Home"
+                    parentRoute="/"
+                    eyebrow="Mobile App Development Services"
+                    title="Enterprise Mobile App Development Solutions"
+                    description="We build intuitive, high-performance mobile applications across iOS, Android, and hybrid platforms tailored to accelerate your business growth and customer engagement."
+                    theme={theme}
+                    visual={IOSVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Innovative Mobile Engineering</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Transforming Business Ideas into Impactful Mobile Experiences
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>In an era where mobile accessibility defines customer relationships, having a high-performing and scalable mobile application is essential. At The Digital Connect, we craft bespoke mobile solutions that blend elegant user experiences with enterprise-grade backend stability. Our mobile app developers leverage native and cross-platform technologies to ensure your business reaches its target audience smoothly across all devices.</p>
+                                <p>From early-stage conceptualization and design thinking to deployment and post-launch maintenance, The Digital Connect provides end-to-end mobile engineering services. Whether you require a native iOS app built on Swift, a responsive Android application using Kotlin, or a cost-effective hybrid platform, we engineer solutions designed for high user retention, robust security, and tangible business ROI.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Proven Mobile Development Process"
+                    eyebrow="Our Agile Lifecycle"
+                    description="We follow a systematic agile workflow that guarantees product quality, rapid delivery cycles, and transparent collaboration."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Mobile App Development Services
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore our comprehensive suite of mobile development services engineered to drive engagement and sustainable revenue.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Mobile App Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Discover the tangible advantages of collaborating with our experienced mobile engineering team:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
+    );
 };
 
 export default MobileDevelopment;

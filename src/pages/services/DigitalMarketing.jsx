@@ -1,182 +1,319 @@
 import React from 'react';
 import useSEO from '../../hooks/useSEO';
+import PageTransition from '../../components/common/PageTransition';
+import { SubServiceShared } from '../../components/services/subservices/SubServiceShared';
+import { SEOVisual } from '../../components/services/subservices/visuals/VisualsSoftware_Marketing';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import MainServiceLayout from '../../components/services/MainServiceLayout';
-import { LineChart, BarChart, Target, Users, Search, Share2, Mail, BadgeDollarSign, Workflow, PieChart } from 'lucide-react';
 
-const MarketingHeroVisual = () => (
-  <div className="relative w-full max-w-[500px] h-[500px] flex items-center justify-center z-20">
-
-    {/* Main Analytics Dashboard */}
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-      className="w-[90%] h-[75%] bg-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] border border-brand-purple/20 flex flex-col overflow-hidden z-10"
-    >
-      <div className="h-12 bg-[#FAF9F7] flex items-center px-4 sm:px-6 justify-between border-b border-black/5">
-        <div className="flex gap-2">
-          <div className="w-8 h-8 rounded-full bg-brand-purple/10 flex items-center justify-center"><LineChart className="w-4 h-4 text-brand-purple" /></div>
-          <div className="flex flex-col justify-center gap-1">
-            <div className="h-2 w-16 bg-black/10 rounded-full"></div>
-            <div className="h-2 w-10 bg-black/5 rounded-full"></div>
-          </div>
-        </div>
-        <div className="w-24 h-6 bg-brand-mint/20 rounded-full"></div>
-      </div>
-
-      <div className="p-6 flex flex-col gap-6 flex-1 bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-brand-purple/5 border border-brand-purple/10 rounded-xl p-4 flex flex-col h-20 justify-center">
-            <div className="text-[10px] tracking-wider text-black/50 font-bold mb-1">TRAFFIC</div>
-            <div className="flex items-end gap-2">
-              <div className="w-20 h-5 bg-brand-purple/60 rounded"></div>
-              <div className="w-8 h-3 bg-brand-mint/60 rounded-full"></div>
-            </div>
-          </div>
-          <div className="bg-brand-pink/5 border border-brand-pink/10 rounded-xl p-4 flex flex-col h-20 justify-center">
-            <div className="text-[10px] tracking-wider text-black/50 font-bold mb-1">LEADS</div>
-            <div className="flex items-end gap-2">
-              <div className="w-16 h-5 bg-brand-pink/60 rounded"></div>
-              <div className="w-8 h-3 bg-brand-mint/60 rounded-full"></div>
-            </div>
-          </div>
-          <div className="bg-brand-mint/5 border border-brand-mint/10 rounded-xl p-4 flex flex-col h-20 justify-center">
-            <div className="text-[10px] tracking-wider text-black/50 font-bold mb-1">CONVERSIONS</div>
-            <div className="flex items-end gap-2">
-              <div className="w-12 h-5 bg-brand-mint/60 rounded"></div>
-            </div>
-          </div>
-          <div className="bg-[#171717] rounded-xl p-4 flex flex-col h-20 justify-center text-white">
-            <div className="text-[10px] tracking-wider text-white/50 font-bold mb-1">ROI</div>
-            <div className="text-xl font-heading font-extrabold">+340%</div>
-          </div>
-        </div>
-
-        <div className="flex-1 bg-brand-soft/50 rounded-xl border border-black/5 relative overflow-hidden flex items-end px-4 sm:px-6 gap-2 pt-4">
-          {[30, 45, 25, 60, 40, 80, 50, 100].map((height, i) => (
-            <motion.div
-              key={i}
-              initial={{ height: '0%' }}
-              animate={{ height: `${height}%` }}
-              transition={{ duration: 1.5, delay: i * 0.1, ease: 'easeOut' }}
-              className="flex-1 bg-gradient-to-t from-brand-purple/40 to-brand-purple rounded-t-sm"
-            ></motion.div>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-
-    {/* Floating Target Lead */}
-    <motion.div
-      animate={{ y: [0, 15, 0], x: [0, 10, 0] }}
-      transition={{ duration: 6, delay: 1, repeat: Infinity, ease: 'easeInOut' }}
-      className="absolute bottom-[5%] -left-[5%] bg-white p-4 rounded-xl shadow-2xl border border-brand-pink/20 z-20 flex items-center gap-4"
-    >
-      <div className="w-12 h-12 rounded-full bg-brand-pink/20 flex items-center justify-center">
-        <Target className="w-6 h-6 text-brand-pink" />
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="h-3 w-16 bg-black/10 rounded-full"></div>
-        <div className="h-2 w-24 bg-black/5 rounded-full"></div>
-      </div>
-    </motion.div>
-
-  </div>
-);
-
-const MarketingUniqueVisual = () => (
-  <div className="flex flex-col items-center w-full max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <h3 className="text-2xl font-bold font-heading mb-16 text-center text-[#171717]">The Growth Funnel</h3>
-    <div className="flex flex-col md:flex-row items-center justify-between w-full relative">
-
-      <div className="hidden md:block absolute top-[40%] left-0 w-full h-1 bg-black/5 -translate-y-1/2 -z-10 rounded-full"></div>
-
-      {[
-        { title: "Traffic", icon: <Users />, color: "text-blue-500", delay: 0 },
-        { title: "Leads", icon: <Target />, color: "text-brand-purple", delay: 0.2 },
-        { title: "Conversions", icon: <Workflow />, color: "text-brand-pink", delay: 0.4 },
-        { title: "Revenue", icon: <BadgeDollarSign />, color: "text-brand-mint", delay: 0.6 }
-      ].map((step, i) => (
-        <div key={i} className="flex flex-col flex-1 items-center gap-4 relative group">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ delay: step.delay, duration: 0.4 }}
-            className="w-20 h-20 rounded-full bg-white border-4 border-white shadow-xl flex items-center justify-center relative z-10"
-          >
-            {React.cloneElement(step.icon, { className: `w-8 h-8 mx-auto ${step.color}` })}
-          </motion.div>
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: step.delay + 0.2, duration: 0.5 }}
-            className="font-bold text-sm text-[#171717] px-4 sm:px-6 text-center"
-          >
-            {step.title}
-          </motion.span>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const DigitalMarketing = () => {
-  useSEO({
-    title: "Digital Marketing Services | The Digital Connect",
-    description: "We combine strategy, content, search and performance marketing to help brands reach the right audience and generate measurable growth."
-  });
+    useSEO({
+        "title": "Data-Driven Digital Marketing Services | The Digital Connect",
+        "description": "The Digital Connect provides full-service digital marketing solutions including SEO, PPC advertising, social media marketing, and content strategy."
+});
 
-  return (
-    <MainServiceLayout
-      breadcrumb="Digital Marketing"
-      title="Turn Digital Attention Into Business Growth."
-      subtitle="Performance Marketing"
-      description="We combine strategy, content, search and performance marketing to help brands reach the right audience and generate measurable growth."
-      themeConfig={{
-        bg: 'bg-brand-purple/10',
-        accentText: 'text-purple-600',
-        glowColor: 'bg-brand-purple'
-      }}
-      HeroVisual={MarketingHeroVisual}
-      overview={{
-        title: "Stop buying clicks. Start buying growth.",
-        content: "A beautiful website without traffic is a billboard in the desert. We deploy aggressive, data-driven marketing frameworks prioritizing explicit ROI over vanity metrics. By combining extremely technical SEO, sharp performance media, and behavioral conversion optimization, we establish a relentless digital sales funnel that aggressively scales your market share."
-      }}
-      capabilities={[
-        { icon: <Search />, title: "SEO", desc: "Technical, On-Page, and Content SEO designed to dominate extremely competitive search verticals organically.", href: "/services/digital-marketing/seo", ctaText: "Explore SEO" },
-        { icon: <BadgeDollarSign />, title: "PPC", desc: "Hyper-targeted Google Ads & Meta Ads optimizing ROAS (Return On Ad Spend) meticulously.", href: "/services/digital-marketing/ppc", ctaText: "Explore PPC" },
-        { icon: <Share2 />, title: "Social Media", desc: "Omnichannel brand positioning across LinkedIn, Instagram, TikTok and X.", href: "/services/digital-marketing/social-media", ctaText: "Explore Social Media" },
-        { icon: <PieChart />, title: "Content Marketing", desc: "Strategically crafted content frameworks structurally turning passive traffic into active buyers.", href: "/services/digital-marketing/content-marketing", ctaText: "Explore Content Marketing" }
-      ]}
-      technologies={['Google Analytics 4', 'Google Tag Manager', 'Google Ads', 'Meta Business Manager', 'Ahrefs', 'Semrush', 'HubSpot', 'Mailchimp']}
-      UniqueVisual={MarketingUniqueVisual}
-      processSteps={[
-        { title: "Audit & Research", desc: "Vetting historical data, competitors, and lost keyword opportunities." },
-        { title: "Strategy Formulation", desc: "Setting strict KPIs and assigning media budgets scientifically." },
-        { title: "Asset Creation", desc: "Deploying high-converting ad creatives and SEO-optimized structures." },
-        { title: "Execution", desc: "Activating campaigns across Search, Social, and Email networks." },
-        { title: "Measurement", desc: "Tracking granular attribution directly mapping clicks to closed revenue." },
-        { title: "Optimization", desc: "Continuously killing underperforming assets and scaling winning channels." }
-      ]}
-      benefits={[
-        { title: "More Visibility", desc: "Owning the digital real-estate where your highly intended buyers search." },
-        { title: "Qualified Traffic", desc: "We completely ignore bot traffic and vanity clicks, focusing entirely on intent." },
-        { title: "Better Leads", desc: "Funneling prospects cleanly so your sales team talks to actual buyers." },
-        { title: "Higher Conversions", desc: "Eliminating friction to drastically lower your Cost Per Acquisition (CPA)." },
-        { title: "Data-Driven Decisions", desc: "Zero guesswork relying strictly on empirical analytics." },
-        { title: "Measurable ROI", desc: "Complete transparency proving exactly how much revenue every ad dollar generates." },
-      ]}
-      faqs={[
-        { q: "How long does SEO take to show results?", a: "Unlike paid media, SEO is a formidable long-term asset. While initial technical fixes show minor bumps immediately, true organic market domination generally takes 3 to 6 months of relentless content and link-building." },
-        { q: "Do you guarantee ROAS (Return On Ad Spend)?", a: "No agency can ethically 'guarantee' a specific exact ROAS due to external market factors. However, we relentlessly optimize campaigns and kill losing ads rapidly, historically scaling our clients with profound profitability." },
-        { q: "What advertising platforms do you use?", a: "We focus on Google Ads for High-Intent Search, Meta (Facebook/Instagram) for Retargeting and Lifestyle/B2C scaling, and LinkedIn Ads specifically for high-ticket B2B lead generation." },
-        { q: "Do you create the ad assets?", a: "Yes. Our internal UI/UX and content teams design all ad creatives, write all copywriting, and develop all required Landing Pages seamlessly." }
-      ]}
-    />
-  );
+    const theme = {"accent":"text-brand-blue","bg":"bg-brand-blue/20","softBg":"bg-brand-cyan/10"};
+
+    const services = [
+            {
+                title: "Search Engine Optimization (SEO)",
+                icon: <Search className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore SEO Services",
+                link: "/services/digital-marketing/seo",
+                paragraphs: [
+                    "Dominate organic search results with technical SEO audits, high-intent keyword mapping, on-page optimization, and authoritative backlink acquisition.",
+                    "Drive sustainable organic traffic that delivers qualified inbound leads month after month without continuous ad spend."
+]
+            },
+            {
+                title: "Pay-Per-Click (PPC) Advertising",
+                icon: <Target className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore PPC Services",
+                link: "/services/digital-marketing/ppc",
+                paragraphs: [
+                    "Capture immediate high-intent buyers with precision-targeted Google Search, Display, YouTube, and Meta paid advertising campaigns.",
+                    "We actively optimize bidding strategies, negative keyword lists, and landing page conversions to maximize your Return On Ad Spend."
+]
+            },
+            {
+                title: "Social Media Marketing (SMM)",
+                icon: <MessageSquare className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore Social Media Services",
+                link: "/services/digital-marketing/social-media",
+                paragraphs: [
+                    "Build an engaged, loyal community across LinkedIn, Instagram, Facebook, and X. We develop custom monthly content calendars and visual assets.",
+                    "Turn social followers into brand advocates with strategic engagement, community management, and influencer partnerships."
+]
+            },
+            {
+                title: "Content Marketing & Copywriting",
+                icon: <FileText className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+                cta: "Explore Content Marketing",
+                link: "/services/digital-marketing/content-marketing",
+                paragraphs: [
+                    "Establish industry authority with in-depth whitepapers, thought leadership blog articles, case studies, and email newsletter funnels.",
+                    "Our content marketing team crafts compelling copy that educates prospects, builds brand trust, and guides leads through the sales funnel."
+]
+            }
+    ];
+
+    const processSteps = [
+            { title: "Market & Audience Audit", desc: "Analyzing your competitive landscape, keyword opportunities, customer search intent, and existing channels." },
+            { title: "360° Growth Strategy", desc: "Developing a tailored multichannel marketing plan with clear KPIs, target CPA goals, and milestones." },
+            { title: "Campaign Execution", desc: "Launching technical on-page SEO, high-converting ad copy, visual creative assets, and content funnels." },
+            { title: "Conversion Tracking Setup", desc: "Configuring server-side Google Tag Manager, GA4, and Meta Pixel attribution for accurate tracking." },
+            { title: "A/B Testing & Optimization", desc: "Continuously testing ad creatives, landing page copy, and keyword bids to drive down acquisition costs." },
+            { title: "Transparent Reporting", desc: "Delivering real-time data dashboards and monthly strategic review meetings focused on revenue metrics." }
+    ];
+
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
+
+    const reasons = [
+        "Data-driven marketing strategies tailored to your exact industry and target buyer",
+        "Obsession with tangible bottom-line revenue, qualified leads, and positive ROAS",
+        "Multi-channel expertise spanning technical SEO, paid search, social, and content",
+        "Complete server-side tracking ensuring accurate attribution without data loss",
+        "Transparent real-time reporting dashboards with zero confusing vanity metrics",
+        "Continuous A/B testing of ad creatives, landing pages, and conversion funnels",
+        "No long-term locked contracts — our ongoing results earn your partnership",
+        "Dedicated growth marketing strategists with direct communication access"
+    ];
+
+    const technologies = ["Google Analytics 4","Google Search Console","Google Ads","Meta Ads Manager","Ahrefs","SEMrush","Screaming Frog","HubSpot","Klaviyo","Looker Studio"];
+
+    return (
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="Home"
+                    parentRoute="/"
+                    eyebrow="Digital Marketing Services"
+                    title="Data-Driven Digital Marketing & Growth Strategies"
+                    description="We combine technical SEO, high-ROI paid media advertising, engaging social campaigns, and authoritative content to drive qualified inbound leads and scale revenue."
+                    theme={theme}
+                    visual={SEOVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Accelerating Online Growth</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Strategic Digital Marketing Focused on Measurable Business ROI
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>In a crowded digital landscape, having a great product is only half the battle. You need a data-backed acquisition engine that attracts high-intent prospects and converts them into loyal customers. At The Digital Connect, we craft integrated 360-degree digital marketing strategies that deliver measurable revenue growth.</p>
+                                <p>Our marketing specialists combine in-depth technical SEO, high-performing Google and Meta ad campaigns, engaging social media management, and authoritative content marketing. We measure every dollar spent to optimize your Return On Ad Spend (ROAS) and lower your Customer Acquisition Cost (CAC).</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our Proven Digital Marketing Process"
+                    eyebrow="Our Marketing Workflow"
+                    description="A continuous cycle of research, execution, measurement, and conversion optimization."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our Digital Marketing Services
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore our comprehensive suite of digital marketing services designed for sustainable growth.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for Digital Marketing
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Partner with growth marketers committed to transparent, measurable business results:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
+    );
 };
 
 export default DigitalMarketing;

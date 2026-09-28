@@ -2,15 +2,11 @@ import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
 import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
-import { APIVisual } from '../../../components/services/subservices/visuals/VisualsWeb';
+import { GraphicDesignVisual } from '../../../components/services/subservices/visuals/VisualsUIUX_Ecom';
 import {
     ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
     GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
-    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
-    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
-    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
-    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Building, Briefcase, Palette, Sparkles, Brush, Layers
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,68 +16,79 @@ const fadeIn = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const APIIntegration = () => {
+const GraphicDesign = () => {
     useSEO({
-        "title": "API Integration & Middleware Services | The Digital Connect",
-        "description": "The Digital Connect provides custom API integration, microservices middleware, and third-party platform synchronization for connected business operations."
-});
+        title: "Graphic Designing Services | The Digital Connect",
+        description: "Transform your visual brand identity with professional graphic design services by The Digital Connect. We create high-impact marketing collateral, digital graphics, and brand illustrations."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-pink-600", bg: "bg-pink-500/20", softBg: "bg-pink-50" };
 
     const services = [
-            {
-                title: "Third-Party SaaS Integrations",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Connect Your SaaS Tools",
-                
-                paragraphs: [
-                    "Integrate Salesforce, HubSpot, QuickBooks, Zendesk, Stripe, and ERP platforms seamlessly with your core web and mobile applications.",
-                    "Eliminate manual data entry and ensure customer, billing, and inventory data updates instantaneously across all systems."
-]
-            },
-            {
-                title: "Custom Middleware Development",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Build Custom Middleware",
-                
-                paragraphs: [
-                    "When off-the-shelf connectors fall short, we develop bespoke middleware to transform, validate, and route complex enterprise data.",
-                    "We implement queue systems like RabbitMQ and Redis to process millions of transactions reliably without overloading target endpoints."
-]
-            },
-            {
-                title: "Payment Gateway Integration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800",
-                cta: "Integrate Payment Gateways",
-                
-                paragraphs: [
-                    "Incorporate Stripe, PayPal, Razorpay, Adyen, and Apple Pay with complete PCI-DSS compliance and multi-currency support.",
-                    "We handle automated subscription renewals, tax calculations, webhook confirmations, and refund workflows securely."
-]
-            },
-            {
-                title: "Legacy System Modernization",
-                icon: <Database className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-                cta: "Modernize Legacy APIs",
-                
-                paragraphs: [
-                    "Wrap outdated legacy databases and mainframe software with modern REST and GraphQL APIs without needing complete system rebuilds.",
-                    "Unlock your proprietary corporate data for modern web, mobile, and customer-facing interfaces safely."
-]
-            }
+        {
+            title: "Social Media Post Design",
+            icon: <Palette className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Brand Collateral",
+            paragraphs: [
+                "We’ll help your business make the most of your online presence in the age of social media’s exploding popularity. Even though you recognize the importance of social media, you don’t have the time to devote to it. An increase in website traffic, more visibility, and an increase in the “Awesome” factor are all benefits of using branded social media photographs.",
+                "We will handle your social media branding, as we have a team of skilled graphic designers who can create banners, creativity, and posts for Facebook, Twitter, Instagram, LinkedIn, and Pintesrest. You can count on us to develop innovative ideas tailored to meet the needs of the products and services you offer.",
+                "We combine designs and text by utilizing our specialized social media graphics design services. If you are a small business or a large corporation, we have the unique graphic design services you need at a price you can afford. You’re losing out on a ton of business if you don’t interact with your fans on social media."
+            ]
+        },
+        {
+            title: "Email Template Designing",
+            icon: <Sparkles className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+            cta: "Create Ad Creatives",
+            paragraphs: [
+                "Marketing via email is powerful because it allows you to directly address your target audience’s demands. Email templates are employed instead of regular email to make these efforts more professional and interactive. With the help of these templates, businesses can present information about their offerings in an eye-catching manner.",
+                "Our email templates have been carefully built to match the brand or company’s aesthetic and serve as a creative hook to draw in potential customers. Our talented designers go above and beyond to ensure your content reaches its intended audience. You can count on us to help your company get the word through quickly and effectively.",
+                "Our designer’s creative and strategic resources ensure that your email is professionally communicated to your consumers, making them eager to take action. Our designers work closely with you to fully grasp your business’s goals to create a functional and aesthetically pleasing design."
+            ]
+        },
+        {
+            title: "Brochures Design",
+            icon: <Brush className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Illustrations",
+            paragraphs: [
+                "In the digital age, brochures are often regarded as outdated media, but they still have a vital role. A great brochure design, in our opinion, is unsurpassed. As a critical component of your marketing arsenal, our brochures are full of creativity and stand out from the crowd.",
+                "Improve your marketing analytics by working with a global brochure design business! The creative brochure design solution provided by our designers meets all client requirements while remaining extremely cost-effective. Let us know everything you know about your brand so that we can create powerful brochures!",
+                "Our goal is to make brochures an art form, and our specialist teams of brochures designers are professionals in unique design ideas. The industries in which our brochure designers in India have created brochures include anything from manufacturing and real estate to education, healthcare, and IT. Our brochure designers in India can handle your demands with no problem."
+            ]
+        },
+        {
+            title: "Website Banner Designing",
+            icon: <Layers className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Packaging",
+            paragraphs: [
+                "Sincere gratitude from long-term clients is matched by confidence in our capacity to meet new clients’ expectations based on previous projects. When creating designs for our client’s online presence, we consider their branding and adhere to any branding restrictions. To increase the visibility of your business online, you may rely on the banner design services we provide.",
+                "Being a renowned graphic design company, our banner design services can help you get your business seen more than ever before. When it comes to banner design, we work directly with you to ensure that the final product reflects your company’s image and fits your specific needs.",
+                "Our bespoke banner designs are trusted and liked by people worldwide because of our passion for what we do. Our designers are experts at creating designly appealing and cost-effective banners from conception to execution. Please send us your company’s narrative, or let us do it for you. We promise to provide high-quality banners in the shortest amount of time possible."
+            ]
+        },
+        {
+            title: "Presentation, PPT & eBooks Designing",
+            icon: <Layers className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Packaging",
+            paragraphs: [
+                "Custom-tailored presentation decks, sales presentations, and internal PowerPoint presentations are available. With 21Twelve Interactive, startups and large businesses alike may develop or improve their presentations by creating high-quality decks from scratch or building templates that can be used repeatedly.",
+                "If you’re trying to persuade venture investors, show off your designs, or create excitement within your company through presentations, we can help. As a renowned graphic design company, our professional designers ensure to offer the best-in-class, eye-catching, and intuitive presentations, PPT, and eBooks designs.",
+                "Every organization, from universities to corporations to government agencies, relies on the involvement of its stakeholders and target audience to be successful. Digital content, such as eBooks, is a powerful tool for attracting and retaining a highly targeted audience."
+            ]
+        }
     ];
 
     const processSteps = [
-            { title: "System Audit & Mapping", desc: "Analyzing endpoints, data formats, authentication protocols, and sync frequencies." },
-            { title: "Middleware Architecture", desc: "Designing transformation logic, queue management, and webhook listeners." },
-            { title: "Secure Implementation", desc: "Engineering encryption, token management (OAuth2/JWT), and error logging." },
-            { title: "Sandbox Simulation", desc: "Simulating edge cases, high concurrency, network dropouts, and malformed payloads." },
-            { title: "Production Cutover", desc: "Deploying integrations with live monitoring dashboards and automated alerting." },
-            { title: "Ongoing Maintenance", desc: "Monitoring third-party API deprecations, schema updates, and performance tuning." }
+        { title: "Creative Discovery & Brief", desc: "Understanding your brand mission, target audience profile, market positioning, and core aesthetic goals." },
+        { title: "Visual Strategy & Moodboards", desc: "Developing visual moodboards, style directions, color palettes, and preliminary layout schematics." },
+        { title: "Vector Design & Drafting", desc: "Crafting pixel-perfect vector graphics, marketing collateral, and brand assets in Adobe Suite and Figma." },
+        { title: "Interactive Mockups & Review", desc: "Presenting collateral mapped onto realistic 3D products, packaging, and digital screen mockups." },
+        { title: "Client Review & Polish", desc: "Iterative feedback sessions to refine typography, visual contrast, balance, and messaging hierarchy." },
+        { title: "Print & Digital Asset Delivery", desc: "Delivering print-ready CMYK files with bleeds and web-optimized digital asset packages." }
     ];
 
     const industries = [
@@ -100,29 +107,27 @@ const APIIntegration = () => {
     ];
 
     const reasons = [
-        "Deep experience integrating complex third-party SaaS, ERP, and payment APIs",
-        "Fault-tolerant middleware with automated error recovery and retry queues",
-        "Strict bank-grade encryption for all inflight and at-rest data transfers",
-        "Real-time webhook architectures delivering instant data synchronization",
-        "Prevention of data duplication and synchronization conflicts",
-        "Comprehensive logging dashboards for complete operational visibility",
-        "Proactive monitoring of third-party API deprecations and updates",
-        "Scalable cloud execution ensuring zero performance bottlenecks"
+        "Strategic visual hierarchy built to boost brand recall and conversions",
+        "100% original, vector-based designs with complete copyright ownership",
+        "Multi-format delivery (AI, EPS, SVG, PDF, PNG, JPEG) with print bleed setup",
+        "Fast turnaround times with collaborative Figma and Adobe Creative Cloud workflows",
+        "Consistent brand guidelines integration across every collateral piece",
+        "Dedicated creative director oversight on every graphic design project"
     ];
 
-    const technologies = ["RESTful APIs","GraphQL","gRPC","Webhooks","Node.js","Python","OAuth2","JWT","Redis","RabbitMQ","Kafka","AWS Lambda","Stripe API"];
+    const technologies = ["Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Figma", "CorelDRAW", "Adobe After Effects", "Canva Pro", "Procreate", "Blender 3D"];
 
     return (
         <PageTransition>
             <div className="w-full bg-white min-h-screen font-sans">
                 <SubServiceShared.Hero
-                    parentTitle="Web Development"
-                    parentRoute="/services/web-development"
-                    eyebrow="API Integration"
-                    title="Seamless API Integration & Middleware Engineering"
-                    description="Connect disjointed business systems, automate data flows, and build unified digital ecosystems with secure, high-speed API integrations."
+                    parentTitle="Designing Services"
+                    parentRoute="/services/ui-ux-design"
+                    eyebrow="Graphic Designing Services"
+                    title="Professional Graphic Designing Services"
+                    description="Captivate your target audience with bespoke visual designs that convey authority, creativity, and brand distinction. The Digital Connect turns ideas into memorable visual assets across digital and physical media."
                     theme={theme}
-                    visual={APIVisual}
+                    visual={GraphicDesignVisual}
                     ctaText="GET FREE QUOTE NOW"
                 />
 
@@ -130,13 +135,12 @@ const APIIntegration = () => {
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Unified Digital Architecture</h2>
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Creative Visual Communication</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Connecting Your Business Platforms for Automated Efficiency
+                                Our Stunning Graphic Designing Services
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Modern enterprises rely on dozens of specialized SaaS tools, payment gateways, ERPs, CRMs, and custom databases. When these systems operate in isolation, manual data re-entry causes operational bottlenecks and human errors. At The Digital Connect, we build robust API integrations and custom middleware that synchronize data automatically in real time.</p>
-                                <p>Our engineers design fault-tolerant API pipelines with automatic retry mechanisms, rate-limiting handlers, and data transformation layers. We bridge cloud and legacy systems securely.</p>
+                                <p>The agile flow of the designing process is significant enough to ensure the app's reliability and success in the market.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,9 +149,9 @@ const APIIntegration = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our API Integration Process"
-                    eyebrow="Systematic Integration"
-                    description="Ensuring secure, bidirectional, and real-time data synchronization across all nodes."
+                    title="Our Graphic Design Process"
+                    eyebrow="Our Creative Workflow"
+                    description="From concept discovery to pixel-perfect vector drafting and multi-format delivery."
                     process={processSteps}
                 />
 
@@ -159,9 +163,9 @@ const APIIntegration = () => {
                                 Empower Your Business with Our Services
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our API Integration Offerings
+                                Comprehensive Graphic Design Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">End-to-end integration services that unify your enterprise technology stack.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Tailored graphic design solutions for modern digital and physical brands.</p>
                         </div>
                     </div>
 
@@ -193,7 +197,7 @@ const APIIntegration = () => {
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
                                                     <div className="text-orange-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
@@ -217,7 +221,7 @@ const APIIntegration = () => {
                         theme={theme}
                         technologies={technologies}
                         title="Technologies We Work On"
-                        eyebrow="Our Tech Stack"
+                        eyebrow="Our Design Suite"
                     />
                 )}
 
@@ -251,10 +255,10 @@ const APIIntegration = () => {
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
                             <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for API Integration
+                                Why Choose The Digital Connect for Graphic Design
                             </h3>
                             <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Experience the benefits of seamless, automated enterprise data connectivity:</p>
+                            <p className="text-slate-600">Elevate your brand with our dedicated creative designers:</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,4 +320,4 @@ const APIIntegration = () => {
     );
 };
 
-export default APIIntegration;
+export default GraphicDesign;

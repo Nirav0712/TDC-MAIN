@@ -1,189 +1,318 @@
 import React from 'react';
-import { Search, Map, Layout, Zap, Pointer, Target, Layers, Component, Maximize, Database, Server, Cog, Workflow, BarChart2, MessageSquare, Megaphone, ArrowUpRight, MousePointerClick, ShieldCheck, Mail, LineChart, Cpu, Cloud, Building2, TerminalSquare, LayoutDashboard, LockKeyhole, Globe, Store, ShoppingCart, HeartPulse, Navigation, GraduationCap, Shirt, Dumbbell, Scale, Bitcoin, Landmark, Paintbrush, Building, CheckCircle2, User, Palette, CreditCard, RefreshCw, Code } from 'lucide-react';
+import useSEO from '../../../hooks/useSEO';
+import PageTransition from '../../../components/common/PageTransition';
+import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
 import { WooCommerceVisual } from '../../../components/services/subservices/visuals/VisualsUIUX_Ecom';
-import { ModernServiceLayout } from '../../../components/services/subservices/ModernServiceLayout';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const WooCommerce = () => {
-    const seoData = {
-        title: "Limitless Omnichannel Commerce Built on Code | The Digital Connect",
-        description: "Deeply customized open-source Woo commerce experiences granting complete data ownership and literally limitless platform structural capabilities."
-    };
+    useSEO({
+        "title": "Custom WooCommerce Development Services | The Digital Connect",
+        "description": "The Digital Connect creates custom, scalable, and high-performance WooCommerce stores with custom themes, plugins, and payment integrations."
+});
 
-    const theme = { "accent": "text-brand-periwinkle", "bg": "bg-brand-periwinkle/20", "softBg": "bg-brand-cyan/10" };
+    const theme = {"accent":"text-purple-600","bg":"bg-purple-500/20","softBg":"bg-purple-50"};
 
-    const hero = {
-        parentTitle: "eCommerce Development",
-        parentRoute: "/services/ecommerce-development",
-        eyebrow: "WOOCOMMERCE DEVELOPMENT",
-        title: "Flexible WooCommerce Solutions Built for Online Growth",
-        description: "SaaS eCommerce platforms command immense monthly fees and structurally limit what backend code you can explicitly alter. WooCommerce immediately solves this natively by providing 100% open-source structural access explicitly sitting on top of WordPress.",
-        visual: WooCommerceVisual,
-        ctaText: "Start Your WooCommerce Project"
-    };
-
-    const intro = {
-        eyebrow: "OUR WOOCOMMERCE DEVELOPMENT SERVICES",
-        title: "Complete Commercial Autonomy and Data Control",
-        paragraphs: [
-            "We construct heavy WooCommerce environments heavily optimized exclusively for high-traffic stores that demand extraordinarily specific checkout setups, incredibly dynamic subscription modeling, or highly explicit wholesale (B2B) permission tiering.",
-            "We heavily rewrite standard bloated WooCommerce infrastructures, offloading complex databases, enabling caching, and securing immense catalog queries running flawlessly.",
-            "Owning your entire secure consumer history database natively perfectly safeguards from unexpected SaaS platform bans while granting limitless architectural control."
-        ]
-    };
-
-    const process = {
-        eyebrow: "HOW WE WORK",
-        title: "Our WooCommerce Methodology",
-        description: "We deploy vigorous structural WordPress ecosystems customizing exact commerce logic.",
-        steps: [
-            { title: "Server Architecture", desc: "Engineering intense Redis caching natively optimizing queries matching exact standard enterprise loading metrics flawlessly." },
-            { title: "Store UI Customization", desc: "Drafting visually engaging, highly functional front-end layouts specifically scaling mobile interactions." },
-            { title: "Third-Party Integration", desc: "Implementing aggressive multi-platform tools synchronizing exact analytics and ERP gateways securely." },
-            { title: "Theme Code Execution", desc: "Authoring immaculate bespoke PHP logic fundamentally avoiding massively bloated pre-bought WordPress environments." },
-            { title: "B2B Permission Routing", desc: "Deploying deep user permission tiers instantly altering product pricing dependent natively on logged-in roles." },
-            { title: "Security Protocols", desc: "Running stringent payment gateway lockdown audits blocking explicitly automated malicious transactions." }
-        ]
-    };
-
-    const services = {
-        eyebrow: "COMPREHENSIVE WORDPRESS",
-        title: "WooCommerce Services",
-        items: [
+    const services = [
             {
-                title: "Custom WooCommerce Development",
+                title: "Custom WooCommerce Theme Design",
+                icon: <ShoppingBag className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
+                cta: "Design WooCommerce Theme",
+                
+                paragraphs: [
+                    "Create a distinctive brand identity with bespoke WooCommerce themes coded from scratch. Zero unnecessary scripts or slow visual page builders.",
+                    "Our themes load in milliseconds, reducing customer bounce rates and boosting search engine organic rankings."
+]
+            },
+            {
+                title: "Custom WooCommerce Plugin Development",
                 icon: <Code className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop",
+                imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+                cta: "Develop Custom Plugins",
+                
                 paragraphs: [
-                    "The Digital Connect is the top WooCommerce development agency offering a comprehensive range of WooCommerce design as well as development services. Our custom solution mainly meets the specific eCommerce requirements. At The Digital Connect, we provide you with the top WooCommerce development service providing a team of specialists capable of giving you agile web development approaches.",
-
-                    "Our team strives to provide you with the best effective and maximum level of approach in the WooCommerce-powered project. Whether you are looking for Full-Stack WooCommerce Development, WooCommerce Multi-site Dropship Platform Development, or any other service, then you can easily get the best solution.",
-
-                    "We offer you unique WooCommerce solutions mainly custom-tailored for every client. We have the In-house designers, developers, as well as marketers, bring you suitable solutions. Get the Hassle-free Project Management with the 100% Project Transparency Guaranteed. Our teams of experts are well versed in providing the Conversion Tracking system with advanced technology."
-                ],
-                cta: "Start Development"
+                    "When existing WordPress plugins fail to meet your complex business logic, we develop secure, object-oriented custom WooCommerce plugins.",
+                    "From custom wholesale pricing tiers to dynamic shipping calculators and product configurators."
+]
             },
             {
-                title: "WooCommerce Plugin Development",
-                icon: <Palette className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
+                title: "WooCommerce Speed Optimization",
+                icon: <Zap className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                cta: "Speed Up WooCommerce",
+                
                 paragraphs: [
-                    "By availing of our WooCommerce development services, clients get a responsive, fully-functional, and mainly SEO-friendly e-commerce store. Our WooCommerce experts mainly assure with creating the best intuitive interface to the extent. We are ready to build custom solutions for businesses that are looking for advanced features.",
-
-                    "We assure you of providing the plugin development for easily increasing the user experience. We offer you the best WooCommerce Plugin Development services to develop the variant online stores for extensively attracting customers. Our WooCommerce development team creates better visibility to many powerful features along with a plethora of themes & resources.",
-
-                    "We ensure to add the best scope for add-ons or 3rd party API integrations. We provide an intuitive web interface for extensively performing simple and secure checkout. Our team assures in enabling the WooCommerce Plugin Development for powerful payment gateways, smart tracking integration for Google Analytics along up-sell and cross-sell widgets."
-                ],
-                cta: "Design Your Store"
+                    "Slow WooCommerce stores lose sales. We optimize slow database queries, implement Redis object caching, and configure CDN media offloading.",
+                    "Achieve sub-second checkout speeds and handle heavy seasonal traffic spikes smoothly."
+]
             },
             {
-                title: "WooCommerce Theme Development",
-                icon: <Layout className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=600&auto=format&fit=crop",
+                title: "WooCommerce B2B & Wholesale Portals",
+                icon: <Building2 className="w-8 h-8" />,
+                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                cta: "Build Wholesale Store",
+                
                 paragraphs: [
-                    "Creating a stunning storefront always impresses the visitors. These WooCommerce Theme Development matches brand identity to create the best eCommerce landscape. Are you looking forward to starting developing WooCommerce themes? You’re in the right place.",
+                    "Expand into business-to-business sales with wholesale customer registration, tiered bulk pricing, tax exemptions, and custom quote requests.",
+                    "Seamlessly run retail and B2B wholesale operations from a single unified WordPress installation."
+]
+            }
+    ];
 
-                    "We’ll take a look at WooCommerce themes to easily give you the best results. We are the leading WooCommerce Developers ready to fit your problem definition and fulfill your end goals. WooCommerce Themes files work to create an innovative and effective design and functionality for your site. Each Theme is unique, and we offer you the best-preferred result.",
+    const processSteps = [
+            { title: "Catalog & Logic Discovery", desc: "Evaluating SKU counts, product attributes, custom pricing rules, and shipping zones." },
+            { title: "Custom UI/UX Design", desc: "Designing responsive, mobile-first shopping interfaces tailored to your brand identity." },
+            { title: "Clean Theme & Plugin Coding", desc: "Writing modular PHP and JavaScript without reliance on slow, bloated multipurpose themes." },
+            { title: "Gateway & ERP Integration", desc: "Connecting Stripe, PayPal, localized payment gateways, and inventory management systems." },
+            { title: "Performance & Security QA", desc: "Configuring Redis object caching, database query tuning, and SSL/PCI-DSS compliance checks." },
+            { title: "Deployment & Ongoing Care", desc: "Zero-downtime deployment, automated backups, and continuous plugin security updates." }
+    ];
 
-                    "Our WooCommerce development agency brings you an attractive website. WooCommerce is the ultimate and flexible plugin for WordPress integrations along with the themes. Opt for our professional services for easily getting theme customization. We bring you tailor-made web solutions with 100% guaranteed success."
-                ],
-                cta: "Customize Your Theme"
-            },
-            {
-                title: "WooCommerce Migration",
-                icon: <CreditCard className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "When you are an online retailer who likes to move towards WooCommerce, our team is ready to help you migrate. We are the leading eCommerce technology partner having years of development and migration experience. WooCommerce Migration Service helps you to move the store from the eCommerce platform into WooCommerce.",
+    const industries = [
+        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
+        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
+        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
+        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
+        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
+        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
+        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
+        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
+        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
+        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
+        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+    ];
 
-                    "Our migration processes are automatic, secure, and accurate. WooCommerce Migration helps you to easily transfer the data newly appeared on Source Store. Our team believes every company’s budget for website service is different. Our WooCommerce customization service brings you affordable support plans mainly tailored for your requirement.",
+    const reasons = [
+        "100% complete ownership of your customer data and eCommerce platform",
+        "Zero percentage-based transaction fees or mandatory platform revenue sharing",
+        "Bespoke theme engineering achieving sub-second page load speeds",
+        "Expert database optimization handling catalogs exceeding 50,000+ SKUs",
+        "Secure, custom-coded plugins eliminating third-party security vulnerabilities",
+        "Seamless integration with QuickBooks, Salesforce, and automated shipping carriers",
+        "Robust multi-layer security hardening and automated cloud backups",
+        "Dedicated post-launch SLA support and ongoing WordPress core updates"
+    ];
 
-                    "We can offer you WooCommerce web design services as well. Our team works on all the sites seamlessly, starting from the landing page to the blog. Get the 99.9% Uptime with minimal downtime for WooCommerce Migration with getting the best accurate results. With the Lossless database migration, you have plenty of time to reach customers."
-                ],
-                cta: "Integrate Payments"
-            },
-            {
-                title: "WooCommerce Support & Maintenance",
-                icon: <RefreshCw className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
-                paragraphs: [
-                    "At The Digital Connect, we are well versed in dealing with the security patches, broken links and legacy code on the website. We are the top WooCommerce Development Agency well versed in keeping the website secure, up-to-date as well as bug-free. Our team provides the complete WooCommerce support and maintenance services with focusing on the core business activities.",
-
-                    "We are a reliable and professional team ready to take care of complete website maintenance and updates. We provide 100% WooCommerce maintenance services or support. We have experienced professionals in the team for bringing you better website maintenance.",
-
-                    "We offer you a fully-fledged support team ready to assist you in resolving issues 24×7. We offer you full-service website maintenance with the highest range of support available for every business type. We have a global footprint with a proven work record. Our team has gained years of experience in delivering website support and maintenance."
-                ],
-                cta: "Migrate to WooCommerce"
-            },
-            // {
-            //     title: "WooCommerce Performance Optimization",
-            //     icon: <Zap className="w-8 h-8" />,
-            //     imgUrl: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=600&auto=format&fit=crop",
-            //     paragraphs: [
-            //         "Repairing explicitly broken underlying infrastructure logic ensuring your open-source store matches enterprise rendering sub-millisecond rates directly."
-            //     ],
-            //     cta: "Optimize Performance"
-            // },
-            // {
-            //     title: "WooCommerce Maintenance & Support",
-            //     icon: <Server className="w-8 h-8" />,
-            //     imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-            //     paragraphs: [
-            //         "Executing standard PHP updates natively explicitly deploying patches preventing heavy technical debt from scaling exponentially locally."
-            //     ],
-            //     cta: "Maintain Your Store"
-            // }
-        ]
-    };
-
-    const industries = {
-        eyebrow: "Custom eCommerce Workflows",
-        title: "Industries",
-        description: "A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline and improve customers' engagement.",
-        items: [
-            { name: "Fashion & Apparel", desc: "Robust fashion apps to improve your brand's presence", icon: <Shirt /> },
-            { name: "eCommerce & Retail", desc: "Improve the brand presence and sales with an online marketplace", icon: <ShoppingCart /> },
-            { name: "Health & Fitness", desc: "Perfect solutions for transformational health & fitness care", icon: <HeartPulse /> },
-            { name: "Food & Grocery", desc: "Rapidly develop functional storefronts selling inventory seamlessly", icon: <Store /> },
-            { name: "Travel & Hospitality", desc: "Integrate your travel experience with robust digital platforms", icon: <Navigation /> },
-            { name: "Sports Industry", desc: "Creating modern websites and apps for the sports industry", icon: <Dumbbell /> },
-            { name: "Beauty & Cosmetics", desc: "Visually stunning stores driving cosmetic retail heavily", icon: <Palette /> },
-            { name: "Real Estate", desc: "Intelligent digital solutions for complex internal real estate metrics", icon: <Building2 /> }
-        ]
-    };
-
-    const reasons = {
-        eyebrow: "REASON TO CHOOSE US",
-        title: "Why Businesses Choose Our WooCommerce Services",
-        description: "We combine technical expertise, creative thinking and business-focused practices to accelerate your digital growth.",
-        items: [
-            "Custom WooCommerce Development",
-            "Flexible Store Architecture",
-            "Payment Gateway Integration",
-            "Plugin Integration Protocol",
-            "Performance Optimization Metrics",
-            "Mobile-Responsive Storefronts",
-            "Complex Data Migration",
-            "Ongoing WordPress Maintenance"
-        ]
-    };
-
-    const contact = {
-        title: "Ready to Grow Your WooCommerce Store?",
-        description: "We will get back to you within 24 hours"
-    };
+    const technologies = ["WooCommerce","WordPress","PHP","MySQL","JavaScript","REST API","Redis","Stripe","PayPal","Tailwind CSS","WP-CLI"];
 
     return (
-        <ModernServiceLayout
-            seo={seoData}
-            theme={theme}
-            hero={hero}
-            intro={intro}
-            process={process}
-            services={services}
-            industries={industries}
-            reasons={reasons}
-            contact={contact}
-        />
+        <PageTransition>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="eCommerce Development"
+                    parentRoute="/services/ecommerce-development"
+                    eyebrow="WooCommerce Development"
+                    title="Flexible & Custom WooCommerce Store Development"
+                    description="Harness the open-source power of WordPress with custom WooCommerce digital storefronts that offer complete data ownership and zero transaction fee limits."
+                    theme={theme}
+                    visual={WooCommerceVisual}
+                    ctaText="GET FREE QUOTE NOW"
+                />
+
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Open-Source Commerce Power</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Scalable WooCommerce Solutions Tailored to Your Business Model
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>WooCommerce offers complete freedom from proprietary platform restrictions, recurring transaction fees, and vendor lock-in. At The Digital Connect, we build robust, high-speed WooCommerce digital storefronts capable of supporting large product catalogs and high transaction volumes.</p>
+                                <p>We engineer lightweight custom themes, custom plugins, automated inventory synchronization, and secure payment processing. Our performance-first approach ensures your WooCommerce store delivers rapid page loads and high search engine rankings.</p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our WooCommerce Development Process"
+                    eyebrow="WooCommerce Delivery Lifecycle"
+                    description="A disciplined approach to building fast, secure, and extensible WordPress eCommerce stores."
+                    process={processSteps}
+                />
+
+                {/* Empower Your Business with Our Services */}
+                <section>
+                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
+                                Empower Your Business with Our Services
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our WooCommerce Offerings
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Comprehensive WooCommerce development and customization services.</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-orange-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="Technologies We Work On"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us & Key Features */}
+                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
+                                Why Choose The Digital Connect for WooCommerce Development
+                            </h3>
+                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
+                            <p className="text-slate-600">Enjoy total data control and limitless scalability with our WooCommerce team:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {reasons.map((reason, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
+                                    <span className="text-[#0A1024] font-bold">{reason}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quote Form Section */}
+                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                            <div className="text-center mb-10">
+                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
+                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                            </div>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+                                <div className="pt-4">
+                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                        Submit Request
+                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </PageTransition>
     );
 };
 
