@@ -9,20 +9,54 @@ import {
     BookOpen, CheckCircle, Edit3, Gamepad2, Trophy, Compass,
     ShoppingBag, ShoppingCart, CreditCard, Lock, Palette, PenTool,
     Monitor, MousePointer, Award, Sliders, SmartphoneNfc, Radio,
-    Send, FastForward, Check, FileCheck, Layers2, Code2
+    Send, FastForward, Check, FileCheck, Layers2, Code2, HeartPulse,
+    Tablet, Watch
 } from 'lucide-react';
 
 export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
     const t = title.toLowerCase();
 
-    // 1. MOBILE APP DEVELOPMENT (iOS, Android, Hybrid, Flutter, Swift, Kotlin, iPad)
-    if (t.includes('mobile') || t.includes('ios') || t.includes('android') || t.includes('hybrid') || t.includes('ipad') || t.includes('swift') || t.includes('kotlin') || t.includes('flutter')) {
+    // Determine visual archetype using both title content AND index to guarantee diversity across items
+    const getArchetype = () => {
+        // High-specificity topic matching
+        if (t.includes('game') || t.includes('unreal') || t.includes('unity') || t.includes('metaverse') || t.includes('3d') || t.includes('ar/vr')) return 'game';
+        if (t.includes('social') || t.includes('instagram') || t.includes('facebook') || t.includes('influencer') || t.includes('smm')) return 'social';
+        if (t.includes('content') || t.includes('writing') || t.includes('blog') || t.includes('copywriting') || t.includes('whitepaper')) return 'content';
+        if (t.includes('ecommerce') || t.includes('shopify') || t.includes('woocommerce') || t.includes('magento') || t.includes('store') || t.includes('payment')) return 'ecommerce';
+        if (t.includes('seo') || t.includes('audit') || t.includes('search ranking') || t.includes('serp')) return 'seo';
+        if (t.includes('ppc') || t.includes('ad') || t.includes('bidding') || t.includes('campaign')) return 'ppc';
+        if (t.includes('ui') || t.includes('ux') || t.includes('design') || t.includes('prototype') || t.includes('wireframe') || t.includes('logo')) return 'design';
+        if (t.includes('database') || t.includes('sql') || t.includes('schema') || t.includes('migration')) return 'database';
+        if (t.includes('backend') || t.includes('api') || t.includes('microservice') || t.includes('cloud') || t.includes('devops') || t.includes('server')) return 'cloud';
+
+        // Specific sub-service mobile branching
+        if (t.includes('mobile') || t.includes('ios') || t.includes('android') || t.includes('flutter') || t.includes('swift') || t.includes('kotlin') || t.includes('hybrid')) {
+            const mobileStyles = ['mobile_phone', 'mobile_tablet', 'mobile_watch', 'cloud', 'game', 'code_editor'];
+            return mobileStyles[index % mobileStyles.length];
+        }
+
+        // Web, Frontend, JavaScript & general service cycling (guarantees NO two adjacent cards look the same)
+        const webStyles = [
+            'browser',       // 0: Clean Web Browser
+            'code_editor',   // 1: VS Code IDE Terminal
+            'cloud',         // 2: Cloud Microservices Pipeline
+            'database',      // 3: Relational DB Schema
+            'ecommerce',     // 4: Storefront & 1-Click Buy
+            'seo',           // 5: Performance & Lighthouse Dial
+            'design',        // 6: UI Design Canvas
+            'mobile_phone'   // 7: Mobile Viewport
+        ];
+        return webStyles[index % webStyles.length];
+    };
+
+    const archetype = getArchetype();
+
+    // 1. MOBILE PHONE (Dynamic Island Smartphone)
+    if (archetype === 'mobile_phone') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#38bdf820_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F0F8FF] via-[#F6FAFF] to-[#EBF5FE] p-6 flex items-center justify-center relative select-none">
-                {/* Background Ambient Glow */}
                 <div className="absolute w-48 h-48 bg-cyan-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
-                {/* Smartphone Mockup */}
                 <div className="relative">
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
@@ -30,7 +64,7 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         transition={{ duration: 0.5 }}
                         className="w-[200px] sm:w-[220px] bg-[#0E1726] rounded-[42px] p-2.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.25)] border-4 border-[#1E293B] relative z-10"
                     >
-                        {/* Dynamic Island Notch */}
+                        {/* Notch */}
                         <div className="flex items-center justify-between px-3 pt-0.5 pb-2">
                             <span className="text-[9px] font-bold text-slate-400 font-mono">9:41</span>
                             <div className="w-16 h-4 bg-black rounded-full border border-slate-800 flex items-center justify-center gap-1">
@@ -40,14 +74,13 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <span className="text-[9px] font-bold text-cyan-400 font-mono">5G</span>
                         </div>
 
-                        {/* Internal Screen Content */}
+                        {/* Screen */}
                         <div className="bg-white rounded-[32px] p-3 flex flex-col justify-between h-[190px] border border-slate-100 shadow-inner">
                             <div className="space-y-2.5">
                                 <span className="text-xs font-bold text-slate-800 block truncate">
                                     {title.replace(/development|developer|services|service/gi, '').trim() || "Dashboard"}
                                 </span>
 
-                                {/* Primary Cyan Card */}
                                 <div className="bg-cyan-50/90 border border-cyan-100 rounded-2xl p-2.5 space-y-1.5">
                                     <div className="w-5 h-5 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-600">
                                         <Smartphone size={11} />
@@ -56,7 +89,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                                     <div className="h-1.5 w-10 bg-cyan-200 rounded-full"></div>
                                 </div>
 
-                                {/* Mini Dual Cards */}
                                 <div className="grid grid-cols-2 gap-2">
                                     <div className="bg-slate-50 border border-slate-100 rounded-xl p-2">
                                         <div className="h-1.5 w-8 bg-slate-300 rounded-full"></div>
@@ -66,13 +98,11 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Home Indicator */}
                             <div className="w-16 h-1 bg-slate-300 rounded-full mx-auto"></div>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
+                    {/* Floating Badges */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -87,7 +117,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -106,21 +135,299 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 2. SEO & SEARCH VISIBILITY (SEO, Search, Audit, Technical SEO, Local SEO)
-    if (t.includes('seo') || t.includes('search') || t.includes('audit')) {
+    // 2. SMARTWATCH / WEARABLE (Apple Watch UI)
+    if (archetype === 'mobile_watch') {
+        return (
+            <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#ec489918_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#FFF1F2] via-[#FDF8F9] to-[#FFE4E6] p-6 flex items-center justify-center relative select-none">
+                <div className="absolute w-48 h-48 bg-rose-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div className="relative">
+                    {/* Watch Frame */}
+                    <motion.div
+                        initial={{ y: 8, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-[185px] sm:w-[200px] bg-[#0A0E1A] rounded-[46px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-4 border-slate-600 text-white relative z-10"
+                    >
+                        {/* Digital Crown Button */}
+                        <div className="absolute -right-2 top-8 w-2 h-6 bg-slate-500 rounded-r-md"></div>
+
+                        <div className="flex justify-between items-center px-2 pb-2 text-[10px] font-mono">
+                            <span className="text-rose-400 font-bold">09:41</span>
+                            <span className="text-emerald-400 font-bold">● LIVE</span>
+                        </div>
+
+                        {/* Concentric Fitness / Activity Rings */}
+                        <div className="bg-[#121829] rounded-[28px] p-3 border border-slate-700/80 flex flex-col items-center justify-center space-y-2">
+                            <div className="relative w-18 h-18 rounded-full border-4 border-rose-500 flex items-center justify-center">
+                                <div className="w-12 h-12 rounded-full border-4 border-emerald-400 flex items-center justify-center">
+                                    <div className="w-6 h-6 rounded-full border-4 border-cyan-400 flex items-center justify-center">
+                                        <HeartPulse size={12} className="text-rose-400 animate-pulse" />
+                                    </div>
+                                </div>
+                            </div>
+                            <span className="text-[9px] font-bold text-slate-300">Wearable Health OS</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Floating Badges */}
+                    <motion.div
+                        animate={{ y: [-3, 3, -3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        className="absolute -top-3 -right-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+                            <Watch size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">watchOS & Wear OS</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">Real-Time Sync</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ y: [3, -3, 3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                        className="absolute -bottom-3 -left-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center">
+                            <Zap size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">Ultra-Low Battery</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">BLE 5.3 Connected</span>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        );
+    }
+
+    // 3. TABLET / IPAD CANVAS
+    if (archetype === 'mobile_tablet') {
+        return (
+            <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#8b5cf618_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F5F3FF] via-[#FAF8FF] to-[#EDE9FE] p-6 flex items-center justify-center relative select-none">
+                <div className="absolute w-48 h-48 bg-purple-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div className="relative">
+                    {/* Tablet Landscape Frame */}
+                    <motion.div
+                        initial={{ y: 8, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-[240px] sm:w-[260px] bg-[#1E1B2E] rounded-[30px] p-3 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.25)] border-4 border-slate-700 relative z-10"
+                    >
+                        <div className="bg-white rounded-[20px] p-3 h-[145px] flex flex-col justify-between">
+                            <div className="flex items-center justify-between pb-1 border-b border-slate-100">
+                                <span className="text-[10px] font-bold text-slate-800 truncate">{title.slice(0, 18)}</span>
+                                <span className="text-[8px] font-bold bg-purple-100 text-purple-700 px-2 py-0.5 rounded">iPad Pro Retina</span>
+                            </div>
+                            <div className="grid grid-cols-3 gap-1.5 py-1">
+                                <div className="bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <div className="h-1.5 w-6 bg-purple-300 rounded"></div>
+                                </div>
+                                <div className="bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <div className="h-1.5 w-6 bg-purple-300 rounded"></div>
+                                </div>
+                                <div className="bg-purple-50 p-2 rounded-lg border border-purple-100">
+                                    <div className="h-1.5 w-6 bg-purple-300 rounded"></div>
+                                </div>
+                            </div>
+                            <div className="w-16 h-1 bg-slate-300 rounded-full mx-auto"></div>
+                        </div>
+                    </motion.div>
+
+                    {/* Floating Badges */}
+                    <motion.div
+                        animate={{ y: [-3, 3, -3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        className="absolute -top-3 -right-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+                            <Tablet size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">Adaptive Tablet UI</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">Multi-Window Split</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ y: [3, -3, 3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                        className="absolute -bottom-3 -left-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                            <Sparkles size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">Apple Pencil Rig</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">Stylus Precision</span>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        );
+    }
+
+    // 4. CODE EDITOR / VS CODE IDE
+    if (archetype === 'code_editor') {
+        return (
+            <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#10b98118_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F0FDF4] via-[#F8FAFC] to-[#E6F4EA] p-6 flex items-center justify-center relative select-none">
+                <div className="absolute w-48 h-48 bg-emerald-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div className="relative">
+                    {/* IDE Mockup */}
+                    <motion.div
+                        initial={{ y: 8, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-[230px] sm:w-[250px] bg-[#0D1117] rounded-[26px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 font-mono space-y-2.5"
+                    >
+                        {/* Editor Header */}
+                        <div className="flex items-center justify-between pb-1.5 border-b border-slate-800">
+                            <div className="flex items-center gap-1.5">
+                                <span className="w-2 h-2 rounded-full bg-red-400"></span>
+                                <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+                                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span className="text-[9px] text-slate-400 ml-1">Service.tsx</span>
+                            </div>
+                            <span className="text-[8px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">v5.4</span>
+                        </div>
+
+                        {/* Code Lines */}
+                        <div className="space-y-1 text-[10px]">
+                            <div className="text-purple-400">export const <span className="text-cyan-300">AppEngine</span> = () =&gt; &#123;</div>
+                            <div className="pl-3 text-slate-400">return &lt;<span className="text-amber-300">{title.slice(0, 14)}</span></div>
+                            <div className="pl-6 text-emerald-400">fastRefresh=&#123;<span className="text-cyan-300">true</span>&#125; /&gt;;</div>
+                            <div className="text-purple-400">&#125;;</div>
+                        </div>
+
+                        <div className="flex justify-between items-center text-[8px] text-slate-500 pt-1 border-t border-slate-800 font-sans">
+                            <span>0 Errors • 0 Warnings</span>
+                            <span className="text-emerald-400 font-bold">Build OK</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Floating Badges */}
+                    <motion.div
+                        animate={{ y: [-3, 3, -3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        className="absolute -top-3 -right-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                            <Code2 size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">TypeScript Strict</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">100% Type-Safe</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ y: [3, -3, 3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                        className="absolute -bottom-3 -left-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center">
+                            <GitBranch size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">CI/CD Pipeline</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">Automated Deploy</span>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        );
+    }
+
+    // 5. DATABASE SCHEMA & SQL RELATIONS
+    if (archetype === 'database') {
+        return (
+            <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#f59e0b18_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#FFFBEB] via-[#F8FAFC] to-[#FEF3C7] p-6 flex items-center justify-center relative select-none">
+                <div className="absolute w-48 h-48 bg-amber-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div className="relative">
+                    {/* Database Console */}
+                    <motion.div
+                        initial={{ y: 8, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-[230px] sm:w-[250px] bg-[#0F172A] rounded-[26px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 font-mono space-y-2.5"
+                    >
+                        <div className="flex items-center justify-between pb-1.5 border-b border-slate-800">
+                            <span className="text-[9px] font-bold text-amber-400 flex items-center gap-1">
+                                <Database size={11} /> PostgreSQL Shards
+                            </span>
+                            <span className="text-[8px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">0.2ms Query</span>
+                        </div>
+
+                        {/* Relation Diagram */}
+                        <div className="space-y-1.5 text-[9px]">
+                            <div className="bg-slate-800/80 p-1.5 rounded-lg border border-slate-700 flex justify-between">
+                                <span className="text-cyan-300">users [PK id]</span>
+                                <span className="text-slate-400">UUID</span>
+                            </div>
+                            <div className="text-center text-amber-400 text-[8px]">▼ 1-to-Many Relation</div>
+                            <div className="bg-slate-800/80 p-1.5 rounded-lg border border-slate-700 flex justify-between">
+                                <span className="text-emerald-300">records [FK user_id]</span>
+                                <span className="text-slate-400">Indexed</span>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-between items-center text-[8px] text-slate-400 pt-1 border-t border-slate-800 font-sans">
+                            <span>ACID Compliant</span>
+                            <span className="text-emerald-400 font-bold">Zero Data Loss</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Floating Badges */}
+                    <motion.div
+                        animate={{ y: [-3, 3, -3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        className="absolute -top-3 -right-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+                            <Database size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">PostgreSQL & Redis</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">High IOPS Caching</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ y: [3, -3, 3] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                        className="absolute -bottom-3 -left-6 bg-white rounded-2xl px-3.5 py-2 shadow-[0_12px_28px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center gap-2.5 z-20"
+                    >
+                        <div className="w-7 h-7 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                            <ShieldCheck size={14} />
+                        </div>
+                        <div className="text-left">
+                            <span className="text-xs font-bold text-slate-800 block leading-tight">Automated Backups</span>
+                            <span className="text-[9px] text-slate-400 font-medium block">Point-In-Time Restore</span>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        );
+    }
+
+    // 6. SEO & SEARCH VISIBILITY
+    if (archetype === 'seo') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#10b98118_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F0FDF4] via-[#F7FEFA] to-[#EAFCF1] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-emerald-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Central SERP & Score Card */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-100 relative z-10 space-y-3"
                     >
-                        {/* Search Pill */}
                         <div className="bg-slate-50 border border-slate-200/80 rounded-full px-3 py-1.5 flex items-center gap-2 shadow-inner">
                             <Search size={13} className="text-emerald-500" />
                             <span className="text-[10px] text-slate-600 font-medium truncate flex-1">
@@ -129,21 +436,18 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <span className="text-[9px] font-black bg-emerald-500 text-white px-1.5 py-0.5 rounded-full">#1</span>
                         </div>
 
-                        {/* Result Preview */}
                         <div className="bg-emerald-50/70 border border-emerald-100/90 rounded-2xl p-2.5 space-y-1">
                             <span className="text-[9px] text-emerald-700 font-semibold block">tdc.agency › solutions</span>
                             <span className="text-xs font-bold text-slate-800 block truncate">Rank #1 Global Search</span>
                             <div className="h-1.5 w-full bg-emerald-200/60 rounded-full"></div>
                         </div>
 
-                        {/* Lighthouse Metric */}
                         <div className="flex items-center justify-between bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
                             <span className="text-[10px] font-bold text-slate-700">Lighthouse Score</span>
                             <span className="text-xs font-black text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">99/100</span>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -158,7 +462,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -177,21 +480,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 3. PPC & PAID ADS (PPC, Google Ads, Meta Ads, Display Ads, Social Ads, Performance Max)
-    if (t.includes('ppc') || t.includes('ad') || t.includes('pay-per-click') || t.includes('bidding') || t.includes('campaign')) {
+    // 7. PPC & PAID ADS
+    if (archetype === 'ppc') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#3b82f618_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#EFF6FF] via-[#F6F9FE] to-[#E9F2FE] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-blue-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Live Campaign Dashboard Mockup */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-100 relative z-10 space-y-3"
                     >
-                        {/* Status Header */}
                         <div className="flex items-center justify-between bg-blue-50/80 px-3 py-1.5 rounded-full border border-blue-100">
                             <span className="text-[10px] font-bold text-blue-700 flex items-center gap-1.5">
                                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -202,7 +503,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </span>
                         </div>
 
-                        {/* Central Metric */}
                         <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 text-center space-y-1">
                             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">Target CPA Optimised</span>
                             <span className="text-2xl font-black text-slate-800 block">$14.20</span>
@@ -211,7 +511,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </span>
                         </div>
 
-                        {/* Spend Growth Bars */}
                         <div className="flex items-end justify-between gap-1.5 px-2 pt-1">
                             {[35, 50, 70, 60, 90, 100].map((h, i) => (
                                 <div key={i} style={{ height: `${h * 0.22}px` }} className={`w-6 rounded-t-md ${i === 5 ? 'bg-blue-600 shadow-md' : 'bg-blue-200'}`}></div>
@@ -219,7 +518,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -234,7 +532,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -253,21 +550,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 4. SOCIAL MEDIA & INFLUENCER (Facebook, Instagram, LinkedIn, Twitter, SMM)
-    if (t.includes('social') || t.includes('facebook') || t.includes('instagram') || t.includes('linkedin') || t.includes('twitter') || t.includes('smm')) {
+    // 8. SOCIAL MEDIA & INFLUENCER
+    if (archetype === 'social') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#ec489918_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#FDF2F8] via-[#FEF7FB] to-[#FCE7F3] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-pink-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Social Post Feed Mockup */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[220px] sm:w-[240px] bg-white rounded-[32px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-pink-100 relative z-10 space-y-2.5"
                     >
-                        {/* Profile Row */}
                         <div className="flex items-center gap-2">
                             <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 p-0.5">
                                 <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-[9px] font-black text-pink-600">
@@ -282,13 +577,11 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </div>
                         </div>
 
-                        {/* Media Visual Area */}
                         <div className="bg-gradient-to-tr from-pink-50 via-purple-50 to-blue-50 border border-pink-100 rounded-2xl p-3 space-y-1.5">
                             <div className="h-2 w-28 bg-pink-300/70 rounded-full"></div>
                             <div className="h-1.5 w-20 bg-purple-200 rounded-full"></div>
                         </div>
 
-                        {/* Engagement Bar */}
                         <div className="flex items-center justify-between text-xs font-bold pt-1 border-t border-slate-100">
                             <span className="text-pink-500 flex items-center gap-1"><Heart size={12} className="fill-pink-500" /> 28.4K</span>
                             <span className="text-blue-500 flex items-center gap-1"><MessageSquare size={12} /> 1.8K</span>
@@ -296,7 +589,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -311,7 +603,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -330,21 +621,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 5. CONTENT MARKETING & COPYWRITING (Whitepapers, Case Studies, eBooks, Blogs, Scripts)
-    if (t.includes('content') || t.includes('writing') || t.includes('blog') || t.includes('white paper') || t.includes('case stud') || t.includes('ebook') || t.includes('script')) {
+    // 9. CONTENT WRITING & EDITORIAL
+    if (archetype === 'content') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#f59e0b18_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#FFFBEB] via-[#FEFDF6] to-[#FEF3C7] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-amber-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Notion / Editorial Sheet Mockup */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[26px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-amber-100 relative z-10 space-y-2.5"
                     >
-                        {/* Header Pill */}
                         <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
                             <span className="text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
                                 {title.slice(0, 18)}
@@ -352,7 +641,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <span className="text-[9px] font-bold text-slate-400">2,450 Words</span>
                         </div>
 
-                        {/* Highlighted text block */}
                         <div className="space-y-1.5 py-1">
                             <div className="h-2 w-full bg-slate-100 rounded-full"></div>
                             <div className="h-4 w-4/5 bg-amber-100/90 rounded-lg px-2 flex items-center">
@@ -361,14 +649,12 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <div className="h-2 w-3/5 bg-slate-100 rounded-full"></div>
                         </div>
 
-                        {/* Footer Quality Verification */}
                         <div className="flex items-center justify-between text-[9px] pt-1.5 border-t border-slate-100">
                             <span className="text-slate-500 font-medium">E-E-A-T Verified</span>
                             <span className="text-amber-700 font-bold bg-amber-50 px-2 py-0.5 rounded-full">100% Original</span>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -383,7 +669,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -402,21 +687,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 6. ECOMMERCE & STOREFRONTS (Shopify, WooCommerce, Magento, OpenCart, BigCommerce)
-    if (t.includes('ecommerce') || t.includes('e-commerce') || t.includes('shopify') || t.includes('woocommerce') || t.includes('magento') || t.includes('opencart') || t.includes('bigcommerce') || t.includes('store') || t.includes('marketplace') || t.includes('payment')) {
+    // 10. ECOMMERCE & STOREFRONTS
+    if (archetype === 'ecommerce') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#10b98118_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#ECFDF5] via-[#F6FEFA] to-[#D1FAE5] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-emerald-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Modern Storefront & Instant Checkout Card */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-emerald-100 relative z-10 space-y-3"
                     >
-                        {/* Store Header */}
                         <div className="flex items-center justify-between">
                             <div>
                                 <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">Daily Revenue Surge</span>
@@ -427,20 +710,17 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </div>
                         </div>
 
-                        {/* Instant 1-Click Buy Button */}
                         <div className="w-full bg-[#0A1024] text-white py-2 rounded-xl text-center font-bold text-xs flex items-center justify-center gap-2 shadow-md">
                             <CreditCard size={13} className="text-emerald-400" />
                             1-Click Apple Pay / Stripe
                         </div>
 
-                        {/* Security Uptime Footer */}
                         <div className="flex items-center justify-between text-[9px] text-slate-400 pt-1 border-t border-slate-100">
                             <span>99.99% Uptime</span>
                             <span className="font-bold text-emerald-600">Sub-Second Checkout</span>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -455,7 +735,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -474,21 +753,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 7. UI / UX DESIGN & GRAPHIC (Web Design, Logo, Prototyping, Wireframing)
-    if (t.includes('ui') || t.includes('ux') || t.includes('design') || t.includes('logo') || t.includes('graphic') || t.includes('wireframe') || t.includes('prototype')) {
+    // 11. UI / UX DESIGN & FIGMA CANVAS
+    if (archetype === 'design') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#8b5cf618_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F5F3FF] via-[#FAF8FF] to-[#EDE9FE] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-purple-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Figma Artboard & Design Canvas */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-purple-100 relative z-10 space-y-3"
                     >
-                        {/* Figma Header */}
                         <div className="flex items-center justify-between pb-1 border-b border-slate-100">
                             <span className="text-[10px] font-bold text-purple-700 flex items-center gap-1.5">
                                 <Palette size={12} /> Figma Design System
@@ -500,27 +777,23 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </div>
                         </div>
 
-                        {/* Interactive UI Frame with Selection Handles */}
                         <div className="bg-purple-50/70 rounded-2xl p-3 border-2 border-dashed border-purple-300/70 relative space-y-2">
                             <div className="h-5 bg-white rounded-lg border border-purple-200 shadow-sm flex items-center px-2">
                                 <div className="h-2 w-16 bg-purple-400/60 rounded-full"></div>
                             </div>
                             <div className="h-2 w-24 bg-purple-200 rounded-full"></div>
 
-                            {/* Designer Cursor */}
                             <div className="absolute -bottom-2 right-2 bg-purple-600 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
                                 <MousePointer size={9} /> Lead UI/UX
                             </div>
                         </div>
 
-                        {/* WCAG Rating */}
                         <div className="flex items-center justify-between text-[9px] text-slate-500 pt-1">
                             <span>Pixel-Perfect Rig</span>
                             <span className="font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full">WCAG AAA</span>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -535,7 +808,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -554,21 +826,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 8. GAME DEV / UNREAL / UNITY / METAVERSE / AR VR / 3D
-    if (t.includes('game') || t.includes('unity') || t.includes('unreal') || t.includes('metaverse') || t.includes('ar/vr') || t.includes('ar & vr') || t.includes('simulation') || t.includes('3d')) {
+    // 12. GAME DEVELOPMENT & 3D
+    if (archetype === 'game') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#ec489918_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#FDF2F8] via-[#F8FAFC] to-[#F1F5F9] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-pink-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Gaming Handheld Console Viewport Mockup */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[240px] sm:w-[260px] bg-[#0F172A] rounded-[36px] p-2.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-4 border-slate-700 flex items-center justify-between relative z-10"
                     >
-                        {/* Left D-Pad */}
                         <div className="flex flex-col items-center gap-1 pl-1">
                             <div className="w-2.5 h-2.5 bg-slate-600 rounded-sm"></div>
                             <div className="flex gap-1">
@@ -578,7 +848,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <div className="w-4 h-4 rounded-full bg-slate-800 border border-slate-600 mt-1"></div>
                         </div>
 
-                        {/* Center Viewport */}
                         <div className="bg-[#020617] rounded-2xl p-2.5 flex flex-col items-center justify-center border border-cyan-500/40 w-[140px] h-[130px] relative overflow-hidden">
                             <motion.div
                                 animate={{ rotate: [0, 360] }}
@@ -590,7 +859,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <span className="text-[9px] font-mono font-bold text-cyan-300 mt-1">120 FPS • 4K</span>
                         </div>
 
-                        {/* Right Buttons */}
                         <div className="flex flex-col items-center gap-1 pr-1">
                             <div className="grid grid-cols-2 gap-1">
                                 <div className="w-2.5 h-2.5 rounded-full bg-pink-500 text-[6px] text-white flex items-center justify-center">X</div>
@@ -602,7 +870,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -617,7 +884,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -636,21 +902,19 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 9. BACKEND / APIS / MICROSERVICES / DATABASE / CLOUD / SAAS / CRM / ERP
-    if (t.includes('api') || t.includes('backend') || t.includes('database') || t.includes('microservices') || t.includes('cloud') || t.includes('crm') || t.includes('erp') || t.includes('saas') || t.includes('automation') || t.includes('server')) {
+    // 13. CLOUD ARCHITECTURE & APIS
+    if (archetype === 'cloud') {
         return (
             <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#0284c718_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F0F9FF] via-[#F8FAFC] to-[#E0F2FE] p-6 flex items-center justify-center relative select-none">
                 <div className="absolute w-48 h-48 bg-cyan-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div className="relative">
-                    {/* Cloud Microservices Architecture Console */}
                     <motion.div
                         initial={{ y: 8, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-[#0B132B] rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 space-y-3 font-mono"
                     >
-                        {/* Terminal Header */}
                         <div className="flex items-center justify-between pb-1 border-b border-slate-700">
                             <div className="flex items-center gap-1.5">
                                 <span className="w-2 h-2 rounded-full bg-red-400"></span>
@@ -660,7 +924,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             <span className="text-[9px] font-bold text-emerald-400 font-sans">200 OK (12ms)</span>
                         </div>
 
-                        {/* Pipeline Node Diagram */}
                         <div className="flex items-center justify-between gap-1 py-1 font-sans">
                             <div className="bg-white/10 p-2 rounded-xl text-center flex-1">
                                 <Globe size={13} className="text-cyan-400 mx-auto" />
@@ -678,14 +941,12 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                             </div>
                         </div>
 
-                        {/* Fault Tolerance Footer */}
                         <div className="flex items-center justify-between text-[9px] text-slate-400 pt-1 font-sans">
                             <span>99.999% Reliability</span>
                             <span className="text-emerald-400 font-bold">100k+ req/sec</span>
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 1 (Top Right) */}
                     <motion.div
                         animate={{ y: [-3, 3, -3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -700,7 +961,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </motion.div>
 
-                    {/* Floating Badge 2 (Bottom Left) */}
                     <motion.div
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
@@ -719,20 +979,18 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
         );
     }
 
-    // 10. FRONTEND / JAVASCRIPT / REACT / VUE / ANGULAR / PHP / WORDPRESS / CMS
+    // 14. MODERN BROWSER WINDOW (Default / Web)
     return (
         <div className="w-full h-full min-h-[300px] bg-[radial-gradient(#3b82f618_1px,transparent_1px)] [background-size:16px_16px] bg-gradient-to-b from-[#F0F7FF] via-[#F8FAFC] to-[#E6F0FA] p-6 flex items-center justify-center relative select-none">
             <div className="absolute w-48 h-48 bg-blue-300/30 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="relative">
-                {/* Modern Browser Window Mockup */}
                 <motion.div
                     initial={{ y: 8, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
                     className="w-[230px] sm:w-[250px] bg-white rounded-[26px] shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-200/90 overflow-hidden relative z-10"
                 >
-                    {/* Browser Nav */}
                     <div className="bg-slate-100/90 px-3 py-2 border-b border-slate-200 flex items-center gap-1.5">
                         <span className="w-2 h-2 rounded-full bg-rose-400"></span>
                         <span className="w-2 h-2 rounded-full bg-amber-400"></span>
@@ -742,7 +1000,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                         </div>
                     </div>
 
-                    {/* Web Content */}
                     <div className="p-3.5 space-y-2 bg-[#FAFCFF]">
                         <div className="bg-blue-50/80 border border-blue-100 rounded-xl p-2 flex items-center justify-between">
                             <div>
@@ -758,7 +1015,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                     </div>
                 </motion.div>
 
-                {/* Floating Badge 1 (Top Right) */}
                 <motion.div
                     animate={{ y: [-3, 3, -3] }}
                     transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -773,7 +1029,6 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                     </div>
                 </motion.div>
 
-                {/* Floating Badge 2 (Bottom Left) */}
                 <motion.div
                     animate={{ y: [3, -3, 3] }}
                     transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
