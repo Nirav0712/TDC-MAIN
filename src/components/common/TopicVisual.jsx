@@ -59,8 +59,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[200px] sm:w-[220px] bg-[#0E1726] rounded-[42px] p-2.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.25)] border-4 border-[#1E293B] relative z-10"
                     >
@@ -144,8 +144,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                 <div className="relative">
                     {/* Watch Frame */}
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[185px] sm:w-[200px] bg-[#0A0E1A] rounded-[46px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-4 border-slate-600 text-white relative z-10"
                     >
@@ -212,8 +212,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                 <div className="relative">
                     {/* Tablet Landscape Frame */}
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[240px] sm:w-[260px] bg-[#1E1B2E] rounded-[30px] p-3 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.25)] border-4 border-slate-700 relative z-10"
                     >
@@ -279,8 +279,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                 <div className="relative">
                     {/* IDE Mockup */}
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-[#0D1117] rounded-[26px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 font-mono space-y-2.5"
                     >
@@ -351,8 +351,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
                 <div className="relative">
                     {/* Database Console */}
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-[#0F172A] rounded-[26px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 font-mono space-y-2.5"
                     >
@@ -423,8 +423,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-100 relative z-10 space-y-3"
                     >
@@ -488,8 +488,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-100 relative z-10 space-y-3"
                     >
@@ -558,8 +558,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[220px] sm:w-[240px] bg-white rounded-[32px] p-3.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-pink-100 relative z-10 space-y-2.5"
                     >
@@ -629,8 +629,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[26px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-amber-100 relative z-10 space-y-2.5"
                     >
@@ -695,8 +695,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-emerald-100 relative z-10 space-y-3"
                     >
@@ -761,8 +761,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-white rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-purple-100 relative z-10 space-y-3"
                     >
@@ -834,8 +834,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[240px] sm:w-[260px] bg-[#0F172A] rounded-[36px] p-2.5 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-4 border-slate-700 flex items-center justify-between relative z-10"
                     >
@@ -910,8 +910,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
                 <div className="relative">
                     <motion.div
-                        initial={{ y: 8, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
+                        initial={{ opacity: 1 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="w-[230px] sm:w-[250px] bg-[#0B132B] rounded-[28px] p-4 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)] border-2 border-slate-700 text-white relative z-10 space-y-3 font-mono"
                     >
@@ -986,8 +986,8 @@ export const TopicVisual = ({ title = '', index = 0, cta = '' }) => {
 
             <div className="relative">
                 <motion.div
-                    initial={{ y: 8, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
+                    initial={{ opacity: 1 }}
+                    animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
                     className="w-[230px] sm:w-[250px] bg-white rounded-[26px] shadow-[0_25px_50px_-12px_rgba(15,23,42,0.18)] border-2 border-slate-200/90 overflow-hidden relative z-10"
                 >

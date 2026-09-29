@@ -1,3 +1,4 @@
+import TopicVisual from '../../common/TopicVisual';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -107,16 +108,15 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
                                 })}
                             </div>
 
-                            {/* Right Featured Image with Offset Floating Frame */}
-                            {currentItem.image && (
-                                <div className="relative w-[280px] lg:w-[310px] shrink-0 self-center hidden lg:block my-auto">
-                                    {/* Offset floating border box */}
-                                    <div className="absolute -top-2.5 -right-2.5 w-full h-full border-2 border-[#0B3A60]/40 rounded-2xl pointer-events-none"></div>
-                                    {/* Image */}
-                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
-                                    </div>
+                            {/* Right Featured Interactive Topic Visual */}
+                            <div className="relative w-[300px] lg:w-[330px] shrink-0 self-center hidden lg:block my-auto">
+                                {/* Offset floating border box */}
+                                <div className="absolute -top-2.5 -right-2.5 w-full h-full border-2 border-[#0B3A60]/30 rounded-2xl pointer-events-none z-0"></div>
+                                {/* Interactive Topic Visual Container */}
+                                <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 z-10 bg-white min-h-[270px] flex items-center justify-center">
+                                    <TopicVisual key={currentItem.id} title={currentItem.heading || currentItem.label} />
                                 </div>
-                            )}
+                            </div>
                         </div>
                     </motion.div>
                 </AnimatePresence>
