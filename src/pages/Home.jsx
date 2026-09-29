@@ -3,13 +3,13 @@ import Hero from '../components/home/Hero';
 // import ClientLogos from '../components/home/ClientLogos';
 import AboutPreview from '../components/home/AboutPreview';
 import Services from '../components/home/Services';
-import FeaturedWork from '../components/home/FeaturedWork';
+// import FeaturedWork from '../components/home/FeaturedWork';
 import Industries from '../components/home/Industries';
 import WhyChooseUs from '../components/sections/WhyChooseUs';
 import Process from '../components/home/Process';
 import Technologies from '../components/home/Technologies';
-import CaseStudies from '../components/home/CaseStudies';
-import Testimonials from '../components/home/Testimonials';
+// import CaseStudies from '../components/home/CaseStudies';
+// import Testimonials from '../components/home/Testimonials';
 import BlogPreview from '../components/home/BlogPreview';
 import FinalCTA from '../components/home/FinalCTA';
 
@@ -20,13 +20,13 @@ const Home = () => {
       {/* <ClientLogos /> */}
       <AboutPreview />
       <Services />
-      <FeaturedWork />
+      {/* <FeaturedWork /> */}
       <Industries />
       <WhyChooseUs />
       <Process />
       <Technologies />
-      <CaseStudies />
-      <Testimonials />
+      {/* <CaseStudies /> */}
+      {/* <Testimonials /> */}
       <BlogPreview />
       <FinalCTA />
     </div>

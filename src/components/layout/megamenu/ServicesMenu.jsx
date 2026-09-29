@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Smartphone, PenTool, ShoppingCart, Monitor, TrendingUp, ArrowRight } from 'lucide-react';
+import {
+    Code, Smartphone, PenTool, ShoppingCart, Monitor, TrendingUp,
+    Terminal, Layers, Globe, Database, ShieldCheck, Cpu, Layout,
+    Search, Share2, FileText, ArrowRight, Sparkles, CheckCircle2, Gamepad2
+} from 'lucide-react';
 
-const icons = {
-    Code, Smartphone, PenTool, ShoppingCart, Monitor, TrendingUp
+const getSubIcon = (title) => {
+    const t = title.toLowerCase();
+    if (t.includes('game') || t.includes('unity') || t.includes('unreal') || t.includes('metaverse')) return Gamepad2;
+    if (t.includes('ios') || t.includes('android') || t.includes('mobile') || t.includes('hybrid')) return Smartphone;
+    if (t.includes('design') || t.includes('ui') || t.includes('ux') || t.includes('logo') || t.includes('graphic')) return PenTool;
+    if (t.includes('shop') || t.includes('commerce') || t.includes('magento') || t.includes('opencart')) return ShoppingCart;
+    if (t.includes('seo') || t.includes('marketing') || t.includes('ppc') || t.includes('social')) return TrendingUp;
+    if (t.includes('api') || t.includes('backend') || t.includes('database') || t.includes('cloud')) return Database;
+    if (t.includes('crm') || t.includes('erp') || t.includes('saas') || t.includes('automation')) return Layers;
+    return Code;
 };
 
 const ServicesMenu = ({ data, setActiveMenu }) => {
-    const [activeId, setActiveId] = useState(data.items[0].id);
+    const [activeId, setActiveId] = useState(data.items[0]?.id || 'web-development');
 
     useEffect(() => {
         if (data.items && data.items.length > 0) {
@@ -17,16 +29,13 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
     }, [data]);
 
     const currentItem = data.items.find(i => i.id === activeId) || data.items[0];
-    const ActiveIcon = icons[currentItem.icon] || Code;
 
     return (
-        <div className="flex w-full h-full min-h-[460px]">
-            {/* Left Services Nav */}
-            <div className="w-[340px] shrink-0 bg-brand-primary-navy p-6 flex flex-col gap-2 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.2)] relative z-20">
-                <h4 className="text-xs font-bold tracking-widest uppercase text-white/50 mb-4 px-4 sm:px-6">Our Services</h4>
+        <div className="flex w-full min-h-[460px] bg-white overflow-hidden">
+            {/* Left Categories Sidebar (Navy/Blue) */}
+            <div className="w-[280px] shrink-0 bg-[#0B3A60] py-6 px-3 flex flex-col justify-start relative z-20 gap-1.5 shadow-[inset_-8px_0_16px_rgba(0,0,0,0.15)]">
                 {data.items.map((item) => {
                     const isActive = activeId === item.id;
-                    const Icon = icons[item.icon] || Code;
                     return (
                         <div
                             key={item.id}
@@ -36,75 +45,83 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
                             <Link
                                 to={item.href}
                                 onClick={() => setActiveMenu(null)}
-                                className={`flex items-center justify-between px-4 sm:px-6 py-3.5 rounded-xl transition-all duration-300 relative overflow-hidden group ${isActive ? 'bg-white/10' : 'hover:bg-white/5'}`}
+                                className={`flex items-center px-4 py-3 rounded-lg text-[14px] font-semibold transition-all duration-200 ${
+                                    isActive
+                                        ? 'bg-white text-[#0B3A60] font-bold shadow-md'
+                                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                                }`}
                             >
-                                <div className="flex items-center gap-3 relative z-10">
-                                    <div className={`p-1.5 rounded-lg transition-colors ${isActive ? 'bg-brand-cyan text-brand-primary-navy' : 'bg-white/5 text-white/70 group-hover:bg-white/10 group-hover:text-white'}`}>
-                                        <Icon className="w-4 h-4" />
-                                    </div>
-                                    <span className={`text-[15px] font-semibold transition-colors ${isActive ? 'text-white' : 'text-white/70 group-hover:text-white'}`}>
-                                        {item.label}
-                                    </span>
-                                </div>
-                                {isActive && (
-                                    <motion.div layoutId="services-indicator" className="absolute left-0 top-0 bottom-0 w-1 bg-brand-cyan rounded-r-full" />
-                                )}
+                                <span>{item.label}</span>
                             </Link>
                         </div>
                     );
                 })}
             </div>
 
-            {/* Right Capability List */}
-            <div className="flex-1 bg-white p-10 xl:p-14 relative z-10 flex">
+            {/* Right Main Content Area */}
+            <div className="flex-1 bg-white p-8 lg:p-10 relative z-10 flex flex-col justify-between">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentItem.id}
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -15 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.2 }}
                         className="flex flex-col w-full h-full"
                     >
-                        <div className="flex items-start justify-between mb-8">
-                            <div className="max-w-md">
-                                <h3 className="text-3xl font-heading font-extrabold text-brand-primary-navy mb-3">
-                                    {currentItem.heading}
-                                </h3>
-                                <p className="text-brand-text-muted leading-relaxed">
-                                    {currentItem.description}
-                                </p>
-                            </div>
-                            <div className="w-16 h-16 rounded-2xl bg-brand-bg-light flex items-center justify-center shrink-0">
-                                <ActiveIcon className="w-8 h-8 text-brand-cyan" />
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-10 mt-2">
-                            {currentItem.subServices?.map((sub, idx) => (
-                                <Link
-                                    key={idx}
-                                    to={sub.href}
-                                    onClick={() => setActiveMenu(null)}
-                                    className="group flex items-center p-4 rounded-xl border border-brand-border bg-white hover:border-brand-cyan hover:shadow-md hover:shadow-brand-cyan/5 transition-all duration-300"
-                                >
-                                    <div className="w-1.5 h-1.5 rounded-full bg-brand-text-muted/30 group-hover:bg-brand-cyan transition-colors mr-3"></div>
-                                    <span className="font-semibold text-brand-primary-navy/80 text-sm group-hover:text-brand-primary-navy transition-colors flex-1">
-                                        {sub.title}
-                                    </span>
-                                    <ArrowRight className="w-4 h-4 text-brand-text-muted opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-brand-cyan transition-all duration-300" />
-                                </Link>
-                            ))}
-                        </div>
-
-                        <div className="mt-auto">
+                        {/* Heading */}
+                        <div className="mb-6 pb-2 border-b border-slate-100 flex items-center justify-between">
+                            <h3 className="text-2xl lg:text-3xl font-heading font-extrabold text-[#0B3A60] tracking-tight">
+                                {currentItem.heading}
+                            </h3>
                             <Link
                                 to={currentItem.href}
                                 onClick={() => setActiveMenu(null)}
-                                className="inline-flex items-center gap-2 text-sm font-bold text-brand-primary-navy border-2 border-brand-primary-navy px-3.5 py-3 rounded-full hover:bg-brand-primary-navy hover:text-white transition-all duration-300"
+                                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 hover:text-cyan-700 transition-colors uppercase tracking-wider"
                             >
-                                Explore {currentItem.label} <ArrowRight className="w-4 h-4" />
+                                View All Services <ArrowRight size={14} />
                             </Link>
+                        </div>
+
+                        {/* Content Grid: 2 Columns of Subservices + Featured Framed Image */}
+                        <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto] gap-8 items-start flex-1">
+                            {/* 2-Column Subservices List */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 py-2">
+                                {currentItem.subServices?.map((sub, idx) => {
+                                    const SubIcon = getSubIcon(sub.title);
+                                    return (
+                                        <Link
+                                            key={idx}
+                                            to={sub.href}
+                                            onClick={() => setActiveMenu(null)}
+                                            className="group flex items-center gap-3.5 p-1.5 rounded-xl hover:bg-slate-50 transition-all duration-200"
+                                        >
+                                            <div className="w-8 h-8 rounded-full bg-[#0B3A60] text-white flex items-center justify-center shrink-0 shadow-sm group-hover:bg-cyan-600 group-hover:scale-105 transition-all">
+                                                <SubIcon className="w-4 h-4" />
+                                            </div>
+                                            <span className="font-semibold text-[14px] text-slate-800 group-hover:text-cyan-600 transition-colors">
+                                                {sub.title}
+                                            </span>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Right Featured Image with Offset Floating Frame */}
+                            {currentItem.image && (
+                                <div className="relative w-[280px] lg:w-[310px] shrink-0 self-center hidden lg:block my-auto">
+                                    {/* Offset floating border box */}
+                                    <div className="absolute -top-2.5 -right-2.5 w-full h-full border-2 border-[#0B3A60]/40 rounded-2xl pointer-events-none"></div>
+                                    {/* Image */}
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
+                                        <img
+                                            src={currentItem.image}
+                                            alt={currentItem.heading}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 </AnimatePresence>

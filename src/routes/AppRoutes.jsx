@@ -112,6 +112,12 @@ import SEO from '../pages/services/digital-marketing/SEO';
 import PPC from '../pages/services/digital-marketing/PPC';
 import SocialMedia from '../pages/services/digital-marketing/SocialMedia';
 import ContentMarketing from '../pages/services/digital-marketing/ContentMarketing';
+import GameDevelopment from '../pages/services/GameDevelopment';
+import AndroidGameDevelopment from '../pages/services/game-development/AndroidGameDevelopment';
+import UnityGameDevelopment from '../pages/services/game-development/UnityGameDevelopment';
+import IOSGameDevelopment from '../pages/services/game-development/IOSGameDevelopment';
+import MetaverseDevelopment from '../pages/services/game-development/MetaverseDevelopment';
+import UnrealGameDevelopment from '../pages/services/game-development/UnrealGameDevelopment';
 
 const AppRoutes = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -228,10 +234,18 @@ const AppRoutes = () => {
                     <Route path="/services/software-development/business-automation" element={<BusinessAutomation />} />
                     <Route path="/services/software-development/api-development" element={<APIDevelopment />} />
                     <Route path="/services/digital-marketing/seo" element={<SEO />} />
+                    <Route path="/services/digital-marketing/professional-seo-services" element={<Navigate to="/services/digital-marketing/seo" replace />} />
                     <Route path="/services/digital-marketing/ppc" element={<PPC />} />
                     <Route path="/services/digital-marketing/social-media" element={<SocialMedia />} />
                     <Route path="/services/digital-marketing/content-marketing" element={<ContentMarketing />} />
+                    <Route path="/services/digital-marketing/content-writing-services" element={<Navigate to="/services/digital-marketing/content-marketing" replace />} />
                     <Route path="/services/digital-marketing/performance-marketing" element={<Navigate to="/services/digital-marketing" replace />} />
+                    <Route path="/services/game-development" element={<GameDevelopment />} />
+                    <Route path="/services/game-development/android-game-development" element={<AndroidGameDevelopment />} />
+                    <Route path="/services/game-development/unity-game-development" element={<UnityGameDevelopment />} />
+                    <Route path="/services/game-development/ios-game-development" element={<IOSGameDevelopment />} />
+                    <Route path="/services/game-development/metaverse-development" element={<MetaverseDevelopment />} />
+                    <Route path="/services/game-development/unreal-game-development" element={<UnrealGameDevelopment />} />
 
                     {HireRoutes().props.children}
 

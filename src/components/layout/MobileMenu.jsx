@@ -9,7 +9,7 @@ const navOrder = [
     { label: 'Company', id: 'company' },
     { label: 'Services', id: 'services' },
     { label: 'Industries', id: 'industries' },
-    { label: 'Portfolio', id: 'portfolio' },
+    // { label: 'Portfolio', id: 'portfolio' },
     { label: 'Process', id: 'process' },
     { label: 'Hire Team', id: 'hire-team' },
     { label: 'Careers', id: 'careers' }

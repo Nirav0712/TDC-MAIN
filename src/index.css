@@ -450,3 +450,53 @@ section {
     gap: 20px !important;
   }
 }
+
+/* =========================================================
+   DESKTOP VIEW: OPTIMIZE & REDUCE RIGHT / LEFT PADDING
+   (Strictly applies only on Desktop min-width: 1024px)
+   ========================================================= */
+@media (min-width: 1024px) {
+  /* Reduce container and section horizontal padding across desktop */
+  .lg\:px-8,
+  .lg\:px-6,
+  .lg\:px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .lg\:px-10,
+  .lg\:px-12 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .lg\:px-16,
+  .lg\:px-20,
+  .lg\:px-24 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .xl\:px-8,
+  .xl\:px-6 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .xl\:px-10,
+  .xl\:px-12 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .xl\:px-16,
+  .xl\:px-20 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .\32 xl\:px-8 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}

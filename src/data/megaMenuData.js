@@ -46,6 +46,7 @@ export const megaMenuData = {
                 heading: "Web & CMS Development",
                 description: "Build fast, scalable and high-performing digital experiences designed around your business goals.",
                 icon: "Code",
+                image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
                 href: "/services/web-development",
                 subServices: [
                     { title: "CakePHP Development", href: "/services/web-development/cakephp-development" },
@@ -64,6 +65,7 @@ export const megaMenuData = {
                 heading: "Mobile App Development",
                 description: "Create seamless mobile experiences for iOS and Android.",
                 icon: "Smartphone",
+                image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=600",
                 href: "/services/mobile-app-development",
                 subServices: [
                     { title: "iOS Development", href: "/services/mobile-app-development/ios-development" },
@@ -77,6 +79,7 @@ export const megaMenuData = {
                 heading: "Designing Services",
                 description: "Create memorable brands, captivating graphics, and intuitive digital experiences that convert.",
                 icon: "PenTool",
+                image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=600",
                 href: "/services/ui-ux-design",
                 subServices: [
                     { title: "Graphic Designing Services", href: "/services/ui-ux-design/graphic-design" },
@@ -91,6 +94,7 @@ export const megaMenuData = {
                 heading: "eCommerce Development",
                 description: "Create high-converting eCommerce storefronts and marketplace solutions.",
                 icon: "ShoppingCart",
+                image: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=600",
                 href: "/services/ecommerce-development",
                 subServices: [
                     { title: "Magento Development", href: "/services/ecommerce-development/magento-development" },
@@ -101,32 +105,51 @@ export const megaMenuData = {
                 ]
             },
             {
-                id: "software-development",
-                label: "Software Development",
-                heading: "Custom Software Development",
-                description: "Build scalable software solutions, SaaS products, and custom enterprise tools.",
-                icon: "Monitor",
-                href: "/services/software-development",
+                id: "javascript-development",
+                label: "JavaScript Development",
+                heading: "JavaScript Development",
+                description: "Build robust, scalable, and dynamic web applications with cutting-edge JavaScript frameworks and technologies.",
+                icon: "Code",
+                image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=600",
+                href: "/hire-team/javascript-developers",
                 subServices: [
-                    { title: "CRM Development", href: "/services/software-development/crm" },
-                    { title: "ERP Solutions", href: "/services/software-development/erp" },
-                    { title: "SaaS Product Engineering", href: "/services/software-development/saas" },
-                    { title: "Business Automation", href: "/services/software-development/business-automation" },
-                    { title: "API Development", href: "/services/software-development/api-development" }
+                    { title: "Angularjs Development", href: "/hire-team/javascript-developers/angular-developer" },
+                    { title: "Expressjs Development", href: "/hire-team/javascript-developers/express-js-developer" },
+                    { title: "Meteorjs Development", href: "/hire-team/javascript-developers" },
+                    { title: "Nodejs Development", href: "/hire-team/javascript-developers/node-js-developer" },
+                    { title: "Reactjs Development", href: "/hire-team/javascript-developers/react-developer" },
+                    { title: "Vuejs Development", href: "/hire-team/javascript-developers/vue-js-developer" }
+                ]
+            },
+            {
+                id: "game-development",
+                label: "Game Development",
+                heading: "Game Development",
+                description: "Create immersive 2D, 3D, AR/VR, and Metaverse gaming experiences across mobile, console, and web platforms.",
+                icon: "Gamepad2",
+                image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600",
+                href: "/services/game-development",
+                subServices: [
+                    { title: "Android Game Development", href: "/services/game-development/android-game-development" },
+                    { title: "Unity Game Development", href: "/services/game-development/unity-game-development" },
+                    { title: "iOS Game Development", href: "/services/game-development/ios-game-development" },
+                    { title: "Metaverse Development", href: "/services/game-development/metaverse-development" },
+                    { title: "Unreal Game Development", href: "/services/game-development/unreal-game-development" }
                 ]
             },
             {
                 id: "digital-marketing",
                 label: "Digital Marketing",
                 heading: "Digital Marketing",
-                description: "Grow your online presence with data-driven marketing, SEO, and paid campaigns.",
+                description: "Grow your online presence with data-driven marketing, SEO, PPC, social media, and compelling content writing.",
                 icon: "TrendingUp",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
                 href: "/services/digital-marketing",
                 subServices: [
-                    { title: "SEO Services", href: "/services/digital-marketing/seo" },
+                    { title: "Professional SEO Services", href: "/services/digital-marketing/seo" },
                     { title: "PPC Services", href: "/services/digital-marketing/ppc" },
                     { title: "Social Media Marketing", href: "/services/digital-marketing/social-media" },
-                    { title: "Content Marketing", href: "/services/digital-marketing/content-marketing" }
+                    { title: "Content Writing Services", href: "/services/digital-marketing/content-marketing" }
                 ]
             }
         ]

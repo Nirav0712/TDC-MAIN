@@ -24,64 +24,71 @@ const MobileDevelopment = () => {
     useSEO({
         "title": "Custom Mobile App Development Company | The Digital Connect",
         "description": "The Digital Connect delivers full-cycle mobile app development services for iOS, Android, and cross-platform applications with scalable architectures."
-});
+    });
 
-    const theme = {"accent":"text-brand-electric-cyan","bg":"bg-brand-electric-cyan/20","softBg":"bg-brand-periwinkle/20"};
+    const theme = { "accent": "text-brand-electric-cyan", "bg": "bg-brand-electric-cyan/20", "softBg": "bg-brand-periwinkle/20" };
 
     const services = [
-            {
-                title: "iOS Application Development",
-                icon: <Apple className="w-8 h-8" />,
-                imgUrl: "/images/ios_custom_dev.png",
-                cta: "Explore iOS App Services",
-                link: "/services/mobile-app-development/ios-development",
-                paragraphs: [
-                    "iOS applications represent the highest benchmark of performance, security, and consumer loyalty. At The Digital Connect, we build native iPhone, iPad, Apple Watch, and Apple TV applications utilizing Swift and SwiftUI.",
-                    "Our developers follow Apple's Human Interface Guidelines strictly, ensuring your mobile application delivers smooth 120Hz interactions, seamless biometric authentication, and deep integration with native Apple frameworks such as CoreML, HealthKit, and ARKit."
-]
-            },
-            {
-                title: "Android Application Development",
-                icon: <Smartphone className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1607252654015-f85df1fac051?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Android App Services",
-                link: "/services/mobile-app-development/android-development",
-                paragraphs: [
-                    "Android commands the largest global smartphone market share across thousands of unique device manufacturers. The Digital Connect engineers robust Kotlin applications designed to navigate hardware fragmentation effortlessly.",
-                    "By implementing modern Material Design systems and asynchronous Kotlin Coroutines, we build responsive Android solutions that offer consistent performance on both flagship smartphones and budget devices."
-]
-            },
-            {
-                title: "Hybrid & Cross-Platform Apps",
-                icon: <Combine className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Hybrid App Services",
-                link: "/services/mobile-app-development/hybrid-app-development",
-                paragraphs: [
-                    "Reduce your time to market and development expenses with cross-platform frameworks like Flutter and React Native. The Digital Connect builds unified mobile applications sharing a single codebase across iOS and Android.",
-                    "Our hybrid applications provide near-native compilation speeds, fluid 60fps graphical rendering, and seamless native module bridging without compromising user experience or brand integrity."
-]
-            },
-            {
-                title: "Enterprise Mobile Solutions",
-                icon: <Briefcase className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-                cta: "Consult Our Mobile Architects",
-                link: "/contact",
-                paragraphs: [
-                    "Modern enterprises require robust mobile platforms for internal workforce productivity, remote field operations, and real-time operational oversight. The Digital Connect crafts secure enterprise mobile platforms.",
-                    "We implement single sign-on (SSO), end-to-end data encryption, role-based access control (RBAC), and custom enterprise API integrations that keep your corporate data secure while empowering your distributed teams."
-]
-            }
+        {
+            title: "iOS Application Development",
+            icon: <Apple className="w-8 h-8" />,
+            imgUrl: "/images/ios_custom_dev.png",
+            cta: "Explore iOS App Services",
+            link: "/services/mobile-app-development/ios-development",
+            paragraphs: [
+                "Being a reliable mobile app development company, we help you fulfill your app’s requirements. Our dexterous team of skilled developers makes us a top iOS app development firm worldwide. We help you become competitive and challenging among your competitors. Our long years of expertise have delivered comprehensive, reliable, and highly secured solutions to different business verticals. Our avid iOS developers know all the modern programming languages and tools that help them develop interactive and innovative applications.",
+
+                "We are a strong team of industry-veteran programmers having expertise and knowledge of the latest methodologies and technologies. We are committed to serving business-centric and highly profitable app development solutions in the set timeframe. If you want to meet the ever-changing demand of today’s iOS app users, we are the one-stop destination for you. Our solutions are coded by professional UI/UX designers, quality analysts, and expert developers. Connect with us for affordable iOS app solutions."
+            ],
+        },
+        {
+            title: "Android Application Development",
+            icon: <Smartphone className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1607252654015-f85df1fac051?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Android App Services",
+            link: "/services/mobile-app-development/android-development",
+            paragraphs: [
+                "Do you want to experience innovation and creativity? Are you seeking a reliable and highly affordable Android app development company? We are here to assist you with our in-depth technical expertise and experience. Our experienced Android app developers are serving the best apps to industry domains.",
+
+                "With a specialized team, we create robust and well-researched apps for your business to make it profitable and competitive. We assure to offer high-performing and robust solutions. Our developers know the Android platform’s security cracks; we utilize full security protocols and tools to resolve these cracks.",
+
+                "We ensure the smooth flow of the app’s architecture and strong security layers throughout the development. Maintaining transparency is our major advantage. To get your trust in our app development process, we report to you regularly and update you on the project’s progress."
+            ],
+        },
+        {
+            title: "Hybrid & Cross-Platform Apps",
+            icon: <Combine className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Hybrid App Services",
+            link: "/services/mobile-app-development/hybrid-app-development",
+            paragraphs: [
+                "Do you need an app that can run seamlessly across the iOS and Android platforms within a limited budget? A hybrid app is the best answer. It is a blend of web and native apps and offers a cross-platform experience and highly scalable robust features in a fully customized mobile app.",
+
+                "Hybrid app development includes native app capabilities and features and also serves to put developers and businesses on the way toward the acceptance of HTML5 app development. We are the top mobile app development company and have a proven track record of delivering highly functional and innovative hybrid app solutions to our clients.",
+
+                "Our developers use modern technologies to bring ideas into reality. We ensure optimum user experience. The hybrid applications we create offer seamless functionality and load faster as well. Our proficient designers create apps that are aesthetically interactive and appealing. We keep our clients on top priority and deliver the work on or before time."
+            ],
+        },
+        //             {
+        //                 title: "Enterprise Mobile Solutions",
+        //                 icon: <Briefcase className="w-8 h-8" />,
+        //                 imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+        //                 cta: "Consult Our Mobile Architects",
+        //                 link: "/contact",
+        //                 paragraphs: [
+        //                     "Modern enterprises require robust mobile platforms for internal workforce productivity, remote field operations, and real-time operational oversight. The Digital Connect crafts secure enterprise mobile platforms.",
+        //                     "We implement single sign-on (SSO), end-to-end data encryption, role-based access control (RBAC), and custom enterprise API integrations that keep your corporate data secure while empowering your distributed teams."
+        // ]
+        //             }
     ];
 
     const processSteps = [
-            { title: "Discovery & Strategy", desc: "We evaluate your business goals, target audience, and functional requirements to craft an actionable product roadmap." },
-            { title: "UI/UX Prototyping", desc: "Our design team crafts intuitive wireframes and interactive prototypes that follow platform-specific design guidelines." },
-            { title: "Agile Development", desc: "Experienced engineers write modular, secure, and clean code to bring application features to life incrementally." },
-            { title: "Comprehensive QA", desc: "Rigorous automated and manual testing across real devices guarantees bug-free performance and stability." },
-            { title: "Store Launch & Deployment", desc: "We handle complete App Store and Google Play submission protocols, ensuring rapid approval." },
-            { title: "Continuous Optimization", desc: "Ongoing monitoring, feature enhancements, OS compatibility upgrades, and 24/7 technical support." }
+        { title: "Discovery & Strategy", desc: "We evaluate your business goals, target audience, and functional requirements to craft an actionable product roadmap." },
+        { title: "UI/UX Prototyping", desc: "Our design team crafts intuitive wireframes and interactive prototypes that follow platform-specific design guidelines." },
+        { title: "Agile Development", desc: "Experienced engineers write modular, secure, and clean code to bring application features to life incrementally." },
+        { title: "Comprehensive QA", desc: "Rigorous automated and manual testing across real devices guarantees bug-free performance and stability." },
+        { title: "Store Launch & Deployment", desc: "We handle complete App Store and Google Play submission protocols, ensuring rapid approval." },
+        { title: "Continuous Optimization", desc: "Ongoing monitoring, feature enhancements, OS compatibility upgrades, and 24/7 technical support." }
     ];
 
     const industries = [
@@ -110,7 +117,7 @@ const MobileDevelopment = () => {
         "Proven track record delivering scalable mobile architectures"
     ];
 
-    const technologies = ["Swift","SwiftUI","Kotlin","Java","Flutter","React Native","Objective-C","Xcode","Android Studio","Firebase","GraphQL","REST APIs","SQLite","Realm","TestFlight"];
+    const technologies = ["Swift", "SwiftUI", "Kotlin", "Java", "Flutter", "React Native", "Objective-C", "Xcode", "Android Studio", "Firebase", "GraphQL", "REST APIs", "SQLite", "Realm", "TestFlight"];
 
     return (
         <PageTransition>
@@ -129,7 +136,7 @@ const MobileDevelopment = () => {
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Innovative Mobile Engineering</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                 Transforming Business Ideas into Impactful Mobile Experiences

@@ -10,7 +10,8 @@ import {
     Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
     Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
     Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart,
+    MapPin, RefreshCw, Trophy
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -22,95 +23,147 @@ const fadeIn = {
 
 const SEO = () => {
     useSEO({
-        "title": "Professional SEO Services Company | The Digital Connect",
-        "description": "The Digital Connect delivers technical, on-page, off-page, and local SEO services engineered to dominate search rankings and drive inbound leads."
-});
+        title: "Professional SEO Services Company | Search Engine Optimization | The Digital Connect",
+        description: "Dominate Google search results with professional SEO services. The Digital Connect delivers technical SEO audits, semantic keyword optimization, link building, and local SEO."
+    });
 
-    const theme = {"accent":"text-brand-blue","bg":"bg-brand-blue/20","softBg":"bg-brand-cyan/10"};
+    const theme = { accent: "text-cyan-600", bg: "bg-cyan-500/20", softBg: "bg-cyan-50" };
 
     const services = [
-            {
-                title: "Technical SEO Optimization",
-                icon: <Zap className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-                cta: "Fix Technical SEO",
-                
-                paragraphs: [
-                    "Eliminate technical hurdles preventing Google from indexing your pages. We resolve redirect chains, canonical errors, broken links, and duplicate content.",
-                    "We optimize Core Web Vitals (LCP, INP, CLS) to ensure your website passes Google's mobile-first performance benchmarks."
-]
-            },
-            {
-                title: "On-Page & Semantic SEO",
-                icon: <FileText className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-                cta: "Optimize On-Page SEO",
-                
-                paragraphs: [
-                    "Align every page with modern NLP (Natural Language Processing) and semantic search algorithms. We optimize heading hierarchies, image alt tags, and body copy.",
-                    "Implement JSON-LD structured data schema (Organization, Product, FAQ, Article) to capture rich snippets in search results."
-]
-            },
-            {
-                title: "Local SEO & Google Business Profile",
-                icon: <Map className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-                cta: "Dominate Local Search",
-                
-                paragraphs: [
-                    "Dominate local Google Map Pack rankings and attract nearby customers. We optimize your Google Business Profile, manage local citations, and generate reviews.",
-                    "Ideal for multi-location enterprises, healthcare clinics, legal firms, and local service providers seeking nearby clients."
-]
-            },
-            {
-                title: "eCommerce SEO",
-                icon: <ShoppingCart className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=800",
-                cta: "Grow Store Rankings",
-                
-                paragraphs: [
-                    "Drive organic shoppers directly to your product and category pages on Shopify, WooCommerce, or custom platforms.",
-                    "We optimize faceted navigation, product schema markup, customer reviews, and category copy to outrank competitors."
-]
-            }
+        {
+            title: "Local SEO Service",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Fix Technical SEO",
+            paragraphs: [
+                "Local SEO is all about boosting your local business’s internet visibility and reaching out to the people who live in your area with your goods or services. Rather than targeting the whole country, local SEO targets a particular location. We know how to optimize your website, including keywords, frame headers, meta titles, meta descriptions, and images.",
+
+                "Search engine rankings are often influenced by how effectively your Google My Business page is optimized. It is where you give your location, company hours, a brief description, and a few images. When a user types a search query, the search engine’s results pages consider proximity, relevancy, and popularity before selecting a firm.",
+
+                "We utilize our in-depth skills to help you increase your business’s visibility in the local vicinity. Our local SEO service provides reliable and targeted results to all clients. We optimize your website for better visibility and access to all different search engines."
+            ],
+        },
+        {
+            title: "E-commerce SEO Service",
+            icon: <FileText className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Optimize On-Page SEO",
+            paragraphs: [
+                "E-commerce SEO refers to the practice of improving a company’s online shop. eCommerce SEO is the umbrella term for all of the subsequent SEO developments. Every day, search engines answer millions of inquiries related to eCommerce. Your website’s traffic and ranking will rise in less time if you use our eCommerce SEO services. Indeed, we are a one-stop solution for all your SEO needs.",
+
+                "Being a professional SEO company, we have extensive expertise in working with top brands and can assist you in getting the top ranking on SERPs. We are committed to offering result-oriented eCommerce SEO to drive growth, increase conversion, and generate organic traffic and sales.",
+
+                "We help you improve your eCommerce business presence with the best content and website optimization strategy recommended by search engines. We also deliver relevant information to your customers using our appropriate SEO content tactics. So don’t worry; you will always get committed and affordable eCommerce SEO services with us."
+            ],
+        },
+        {
+            title: "E-commerce SEO Service",
+            icon: <MapPin className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+            cta: "Dominate Local Map Pack",
+            paragraphs: [
+                "E-commerce SEO refers to the practice of improving a company’s online shop. eCommerce SEO is the umbrella term for all of the subsequent SEO developments. Every day, search engines answer millions of inquiries related to eCommerce. Your website’s traffic and ranking will rise in less time if you use our eCommerce SEO services. Indeed, we are a one-stop solution for all your SEO needs.",
+
+                "Being a professional SEO company, we have extensive expertise in working with top brands and can assist you in getting the top ranking on SERPs. We are committed to offering result-oriented eCommerce SEO to drive growth, increase conversion, and generate organic traffic and sales.",
+
+                "We help you improve your eCommerce business presence with the best content and website optimization strategy recommended by search engines. We also deliver relevant information to your customers using our appropriate SEO content tactics. So don’t worry; you will always get committed and affordable eCommerce SEO services with us."
+            ],
+        },
+        {
+            title: "eCommerce SEO & Faceted Navigation",
+            icon: <ShoppingCart className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=800",
+            cta: "Boost Store Rankings",
+            paragraphs: [
+                "Drive high-intent organic shoppers directly to product and category pages across Shopify, Magento, WooCommerce, or custom storefronts.",
+                "We optimize faceted filters, canonicalization of variant URLs, rich merchant schema, and write high-converting category copy."
+            ]
+        },
+        {
+            title: "International SEO Service",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Domain Authority",
+            paragraphs: [
+                "You’ll need to use global SEO techniques to increase your website’s organic traffic from other countries and languages. To succeed at international SEO, you must cater to your target market’s cultural context and enable them to make purchases in their currency and language.",
+
+                "Whether you want to conduct local keyword research in the international market or maximize your search engine rankings, our global SEO experts are here to assist you with their robust knowledge. Our international SEO approach will boost your brand’s visibility among global customers. Being a professional SEO company, we know how to make your business global and bring profits.",
+
+                "As the best SEO Company, we are committed to providing a complete set of integrated services to drive more growth for your company. Our professional SEO services are tailored to your business needs from SEO consultation and management."
+            ],
+        },
+        {
+            title: "SEO Consulting",
+            icon: <Building2 className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+            cta: "Scale Enterprise SEO",
+            paragraphs: [
+                "A strong presence on search engines is vital for all businesses as it helps you get more visibility, profits, and ROI in less time and effort. Your website needs to be optimized for search engines using on-page optimization or on-site SEO. Our experienced SEO consultants optimize your website as per the modern SEO approach and search engine algorithm.",
+
+                "We work with the motto to increase your business’s visibility so more customers can grab your products and services. As the best SEO company, we create high-quality links on high DA and PA websites. Moreover, we implement the best-in-class SEO strategies to boost your website’s ranking and brand’s presence in today’s highly competitive market.",
+
+                "Using our SEO consulting service, you can leverage the benefits of experienced digital marketers, business analysts, project managers, and content developers. We empower our clients to achieve the desired results and rank on the SERP."
+            ],
+        }
     ];
 
     const processSteps = [
-            { title: "Technical Site Audit", desc: "Auditing indexability, crawl budget, Core Web Vitals, site architecture, and XML sitemaps." },
-            { title: "Keyword & Intent Mapping", desc: "Researching high-value commercial keywords, search volume, and user search intent." },
-            { title: "On-Page Optimization", desc: "Optimizing title tags, meta descriptions, header tags, schema markup, and internal linking." },
-            { title: "Content Strategy & Creation", desc: "Publishing comprehensive, keyword-targeted articles that satisfy Google's E-E-A-T guidelines." },
-            { title: "Authority Link Building", desc: "Acquiring high-domain-authority, relevant editorial backlinks through ethical digital PR." },
-            { title: "Performance Tracking", desc: "Monitoring organic keyword rankings, traffic trends, and lead conversions in Looker Studio." }
+        {
+            title: "Groundwork",
+            desc: "Researching and analyzing the clients’ industry & their competitors to know KPIs & project management to ensure the project’s success."
+        },
+        {
+            title: "Objective & Scope",
+            desc: "We communicate with our clients, know their needs, and suggest the best solution to get the desired results. In addition, our SEO experts help you know the overall scope of your tasks."
+        },
+        {
+            title: "Planning & Scheduling",
+            desc: "We analyze every detail of the project schedule, like the required number of resources, tasks, challenges, and associated milestones. We identify keywords to optimize content and the website."
+        },
+        {
+            title: "Submission to Search Engines",
+            desc: "We submit the optimized pages to the search engines. Our experienced SEO experts implement the best strategies to rank your website on different search engines."
+        },
+        {
+            title: "QA & Testing",
+            desc: "We test everything before and after submitting the website to the search engines. Furthermore, our team makes required enhancements per the search engine’s algorithm."
+        },
+        {
+            title: "Help & Support",
+            desc: "Being a professional SEO company, we offer consistent support to our clients and resolve all their issues in no time. We review the ranking continuously and work to improve it."
+        }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "eCommerce & D2C", desc: "Category rankings, product rich snippets, and high-intent shopper traffic.", icon: <ShoppingCart /> },
+        { name: "B2B SaaS & Tech", desc: "High-intent bottom-funnel software keyword dominance and SQL generation.", icon: <Cloud /> },
+        { name: "Healthcare & Clinics", desc: "Doctor profiles, patient condition pages, and local Google Map Pack rankings.", icon: <HeartPulse /> },
+        { name: "Legal & Law Firms", desc: "High-value practice area search rankings and localized client acquisition.", icon: <Scale /> },
+        { name: "Real Estate & Housing", desc: "Neighborhood listing portals, property market keywords, and agent hubs.", icon: <Building2 /> },
+        { name: "Fintech & Banking", desc: "Authoritative financial guides, loan calculators, and compliance-first SEO.", icon: <Landmark /> },
+        { name: "Education & Universities", desc: "Course curriculum pages, student enrollment funnels, and program search.", icon: <GraduationCap /> },
+        { name: "Logistics & Freight", desc: "Supply chain service keywords and multi-location depot visibility.", icon: <Truck /> },
+        { name: "Automotive & Dealerships", desc: "New and pre-owned inventory search and localized dealership SEO.", icon: <Navigation /> },
+        { name: "Hospitality & Tourism", desc: "Direct hotel booking optimization, travel guides, and excursion tours.", icon: <Globe /> },
+        { name: "Fashion & Apparel", desc: "Trend keyword clusters, visual image search optimization, and lookbooks.", icon: <Shirt /> },
+        { name: "Manufacturing & Industrial", desc: "B2B equipment specification queries, RFQ forms, and distributor portals.", icon: <Briefcase /> }
     ];
 
     const reasons = [
-        "100% white-hat, ethical SEO practices that protect your brand from Google penalties",
-        "Focus on high-intent commercial keywords that drive actual pipeline revenue",
-        "In-depth technical audits resolving foundational site architecture flaws",
-        "Transparent monthly Looker Studio reporting tracking ranking movements and traffic",
-        "Custom content creation adhering strictly to Google E-E-A-T quality guidelines",
-        "Proven experience growing organic traffic for B2B SaaS, eCommerce, and Enterprise",
-        "Continuous adaptation to major Google core algorithm updates",
-        "Dedicated SEO strategist providing proactive consultation and recommendations"
+        "100% white-hat, ethical SEO practices that permanently protect your site from Google penalties",
+        "Focus on commercial, high-intent keywords that drive measurable inbound sales pipeline revenue",
+        "Deep technical audits resolving foundational architecture, crawl budget, and Core Web Vitals issues",
+        "Transparent real-time Looker Studio reporting tracking ranking movements and organic revenue",
+        "High-quality editorial link building from trusted, niche-relevant high-authority websites",
+        "Proven experience scaling organic traffic for B2B SaaS, enterprise platforms, and eCommerce",
+        "Proactive continuous adaptation to major Google Core and helpful content algorithm updates",
+        "Dedicated SEO strategist providing direct weekly communication and roadmap consultation"
     ];
 
-    const technologies = ["Google Search Console","Ahrefs","SEMrush","Screaming Frog","Google Analytics 4","SurferSEO","Schema.org","Looker Studio","Sitebulb"];
+    const technologies = [
+        "Google Search Console", "Ahrefs", "SEMrush", "Screaming Frog", "Google Analytics 4",
+        "SurferSEO", "Schema.org", "Looker Studio", "Sitebulb", "PageSpeed Insights", "HubSpot"
+    ];
 
     return (
         <PageTransition>
@@ -118,25 +171,25 @@ const SEO = () => {
                 <SubServiceShared.Hero
                     parentTitle="Digital Marketing"
                     parentRoute="/services/digital-marketing"
-                    eyebrow="SEO Services"
-                    title="Strategic Search Engine Optimization (SEO) Services"
-                    description="Dominate Google search results, capture high-intent organic traffic, and establish sustainable industry authority with our comprehensive SEO services."
+                    eyebrow="Sustainable Organic Visibility"
+                    title="Professional Search Engine Optimization (SEO) Services"
+                    description="Dominate Google search results, capture high-intent organic traffic, and establish long-term market authority. The Digital Connect engineers technical SEO audits, semantic keyword strategies, and high-authority link acquisition that compound revenue."
                     theme={theme}
                     visual={SEOVisual}
-                    ctaText="GET FREE QUOTE NOW"
+                    ctaText="GET FREE SEO AUDIT"
                 />
 
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Sustainable Organic Growth</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Proven SEO Strategies Engineered for Long-Term Market Leadership
+                                Proven SEO Strategies Engineered for Long-Term Search Engine Dominance
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Over 90% of online experiences begin with a search engine query. If your website is not ranking on page one for high-intent industry keywords, your competitors are capturing your potential customers. At The Digital Connect, we provide ethical, white-hat SEO services that deliver compounding organic traffic growth.</p>
-                                <p>Our SEO specialists conduct deep technical site audits, resolve crawlability errors, map semantic keyword intent, optimize on-page content, and acquire authoritative backlinks. We help you achieve top Google rankings that drive measurable sales pipeline revenue.</p>
+                                <p>Over 93% of all global web sessions begin with a search engine query. If your website is not commanding page-one real estate for high-intent industry searches, your competitors are capturing your potential customers. At The Digital Connect, we deliver ethical, data-backed SEO services that generate compounding organic growth.</p>
+                                <p>Our senior SEO specialists conduct exhaustive technical audits, resolve indexation bottlenecks, map topical semantic keyword clusters, optimize on-page content for Google's E-E-A-T guidelines, and execute authoritative digital PR campaigns to position your brand as the undisputed authority in your niche.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,23 +198,23 @@ const SEO = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Systematic SEO Growth Process"
-                    eyebrow="Our SEO Methodology"
-                    description="A data-backed organic search optimization framework."
+                    title="Our Professional SEO Growth Lifecycle"
+                    eyebrow="Agile SEO Process"
+                    description="From comprehensive site audits and keyword intent mapping to technical on-page execution, link building, and Looker Studio tracking."
                     process={processSteps}
                 />
 
-                {/* Empower Your Business with Our Services */}
+                {/* Empower Services Cards */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
-                                Empower Your Business with Our Services
+                            <div className="bg-cyan-50 text-cyan-700 font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6 border border-cyan-200">
+                                Empower Your Brand with Organic SEO
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our SEO Service Offerings
+                                Our Professional SEO Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Full-spectrum SEO services designed to elevate your organic search visibility.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore full-spectrum search engine optimization capabilities engineered to drive consistent organic pipeline revenue.</p>
                         </div>
                     </div>
 
@@ -175,12 +228,12 @@ const SEO = () => {
                                         whileInView="visible"
                                         viewport={{ once: true, margin: "-50px" }}
                                         variants={fadeIn}
-                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F2FCFD]`}
                                     >
                                         <div className="w-full lg:w-[49%] flex flex-col justify-center">
                                             <div>
                                                 <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                                <div className="w-20 h-[2px] bg-cyan-600 mt-4 mb-6"></div>
                                             </div>
                                             <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
                                                 {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
@@ -188,13 +241,13 @@ const SEO = () => {
                                         </div>
 
                                         <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
-                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
                                             <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
-                                                    <div className="text-orange-400 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-cyan-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
                                                     <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
@@ -216,7 +269,7 @@ const SEO = () => {
                     <SubServiceShared.Technology
                         theme={theme}
                         technologies={technologies}
-                        title="Technologies We Work On"
+                        title="SEO Tools, Crawlers & Analytics Platforms"
                         eyebrow="Our Tech Stack"
                     />
                 )}
@@ -226,7 +279,7 @@ const SEO = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries & Verticals We Rank</h3>
                             <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -245,72 +298,39 @@ const SEO = () => {
                     </div>
                 </section>
 
-                {/* Reasons to Choose Us & Key Features */}
-                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                {/* Reasons to Choose Us */}
+                <section className="py-20 lg:py-32 bg-[#FAF7F4]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
-                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for SEO Services
-                            </h3>
-                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Achieve lasting search engine prominence with our specialized SEO team:</p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {reasons.map((reason, i) => (
-                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
-                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
-                                    <span className="text-[#0A1024] font-bold">{reason}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Quote Form Section */}
-                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
-                            <div className="text-center mb-10">
-                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
-                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Why Choose The Digital Connect</h2>
+                                <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">
+                                    Why Choose The Digital Connect for Professional SEO
+                                </h3>
+                                <p className="mt-4 text-slate-600 text-base md:text-lg">We combine deep technical audit expertise with authoritative digital PR to build compounding search dominance.</p>
                             </div>
-                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
-                                    </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 col-span-2">
+                                    {reasons.map((r, i) => (
+                                        <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-cyan-200 transition-colors">
+                                            <div className="w-6 h-6 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center shrink-0 mt-0.5">
+                                                <CheckCircle2 size={16} />
+                                            </div>
+                                            <p className="text-slate-700 font-medium text-sm leading-relaxed">{r}</p>
+                                        </motion.div>
+                                    ))}
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
-                                </div>
-                                <div className="pt-4">
-                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
-                                        Submit Request
-                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                {/* Quote Form */}
+                <SubServiceShared.QuoteForm
+                    theme={theme}
+                    title="Ready to Command Page One of Google?"
+                    subtitle="Share your website URL with our senior SEO architects and receive a complimentary technical audit & ranking growth roadmap within 24 hours."
+                />
             </div>
         </PageTransition>
     );

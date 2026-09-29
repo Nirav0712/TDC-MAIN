@@ -134,34 +134,48 @@ export const SubServiceShared = {
         </section>
     ),
 
-    Process: ({ process, theme, title = "Methodology", eyebrow = "How We Work" }) => (
-        <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
-                    <span className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3 block">{eyebrow}</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A1024]">{title}</h2>
+    Process: ({ process, theme, title = "Methodology", eyebrow = "How We Work", description }) => (
+        <section className="py-16 md:py-24 bg-[#FAFCFF] relative overflow-hidden border-y border-slate-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10">
+                <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+                    <span className="text-cyan-600 font-bold uppercase tracking-widest text-xs mb-2 block">{eyebrow}</span>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A1024]">{title}</h2>
+                    {description && (
+                        <p className="mt-3 text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                            {description}
+                        </p>
+                    )}
                 </div>
 
-                <div className="relative">
-                    {/* Horizontal Line Desktop */}
-                    <div className="hidden lg:block absolute top-[120px] left-0 w-full h-1 bg-slate-100"></div>
-                    {/* Vertical Line Mobile */}
-                    <div className="lg:hidden absolute top-0 left-[28px] md:left-[44px] h-full w-1 bg-slate-100"></div>
-
-                    <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:space-y-0">
-                        {process.map((step, idx) => (
-                            <motion.div key={idx} variants={fadeIn} className="relative flex lg:flex-col items-center lg:w-48 group">
-                                <div className="z-10 bg-white border-4 border-slate-50 w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:border-cyan-100 transition-colors duration-300 flex-shrink-0 lg:mb-8 text-cyan-600 font-black text-xl lg:w-20 lg:h-20 lg:text-2xl shrink-0">
-                                    0{idx + 1}
+                {/* Simple, Unique, Interactive & Aesthetic Process Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {process.map((step, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: idx * 0.05 }}
+                            className="group relative bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                        >
+                            <div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 font-extrabold text-sm flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all duration-300">
+                                        0{idx + 1}
+                                    </span>
+                                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-cyan-600 transition-colors">
+                                        Step 0{idx + 1}
+                                    </span>
                                 </div>
-                                <div className="hidden lg:block absolute top-[40px] left-[50%] w-full h-1 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 delay-100 z-0"></div>
-                                <div className="ml-6 lg:ml-0 text-left lg:text-center">
-                                    <h4 className="font-bold text-[#0A1024] text-lg lg:text-xl lg:max-w-xs">{step.title}</h4>
-                                    <p className="mt-2 text-sm text-slate-500 break-words">{step.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                                <h3 className="text-lg font-bold text-[#0A1024] mb-2.5 group-hover:text-cyan-700 transition-colors">
+                                    {step.title}
+                                </h3>
+                                <p className="text-slate-600 text-sm leading-relaxed">
+                                    {step.desc}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
@@ -247,6 +261,51 @@ export const SubServiceShared = {
                     <Link to="/contact" className="bg-cyan-500 text-white px-6 py-3.5 rounded-full font-bold shadow-lg hover:bg-cyan-400 hover:-translate-y-1 transition-all flex justify-center items-center gap-3 w-full sm:w-auto">
                         Get a Free Quote <ArrowRight className="w-5 h-5" />
                     </Link>
+                </div>
+            </div>
+        </section>
+    ),
+
+    QuoteForm: ({ theme, title = "GET A FREE QUOTE", subtitle = "We will get back to you within 24 hours", serviceName }) => (
+        <section className="py-16 md:py-24 lg:py-32 bg-white relative">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
+                    <div className="text-center mb-10">
+                        <h3 className="text-3xl font-bold text-[#0A1024] mb-3">{title}</h3>
+                        <p className="text-slate-600">{subtitle}</p>
+                    </div>
+                    <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
+                                <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
+                                <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
+                                <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
+                                <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                            </div>
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
+                            <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder={serviceName ? `Tell us about your ${serviceName} requirements...` : "Tell us about your project requirements..."}></textarea>
+                        </div>
+                        <div className="pt-4">
+                            <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
+                                Submit Request
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

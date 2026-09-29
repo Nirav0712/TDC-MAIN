@@ -24,64 +24,90 @@ const WebDevelopment = () => {
     useSEO({
         "title": "Full Stack Web Development Services | The Digital Connect",
         "description": "The Digital Connect provides custom full stack web development services including frontend, backend, CMS, API integration, and custom web applications."
-});
+    });
 
-    const theme = {"accent":"text-brand-cyan","bg":"bg-brand-cyan/20","softBg":"bg-brand-soft-blue/20"};
+    const theme = { "accent": "text-brand-cyan", "bg": "bg-brand-cyan/20", "softBg": "bg-brand-soft-blue/20" };
 
     const services = [
-            {
-                title: "Frontend Web Development",
-                icon: <Layout className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Frontend Services",
-                link: "/services/web-development/frontend-development",
-                paragraphs: [
-                    "Deliver captivating user experiences with pixel-perfect, accessible, and interactive frontend interfaces built with React, Next.js, and modern CSS architectures.",
-                    "We prioritize sub-second load times, smooth micro-animations, and complete responsive adaptability across all device viewports."
-]
-            },
-            {
-                title: "Backend & Cloud Architecture",
-                icon: <Server className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Backend Services",
-                link: "/services/web-development/backend-development",
-                paragraphs: [
-                    "Power your applications with high-throughput microservices, robust relational and NoSQL databases, and secure serverless backend architectures.",
-                    "Our backend engineers build systems that handle massive concurrency, data integrity, and strict enterprise compliance standards."
-]
-            },
-            {
-                title: "CMS Development & Headless Solutions",
-                icon: <FileText className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore CMS Services",
-                link: "/services/web-development/cms-development",
-                paragraphs: [
-                    "Empower your marketing and editorial teams with modern headless CMS platforms like Sanity, Contentful, Strapi, and custom WordPress engines.",
-                    "Enjoy full editorial autonomy with decoupled frontends that maintain lightning-fast static page generation and top search rankings."
-]
-            },
-            {
-                title: "Custom Web Applications",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Custom Web Apps",
-                link: "/services/web-development/custom-web-applications",
-                paragraphs: [
-                    "Solve unique operational challenges with tailored web applications, executive dashboards, client portals, and workflow management systems.",
-                    "The Digital Connect crafts bespoke software specifically aligned with how your organization operates."
-]
-            }
+        {
+            title: "WordPress Development Services",
+            icon: <Layout className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Frontend Services",
+            link: "/services/web-development/frontend-development",
+            paragraphs: [
+                "WordPress development services from The Digital Connect are a one-stop solution to all your website development needs. With a 33% website market share, WordPress has a lot to offer users. Our team of experts ensures that you make the best out of the platforms. As a leading CMS development company, we offer affordable and result-driven WordPress development services.",
+
+                "We are proud to share that at The Digital Connect, we have worked with clients from different domains. Our varied clientele has helped us become even stronger over the years. Presently, we proudly service clients across the globe. Our CMS development services can create compelling digital experiences that add value to your business.",
+
+                "With our unmatchable custom CMS development services, we can help you migrate or upgrade your business to WordPress from any other content management system. We closely work with our clients to understand their business and deliver the best WordPress development solutions."
+            ],
+        },
+        {
+            title: "PHP Development",
+            icon: <Server className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Backend Services",
+            link: "/services/web-development/backend-development",
+            paragraphs: [
+                "PHP was initially developed for website development but has developed significantly and turned into a fully-fledged, efficient programming language in recent years. Today PHP is the first choice for expert website developers. If you’re also looking for PHP web development, feel free to connect with The Digital Connect.",
+
+                "We are known to deliver exceptional websites and app solutions using PHP frameworks. As a leading custom CMS development company, we have many services to offer to help your business grow significantly. Our primary focus is to develop website solutions that compel you to choose PHP repeatedly.",
+
+                "Our professionals are always available to assist you with your PHP development requirements. We work with different PHP frameworks, depending on the business type. As a top web development service provider, we offer affordable, tried, and tested PHP development methods."
+            ],
+        },
+        {
+            title: "CakePHP Development Services",
+            icon: <FileText className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore CMS Services",
+            link: "/services/web-development/cms-development",
+            paragraphs: [
+                "CakePHP offers easy coding with a unique template editor and enables the development of highly scalable web solutions in no time. It is also an open-source platform that developers can utilize anytime and anywhere to create unique designs. It has an MVC pattern, making it better than other web development frameworks.",
+
+                "We are the leading CakePHP developers in the market. Our unmatchable approaches eliminate integrating various components to design web applications. It helps you save costs and get your web application on a pocket-friendly budget. Our experts specialize in custom CakePHP framework development and bring solutions compatible with the latest PHP versions.",
+
+                "As a custom CMS development company, we ensure your business is well supported with the newest CakePHP development methods. If you’re still doubtful about the need for the CakePHP framework, let us help you count its unbeatable features."
+            ],
+        },
+        {
+            title: "Drupal Development Services",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Custom Web Apps",
+            link: "/services/web-development/custom-web-applications",
+            paragraphs: [
+                "At The Digital Connect, we create web pages in Drupal, undoubtedly the first experts for building large websites and web applications. We have a team of experienced professionals with hands-on experience executing Drupal projects. We are 24\\*7 available to create Drupal websites at an affordable price.",
+
+                "Over the years, we have developed hundreds of websites using Drupal. We have clients from various domains dealing with such veritable clientele has given us immense confidence to introduce new methodologies. Our approaches and methods are backed by in-depth research and tested in advance.",
+
+                "As an active member of the Drupal community, we ensure that your business remains at the top of the search engine results. We added quite a few new modules and helped develop many existing ones. We enjoy building websites with Drupal frameworks as it allows us to deliver compelling web solutions to our clients."
+            ],
+        },
+        {
+            title: "Joomla Development Services",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Custom Web Apps",
+            link: "/services/web-development/custom-web-applications",
+            paragraphs: [
+                "The Digital Connect is a leading web development service provider. Here we provide a wide range of Joomla services that help your business reach the next level of success. Our expert Joomla developers are experienced in creating excellent Joomla websites and web applications. As a leading CMS development company, we have developed highly potent online applications and alluring websites with Joomla CMS solutions.",
+
+                "Our Joomla developers have gained prowess in building effective Joomla web solutions with minimal operation and maintenance costs. Our comprehensive services include responsive Joomla website development, up-gradation, security testing, maintenance, migrations, etc. While you hire Joomla development services from The Digital Connect, you get template design and customization, Joomla application development, Joomla extension development, Joomla e-commerce solutions, etc.",
+
+                "We have effective solutions for all, no matter what business domain you belong to and your website development requirements. As a top-notch Joomla developer, we assure you to provide you with the best web development services."
+            ],
+        }
     ];
 
     const processSteps = [
-            { title: "Architecture & Scoping", desc: "Defining technical specifications, database schemas, and API contracts tailored to your growth goals." },
-            { title: "UI/UX Prototyping", desc: "Crafting modern, accessible, and responsive user interfaces tailored to your brand identity." },
-            { title: "Full-Stack Development", desc: "Writing clean, modular code with rigorous TypeScript typing and modern frameworks." },
-            { title: "Performance & Security QA", desc: "Conducting automated unit testing, load testing, penetration audits, and cross-browser checks." },
-            { title: "Cloud Deployment", desc: "Deploying to optimized cloud infrastructure with automated CI/CD pipelines and CDN caching." },
-            { title: "24/7 Monitoring & Support", desc: "Ongoing server management, security patching, Core Web Vitals maintenance, and feature rollouts." }
+        { title: "Architecture & Scoping", desc: "Defining technical specifications, database schemas, and API contracts tailored to your growth goals." },
+        { title: "UI/UX Prototyping", desc: "Crafting modern, accessible, and responsive user interfaces tailored to your brand identity." },
+        { title: "Full-Stack Development", desc: "Writing clean, modular code with rigorous TypeScript typing and modern frameworks." },
+        { title: "Performance & Security QA", desc: "Conducting automated unit testing, load testing, penetration audits, and cross-browser checks." },
+        { title: "Cloud Deployment", desc: "Deploying to optimized cloud infrastructure with automated CI/CD pipelines and CDN caching." },
+        { title: "24/7 Monitoring & Support", desc: "Ongoing server management, security patching, Core Web Vitals maintenance, and feature rollouts." }
     ];
 
     const industries = [
@@ -110,7 +136,7 @@ const WebDevelopment = () => {
         "Dedicated post-launch SLA support and ongoing optimization"
     ];
 
-    const technologies = ["React","Next.js","Vue.js","Node.js","TypeScript","Python","Django","PostgreSQL","MongoDB","Redis","GraphQL","Tailwind CSS","Docker","AWS","Vercel"];
+    const technologies = ["React", "Next.js", "Vue.js", "Node.js", "TypeScript", "Python", "Django", "PostgreSQL", "MongoDB", "Redis", "GraphQL", "Tailwind CSS", "Docker", "AWS", "Vercel"];
 
     return (
         <PageTransition>
@@ -129,7 +155,7 @@ const WebDevelopment = () => {
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Modern Web Engineering</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                 Transforming Complex Ideas into Resilient Web Platforms

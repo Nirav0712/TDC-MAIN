@@ -118,20 +118,27 @@ const Process = () => {
       </section>
 
       {/* PROCESS JOURNEY */}
-      <section className="py-24 bg-white relative relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Subtle grid background */}
+        <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#0ea5e9 0.75px, transparent 0.75px), radial-gradient(#0ea5e9 0.75px, #ffffff 0.75px)', backgroundSize: '30px 30px', backgroundPosition: '0 0, 15px 15px' }}></div>
+        <div className="absolute top-1/3 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Step-by-Step</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-700 text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+              Step-by-Step Delivery
+            </div>
             <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight">
               The Journey to Digital Excellence
             </h2>
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            {/* Connecting Line */}
-            <div className="absolute left-[39px] md:left-1/2 top-0 bottom-0 w-[2px] bg-brand-border md:-translate-x-1/2"></div>
+            {/* Connecting Line with Gradient Glow */}
+            <div className="absolute left-[39px] md:left-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-600 md:-translate-x-1/2 rounded-full opacity-60"></div>
 
-            <div className="space-y-16">
+            <div className="space-y-14 md:space-y-18">
               {processSteps.map((step, index) => {
                 const isEven = index % 2 === 0;
                 return (
@@ -143,26 +150,32 @@ const Process = () => {
                     transition={{ duration: 0.6 }}
                     className={`relative flex flex-col md:flex-row items-stretch md:items-center gap-8 md:gap-16 ${isEven ? 'md:flex-row-reverse' : ''}`}
                   >
-                    {/* Icon Node */}
-                    <div className="absolute left-[20px] md:left-1/2 top-4 md:top-1/2 w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-white border-[4px] border-brand-cyan text-brand-primary-navy font-bold rounded-full flex items-center justify-center z-10 transform -translate-x-1/2 md:-translate-y-1/2 shadow-lg">
-                      <span className="text-xs md:text-sm">{step.id}</span>
+                    {/* Glowing Icon Node */}
+                    <div className="absolute left-[20px] md:left-1/2 top-4 md:top-1/2 w-[44px] h-[44px] md:w-[64px] md:h-[64px] bg-[#061A2E] border-4 border-white text-cyan-400 font-extrabold rounded-2xl flex items-center justify-center z-10 transform -translate-x-1/2 md:-translate-y-1/2 shadow-xl shadow-cyan-500/20 ring-4 ring-cyan-500/20">
+                      <span className="text-xs md:text-sm font-mono tracking-tight">{step.id}</span>
                     </div>
 
                     {/* Content Block */}
                     <div className={`flex-1 pl-[70px] md:pl-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className={`bg-brand-off-white p-8 rounded-2xl border border-brand-border hover:shadow-xl hover:border-brand-cyan/30 transition-all duration-300 relative ${isEven ? 'md:ml-12' : 'md:mr-12'}`}>
+                      <div className={`bg-white p-7 sm:p-8 rounded-2xl border border-slate-200/90 shadow-md hover:shadow-2xl hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 relative group ${isEven ? 'md:ml-12' : 'md:mr-12'}`}>
+                        {/* Top Accent line on hover */}
+                        <div className="absolute top-0 left-6 right-6 h-[3px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
                         <div className={`flex items-center gap-4 mb-4 ${isEven ? 'justify-start' : 'md:justify-end'}`}>
-                          <div className="w-12 h-12 rounded-xl bg-brand-cyan/10 flex items-center justify-center shrink-0">
+                          <div className="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300 shadow-sm">
                             {step.icon}
                           </div>
-                          <h3 className="text-2xl font-bold font-heading text-brand-primary-navy">{step.title}</h3>
+                          <div>
+                            <h3 className="text-2xl font-bold font-heading text-brand-primary-navy group-hover:text-cyan-700 transition-colors">{step.title}</h3>
+                            <p className="text-cyan-600 text-xs font-bold uppercase tracking-wider">{step.subtitle}</p>
+                          </div>
                         </div>
-                        <p className="text-brand-cyan font-semibold mb-4">{step.subtitle}</p>
-                        <ul className={`space-y-2 text-brand-text-muted ${isEven ? '' : 'md:inline-block md:text-right'}`}>
+
+                        <ul className={`space-y-2.5 text-slate-600 text-sm mt-4 pt-4 border-t border-slate-100 ${isEven ? '' : 'md:inline-block md:text-right'}`}>
                           {step.items.map((item, i) => (
-                            <li key={i} className="flex items-center gap-2 justify-start md:justify-[inherit]">
-                              <div className="w-1.5 h-1.5 rounded-full bg-brand-light-blue shrink-0"></div>
-                              {item}
+                            <li key={i} className="flex items-center gap-2.5 justify-start md:justify-[inherit]">
+                              <div className="w-2 h-2 rounded-full bg-cyan-500 shrink-0"></div>
+                              <span>{item}</span>
                             </li>
                           ))}
                         </ul>

@@ -129,7 +129,7 @@ const PaymentIntegration = () => {
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Frictionless Checkout Experiences</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                 Maximize Conversions with Seamless Payment Gateway Integrations

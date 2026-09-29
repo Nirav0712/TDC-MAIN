@@ -24,64 +24,90 @@ const Ecommerce = () => {
     useSEO({
         "title": "Custom eCommerce Development Services | The Digital Connect",
         "description": "The Digital Connect provides end-to-end eCommerce development services including Shopify, WooCommerce, custom headless storefronts, payment gateways, and marketplaces."
-});
+    });
 
-    const theme = {"accent":"text-emerald-600","bg":"bg-emerald-500/20","softBg":"bg-emerald-50"};
+    const theme = { "accent": "text-emerald-600", "bg": "bg-emerald-500/20", "softBg": "bg-emerald-50" };
 
     const services = [
-            {
-                title: "Shopify & Shopify Plus Development",
-                icon: <Store className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Shopify Services",
-                link: "/services/ecommerce-development/shopify",
-                paragraphs: [
-                    "Launch enterprise-grade online stores with bespoke Liquid themes, custom Shopify apps, and headless storefronts built for scale.",
-                    "Maximize your average order value (AOV) with customized checkout extensions, product bundles, and localized global currencies."
-]
-            },
-            {
-                title: "WooCommerce Development",
-                icon: <ShoppingBag className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore WooCommerce Services",
-                link: "/services/ecommerce-development/woocommerce",
-                paragraphs: [
-                    "Leverage the limitless flexibility of WordPress with custom WooCommerce architectures. Own your customer data with zero ongoing platform subscription fees.",
-                    "We engineer lightweight, secure WooCommerce themes optimized to handle thousands of SKUs with rapid page load speeds."
-]
-            },
-            {
-                title: "Custom Headless eCommerce",
-                icon: <Globe className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Custom eCommerce",
-                link: "/services/ecommerce-development/custom-ecommerce",
-                paragraphs: [
-                    "Break free from traditional platform limitations with headless eCommerce frontends built on Next.js paired with robust backend commerce APIs.",
-                    "Achieve instantaneous page transitions, personalized shopping experiences, and omnichannel catalog distribution."
-]
-            },
-            {
-                title: "Multi-Vendor Marketplaces",
-                icon: <ShoppingCart className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800",
-                cta: "Explore Marketplace Dev",
-                link: "/services/ecommerce-development/marketplace-development",
-                paragraphs: [
-                    "Build multi-sided digital marketplaces where multiple independent vendors list products, manage inventory, and fulfill customer orders.",
-                    "We engineer automated split payments, vendor commission dashboards, review management, and global shipping calculations."
-]
-            }
+        {
+            title: "Magneto Development",
+            icon: <Store className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Shopify Services",
+            link: "/services/ecommerce-development/shopify",
+            paragraphs: [
+                "When building successful online businesses, Magento has a wealth of sophisticated tools. Because of its open-source nature and a great degree of adaptability in terms of functionality, features, plans, and architecture, it’s a big hit. Help your company meet its unique demands by hiring a Magento developer who can help you convert a PSD to Magento, customize an existing Magento theme, add extensions, and integrate with third-party API providers.",
+
+                "We use a feedback-based strategy and standardized development methods like GIT and Development Environments as part of our development process. From shop design to online store setup, bespoke extensions, and third-party connections, you may hire Magento 2 expertise from us.",
+
+                "Magento experts at our company are adept at offering sturdy yet scalable solutions designed to improve revenue and enhance user experience while accelerating expansion. Please take advantage of our extensive expertise in building eCommerce websites for organizations of all sizes. We can help you find the best Magento developers for your e-commerce business."
+            ],
+        },
+        {
+            title: "WooCommerce Development",
+            icon: <ShoppingBag className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore WooCommerce Services",
+            link: "/services/ecommerce-development/woocommerce",
+            paragraphs: [
+                "To create a full-fledged eCommerce business, WooCommerce is the best option since it is a scalable open-source platform developed for WordPress which can be easily customized. The Digital Connect can help you with WooCommerce development. Hire our WooCommerce development service to create a distinctive and engaging shopping experience for your customers.",
+
+                "With The Digital Connect, a top WooCommerce development company in the market, you can expect a flawless, responsive, and functioning eCommerce shop with a user-friendly design, engaging themes, and strong extensions. We use an iterative development method to ensure timely delivery and work in short, specified sprints.",
+
+                "Our skilled programmers adhere to W3C guidelines to ensure their work is bug-free. Our specialists will work with you to find the best possible solution for your company’s particular needs. When you work with The Digital Connect, you can be sure that your Woocommerce development is in good hands. Our Woocommerce development services are result-oriented, high-quality, and dependable."
+            ],
+        },
+        {
+            title: "Shopify Development",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Custom eCommerce",
+            link: "/services/ecommerce-development/custom-ecommerce",
+            paragraphs: [
+                "With our Shopify ecommerce development company, you can increase your sales and income. Shopify is the world’s top eCommerce platform for small and medium-sized enterprises. Our Shopify eCommerce development company offers completely integrated solutions by combining world-class platform and subject experience with selected technical advice.",
+
+                "We provide a wide range of Shopify development services that help you match your brand’s vision to your customers’ expectations. A leading Shopify web development firm, we specialize in the creation of specific e-commerce sites as well as dependable mobile apps. Our Shopify eCommerce development services include everything from bespoke Shopify theme creation to third-party integrations, functionality, and security methods that comply.",
+
+                "Known for producing functionally efficient and cost-effective Shopify sites, we are a professional Shopify development business. Our customized solutions enable you to design your online shop, add new features, manage sales channels and inventory, measure your business’s development and performance smoothly, etc."
+            ],
+        },
+        {
+            title: "OpenCart Development",
+            icon: <ShoppingCart className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Marketplace Dev",
+            link: "/services/ecommerce-development/marketplace-development",
+            paragraphs: [
+                "PHP, jQuery, and Bootstrap as a CSS framework make OpenCart development well-suited for small and medium-sized businesses. It’s simple to change the design. OpenCart’s MVC structure is simple to comprehend and grow. Millions of websites throughout the globe utilize OpenCart as their shopping cart platform.",
+
+                "Your customers may buy from a wide variety of items and categories, and you’ll be able to improve your productivity and collect valuable data thanks to OpenCart. When customizing OpenCart for your business, no one knows OpenCart better than The Digital Connect. We serve many clients, from massive corporations to small businesses.",
+
+                "Our specialty is web design, development, and integration services based on OpenCart. Our customers are always kept in the loop about the status of their projects, and their input is taken into account throughout the design process to guarantee complete client satisfaction."
+            ],
+        },
+        {
+            title: "BigCommerce Development",
+            icon: <ShoppingCart className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800",
+            cta: "Explore Marketplace Dev",
+            link: "/services/ecommerce-development/marketplace-development",
+            paragraphs: [
+                "Do you have a specific need for your online store? You may then make use of our BigCommerce design services. Known for being feature-rich, adaptable, and cost-effective, BigCommerce is a leading platform for turnkey eCommerce sites. With BigCommerce, you can quickly and affordably create and expand your online store.",
+
+                "We’ve helped a few companies develop from nothing to something quickly by using eCommerce development services. For BigCommerce integration solutions, you can also employ our professionals. We are well-known for creating BigCommerce solutions for any company that is comprehensive, high-performing, and works across all platforms.",
+
+                "To turn your concept and organization into a lean, mean, and outstanding sales machine, our highly qualified BigCommerce professionals can assist you. All parts of BigCommerce, from catalog building and ERP integration to backend operations and connectivity with other omnichannel platforms, are handled by us."
+            ],
+        }
     ];
 
     const processSteps = [
-            { title: "Store Strategy & Scoping", desc: "Analyzing your product catalog, buyer personas, shipping logic, and payment requirements." },
-            { title: "Conversion-Focused UI/UX", desc: "Designing intuitive product detail pages, search filters, and 1-click checkout experiences." },
-            { title: "Custom Development", desc: "Building responsive themes, custom apps, and backend integrations with clean code." },
-            { title: "Payment & Logistics Setup", desc: "Integrating secure payment gateways, shipping calculators, and ERP inventory sync." },
-            { title: "Rigorous Testing & Security", desc: "Executing end-to-end transaction tests, load testing, and PCI-DSS compliance checks." },
-            { title: "Launch & Growth Optimization", desc: "Coordinating zero-downtime cutover, SEO audits, and ongoing conversion rate optimization (CRO)." }
+        { title: "Store Strategy & Scoping", desc: "Analyzing your product catalog, buyer personas, shipping logic, and payment requirements." },
+        { title: "Conversion-Focused UI/UX", desc: "Designing intuitive product detail pages, search filters, and 1-click checkout experiences." },
+        { title: "Custom Development", desc: "Building responsive themes, custom apps, and backend integrations with clean code." },
+        { title: "Payment & Logistics Setup", desc: "Integrating secure payment gateways, shipping calculators, and ERP inventory sync." },
+        { title: "Rigorous Testing & Security", desc: "Executing end-to-end transaction tests, load testing, and PCI-DSS compliance checks." },
+        { title: "Launch & Growth Optimization", desc: "Coordinating zero-downtime cutover, SEO audits, and ongoing conversion rate optimization (CRO)." }
     ];
 
     const industries = [
@@ -110,7 +136,7 @@ const Ecommerce = () => {
         "Ongoing maintenance, security patch management, and Conversion Rate Optimization (CRO)"
     ];
 
-    const technologies = ["Shopify","Shopify Plus","WooCommerce","WordPress","Next.js","Liquid","PHP","Node.js","Stripe API","PayPal","Klaviyo","Algolia","Tailwind CSS"];
+    const technologies = ["Shopify", "Shopify Plus", "WooCommerce", "WordPress", "Next.js", "Liquid", "PHP", "Node.js", "Stripe API", "PayPal", "Klaviyo", "Algolia", "Tailwind CSS"];
 
     return (
         <PageTransition>
@@ -129,7 +155,7 @@ const Ecommerce = () => {
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Engineering Digital Commerce</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
                                 Transforming Online Shopping into Seamless Customer Journeys
@@ -153,7 +179,7 @@ const Ecommerce = () => {
 
                 {/* Empower Your Business with Our Services */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
                             <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
                                 Empower Your Business with Our Services

@@ -1,137 +1,344 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
+import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
+import { SubServiceShared } from '../../../components/services/subservices/SubServiceShared';
+import { ReactVisual } from '../../../components/services/subservices/visuals/VisualsJS';
+import {
+    ArrowRight, CheckCircle2, ShoppingCart, HeartPulse, Navigation,
+    GraduationCap, Shirt, Dumbbell, Scale, Landmark, Truck, Building2,
+    Building, Briefcase, MonitorPlay, Apple, Smartphone, Combine,
+    Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
+    Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
+    Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart,
+    Settings, Cpu, Terminal, Shield, RefreshCw
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const ReactDeveloper = () => {
+    useSEO({
+        title: "Hire React.js Developers | Dedicated React & Next.js Engineers | The Digital Connect",
+        description: "Hire certified React.js developers for dynamic SPAs, Next.js web applications, complex dashboards, and React Native mobile apps. Rapid onboarding with vetted engineers."
+    });
+
+    const theme = { accent: "text-cyan-500", bg: "bg-cyan-500/20", softBg: "bg-cyan-50" };
+
+    const services = [
+        {
+            title: "Custom React.js Web & SPA Development",
+            icon: <Code className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+            cta: "Hire React Developers",
+            paragraphs: [
+                "Indeed, getting digital change in your business makes it dynamic and competitive. A digital presence is also necessary to sustain today’s highly competitive market. We have extensive expertise in developing high-performing and result-oriented ReactJS web and mobile apps.",
+
+                "We are a one-stop solution for all your web and mobile app development needs. We have become the first choice of numerous businesses seeking efficient and dedicated digital solutions with a strong flair for developing custom web apps. We help you achieve your goals with our efficiency and agility.",
+
+                "As a leading ReactJS developer, we ensure a superior user experience and interactive user interfaces in the apps we create. Our mission is to bring highly efficient and reliable futuristic apps to your business. The Digital Connect is a top-rated web app development company that assists businesses in capturing customers’ attention effortlessly."
+            ],
+        },
+        {
+            title: "ReactJS Support & Maintenance Services",
+            icon: <Globe className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            cta: "Build Next.js Web Apps",
+            paragraphs: [
+                "Are you concerned about the issues of post-development or post-project delivery? Don’t be. We are just a call away from resolving all your issues with our outstanding support and maintenance services to all our clients.",
+
+                "At The Digital Connect, we are committed to offering assured development support during and after the project delivery. Our responsive team of ReactJS developers has long experience creating innovative and business-centric apps with the latest functionalities and features.",
+
+                "Our support team offers 24\\*7 support for the smooth and uninterrupted functionality of the app. You can rely on us for flawless time management, project collaboration, communication, and a strong developer background. A strong support team will always care for your digital presence with ReactJS solutions."
+            ],
+        },
+        {
+            title: "Custom React JS Development Services",
+            icon: <Smartphone className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+            cta: "Build React Native Apps",
+            paragraphs: [
+                "The increasing popularity of web apps has proven the importance of having a digital presence. Web apps make your business accessible anytime, anywhere. It is the right time for businesses to leverage the unmatched advantages of the ReactJS framework.",
+
+                "Hiring a ReactJS Consulting firm is the best key for businesses seeking growth and enhanced ROI. Here we help you get the best-in-class and highly functional custom web apps for your business. Brands worldwide prefer our web app development services as we always maintain the quality and theme of the technology.",
+
+                "With ReactJS, we provide robust and reliable apps. We have strong expertise in creating engaging web and dedicated apps for businesses. Our capable team creates a perfectly suitable app with unmatched functionalities and interactive UI designs. We offer the best digital solutions for your unique app development needs."
+            ],
+        },
+        {
+            title: "ReactJS Migration Services",
+            icon: <LayoutDashboard className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            cta: "Build React Dashboards",
+            paragraphs: [
+                "Are you seeking to migrate your existing project to the modern ReactJS platform? Migrating to new technologies and framework is one of the vital aspects of improving your business growth. ReactJS migration is one of the widely used frameworks today.",
+
+                "It is gaining popularity due to its flexibility, scalability, and performance. Businesses looking to migrate their mobile and web apps to this framework need an expert ReactJS partner; The Digital Connect is the best bet. Our professional team analyzes your existing web platform, current business requirements, and challenges to frame a full-fledged migration strategy.",
+
+                "With our perfect ReactJS migration services, we help you increase your conversion and sales. We migrate your existing platform to a fast, feature-rich, robust framework with a team of veteran developers. This modern tech framework enables us to create a well-designed, interactive UI with the best features."
+            ],
+        },
+        {
+            title: "ReactJS Plugin Development Services",
+            icon: <Zap className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+            cta: "Optimize React Performance",
+            paragraphs: [
+                "From time to time, businesses need to enhance their web app’s functionality to scale up with the competitive needs of the market. Here plugins play a vital role in getting you the desired functionalities effortlessly. The functionalities of the ReactJS-based app can extend by creating custom plugins.",
+
+                "Moreover, you can also integrate existing plugins to fulfill your project needs. If you seek a ReactJS development company for custom plugin development services, we are here to assist you with our in-depth skills and robust knowledge.",
+
+                "Our extensive expertise in creating custom plugins helps us to fulfill the specific requirements of our client’s businesses. We render and add better features to your business applications with seasoned ReactJS developers. Don’t worry about plugin development to integration; our ReactJS developer can help you with all web app services."
+            ],
+        },
+        // {
+        //     title: "Legacy Frontend Migration to Modern React",
+        //     icon: <RefreshCw className="w-8 h-8" />,
+        //     imgUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800",
+        //     cta: "Migrate to React.js",
+        //     paragraphs: [
+        //         "Upgrade legacy jQuery, Angular 1.x, or monolithic template engines to a modern, maintainable React and TypeScript ecosystem.",
+        //         "Our structured micro-frontend strategy enables phased migration without halting active feature development or risking business continuity."
+        //     ]
+        // }
+    ];
+
+    const processSteps = [
+        {
+            title: "Requirement Analysis",
+            desc: "Our veteran team analyzes your requirements, business goals, users’ expectations, end project vision."
+        },
+        {
+            title: "Planning & Strategy",
+            desc: "Our professional ReactJS app developers plan perfectly according to your project requirements and create an optimal strategy for development."
+        },
+        {
+            title: "Product Design",
+            desc: "We keep your requirements in mind and create unique UI/UX designs. Leverage the benefits of creative UI/UX designs and make your product interactive."
+        },
+        {
+            title: "Product Development",
+            desc: "Our dedicated and knowledgable developers use agile processes and modern coding practices to create unique apps."
+        },
+        {
+            title: "Testing & QA",
+            desc: "As a renowned ReactJS development company, we follow a unique QA & testing approach to ensure the project's quality and flow."
+        },
+        {
+            title: "Product Perfecting",
+            desc: "We perform repetitive checks to ensure that the app we deliver to you meets your expectations and fulfils business need."
+        },
+        {
+            title: "Project Delivery",
+            desc: "Develop and launch your applications with no time delays. Our ReactJS developer offers a speedy deployment process."
+        }
+    ];
+
+    const industries = [
+        { name: "eCommerce & D2C Brands", desc: "Sub-second product catalog browsing, dynamic carts, and instant checkout.", icon: <ShoppingCart /> },
+        { name: "Fintech & Trading Platforms", desc: "Real-time market tickers, dynamic financial charts, and secure auth.", icon: <Landmark /> },
+        { name: "Healthcare & Telehealth", desc: "HIPAA-compliant interactive patient portals and booking calendars.", icon: <HeartPulse /> },
+        { name: "SaaS & Cloud Applications", desc: "Multi-tenant user management, settings hubs, and billing portals.", icon: <Cloud /> },
+        { name: "Media & Streaming", desc: "Fluid video playback experiences, interactive playlists, and social feeds.", icon: <MonitorPlay /> },
+        { name: "Logistics & Supply Chain", desc: "Live mapping, automated fleet schedules, and dispatch dashboards.", icon: <Navigation /> },
+        { name: "EdTech & E-Learning", desc: "Interactive course players, live whiteboard collaboration, and quizzes.", icon: <GraduationCap /> },
+        { name: "Real Estate & PropTech", desc: "Interactive floor plans, virtual tours, and map-based listing search.", icon: <Building /> },
+        { name: "Automotive & Mobility", desc: "Vehicle configurators, dynamic finance calculators, and booking flows.", icon: <Truck /> },
+        { name: "Fitness & Lifestyle", desc: "Gamified workout trackers, telemetry graphs, and community hubs.", icon: <Dumbbell /> },
+        { name: "LegalTech & Enterprise", desc: "Document collaboration suites, audit viewers, and signature flows.", icon: <Scale /> },
+        { name: "Social & Community", desc: "Real-time chat feeds, notification bells, and rich content editors.", icon: <MessageSquare /> }
+    ];
+
+    const reasons = [
+        "Certified React.js and Next.js developers with 5+ years average enterprise experience",
+        "Deep mastery of React 18+ concurrency, Server Components, Hooks, and TypeScript",
+        "Proven expertise in Next.js App Router for sub-second page loads and superior SEO",
+        "State management mastery: Redux Toolkit, Zustand, Recoil, TanStack React Query",
+        "Flexible hiring models: Dedicated Monthly Team, Staff Augmentation, or T&M",
+        "100% test coverage with Jest, React Testing Library, Cypress, and Playwright",
+        "Overlapping timezone coverage for USA, UK, Europe, Australia, and Global teams",
+        "Complete code ownership, strict NDA agreements, and transparent sprint reporting"
+    ];
+
+    const technologies = [
+        "React 18+", "Next.js 14", "TypeScript", "React Native", "Redux Toolkit",
+        "Zustand", "TanStack Query", "Tailwind CSS", "Framer Motion", "GraphQL",
+        "REST APIs", "Node.js", "Jest", "Playwright", "Storybook", "Vercel & AWS"
+    ];
+
     return (
         <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/javascript-developers" className="hover:text-[#08BFE8] transition-colors">JavaScript Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">React Developer</span>
-                </div>
+            <div className="w-full bg-white min-h-screen font-sans">
+                <SubServiceShared.Hero
+                    parentTitle="JavaScript Developers"
+                    parentRoute="/hire-team/javascript-developers"
+                    eyebrow="Modern Component-Driven Engineering"
+                    title="A Reliable React JS Development Company"
+                    description="Build ultra-fast, interactive web applications and mobile apps with certified React.js developers. The Digital Connect creates high-converting SPAs, Next.js portals, and enterprise dashboards with pixel-perfect precision and scalable architecture."
+                    theme={theme}
+                    visual={ReactVisual}
+                    ctaText="HIRE REACT DEVELOPERS"
+                />
 
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire React Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated React engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a React Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
+                {/* Intro Section */}
+                <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="w-full">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Enterprise Front-End Authority</h2>
+                            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
+                                Crafting High-Speed, Conversion-Optimized React.js Web Experiences
+                            </motion.h2>
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
+                                <p>React.js dominates modern frontend development through its declarative component model, lightning-fast Virtual DOM diffing engine, and vibrant open-source ecosystem. When paired with Next.js Server Components and modern TypeScript, React delivers unmatched user experiences, instantaneous page transitions, and top-tier search engine visibility.</p>
+                                <p>At The Digital Connect, our dedicated React.js developers engineer high-performance single-page applications, complex SaaS analytics portals, headless eCommerce storefronts, and cross-platform React Native apps. We integrate seamlessly into your Agile sprints to accelerate feature releases while enforcing strict code quality standards.</p>
+                            </motion.div>
+                        </div>
+                    </div>
                 </section>
 
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our React Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
+                {/* Process Section */}
+                <SubServiceShared.Process
+                    theme={theme}
+                    title="Our React.js Development & Hiring Lifecycle"
+                    eyebrow="Agile React Delivery"
+                    description="From architecture discovery to component development and continuous QA, our structured process ensures maximum speed and code elegance."
+                    process={processSteps}
+                />
+
+                {/* Empower Services Cards */}
+                <section>
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                            <div className="bg-cyan-50 text-cyan-700 font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6 border border-cyan-200">
+                                Empower Your Frontend with React.js
+                            </div>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
+                                Our React.js Development & Staffing Services
+                            </h3>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore full-spectrum React and Next.js engineering capabilities tailored for high-growth digital businesses.</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant React ecosystems.</p>
+                    </div>
+
+                    <div className="w-full bg-white py-12 md:py-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="space-y-12 lg:space-y-16">
+                                {services.map((svc, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={fadeIn}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F2FCFD]`}
+                                    >
+                                        <div className="w-full lg:w-[49%] flex flex-col justify-center">
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
+                                                <div className="w-20 h-[2px] bg-cyan-500 mt-4 mb-6"></div>
+                                            </div>
+                                            <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
+                                                {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
+                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
+                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
+                                                </div>
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-cyan-400 shrink-0">
+                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
+                                                    </div>
+                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
+                                                        {svc.cta}
+                                                    </span>
+                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
+                {/* Technologies Section */}
+                {technologies && technologies.length > 0 && (
+                    <SubServiceShared.Technology
+                        theme={theme}
+                        technologies={technologies}
+                        title="React Frameworks, State Managers & Tools"
+                        eyebrow="Our Tech Stack"
+                    />
+                )}
+
+                {/* Industries Section */}
+                <section className="py-20 lg:py-32 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
                         </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect React engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((ind, i) => (
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                        {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-[#0A1024] mb-2">{ind.name}</h5>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{ind.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Reasons to Choose Us */}
+                <section className="py-20 lg:py-32 bg-[#FAF7F4]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Why Choose The Digital Connect</h2>
+                                <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">
+                                    Why Choose The Digital Connect for React Development
+                                </h3>
+                                <p className="mt-4 text-slate-600 text-base md:text-lg">We combine pixel-perfect design translation with enterprise React architecture to build market-leading web applications.</p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 col-span-2">
+                                    {reasons.map((r, i) => (
+                                        <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-cyan-200 transition-colors">
+                                            <div className="w-6 h-6 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center shrink-0 mt-0.5">
+                                                <CheckCircle2 size={16} />
+                                            </div>
+                                            <p className="text-slate-700 font-medium text-sm leading-relaxed">{r}</p>
+                                        </motion.div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled React developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire React Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
+                {/* Quote Form */}
+                <SubServiceShared.QuoteForm
+                    theme={theme}
+                    title="Ready to Build Next-Gen React Applications?"
+                    subtitle="Share your frontend roadmap with our React architects and receive senior developer profiles & a tailored technical estimate within 24 hours."
+                />
             </div>
         </PageTransition>
     );
 };
+
 export default ReactDeveloper;

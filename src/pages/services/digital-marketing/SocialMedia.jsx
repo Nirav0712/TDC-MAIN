@@ -10,7 +10,8 @@ import {
     Layout, Server, FileText, Globe, Code, PenTool, Zap, Database,
     Cloud, Layers, CreditCard, Users, LayoutDashboard, Search,
     Target, Palette, Component, Repeat, Store, ShoppingBag, ArrowRightLeft,
-    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart
+    Share2, MessageSquare, BookOpen, CheckCircle, Sparkles, ShieldCheck, Mail, LineChart,
+    Megaphone, RefreshCw, Trophy
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -22,95 +23,148 @@ const fadeIn = {
 
 const SocialMedia = () => {
     useSEO({
-        "title": "Social Media Marketing & Management | The Digital Connect",
-        "description": "The Digital Connect provides full-service social media management, brand storytelling, community growth, and paid social campaigns."
-});
+        title: "Social Media Marketing & Management Agency | The Digital Connect",
+        description: "Build an active community, amplify brand awareness, and drive social revenue. The Digital Connect manages full-cycle organic social, influencer, and viral campaigns."
+    });
 
-    const theme = {"accent":"text-pink-500","bg":"bg-pink-500/20","softBg":"bg-pink-50"};
+    const theme = { accent: "text-pink-500", bg: "bg-pink-500/20", softBg: "bg-pink-50" };
 
     const services = [
-            {
-                title: "Instagram & Facebook Management",
-                icon: <Share2 className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
-                cta: "Grow on Instagram",
-                
-                paragraphs: [
-                    "Curate a visually stunning Instagram feed with high-engagement carousels, short-form Reels, Stories, and branded community posts.",
-                    "We optimize hashtag strategies, post timings, and interactive polls to maximize organic algorithm reach."
-]
-            },
-            {
-                title: "LinkedIn Thought Leadership & B2B",
-                icon: <Briefcase className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
-                cta: "Scale B2B Social",
-                
-                paragraphs: [
-                    "Position your executives and company as industry thought leaders on LinkedIn with insightful text posts, case studies, and document carousels.",
-                    "Build corporate trust, attract enterprise clients, and recruit top-tier talent with a strong organic LinkedIn presence."
-]
-            },
-            {
-                title: "Social Graphic & Video Production",
-                icon: <PenTool className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-                cta: "Create Social Content",
-                
-                paragraphs: [
-                    "Stop the scroll with custom-designed social graphics, infographics, and engaging motion animations tailored to each platform's aspect ratios.",
-                    "Every visual asset is crafted specifically for your brand, adhering strictly to your color palettes and typography."
-]
-            },
-            {
-                title: "Influencer & Creator Partnerships",
-                icon: <Users className="w-8 h-8" />,
-                imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-                cta: "Partner with Creators",
-                
-                paragraphs: [
-                    "Expand your reach through authentic creator collaborations. We identify, vet, negotiate, and manage influencer partnerships aligned with your brand.",
-                    "Leverage creator-generated content (UGC) across organic social feeds and high-converting paid social ads."
-]
-            }
+        {
+            title: "Facebook Marketing",
+            icon: <Share2 className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+            cta: "Grow on Instagram & FB",
+            paragraphs: [
+                "Through Facebook, you are certain to reach your target demographic since the social media platform has over 2 billion monthly active users. Use the most popular social media network to expand your company’s reach.",
+
+                "Facebook advertising services may help your company create an online following, raise brand recognition, and improve lead generation and revenue-generating initiatives. It’s a must-use advertising channel for organizations that want to develop because of Facebook’s large audience (it has more than two billion monthly users), extensive targeting possibilities, and a wide variety of ad kinds.",
+
+                "We at The Digital Connect provide Facebook ad management services to get the most out of Facebook. We’re a one-stop solution for Facebook advertising, taking care of everything from developing your strategy and ad creatives to starting and tracking your campaigns."
+            ],
+        },
+        {
+            title: "Instagram Marketing",
+            icon: <Briefcase className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+            cta: "Scale B2B Thought Leadership",
+            paragraphs: [
+                "Is Instagram advertising something you’re interested in using for your business? If this is the case, you need a strategy. Effective Instagram advertising needs strategic knowledge, a creative eye, and the time to execute and track results.",
+
+                "Many companies don’t have the means to run effective Instagram ads, so we’re here to assist. If you’re looking for an Instagram advertising agency, we’ll keep you up to speed on the most recent industry developments, algorithm adjustments, and best practices. The buyer’s journey may be broken down into phases, from awareness through conversion, and we can do so while keeping inside your budget.",
+
+                "Our agency can maximize your ad budget because of Instagram’s large and diversified user base, which includes more than 1 billion active monthly accounts and more than 500 million active daily accounts. We can target our digital advertising efforts to the specific individuals you want to reach by determining characteristics like geography, interests, demographics, habits, and more."
+            ],
+        },
+        {
+            title: "LinkedIn Marketing",
+            icon: <MonitorPlay className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
+            cta: "Create Viral Video Content",
+            paragraphs: [
+                "When it comes to targeting and efficiently reaching professionals all around the globe, LinkedIn stands out above the other social media giants that may claim comparable figures. Consider using LinkedIn advertising services if you’re planning to target individuals based on their professions, skill sets, industries, or professional interests since more than half of its members have a college degree.",
+
+                "Our LinkedIn advertising agency is always up to speed on algorithm updates and LinkedIn news to provide the greatest possible marketing results for your company. To get the best results for your company, we use our LinkedIn ad campaign management knowledge and smart selection among the platform’s many ad formatting and targeting options.",
+
+                "You can count on us to keep you updated throughout the process since we know how important it is to make the most of your financial resources. Every step of the way, you can be certain that we will use your resources effectively and productively to help you reach the goals you care about most."
+            ],
+        },
+        {
+            title: "Twitter Marketing",
+            icon: <Users className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+            cta: "Launch Influencer Campaign",
+            paragraphs: [
+                "Get in touch with present and future customers quickly with Twitter advertising services. Become the company that people follow and believe in. The sheer volume of tweets on Twitter might be frightening, but we have the expertise to assist your company in cutting through the clutter and getting your message out there.",
+
+                "Does your company want to tap into the buying power of generations who have grown up in the digital age? We’ll use your marketing campaign’s latest industry information and platform technologies to target your targeted consumers. We follow industry best practices to get the greatest outcomes and make the most of every opportunity.",
+
+                "Don’t hesitate to contact us for your Twitter advertising management if you don’t have the time to build smart advertising campaigns, evaluate and make adjustments based on Twitter information, and keep up with industry developments."
+            ],
+        },
+        {
+            title: "eCommerce Social Media Services",
+            icon: <Palette className="w-8 h-8" />,
+            imgUrl: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=800",
+            cta: "Design Visual Assets",
+            paragraphs: [
+                "You can attract more clients to your eCommerce site and enhance your income through social network marketing. As a result, your eCommerce shop’s social media advertising campaigns may directly impact sales and profits.",
+
+                "Social media marketing strategies for eCommerce businesses include paid advertising on social media networks such as Facebook, Twitter, Instagram, LinkedIn, YouTube, and other platforms. Paid social media advertising allows you to expand the reach of your brand’s social media presence beyond what you can accomplish organically on social media.",
+
+                "Because of algorithm changes on social media networks such as Facebook, connecting consumers organically on these platforms is more difficult than ever. E-tailers should consider employing social media advertising to boost their online sales to grow their business."
+            ],
+        },
+        // {
+        //     title: "Social Listening & Reputation Crisis Management",
+        //     icon: <ShieldCheck className="w-8 h-8" />,
+        //     imgUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+        //     cta: "Monitor Brand Mentions",
+        //     paragraphs: [
+        //         "Track brand sentiment, customer feedback, and competitor movements in real-time across social networks with advanced listening tools.",
+        //         "We proactively address customer concerns, mitigate PR risks, and turn customer inquiries into positive brand loyalty moments."
+        //     ]
+        // }
     ];
 
     const processSteps = [
-            { title: "Brand Voice & Audience Audit", desc: "Defining your unique tone of voice, visual style guide, and target audience personas." },
-            { title: "Monthly Content Calendar", desc: "Planning thematic content pillars, product spotlights, industry insights, and educational graphics." },
-            { title: "Creative Asset Production", desc: "Designing branded carousels, custom graphics, short-form video Reels, and persuasive captions." },
-            { title: "Automated Scheduling", desc: "Scheduling posts at peak audience engagement times across all active social channels." },
-            { title: "Active Community Management", desc: "Responding to comments, direct messages, and brand mentions to nurture community relationships." },
-            { title: "Analytics & Strategy Tuning", desc: "Reviewing monthly engagement rates, follower growth, and referral traffic to refine content." }
+        {
+            title: "Assessing Your Existing Social Media Presence",
+            desc: "We will first observe your surroundings and social media presence before making plans for the future."
+        },
+        {
+            title: "Determining the Ideal Customer for You",
+            desc: "We will research extensively to determine the ideal customers that suit your needs."
+        },
+        {
+            title: "Selecting a Channel",
+            desc: "For your company, we focus on the social media outlets that will have the most effect."
+        },
+        {
+            title: "Social Strategy & Posting",
+            desc: "We will create and distribute high-quality content with the right strategy, monitoring, and execution."
+        },
+        {
+            title: "Promoting Your Business Through Social Media",
+            desc: "We help you promote your business socially with a mixture of organic and paid ads strategies."
+        },
+        {
+            title: "Tracking and Analyzing Results",
+            desc: "After all the efforts, we will measure everything, which will help us know where to improve our strategy."
+        }
     ];
 
     const industries = [
-        { name: "eCommerce & Retail", desc: "Improve brand presence and sales with scalable digital storefronts.", icon: <ShoppingCart /> },
-        { name: "Health & Fitness", desc: "HIPAA-compliant platforms for transformational digital healthcare.", icon: <HeartPulse /> },
-        { name: "Travel & Hospitality", desc: "Integrate customer travel experiences with robust booking platforms.", icon: <Navigation /> },
-        { name: "Education & e-Learning", desc: "Blending modern technology to bring seamless interactive learning.", icon: <GraduationCap /> },
-        { name: "Fashion & Apparel", desc: "Interactive digital storefronts and style apps to boost online presence.", icon: <Shirt /> },
-        { name: "Sports & Recreation", desc: "Creating modern websites and engaging tracking apps for sports.", icon: <Dumbbell /> },
-        { name: "Legal & Compliance", desc: "Secure digital document portals and case workflows for law firms.", icon: <Scale /> },
-        { name: "Fintech & Banking", desc: "Trustworthy & next-gen financial software solutions for enterprises.", icon: <Landmark /> },
-        { name: "Logistics & Supply Chain", desc: "Intelligent freight routing and real-time inventory tracking portals.", icon: <Truck /> },
-        { name: "Real Estate & PropTech", desc: "Intelligent digital solutions and listing portals for real estate.", icon: <Building2 /> },
-        { name: "SaaS & Cloud Platforms", desc: "Multi-tenant cloud architectures engineered for rapid subscription scaling.", icon: <Building /> },
-        { name: "Automotive & Manufacturing", desc: "Smart production monitoring and supply chain management tools.", icon: <Briefcase /> }
+        { name: "Fashion & Apparel", desc: "Lookbooks, influencer styling hauls, and visual shoppable Instagram feeds.", icon: <Shirt /> },
+        { name: "B2B SaaS & Tech", desc: "Founder thought leadership, product release demos, and employee culture.", icon: <Cloud /> },
+        { name: "eCommerce & D2C", desc: "Viral unboxing videos, customer reviews, and dynamic product giveaways.", icon: <ShoppingCart /> },
+        { name: "Health & Fitness", desc: "Workout tutorials, transformation stories, and motivational reels.", icon: <HeartPulse /> },
+        { name: "Food & Beverage", desc: "Appetizing recipe reels, restaurant aesthetic photos, and foodie reviews.", icon: <Sparkles /> },
+        { name: "Real Estate & Architecture", desc: "Luxury property video tours, interior design carousels, and market updates.", icon: <Building2 /> },
+        { name: "Education & Learning", desc: "Bite-sized knowledge tips, student achievements, and campus life.", icon: <GraduationCap /> },
+        { name: "Fintech & Finance", desc: "Financial literacy carousels, market commentary, and security tips.", icon: <Landmark /> },
+        { name: "Travel & Hospitality", desc: "Wanderlust travel reels, resort amenities showcases, and guest stories.", icon: <Globe /> },
+        { name: "Legal & Professional", desc: "Legal tips, corporate case wins, and attorney introduction videos.", icon: <Scale /> },
+        { name: "Automotive & Dealerships", desc: "Vehicle walkarounds, exhaust sounds, and new inventory spotlights.", icon: <Truck /> },
+        { name: "Gaming & Entertainment", desc: "Gameplay clips, community memes, and live streaming announcements.", icon: <MonitorPlay /> }
     ];
 
     const reasons = [
-        "Bespoke content strategy aligned with your unique business goals and brand identity",
-        "Custom-designed graphic and video assets — zero low-quality generic stock images",
-        "Consistent monthly content calendars provided in advance for client approval",
-        "Active community management fostering real relationships with your followers",
-        "Proven B2B LinkedIn thought leadership and B2C Instagram growth playbooks",
-        "Transparent monthly analytics reports tracking reach, engagement, and click-throughs",
-        "Seamless integration with your paid advertising and content marketing initiatives",
-        "Dedicated social media strategist managing your daily posting and community voice"
+        "Dedicated team of social strategists, copywriters, graphic designers, and video editors",
+        "Strategic focus on genuine community engagement and pipeline revenue, not just vanity follower counts",
+        "Consistent, high-frequency posting schedules managed with zero operational burden on your team",
+        "Custom high-production short-form video creation optimized for TikTok, Reels, and Shorts algorithms",
+        "Proactive influencer relationship management delivering vetted creators aligned with your values",
+        "Transparent monthly Looker Studio reporting detailing audience demographic growth and engagement",
+        "Comprehensive brand reputation monitoring catching customer sentiment issues before they escalate",
+        "Proven experience scaling organic social presence for consumer brands and B2B enterprises alike"
     ];
 
-    const technologies = ["Buffer","Hootsuite","Sprout Social","Figma","Adobe Photoshop","Canva","Later","Meta Business Suite","LinkedIn Analytics"];
+    const technologies = [
+        "Instagram Creator Studio", "LinkedIn Analytics", "TikTok Ads & Organic", "Buffer / Hootsuite",
+        "Canva Enterprise", "Adobe Premiere Pro", "After Effects", "Figma", "Sprout Social",
+        "Brand24", "Looker Studio", "CapCut Pro", "Meta Business Suite"
+    ];
 
     return (
         <PageTransition>
@@ -118,25 +172,25 @@ const SocialMedia = () => {
                 <SubServiceShared.Hero
                     parentTitle="Digital Marketing"
                     parentRoute="/services/digital-marketing"
-                    eyebrow="Social Media Marketing"
-                    title="Strategic Social Media Marketing & Management"
-                    description="Build an engaged community, amplify brand authority, and turn casual followers into dedicated brand evangelists across all major social networks."
+                    eyebrow="Social Media Mastery"
+                    title="Social Media Marketing & Management Services"
+                    description="Turn casual social scrollers into loyal, active brand advocates. The Digital Connect delivers full-service social media management, viral short-form video production, B2B thought leadership, and influencer partnerships that amplify brand equity."
                     theme={theme}
                     visual={SocialMediaVisual}
-                    ctaText="GET FREE QUOTE NOW"
+                    ctaText="GET FREE SOCIAL AUDIT"
                 />
 
                 {/* Intro Section */}
                 <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Building Authentic Communities</h2>
+                        <div className="w-full">
+                            <h2 className="text-pink-600 font-bold uppercase tracking-wider text-sm mb-3">Authentic Brand Storytelling</h2>
                             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024] mb-8">
-                                Amplify Your Brand Voice and Drive Meaningful Social Engagement
+                                Building High-Engagement Communities Across Modern Social Channels
                             </motion.h2>
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="prose prose-lg prose-slate max-w-none space-y-6 text-slate-600">
-                                <p>Social media is no longer just a broadcast channel for promotional announcements; it is where modern consumers discover, vet, and build emotional connections with brands. At The Digital Connect, we provide end-to-end social media marketing and management services that elevate your brand voice.</p>
-                                <p>From monthly content calendar planning and custom graphic production to community engagement and paid social campaigns on LinkedIn, Instagram, Facebook, and X, our social team crafts content that sparks conversations and drives referral traffic.</p>
+                                <p>Social media is the digital storefront and cultural heartbeat of modern brands. A passive or generic social media presence alienates potential customers and damages brand trust. To succeed, brands must consistently publish visually striking, value-packed content that sparks genuine conversation and commands attention.</p>
+                                <p>At The Digital Connect, our social media strategists, copywriters, and video producers craft bespoke organic social campaigns across LinkedIn, Instagram, TikTok, Facebook, and X. We combine captivating aesthetic design with algorithmic video pacing to build engaged communities that drive meaningful commercial results.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -145,23 +199,23 @@ const SocialMedia = () => {
                 {/* Process Section */}
                 <SubServiceShared.Process
                     theme={theme}
-                    title="Our Social Media Management Process"
-                    eyebrow="Social Strategy Workflow"
-                    description="A disciplined content pipeline ensuring consistent publishing and high engagement."
+                    title="Our Social Media Management Lifecycle"
+                    eyebrow="Agile Social Process"
+                    description="From brand persona discovery and monthly content calendar creation to creative production, scheduling, and community moderation."
                     process={processSteps}
                 />
 
-                {/* Empower Your Business with Our Services */}
+                {/* Empower Services Cards */}
                 <section>
-                    <div className="bg-white py-12 md:py-16 lg:py-20">
+                    <div className="bg-white py-8 md:py-10 lg:py-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                            <div className="bg-[#EAF4FE] text-[#05408A] font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6">
-                                Empower Your Business with Our Services
+                            <div className="bg-pink-50 text-pink-700 font-bold text-sm tracking-wide uppercase px-3.5 py-2 rounded-full mb-6 border border-pink-200">
+                                Empower Your Brand on Social Media
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A1024]">
-                                Our Social Media Offerings
+                                Our Social Media Marketing Services
                             </h3>
-                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Complete social media solutions tailored to your industry and brand identity.</p>
+                            <p className="mt-4 text-slate-600 max-w-2xl text-base md:text-lg">Explore full-spectrum social media management, short-form video, and influencer capabilities engineered for maximum engagement.</p>
                         </div>
                     </div>
 
@@ -175,12 +229,12 @@ const SocialMedia = () => {
                                         whileInView="visible"
                                         viewport={{ once: true, margin: "-50px" }}
                                         variants={fadeIn}
-                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#F0F7FF]`}
+                                        className={`group relative flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch justify-between gap-10 lg:gap-14 w-full p-6 lg:p-10 rounded-[32px] transition-colors duration-500 hover:bg-[#FFF8FA]`}
                                     >
                                         <div className="w-full lg:w-[49%] flex flex-col justify-center">
                                             <div>
                                                 <h4 className="text-xl md:text-2xl font-bold text-[#0A1024]">{svc.title}</h4>
-                                                <div className="w-20 h-[2px] bg-orange-500 mt-4 mb-6"></div>
+                                                <div className="w-20 h-[2px] bg-pink-500 mt-4 mb-6"></div>
                                             </div>
                                             <div className="space-y-4 text-[#2D3748] text-base leading-relaxed">
                                                 {svc.paragraphs.map((p, idx) => <p key={idx}>{p}</p>)}
@@ -188,13 +242,13 @@ const SocialMedia = () => {
                                         </div>
 
                                         <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
-                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
+                                            <div className="absolute -inset-4 sm:-inset-6 bg-pink-500/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
                                             <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
                                                 <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
                                                     <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
                                                 </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
-                                                    <div className="text-orange-400 shrink-0">
+                                                <Link to="/contact" className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
+                                                    <div className="text-pink-400 shrink-0">
                                                         {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                                                     </div>
                                                     <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
@@ -216,7 +270,7 @@ const SocialMedia = () => {
                     <SubServiceShared.Technology
                         theme={theme}
                         technologies={technologies}
-                        title="Technologies We Work On"
+                        title="Social Platforms, Creation & Listening Tools"
                         eyebrow="Our Tech Stack"
                     />
                 )}
@@ -225,14 +279,14 @@ const SocialMedia = () => {
                 <section className="py-20 lg:py-32 bg-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries We Serve</h3>
+                            <h2 className="text-pink-600 font-bold uppercase tracking-wider text-sm mb-3">Custom IT Solutions for Varied Verticals</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024] mb-4">Industries & Verticals We Grow</h3>
                             <p className="text-slate-600">A perfect combination of ideation & innovation of digital products for all industry verticals. We help you streamline operations and improve customer engagement.</p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {industries.map((ind, i) => (
-                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-cyan-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
-                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 group-hover:border-cyan-200 transition-colors">
+                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-pink-200 hover:shadow-xl transition-all duration-300 flex flex-col items-start gap-4">
+                                    <div className="w-12 h-12 bg-white border border-slate-200 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-pink-50 group-hover:text-pink-600 group-hover:border-pink-200 transition-colors">
                                         {React.cloneElement(ind.icon, { className: 'w-6 h-6' })}
                                     </div>
                                     <div>
@@ -245,72 +299,39 @@ const SocialMedia = () => {
                     </div>
                 </section>
 
-                {/* Reasons to Choose Us & Key Features */}
-                <section className="py-20 lg:py-32 bg-[#F5FAFD]">
+                {/* Reasons to Choose Us */}
+                <section className="py-20 lg:py-32 bg-[#FAF7F4]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                            <h2 className="text-cyan-600 font-bold uppercase tracking-wider text-sm mb-3">Reason to Choose Us</h2>
-                            <h3 className="text-3xl md:text-5xl font-bold text-[#0A1024] leading-tight mb-6">
-                                Why Choose The Digital Connect for Social Media Marketing
-                            </h3>
-                            <h4 className="text-xl font-bold text-slate-700 mb-4">Our Key Features</h4>
-                            <p className="text-slate-600">Build meaningful brand affinity with our social media management team:</p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {reasons.map((reason, i) => (
-                                <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex items-start gap-4">
-                                    <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
-                                    <span className="text-[#0A1024] font-bold">{reason}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Quote Form Section */}
-                <section className="py-16 md:py-24 lg:py-32 bg-white relative">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="bg-slate-50 rounded-[32px] shadow-sm overflow-hidden border border-slate-200 p-8 lg:p-12">
-                            <div className="text-center mb-10">
-                                <h3 className="text-3xl font-bold text-[#0A1024] mb-3">GET A FREE QUOTE</h3>
-                                <p className="text-slate-600">We will get back to you within 24 hours</p>
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-pink-600 font-bold uppercase tracking-wider text-sm mb-3">Why Choose The Digital Connect</h2>
+                                <h3 className="text-3xl md:text-4xl font-bold text-[#0A1024]">
+                                    Why Choose The Digital Connect for Social Media Marketing
+                                </h3>
+                                <p className="mt-4 text-slate-600 text-base md:text-lg">We combine high-aesthetic creative visual assets with proactive community building to turn social followers into brand advocates.</p>
                             </div>
-                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Your quote request has been received. Our team will contact you shortly."); }}>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">First Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Last Name <span className="text-red-500">*</span></label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
-                                    </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 col-span-2">
+                                    {reasons.map((r, i) => (
+                                        <motion.div key={i} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-pink-200 transition-colors">
+                                            <div className="w-6 h-6 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center shrink-0 mt-0.5">
+                                                <CheckCircle2 size={16} />
+                                            </div>
+                                            <p className="text-slate-700 font-medium text-sm leading-relaxed">{r}</p>
+                                        </motion.div>
+                                    ))}
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Email Address <span className="text-red-500">*</span></label>
-                                        <input required type="email" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="john@example.com" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#0A1024]">Phone Number <span className="text-red-500">*</span></label>
-                                        <input required type="tel" className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-[#0A1024]">Message <span className="text-red-500">*</span></label>
-                                    <textarea required rows={4} className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 outline-none transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your project requirements..."></textarea>
-                                </div>
-                                <div className="pt-4">
-                                    <button type="submit" className="w-full md:w-auto px-6 py-3.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-600/20 flex justify-center items-center group mx-auto">
-                                        Submit Request
-                                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                {/* Quote Form */}
+                <SubServiceShared.QuoteForm
+                    theme={theme}
+                    title="Ready to Transform Your Social Media Presence?"
+                    subtitle="Share your social media goals with our creative directors and receive a complimentary social audit & monthly growth strategy within 24 hours."
+                />
             </div>
         </PageTransition>
     );

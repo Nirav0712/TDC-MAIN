@@ -6,7 +6,7 @@ const navLinks = [
     { label: 'Company', id: 'company', path: '/about' },
     { label: 'Services', id: 'services', path: '/services' },
     { label: 'Industries', id: 'industries', path: '/industries' },
-    { label: 'Portfolio', id: 'portfolio', path: '/portfolio' },
+    // { label: 'Portfolio', id: 'portfolio', path: '/portfolio' },
     { label: 'Process', id: 'process', path: '/process' },
     { label: 'Hire Team', id: 'hire-team', path: '/hire-team/web-developers' },
     { label: 'Careers', id: 'careers', path: '/careers' }
@@ -77,7 +77,7 @@ const DesktopNavigation = () => {
 
             {/* Mega Menu positioning container - Absolutely centered relative to the Header max-w-1400px container */}
             <div
-                className="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-48px)] xl:w-[calc(100vw-80px)] max-w-[1180px] pointer-events-none hidden lg:block"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-48px)] xl:w-[calc(100vw-80px)] max-w-[1240px] pointer-events-none hidden lg:block"
                 style={{ zIndex: 1100 }}
             >
                 <div
