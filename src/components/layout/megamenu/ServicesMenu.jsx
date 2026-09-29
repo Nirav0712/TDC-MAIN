@@ -114,11 +114,6 @@ const ServicesMenu = ({ data, setActiveMenu }) => {
                                     <div className="absolute -top-2.5 -right-2.5 w-full h-full border-2 border-[#0B3A60]/40 rounded-2xl pointer-events-none"></div>
                                     {/* Image */}
                                     <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
-                                        <img
-                                            src={currentItem.image}
-                                            alt={currentItem.heading}
-                                            className="w-full h-full object-cover"
-                                        />
                                     </div>
                                 </div>
                             )}

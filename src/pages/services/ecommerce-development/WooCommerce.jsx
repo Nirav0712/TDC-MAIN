@@ -1,3 +1,4 @@
+import TopicCard from '../../../components/common/TopicCard';
 import React from 'react';
 import useSEO from '../../../hooks/useSEO';
 import PageTransition from '../../../components/common/PageTransition';
@@ -187,23 +188,7 @@ const WooCommerce = () => {
                                             </div>
                                         </div>
 
-                                        <div className="w-full lg:w-[45%] relative mt-6 lg:mt-0 flex flex-col">
-                                            <div className="absolute -inset-4 sm:-inset-6 bg-orange-400/20 rounded-full blur-3xl pointer-events-none -z-10 transition-colors"></div>
-                                            <div className="relative w-full flex-1 bg-white rounded-[24px] shadow-lg border border-slate-100 p-2 flex flex-col">
-                                                <div className="relative w-full flex-1 min-h-[250px] overflow-hidden rounded-t-[18px]">
-                                                    <img src={svc.imgUrl} alt={svc.title} className="absolute inset-0 w-full h-full object-cover block" />
-                                                </div>
-                                                <Link to={svc.link || "/contact"} className="group/link flex items-center w-full bg-[#0A1024] text-white p-4 sm:p-5 rounded-b-[18px] transition-colors hover:bg-slate-900 gap-4 mt-0.5 shrink-0">
-                                                    <div className="text-orange-400 shrink-0">
-                                                        {React.cloneElement(svc.icon, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
-                                                    </div>
-                                                    <span className="font-semibold text-sm sm:text-base leading-snug flex-1">
-                                                        {svc.cta}
-                                                    </span>
-                                                    <ArrowRight className="w-5 h-5 text-white/50 group-hover/link:text-white group-hover/link:translate-x-1 transition-all shrink-0" />
-                                                </Link>
-                                            </div>
-                                        </div>
+                                        <TopicCard svc={svc} index={i} />
                                     </motion.div>
                                 ))}
                             </div>
