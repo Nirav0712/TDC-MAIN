@@ -1,137 +1,94 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const AspnetDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/web-developers" className="hover:text-[#08BFE8] transition-colors">Web Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">ASP.NET Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire ASP.NET Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated ASP.NET engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a ASP.NET Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our ASP.NET Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant ASP.NET ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect ASP.NET engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled ASP.NET developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire ASP.NET Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="ASP.NET"
+      pageTitle="Hire Dedicated ASP.NET Developers | C# & Microsoft Web Experts | The Digital Connect"
+      metaDescription="Hire certified ASP.NET developers from The Digital Connect. C#, ASP.NET MVC, Web API, Azure cloud integration, SQL Server, and flexible hiring models."
+      tagline="We successfully engineer enterprise Microsoft .NET web applications & cloud platforms"
+      heroDescription="We have a group of gifted and dedicated ASP.NET developers who specialize in building enterprise-grade web applications, ASP.NET Web APIs, modern C# backends, SQL Server databases, and Azure cloud solutions. Get in touch with us for your free quote."
+      heroBullets={[
+        "Enterprise C# and ASP.NET MVC / Web API application development",
+        "High-performance SQL Server database optimization, Entity Framework, and Dapper",
+        "Seamless Microsoft Azure cloud integration, microservices, and active directory security"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "100+", label: "ASP.NET Solutions Delivered" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Enterprise-Grade Microsoft .NET Web Solutions",
+        card1Text1: "Does your organization require seasoned ASP.NET developers? We at The Digital Connect provide cutting-edge, all-inclusive ASP.NET programming solutions. We help enterprise businesses worldwide construct high-security, high-performance web applications that integrate seamlessly with Microsoft enterprise ecosystems.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced ASP.NET developers, allowing you to take advantage of our availability as your Offshore Development Center. Your company can make significant savings and improve the effectiveness of its IT infrastructure by using fewer resources and merging them with our skilled team.",
+        card2Title: "Certified Microsoft C# & Azure Engineers",
+        card2Text1: "One of the finest enterprise development firms, The Digital Connect provides you with a dedicated team of ASP.NET developers. To build sophisticated web applications and transactional systems, our certified developers are trained engineers with deep expertise in C#, ASP.NET Core, Entity Framework, and SQL Server.",
+        card2Text2: "Their technical capability enables us to provide effective contractual services in this area to meet your unique enterprise demands with clean N-tier architecture, automated xUnit testing, and compliance with industry standards."
+      }}
+      whyChoosePoints={[
+        {
+          title: "ASP.NET MVC & Web API",
+          desc: "Architecting modular, maintainable web applications and high-throughput RESTful Web APIs using modern C#."
+        },
+        {
+          title: "Legacy .NET Framework Migration",
+          desc: "Upgrading legacy ASP.NET Web Forms and .NET 4.x applications to modern ASP.NET Core and .NET 8 LTS."
+        },
+        {
+          title: "Azure Cloud & DevOps Integration",
+          desc: "Deploying scalable serverless functions, Azure App Services, Azure SQL, and automated Azure DevOps pipelines."
+        },
+        {
+          title: "Database Performance & ORM",
+          desc: "High-performance data access using Entity Framework Core, Dapper micro-ORM, and SQL Server stored procedures."
+        },
+        {
+          title: "Enterprise Identity & Security",
+          desc: "Implementing Azure Active Directory (AAD), OAuth2/OpenID Connect, and ASP.NET Identity with role-based access."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile sprints with daily standups, comprehensive unit/integration testing, and strict enterprise milestone deliveries."
+        }
+      ]}
+      techHighlight={{
+        title1: "Microsoft Ecosystem & Cloud Scalability",
+        desc1: "Our ASP.NET developers leverage the full power of the Microsoft cloud ecosystem (Azure Functions, Service Bus, Redis Cache, and Cosmos DB) to build resilient, auto-scaling enterprise platforms.",
+        title2: "Modern Cross-Platform Web Architecture",
+        desc2: "We combine high-performance ASP.NET Core web backends with React or Angular frontends, delivering responsive, low-latency user interfaces backed by robust enterprise C# logic."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly or monthly hiring models with zero hidden fees. Ramp up developer bandwidth smoothly on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your proprietary code and database are 100% secured. We enforce strict NDAs and Microsoft enterprise security protocols."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Augment your engineering team with certified C# / .NET specialists ready to deploy code from Day 1."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Certified Microsoft developers proficient in C#, ASP.NET Core, Web API, EF Core, SQL Server, and Azure."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You maintain 100% intellectual property and complete ownership of all repository code, schemas, and CI/CD pipelines."
+        }
+      ]}
+    />
+  );
 };
+
 export default AspnetDeveloper;

@@ -1,137 +1,96 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const WebDesigner = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/designers" className="hover:text-[#08BFE8] transition-colors">Designers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Web Designer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Web Designers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Web Design engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Web Design Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Web Design Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Web Design ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Web Design engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Web Design developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Web Designers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Web Design"
+      pageCategory="Designers"
+      categoryUrl="/hire-team/designers"
+      pageTitle="Hire Dedicated Web Designers | Responsive & Modern Website Design Experts | The Digital Connect"
+      metaDescription="Hire certified Web Designers from The Digital Connect. Responsive landing pages, corporate websites, SaaS web design, Figma, and flexible hiring models."
+      tagline="We successfully craft responsive, conversion-focused & visually stunning web experiences"
+      heroDescription="We have a group of gifted and dedicated Web Designers who specialize in designing modern, responsive websites, high-converting SaaS landing pages, eCommerce storefronts, and interactive web portals using Figma and modern UI aesthetics. Get in touch with us for your free quote."
+      heroBullets={[
+        "Modern, responsive web layouts optimized for desktop, tablet, and mobile breakpoints",
+        "Conversion rate optimization (CRO) principles embedded into landing pages and lead funnels",
+        "Clean Figma component systems with design tokens ready for React, Next.js, and WordPress builds"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "310+", label: "Websites Designed" },
+        { value: "24/7", label: "Design Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Aesthetic, High-Converting Web Design Solutions",
+        card1Text1: "Does your company need expert Web Designers? We at The Digital Connect provide cutting-edge, all-inclusive website design solutions. We help businesses worldwide elevate their online presence with modern, beautiful web layouts that captivate visitors and convert them into paying customers.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Web Designers, allowing you to take advantage of our availability as your Offshore Design Center. Your company can make significant savings and improve the effectiveness of its web presence by using fewer resources and merging them with our skilled team.",
+        card2Title: "Certified Figma & Responsive Web Specialists",
+        card2Text1: "One of the finest web creative firms, The Digital Connect provides you with a dedicated team of Web Designers. To construct striking web pages, our certified designers possess deep expertise in grid systems, visual hierarchy, typography, micro-interactions, and conversion rate optimization.",
+        card2Text2: "Their creative capability enables us to provide effective contractual services in this area to meet your unique brand demands with pixel-perfect responsive layouts, structured design assets, and fast delivery."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Responsive Multi-Device Layouts",
+          desc: "Designing tailored experiences across 4K desktop, laptop, tablet, and mobile screen sizes."
+        },
+        {
+          title: "SaaS & Tech Landing Pages",
+          desc: "High-converting hero sections, feature grids, pricing comparison tables, and interactive FAQ accordions."
+        },
+        {
+          title: "eCommerce Storefront Design",
+          desc: "Conversion-optimized product pages, category grids, cart drawers, and streamlined checkout interfaces."
+        },
+        {
+          title: "Micro-Interactions & Motion States",
+          desc: "Defining hover effects, scroll-driven animations, skeleton loaders, and interactive state transitions."
+        },
+        {
+          title: "Developer-Ready Component Systems",
+          desc: "Impeccably organized Figma auto-layout components ready for TailwindCSS, React, and Webflow implementation."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile 2-week design sprints with daily standups, live Figma previews, and prompt revision turnarounds."
+        }
+      ]}
+      techHighlight={{
+        title1: "Speed-Oriented Visual Design Systems",
+        desc1: "Our web designers build with web performance in mind—utilizing modern vector SVG graphics, responsive typography scales, and CSS-friendly visual effects that load in milliseconds.",
+        title2: "A/B Testable Modular Layouts",
+        desc2: "We design modular section blocks (hero variations, social proof bars, testimonial sliders) that enable your growth team to run continuous A/B conversion tests effortlessly."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly and monthly hiring models with zero hidden overheads. Scale your web design bandwidth on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your proprietary brand concepts and designs are completely protected. We enforce strict bilateral NDAs."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Launch new marketing landing pages and brand redesigns in record time with dedicated web designers."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Certified designers skilled in Figma, Adobe XD, Photoshop, Illustrator, Webflow, and HTML/CSS principles."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You retain 100% full intellectual property and ownership of all Figma files, design tokens, and exported assets."
+        }
+      ]}
+    />
+  );
 };
+
 export default WebDesigner;

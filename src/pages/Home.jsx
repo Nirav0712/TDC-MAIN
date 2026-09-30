@@ -7,7 +7,7 @@ import Services from '../components/home/Services';
 import Industries from '../components/home/Industries';
 import WhyChooseUs from '../components/sections/WhyChooseUs';
 import Process from '../components/home/Process';
-import Technologies from '../components/home/Technologies';
+// import Technologies from '../components/home/Technologies';
 // import CaseStudies from '../components/home/CaseStudies';
 // import Testimonials from '../components/home/Testimonials';
 import BlogPreview from '../components/home/BlogPreview';
@@ -24,7 +24,7 @@ const Home = () => {
       <Industries />
       <WhyChooseUs />
       <Process />
-      <Technologies />
+      {/* <Technologies /> */}
       {/* <CaseStudies /> */}
       {/* <Testimonials /> */}
       <BlogPreview />

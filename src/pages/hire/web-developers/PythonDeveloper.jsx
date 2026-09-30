@@ -1,137 +1,96 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const PythonDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/web-developers" className="hover:text-[#08BFE8] transition-colors">Web Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Python Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Python Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Python engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Python Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Python Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Python ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Python engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Python developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Python Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Python"
+      pageCategory="Web Developers"
+      categoryUrl="/hire-team/web-developers"
+      pageTitle="Hire Dedicated Python Developers | Django & FastAPI Experts | The Digital Connect"
+      metaDescription="Hire certified and gifted Python developers from The Digital Connect. 6+ years experience, 120+ projects delivered, 24/7 technical support, and flexible hiring models."
+      tagline="We successfully enhance your online presence & data intelligence"
+      heroDescription="We have a group of gifted and dedicated Python developers who have experience building high-scale web applications, asynchronous APIs, and cloud-native systems. Get in touch with us for your free quote."
+      heroBullets={[
+        "Expertise in Django, FastAPI, Flask & AI/ML integration",
+        "High scalability, low latency, and asynchronous microservices",
+        "Reduced risk of errors or bugs through strict typing & automated testing"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "120+", label: "Python Projects Delivered" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Cutting-Edge, High-Throughput Python Solutions",
+        card1Text1: "Does your company need Python engineers? We at The Digital Connect provide cutting-edge, all-inclusive Python programming solutions. We help organizations worldwide by generating high returns on investment through successful deployment of web apps, data processing pipelines, and microservices.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Python developers, allowing you to take advantage of our availability as your Offshore Development Center. Your company can make significant savings and improve the effectiveness of its IT strategy by using fewer resources and merging them with our skilled team.",
+        card2Title: "Trained Engineers & Contractual Services",
+        card2Text1: "One of the finest development firms, we at The Digital Connect provide you with a dedicated team of Python developers. To create some of the most sophisticated web apps and AI-ready backends, our certified Python developers are trained engineers with deep expertise in Django, FastAPI, Celery, and cloud databases.",
+        card2Text2: "Their potential enables us to provide effective contractual services in this area to meet your unique company demands with high precision, high code quality, and strict performance metrics."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Work with Professionals",
+          desc: "Work with senior Python developers who are familiar with PEP 8 standards, clean architecture, and modern async programming."
+        },
+        {
+          title: "Bespoke Python Applications",
+          desc: "Development of individual bespoke applications, REST/GraphQL APIs, and intelligent data pipelines tailored to your operations."
+        },
+        {
+          title: "Real-Time Project Management",
+          desc: "Project management that is efficient, transparent, and tracked in real-time with daily sprint demos and Jira tracking."
+        },
+        {
+          title: "Python Upgrades & Migrations",
+          desc: "Knowledgeable about Python 2.x to 3.x upgrades, framework refactoring, and migrating monoliths to async microservices."
+        },
+        {
+          title: "Flexible Engagement Models",
+          desc: "A project's flexible engagement models allowing you to quickly scale Python engineer bandwidth up or down."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile sprint execution and automated CI/CD pipelines ensuring your Python modules ship strictly on schedule."
+        }
+      ]}
+      techHighlight={{
+        title1: "Broad Range of Python & Web Framework Skills",
+        desc1: "We at The Digital Connect provide top Python developers with a broad range of skills, enabling them to work on everything from high-speed FastAPI endpoints and Django platforms to complex data pipelines and automated web scrapers. Our affordable Python developers help create a seamless, scalable experience for your digital applications because they are knowledgeable about programming languages, async concurrency, and cloud architectures.",
+        title2: "Full-Stack Synergy & Asynchronous Background Services",
+        desc2: "Hire Indian Python developers to create dynamic, functional web backends and data-intensive applications. We at The Digital Connect take charge of building scalable software frameworks and executing resilient background worker queues (Celery, Redis). All of our Python developers collaborate seamlessly with front-end teams (React, Vue, Next.js) and DevOps engineers. We offer a variety of services thanks to our technical expertise in RESTful APIs, GraphQL, SQL/NoSQL databases, and cloud platforms (AWS, GCP)."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "We don't have any hidden fees when you employ Python developers from us. We remain open for the duration of our engagement. Hire seasoned Python developers according to your requirements, with the flexibility to quickly ramp up or scale down as necessary to adapt to shifting business demands."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "With The Digital Connect, your data is entirely secure, and we value your privacy. Our team uses strict data protection methods and signed Non-Disclosure Agreements (NDAs) to guarantee total confidentiality of ongoing projects."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "We give you all the tools and engineering support you need to strengthen your company while assisting you in constructing a scalable, modern technology ecosystem."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Total accessibility with our knowledgeable Python engineers in your frameworks. Our developers offer deep domain expertise in Django, FastAPI, Flask, Celery, and AI/ML to create custom solutions tailored to specific industries."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "Hire Python developer strategy gives you direct control of projects, enabling them to be finished on schedule. 100% source code, repository, and intellectual property ownership is entirely transparent to you."
+        }
+      ]}
+    />
+  );
 };
+
 export default PythonDeveloper;

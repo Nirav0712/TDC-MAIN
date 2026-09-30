@@ -1,137 +1,96 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const SalesforceConsultant = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/salesforce-integration-developers" className="hover:text-[#08BFE8] transition-colors">Salesforce Integration Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Salesforce Consultant</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Salesforce Consultants
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Salesforce Strategy engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Salesforce Strategy Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Salesforce Strategy Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Salesforce Strategy ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Salesforce Strategy engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Salesforce Strategy developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Salesforce Consultants <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Salesforce Consulting"
+      pageCategory="Salesforce Developers"
+      categoryUrl="/hire-team/salesforce-integration-developers"
+      pageTitle="Hire Dedicated Salesforce Consultants | CRM Strategy & Architecture Experts | The Digital Connect"
+      metaDescription="Hire certified Salesforce Consultants from The Digital Connect. CRM audits, Sales Cloud, Service Cloud, digital transformation, and flexible hiring models."
+      tagline="We successfully optimize CRM workflows, maximize adoption & drive ROI on your Salesforce investment"
+      heroDescription="We have a group of gifted and dedicated Salesforce Consultants who specialize in business process optimization, Salesforce org health audits, CRM roadmap planning, multi-cloud implementation, and change management strategies. Get in touch with us for your free quote."
+      heroBullets={[
+        "Certified Salesforce Consultants & Solution Architects with enterprise advisory experience",
+        "Comprehensive Salesforce Org Health Audits: Technical debt, security, licensing, and optimization",
+        "End-to-end multi-cloud roadmap planning for Sales Cloud, Service Cloud, Experience Cloud, and CPQ"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "85+", label: "CRM Roadmaps Implemented" },
+        { value: "24/7", label: "Consulting Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Strategic, High-Impact Salesforce Consulting Solutions",
+        card1Text1: "Does your company need expert Salesforce Consultants? We at The Digital Connect provide cutting-edge, all-inclusive Salesforce consulting and architecture advisory solutions. We help enterprise leaders translate complex business goals into streamlined, automated CRM workflows that drive user adoption and measurable revenue growth.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Salesforce Consultants, allowing you to take advantage of our availability as your Offshore Consulting Center. Your company can make significant savings and eliminate costly implementation mistakes by using fewer resources and merging them with our skilled team.",
+        card2Title: "Certified Salesforce Solution Architects",
+        card2Text1: "One of the finest CRM advisory firms, The Digital Connect provides you with a dedicated team of Salesforce Consultants. To structure enterprise-wide CRM deployments, our certified consultants possess deep expertise in business analysis, data governance, security modeling, and third-party AppExchange evaluations.",
+        card2Text2: "Their advisory capability enables us to provide effective contractual services in this area to meet your unique business demands with practical implementation blueprints, user training documentation, and clear milestone deliverables."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Salesforce Org Health & Security Audits",
+          desc: "Evaluating code health, governor limit bottlenecks, duplicate data, unused licenses, and security permissions."
+        },
+        {
+          title: "Business Process & Workflow Optimization",
+          desc: "Mapping end-to-end sales and customer service funnels to replace manual tasks with automated Flows."
+        },
+        {
+          title: "Multi-Cloud Implementation Strategy",
+          desc: "Designing cohesive roadmaps connecting Sales Cloud, Service Cloud, Marketing Cloud, and Experience Cloud."
+        },
+        {
+          title: "Salesforce CPQ & Billing Consulting",
+          desc: "Configuring product bundles, dynamic pricing rules, discount schedules, and automated invoice workflows."
+        },
+        {
+          title: "User Adoption & Change Management",
+          desc: "Creating interactive user training programs, documentation, and executive dashboard reporting to ensure high CRM adoption."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Structured milestone delivery sprints with executive stakeholder reviews, risk registers, and actionable guidance."
+        }
+      ]}
+      techHighlight={{
+        title1: "Maximizing ROI & Eliminating License Waste",
+        desc1: "Our consultants review your Salesforce licensing tiers and custom objects, identifying underutilized features and consolidating custom code to drastically lower total cost of ownership (TCO).",
+        title2: "Enterprise Data Governance & Clean Architecture",
+        desc2: "We architect scalable data models, record sharing rules, territory management hierarchies, and automated deduplication pipelines to maintain pristine CRM data hygiene."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly and monthly advisory models with zero hidden overheads. Scale consulting engagement hours on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your business strategies and customer data are completely protected. We enforce strict bilateral NDAs."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Eliminate costly trial-and-error by engaging certified Salesforce architects who have solved enterprise CRM challenges."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Certified consultants skilled in Sales Cloud, Service Cloud, Experience Cloud, CPQ, Flow Builder, and Architecture."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You retain 100% full intellectual property and ownership of all architecture blueprints, audit reports, and roadmap assets."
+        }
+      ]}
+    />
+  );
 };
+
 export default SalesforceConsultant;

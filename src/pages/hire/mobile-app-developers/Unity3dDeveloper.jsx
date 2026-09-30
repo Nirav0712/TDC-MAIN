@@ -1,137 +1,96 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const Unity3dDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/mobile-app-developers" className="hover:text-[#08BFE8] transition-colors">Mobile App Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Unity 3D Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Unity 3D Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Unity 3D engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Unity 3D Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Unity 3D Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Unity 3D ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Unity 3D engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Unity 3D developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Unity 3D Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Unity 3D"
+      pageCategory="Mobile App Developers"
+      categoryUrl="/hire-team/mobile-app-developers"
+      pageTitle="Hire Dedicated Unity 3D Developers | Game & AR/VR Experts | The Digital Connect"
+      metaDescription="Hire certified Unity 3D developers from The Digital Connect. C# game development, mobile 2D/3D games, AR/VR simulations, physics engines, and flexible hiring models."
+      tagline="We successfully engineer immersive 2D/3D mobile games, AR/VR applications & interactive simulations"
+      heroDescription="We have a group of gifted and dedicated Unity 3D developers who specialize in building captivating 2D/3D mobile games, augmented reality (AR) & virtual reality (VR) experiences, interactive simulations, and custom shader development with C# and Unity Engine. Get in touch with us for your free quote."
+      heroBullets={[
+        "Modern Unity 6 & C# development for high-performance 2D and 3D mobile games",
+        "Immersive Augmented Reality (AR Foundation / ARKit / ARCore) and Virtual Reality (Meta Quest / Vision Pro)",
+        "Universal Render Pipeline (URP), custom HLSL shaders, physics optimization, and multiplayer networking"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "70+", label: "Unity Games & Apps Delivered" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Immersive 2D/3D Games & Interactive 3D Solutions",
+        card1Text1: "Does your studio or enterprise need senior Unity 3D developers? We at The Digital Connect provide cutting-edge, all-inclusive Unity engine development solutions. We help gaming studios and brands worldwide build high-framerate mobile games, training simulations, and gamified apps that captivate millions of users.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Unity 3D developers, allowing you to take advantage of our availability as your Offshore Development Center. Your studio can make significant savings and improve the effectiveness of its development pipeline by using fewer resources and merging them with our skilled team.",
+        card2Title: "Certified C# Game & Simulation Engineers",
+        card2Text1: "One of the finest interactive 3D development firms, The Digital Connect provides you with a dedicated team of Unity developers. To build sophisticated mobile titles and AR/VR applications, our certified developers are trained engineers with deep expertise in C#, URP, Shader Graph, Addressables, and multiplayer SDKs (Photon / Netcode).",
+        card2Text2: "Their technical capability enables us to provide effective contractual services in this area to meet your unique project demands with steady 60fps mobile execution, optimized draw calls, and seamless cross-platform deployment."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Mobile Game Architecture (2D/3D)",
+          desc: "End-to-end game programming with C#, state machines, character controllers, physics, and particle systems."
+        },
+        {
+          title: "AR / VR & Spatial Simulations",
+          desc: "Building interactive AR/VR training tools, architectural walkthroughs, and spatial computing apps for Meta Quest and Apple Vision Pro."
+        },
+        {
+          title: "Graphics & Shader Optimization",
+          desc: "Custom HLSL shaders, Shader Graph, Universal Render Pipeline (URP), dynamic lighting, and texture compression."
+        },
+        {
+          title: "Asset Management & Addressables",
+          desc: "Optimizing mobile binary sizes with Unity Addressable Assets and dynamic on-demand content streaming."
+        },
+        {
+          title: "Monetization & Analytics",
+          desc: "Seamless integration of Unity Ads, AdMob, In-App Purchases (IAP), Game Analytics, and leaderboard backends."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile milestone sprints with playtesting builds on physical iOS and Android test devices and continuous integration."
+        }
+      ]}
+      techHighlight={{
+        title1: "Sub-Millisecond Mobile Rendering & Draw Call Batching",
+        desc1: "Our Unity developers employ static/dynamic batching, GPU instancing, texture atlasing, and LOD (Level of Detail) systems to achieve rock-solid 60fps on mid-range mobile devices without overheating.",
+        title2: "Multiplayer Synchronization & Cloud Save",
+        desc2: "We build real-time multiplayer lobbies and state synchronization using Photon Fusion, Unity Netcode for GameObjects, and cloud backend databases (Firebase/PlayFab)."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly and monthly billing models with zero hidden overheads. Scale your Unity development team on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your game concepts, 3D models, and source code are completely protected. We enforce strict bilateral NDAs."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Rapidly prototype gameplay mechanics and ship fully polished interactive titles on iOS, Android, and PC."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Certified engineers skilled in Unity 6, C#, URP, Shader Graph, AR Foundation, Photon, and Addressables."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You retain 100% full intellectual property and source code ownership of all Unity projects, 3D assets, and shaders."
+        }
+      ]}
+    />
+  );
 };
+
 export default Unity3dDeveloper;

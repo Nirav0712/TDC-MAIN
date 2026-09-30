@@ -1,137 +1,96 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const SalesforceCommerceCloudDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/salesforce-integration-developers" className="hover:text-[#08BFE8] transition-colors">Salesforce Integration Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Salesforce Commerce Cloud Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Salesforce Commerce Cloud Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Commerce Cloud engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Commerce Cloud Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Commerce Cloud Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Commerce Cloud ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Commerce Cloud engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Commerce Cloud developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Salesforce Commerce Cloud Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Salesforce Commerce Cloud"
+      pageCategory="Salesforce Developers"
+      categoryUrl="/hire-team/salesforce-integration-developers"
+      pageTitle="Hire Dedicated Salesforce Commerce Cloud Developers | SFCC B2B/B2C Experts | The Digital Connect"
+      metaDescription="Hire certified Salesforce Commerce Cloud (SFCC) developers from The Digital Connect. SFRA, B2B/B2C Commerce, headless commerce, cartridge development, and flexible hiring models."
+      tagline="We successfully scale enterprise B2B & B2C eCommerce storefronts on Salesforce Commerce Cloud (SFCC)"
+      heroDescription="We have a group of gifted and dedicated Salesforce Commerce Cloud (SFCC) developers who specialize in Storefront Reference Architecture (SFRA), custom cartridge development, headless commerce APIs (SCAPI), and third-party payment/ERP integrations. Get in touch with us for your free quote."
+      heroBullets={[
+        "Storefront Reference Architecture (SFRA) and custom cartridge development for B2C & B2B",
+        "Headless Commerce with Salesforce Composable Storefront and Salesforce Commerce API (SCAPI)",
+        "Omnichannel eCommerce integration: Payment gateways, order management (SOM), and ERPs"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "70+", label: "SFCC Stores Delivered" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Enterprise, High-Conversion SFCC eCommerce Solutions",
+        card1Text1: "Does your retail brand need certified Salesforce Commerce Cloud developers? We at The Digital Connect provide cutting-edge, all-inclusive SFCC engineering solutions. We help enterprise global brands launch high-concurrency, personalized shopping experiences that scale effortlessly during peak holiday traffic.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced SFCC developers, allowing you to take advantage of our availability as your Offshore Development Center. Your brand can make significant savings and improve eCommerce revenue by using fewer resources and merging them with our skilled team.",
+        card2Title: "Certified B2B & B2C Commerce Specialists",
+        card2Text1: "One of the finest enterprise eCommerce firms, The Digital Connect provides you with a dedicated team of SFCC developers. To construct high-converting shopping workflows, our certified developers possess deep expertise in SFRA, OCAPI, SCAPI, Business Manager, ISML templates, and JavaScript Controllers.",
+        card2Text2: "Their technical capability enables us to provide effective contractual services in this area to meet your unique retail demands with sub-second page loads, global multi-currency checkout, and seamless third-party cartridge integrations."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Storefront Reference Architecture (SFRA)",
+          desc: "Building modern, mobile-first, and highly customizable storefronts following official SFRA coding standards."
+        },
+        {
+          title: "Custom Cartridge Development",
+          desc: "Developing and maintaining custom cartridges for tax calculators (Avalara), reviews (Yotpo), and fraud prevention."
+        },
+        {
+          title: "Headless Composable Commerce",
+          desc: "Building React/Next.js composable storefronts powered by Salesforce Commerce API (SCAPI) and PWA Kit."
+        },
+        {
+          title: "Salesforce Order Management (SOM)",
+          desc: "Configuring distributed order routing, split shipments, return merchandise authorization (RMA), and inventory sync."
+        },
+        {
+          title: "Einstein AI Product Recommendations",
+          desc: "Configuring Salesforce Einstein AI recommendation algorithms, predictive search, and personalized product sorting."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile 2-week sprints with daily standups, clean code reviews, automated CI/CD deployments, and post-launch SLAs."
+        }
+      ]}
+      techHighlight={{
+        title1: "High-Volume Flash Sale Concurrency & Caching",
+        desc1: "Our SFCC developers configure optimal Page Designer caching, static asset CDN distribution, and efficient database pipelines, ensuring flawless checkout experiences under tens of thousands of concurrent users.",
+        title2: "Multi-Site & Global Localization Architecture",
+        desc2: "We architect multi-site configurations supporting localized currencies, international payment methods, multi-language catalogs, and country-specific tax rules from a single master catalog."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly and monthly hiring models with zero hidden overheads. Scale your SFCC engineering capacity on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your proprietary code and customer transactions are completely secured. We enforce strict bilateral NDAs and PCI-DSS compliance."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Accelerate your retail product roadmap with certified SFCC specialists who ship robust storefront features."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Certified engineers skilled in SFRA, SCAPI, OCAPI, JavaScript Controllers, ISML, PWA Kit, and Business Manager."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You retain 100% full intellectual property and ownership of all custom cartridges, repositories, and configurations."
+        }
+      ]}
+    />
+  );
 };
+
 export default SalesforceCommerceCloudDeveloper;

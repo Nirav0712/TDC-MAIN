@@ -1,137 +1,94 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const GolangDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/web-developers" className="hover:text-[#08BFE8] transition-colors">Web Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Golang Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Golang Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Golang engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Golang Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Golang Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Golang ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Golang engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Golang developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Golang Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Golang"
+      pageTitle="Hire Dedicated Golang Developers | Go Backend & Microservices Experts | The Digital Connect"
+      metaDescription="Hire certified Golang developers from The Digital Connect. High-concurrency microservices, gRPC APIs, cloud-native systems, Docker/K8s, and flexible hiring models."
+      tagline="We successfully scale your high-concurrency microservices & cloud-native backend systems"
+      heroDescription="We have a group of gifted and dedicated Golang developers with deep expertise in architecting high-throughput microservices, low-latency gRPC/REST APIs, distributed systems, and real-time streaming pipelines. Get in touch with us for your free quote."
+      heroBullets={[
+        "High-performance concurrent microservices built with Go (Golang) goroutines and channels",
+        "Low-latency REST, gRPC, and WebSocket streaming architectures for fintech & IoT",
+        "Cloud-native deployment with Docker, Kubernetes, Prometheus, and AWS/GCP"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "60+", label: "Go Microservices Deployed" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "High-Concurrency & Low-Latency Go Architectures",
+        card1Text1: "Does your company need Golang engineers? We at The Digital Connect provide cutting-edge, all-inclusive Go backend solutions. We help technology companies and fintech enterprises worldwide achieve extreme throughput, sub-millisecond response times, and massive cost savings on cloud infrastructure.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Golang developers, allowing you to take advantage of our availability as your Offshore Development Center. Your company can make significant savings and improve the effectiveness of its backend engineering roadmap by using fewer resources and merging them with our skilled team.",
+        card2Title: "Trained Distributed Systems Engineers",
+        card2Text1: "One of the finest backend development firms, The Digital Connect provides you with a dedicated team of Golang developers. To create some of the most sophisticated distributed architectures, our certified developers are trained engineers with deep expertise in Go concurrency patterns, memory profiling, and cloud-native standards.",
+        card2Text2: "Their technical capability enables us to provide effective contractual services in this area to meet your unique company demands with robust fault tolerance, automated unit/integration testing, and strict SLAs."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Microservices Architecture",
+          desc: "Decoupled, event-driven microservices engineered with Go, gRPC, Kafka, and RabbitMQ for extreme scale."
+        },
+        {
+          title: "High-Performance REST & gRPC APIs",
+          desc: "Ultra-fast API endpoints built with Gin, Echo, Fiber, and Protobuf with automated Swagger documentation."
+        },
+        {
+          title: "Real-Time Streaming & WebSockets",
+          desc: "Live messaging platforms, fintech trading tickers, and IoT telemetry ingestion pipelines with Go channels."
+        },
+        {
+          title: "Cloud-Native DevOps Integration",
+          desc: "Containerized Go binaries optimized for minimal Docker image footprints and automated Kubernetes orchestration."
+        },
+        {
+          title: "Database Optimization & ORM",
+          desc: "High-throughput database access using GORM, sqlx, pgx, Redis caching, and distributed NoSQL databases."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile sprint releases backed by strict peer code reviews, Go benchmark tests, and continuous delivery."
+        }
+      ]}
+      techHighlight={{
+        title1: "Concurrency Mastery with Goroutines & Channels",
+        desc1: "Our Golang developers harness lightweight goroutines and robust synchronization primitives (sync.Mutex, channels) to handle millions of simultaneous socket connections with minimal RAM usage.",
+        title2: "Distributed Systems & Event-Driven Pipelines",
+        desc2: "We construct reliable distributed systems utilizing Apache Kafka, Redis Pub/Sub, gRPC bi-directional streaming, and PostgreSQL connection pooling for mission-critical platforms."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Transparent hourly or monthly models without hidden charges. Scale your Go backend team up or down on demand."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your proprietary code and infrastructure are 100% protected. We enforce strict NDAs and enterprise security standards."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Instantly augment your backend team with senior Go developers who understand distributed architectures and containerization."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Expertise in Go (1.22+), Gin, Fiber, gRPC, Protobuf, Docker, Kubernetes, PostgreSQL, and Redis."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You maintain 100% ownership of source code repositories, CI/CD configs, and infrastructure-as-code manifests."
+        }
+      ]}
+    />
+  );
 };
+
 export default GolangDeveloper;

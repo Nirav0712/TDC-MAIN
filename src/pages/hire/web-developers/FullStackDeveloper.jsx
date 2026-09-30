@@ -1,137 +1,94 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle2, Layout, Database, Code2, Server } from 'lucide-react';
-import { motion } from 'framer-motion';
-import SEO from '../../../components/seo/SEO';
-import PageTransition from '../../../components/common/PageTransition';
+import DeveloperHireTemplate from '../../../components/hire/DeveloperHireTemplate';
+import { RefreshCw, Lock, Zap, Cpu, Shield } from 'lucide-react';
 
 const FullStackDeveloper = () => {
-    return (
-        <PageTransition>
-            <SEO title="${sub.name} | The Digital Connect" description="Hire experienced ${sub.tech} developers to build scalable, secure and high-performance applications." />
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* BREADCRUMBS */}
-                <div className="pt-[90px] md:pt-[100px] px-4 sm:px-6 max-w-[1320px] mx-auto text-sm font-medium text-[#7F94A8] flex flex-wrap items-center gap-2">
-                    <Link to="/" className="hover:text-[#08BFE8] transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team" className="hover:text-[#08BFE8] transition-colors">Hire Team</Link>
-                    <ChevronRight size={14} />
-                    <Link to="/hire-team/web-developers" className="hover:text-[#08BFE8] transition-colors">Web Developers</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-[#061B2E] font-bold min-w-0 truncate">Full Stack Developer</span>
-                </div>
-
-                {/* HERO */}
-                <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto text-center">
-                    <motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#08BFE8]/10 text-[#08BFE8] text-sm font-bold tracking-wide uppercase mb-6 border border-[#08BFE8]/20">
-                        EXPERT TALENT
-                    </motion.div>
-                    <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="text-[clamp(36px,6vw,64px)] font-heading font-black text-[#061B2E] leading-tight mb-6 max-w-4xl mx-auto">
-                        Hire Full Stack Developers
-                    </motion.h1>
-                    <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.1}} className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
-                        Accelerate your product roadmap by hiring highly vetted, dedicated Full Stack engineers. We provide fully managed talent capable of architecting complex solutions and scaling enterprise applications.
-                    </motion.p>
-                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.2}}>
-                        <Link to="/contact" className="inline-flex bg-[#061B2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold items-center hover:bg-[#08BFE8] transition-all shadow-xl hover:shadow-[#08BFE8]/30">
-                            Hire a Full Stack Expert <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </motion.div>
-                </section>
-
-                {/* WHAT WE CAN BUILD */}
-                <section className="py-16 bg-[#061B2E] text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#08BFE8]/10 rounded-full blur-[100px] pointer-events-none"></div>
-                    <div className="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
-                        <div className="mb-12">
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-4">What Our Full Stack Developers Build</h2>
-                            <p className="text-[#A3B8CC] text-lg max-w-2xl">From powerful monoliths to scalable microservices, our experts deliver production-ready software.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Layout size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Custom Applications</h3>
-                                <p className="text-[#A3B8CC] text-sm">Tailor-made software architecture built exactly to your specific operational specifications.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Database size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Enterprise Solutions</h3>
-                                <p className="text-[#A3B8CC] text-sm">Highly secure, scalable pipelines capable of handling massive organizational throughput.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Server size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">API Development</h3>
-                                <p className="text-[#A3B8CC] text-sm">Robust RESTful and GraphQL endpoints seamlessly connecting your digital infrastructure.</p>
-                            </div>
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#08BFE8]/50 transition-colors">
-                                <Code2 size={32} className="text-[#08BFE8] mb-4" />
-                                <h3 className="font-bold text-lg mb-2">Legacy Migration</h3>
-                                <p className="text-[#A3B8CC] text-sm">Securely upgrading outdated technological stacks into modern, performant Full Stack ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHY HIRE */}
-                <section className="py-16 md:py-24 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Pre-Vetted Talent</h4>
-                                <p className="text-sm text-[#7F94A8]">We put our engineers through intensive technical assessments.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Fast Onboarding</h4>
-                                <p className="text-sm text-[#7F94A8]">Scale your team in days, not months. Skip the standard recruitment delays.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Zero Overhead</h4>
-                                <p className="text-sm text-[#7F94A8]">No internal HR management, office costs, or compliance friction.</p>
-                            </div>
-                            <div className="bg-[#EAF8FC] p-6 rounded-2xl border border-[#08BFE8]/20 flex flex-col gap-3 lg:-mt-8 lg:mb-8">
-                                <CheckCircle2 className="text-[#08BFE8]" size={24} />
-                                <h4 className="font-bold text-[#061B2E]">Agile Execution</h4>
-                                <p className="text-sm text-[#061B2E]/80">Seamless integration directly into your internal Jira/Sprint cycles.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black text-[#061B2E] mb-6">Development Process</h2>
-                            <p className="text-[#7F94A8] text-lg mb-8">Our rigorous operational standard ensures you receive beautiful, production-ready code on time.</p>
-                            
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">01</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Discover & Resource Allocation</h4><p className="text-sm text-[#7F94A8]">We map your technical requirements to the perfect Full Stack engineers.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">02</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Integration & Sprint Planning</h4><p className="text-sm text-[#7F94A8]">Seamless onboarding into your existing CI/CD and communication channels.</p></div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="font-black text-2xl text-[#08BFE8]/30">03</div>
-                                    <div><h4 className="font-bold text-[#061B2E]">Development & QA</h4><p className="text-sm text-[#7F94A8]">Iterative delivery backed by strict code reviews and automated testing.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FINAL CTA */}
-                <section className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 lg:p-16 shadow-xl border border-gray-100">
-                        <h2 className="text-[clamp(28px,4vw,40px)] font-heading font-black mb-6 text-[#061B2E]">Looking for skilled Full Stack developers?</h2>
-                        <p className="text-[#7F94A8] text-lg mb-8 max-w-2xl mx-auto">Connect with us today to discuss your technical constraints and discover how our dedicated talent can drive your product forward.</p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-[#08BFE8] text-white px-3 py-5 rounded-2xl font-bold hover:bg-[#159ED9] transition-colors shadow-lg shadow-[#08BFE8]/30">
-                            Hire Full Stack Developers <ArrowRight size={20} className="ml-2" />
-                        </Link>
-                    </div>
-                </section>
-            </div>
-        </PageTransition>
-    );
+  return (
+    <DeveloperHireTemplate
+      techName="Full Stack"
+      pageTitle="Hire Dedicated Full Stack Developers | Frontend & Backend Experts | The Digital Connect"
+      metaDescription="Hire certified Full Stack developers from The Digital Connect. React, Next.js, Node.js, Python, Java, cloud DevOps, and flexible hiring models."
+      tagline="We successfully deliver end-to-end web apps, interactive frontends & resilient cloud backends"
+      heroDescription="We have a group of gifted and dedicated Full Stack developers who bridge the gap between stunning UI/UX frontends and robust, scalable backend architectures. Get in touch with us for your free quote."
+      heroBullets={[
+        "Modern frontend mastery with React, Next.js, Vue, Angular, and TailwindCSS",
+        "Robust backend engineering in Node.js, Python (Django/FastAPI), Java (Spring Boot), or Go",
+        "Comprehensive database design, REST/GraphQL APIs, DevOps pipelines, and cloud hosting"
+      ]}
+      stats={[
+        { value: "6+", label: "Years of Experience" },
+        { value: "300+", label: "Full Stack Apps Launched" },
+        { value: "24/7", label: "Technical Support" }
+      ]}
+      whyHireIntro={{
+        card1Title: "Comprehensive, End-to-End Full Stack Solutions",
+        card1Text1: "Does your company need versatile full stack engineers? We at The Digital Connect provide cutting-edge, all-inclusive full stack development solutions. We help startups and enterprises worldwide launch complete digital products with seamless integration between user interfaces and complex backend servers.",
+        card1Text2: "Utilizing extensive industry knowledge and skills, we offer adaptable experienced Full Stack developers, allowing you to take advantage of our availability as your Offshore Development Center. Your company can make significant savings and improve the effectiveness of its engineering output by using fewer resources and merging them with our skilled team.",
+        card2Title: "Trained Multi-Stack Engineers & Cloud Specialists",
+        card2Text1: "One of the finest development firms, The Digital Connect provides you with a dedicated team of Full Stack developers. To build sophisticated web applications, our certified developers are trained engineers with deep expertise across modern JavaScript frameworks, relational/NoSQL databases, and cloud DevOps.",
+        card2Text2: "Their technical capability enables us to provide effective contractual services in this area to meet your unique company demands with rapid MVP turnaround, clean architecture, and continuous deployment."
+      }}
+      whyChoosePoints={[
+        {
+          title: "Complete Product Ownership",
+          desc: "Full stack engineers capable of handling UI wireframing, frontend development, API creation, database schemas, and DevOps."
+        },
+        {
+          title: "Modern JavaScript / TypeScript",
+          desc: "End-to-end type safety using TypeScript across React/Next.js frontends and Node.js microservices."
+        },
+        {
+          title: "Custom SaaS & Enterprise Platforms",
+          desc: "Architecting multi-tenant SaaS products, complex customer dashboards, and high-conversion web portals."
+        },
+        {
+          title: "Database Architecture & Optimization",
+          desc: "Expert design and optimization across PostgreSQL, MySQL, MongoDB, Redis, and DynamoDB."
+        },
+        {
+          title: "Cloud & DevOps Integration",
+          desc: "Automated CI/CD workflows, Docker containerization, and deployment on AWS, Vercel, GCP, and Azure."
+        },
+        {
+          title: "Guaranteed On-Time Delivery",
+          desc: "Agile sprints, daily standups, clear sprint goals, and end-to-end automated testing for seamless releases."
+        }
+      ]}
+      techHighlight={{
+        title1: "Bridging Frontend Brilliance & Backend Power",
+        desc1: "Our full stack developers seamlessly connect responsive, animated React/Vue interfaces with secure, asynchronous REST and GraphQL endpoints for snappy, flawless user experiences.",
+        title2: "Reduced Communication Overhead & Faster Time to Market",
+        desc2: "With full stack engineers managing both sides of the application stack, there are zero cross-team dependencies or API contract mismatches, dramatically increasing your product development velocity."
+      }}
+      benefits={[
+        {
+          icon: RefreshCw,
+          title: "100% Transparency and Flexibility",
+          desc: "Flexible hourly and monthly hiring models with zero hidden fees. Ramp developer hours up or down based on your development roadmap."
+        },
+        {
+          icon: Lock,
+          title: "Security and Discretion",
+          desc: "Your data and IP are completely secure with The Digital Connect. We sign strict NDAs and follow OWASP security best practices."
+        },
+        {
+          icon: Zap,
+          title: "Opt for Operational Agility",
+          desc: "Maximize resource efficiency by hiring full-stack versatile engineers who can switch between frontend and backend tasks effortlessly."
+        },
+        {
+          icon: Cpu,
+          title: "Skilled Programmers",
+          desc: "Engineers proficient in React, Next.js, Node.js, Python, Java, PostgreSQL, MongoDB, Docker, and AWS."
+        },
+        {
+          icon: Shield,
+          title: "Possession of the Project",
+          desc: "You maintain 100% intellectual property and complete ownership of code repositories, databases, and deployment scripts."
+        }
+      ]}
+    />
+  );
 };
+
 export default FullStackDeveloper;

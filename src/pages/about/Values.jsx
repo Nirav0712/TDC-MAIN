@@ -1,223 +1,247 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import useSEO from '../../hooks/useSEO';
 import PageTransition from '../../components/common/PageTransition';
-import { useLocation } from 'react-router-dom';
-import { Lightbulb, Heart, ShieldCheck, TrendingUp, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Lightbulb, Heart, ShieldCheck, TrendingUp, Sparkles, CheckCircle2, ArrowRight, ArrowUpRight, Zap, Target, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const valuesData = [
-    { id: 'innovation', number: '01', title: 'Innovation First', icon: Lightbulb, desc: 'We continuously explore better technologies, smarter systems and new ways to solve business challenges.' },
-    { id: 'customer-obsession', number: '02', title: 'Customer Obsession', icon: Heart, desc: 'Every decision starts with understanding the people and businesses we serve.' },
-    { id: 'quality', number: '03', title: 'Quality Without Compromise', icon: ShieldCheck, desc: 'We focus on reliable engineering, thoughtful design and measurable outcomes.' },
-    { id: 'growth', number: '04', title: 'Continuous Growth', icon: TrendingUp, desc: 'We learn, improve and evolve with every project, partnership and challenge.' }
+  {
+    id: 'innovation',
+    number: '01',
+    title: 'Innovation First',
+    tag: 'Next-Gen Tech',
+    icon: Lightbulb,
+    headline: 'Exploring better technologies.',
+    desc: 'We continuously explore smarter systems, modern architectures, and emerging technologies to solve complex business challenges. Stagnation is the enemy of progress.',
+    highlights: ['Microservices & Serverless', 'AI Integration', 'Modern Frontend Stacks'],
+    metric: { value: '100%', label: 'Modern Stack Adoption' }
+  },
+  {
+    id: 'customer-obsession',
+    number: '02',
+    title: 'Customer Obsession',
+    tag: 'User Centricity',
+    icon: Heart,
+    headline: 'Design for the human behind the screen.',
+    desc: 'Every architecture decision starts with deeply understanding user needs and business ROI. True engineering success is defined entirely by the measurable value delivered.',
+    highlights: ['Conversion Optimization', 'Frictionless UX', 'Data-Driven Research'],
+    metric: { value: '4.9/5', label: 'Client Satisfaction' }
+  },
+  {
+    id: 'quality',
+    number: '03',
+    title: 'Quality Without Compromise',
+    tag: 'Zero Technical Debt',
+    icon: ShieldCheck,
+    headline: 'Reliable, enterprise-grade engineering.',
+    desc: 'We focus on clean code, modular architecture, and automated test coverage. Shortcuts are temporary; robust architecture scales forever.',
+    highlights: ['Strict TypeScript', 'Automated CI/CD Tests', 'WCAG AAA Accessibility'],
+    metric: { value: '99.8%', label: 'Test Pass Rate' }
+  },
+  {
+    id: 'growth',
+    number: '04',
+    title: 'Continuous Growth',
+    tag: 'Lifelong Evolution',
+    icon: TrendingUp,
+    headline: 'Learn, improve, and scale together.',
+    desc: 'We evolve with every project, milestone, and technology shift. As your business expands into new markets, our capabilities grow alongside it.',
+    highlights: ['Proactive Monitoring', 'Iterative Sprints', 'Future-Proof Scalability'],
+    metric: { value: '10x', label: 'Scale Readiness' }
+  }
 ];
 
 const Values = () => {
-    useSEO({ title: "Our Values | The Digital Connect", description: "Values shaping our engineering and design." });
-    const location = useLocation();
-    const [activeSection, setActiveSection] = useState('innovation');
+  useSEO({
+    title: "Our Values | The Digital Connect",
+    description: "Discover the principles and core values shaping our digital mindset and engineering excellence."
+  });
 
-    useEffect(() => {
-        if (location.hash) {
-            const id = location.hash.replace('#', '');
-            const element = document.getElementById(id);
-            if (element) {
-                setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 200);
-            }
-        }
-    }, [location]);
+  const [activeValueIndex, setActiveValueIndex] = useState(0);
+  const activeValue = valuesData[activeValueIndex];
+  const ActiveIcon = activeValue.icon;
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id);
-                    window.history.replaceState(null, null, `/about/values#${entry.target.id}`);
-                }
-            });
-        }, { rootMargin: '-20% 0px -60% 0px', threshold: 0.1 });
+  return (
+    <PageTransition>
+      <div className="w-full bg-gradient-to-b from-[#F7FAFC] via-[#EEF8FC]/40 to-[#F7FAFC] min-h-screen font-sans text-slate-800 select-none">
+        
+        {/* HERO SECTION */}
+        <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+          <div className="absolute top-10 right-1/4 w-[550px] h-[350px] bg-[#00A9D6]/8 blur-[130px] rounded-full pointer-events-none" />
+          <div
+            className="absolute inset-0 opacity-[0.025] pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(#061A2E 1px, transparent 1px)',
+              backgroundSize: '32px 32px'
+            }}
+          />
 
-        valuesData.forEach(item => {
-            const el = document.getElementById(item.id);
-            if (el) observer.observe(el);
-        });
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-cyan-200/80 text-[#00A9D6] text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-xs"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#00A9D6]" />
+              <span>Our Guiding Tenets</span>
+            </motion.div>
 
-        return () => observer.disconnect();
-    }, []);
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl sm:text-6xl lg:text-7xl font-heading font-black tracking-tight leading-[1.1] mb-6 text-[#061A2E]"
+            >
+              Principles shaping our{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A9D6] via-[#087EA4] to-[#063B63]">
+                digital mindset.
+              </span>
+            </motion.h1>
 
-    const handleScrollClick = (e, id) => {
-        e.preventDefault();
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            window.history.replaceState(null, null, `/about/values#${id}`);
-        }
-    };
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+            >
+              Beyond technology, these four core pillars dictate how we act, how we build, and how we deliver measurable value for our partners.
+            </motion.p>
+          </div>
+        </section>
 
-    return (
-        <PageTransition>
-            <div className="w-full bg-[#FAFAFA] min-h-screen font-sans">
-                {/* HERO */}
-                <section className="bg-[#061B2E] pt-[120px] pb-[80px] lg:pt-[160px] lg:pb-[120px] px-4 sm:px-6 lg:px-8 relative overflow-hidden text-center z-10 border-b border-[#08BFE8]/10">
-                    <div className="absolute inset-0 bg-[#061B2E] opacity-90 layer-1 pointer-events-none"></div>
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#159ED9]/5 rounded-full blur-[120px] pointer-events-none"></div>
-                    <div className="max-w-[1200px] mx-auto relative z-10">
-                        <span className="text-[#08BFE8] font-bold tracking-[0.2em] text-xs uppercase mb-6 block">Our Values</span>
-                        <h1 className="text-[clamp(42px,9vw,90px)] font-heading font-black text-white leading-[1.1] tracking-tight mb-8">
-                            Principles shaping <br className="hidden md:block" />our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#08BFE8] to-[#EAF8FC]">digital mindset.</span>
-                        </h1>
-                        <p className="text-[#7F94A8] max-w-[700px] mx-auto text-lg md:text-xl font-medium leading-relaxed">
-                            Beyond technology, these four core pillars dictate how we act, how we build, and how we deliver for our partners.
-                        </p>
+        {/* INTERACTIVE VALUES CANVAS */}
+        <section className="pb-20 lg:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+          
+          {/* Top 4 Interactive Selector Tabs */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+            {valuesData.map((val, idx) => {
+              const Icon = val.icon;
+              const isActive = activeValueIndex === idx;
+
+              return (
+                <button
+                  key={val.id}
+                  onClick={() => setActiveValueIndex(idx)}
+                  className={`relative p-5 sm:p-6 rounded-2xl text-left transition-all duration-300 border cursor-pointer select-none ${
+                    isActive
+                      ? 'bg-white border-[#00A9D6] shadow-[0_10px_28px_-8px_rgba(0,169,214,0.22)] -translate-y-1'
+                      : 'bg-white/70 border-slate-200/80 hover:bg-white hover:border-slate-300'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`text-xs font-mono font-bold ${isActive ? 'text-[#00A9D6]' : 'text-slate-400'}`}>
+                      {val.number}
+                    </span>
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
+                      isActive ? 'bg-cyan-50 text-[#00A9D6]' : 'bg-slate-100 text-slate-500'
+                    }`}>
+                      <Icon size={16} />
                     </div>
-                </section>
+                  </div>
 
-                {/* 4 CARDS TILE NAVIGATION */}
-                <section className="relative z-20 -mt-16 pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-[1320px] mx-auto w-full">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                        {valuesData.map((val, i) => {
-                            const Icon = val.icon;
-                            const isActive = activeSection === val.id;
-                            return (
-                                <a
-                                    href={`#${val.id}`}
-                                    onClick={(e) => handleScrollClick(e, val.id)}
-                                    key={val.id}
-                                    className={`group flex flex-col h-full bg-[#08243A] p-8 rounded-3xl border ${isActive ? 'border-[#08BFE8] shadow-[0_0_30px_rgba(8,191,232,0.15)] -translate-y-2' : 'border-[#159ED9]/20 shadow-xl'} hover:bg-[#061B2E] hover:border-[#08BFE8] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden`}
-                                >
-                                    <div className={`absolute top-0 right-0 w-32 h-32 bg-[#08BFE8]/5 rounded-bl-[100px] ${isActive ? 'scale-150' : ''} group-hover:scale-150 transition-transform duration-700`}></div>
-                                    <div className="relative z-10 flex flex-col h-full">
-                                        <div className="flex justify-between items-start mb-8">
-                                            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-colors duration-500 ${isActive ? 'bg-[#08BFE8] text-white' : 'bg-white/5 text-[#EAF8FC] group-hover:bg-[#08BFE8] group-hover:text-white'}`}>
-                                                <Icon size={22} />
-                                            </div>
-                                            <span className={`font-black text-2xl font-heading ${isActive ? 'text-white/40' : 'text-white/20'}`}>{val.number}</span>
-                                        </div>
-                                        <h3 className={`text-xl font-black mb-3 transition-colors ${isActive ? 'text-[#08BFE8]' : 'text-white group-hover:text-[#08BFE8]'}`}>{val.title}</h3>
-                                        <p className="text-[#7F94A8] text-sm leading-relaxed mb-8 flex-1 font-medium">{val.desc}</p>
-                                        <div className={`flex items-center text-sm font-bold transition-colors mt-auto ${isActive ? 'text-white' : 'text-[#08BFE8] group-hover:text-white'}`}>
-                                            <span>Learn more</span>
-                                            <ArrowRight size={16} className={`ml-2 transition-transform duration-300 ${isActive ? 'translate-x-2' : 'group-hover:translate-x-2'}`} />
-                                        </div>
-                                    </div>
-                                </a>
-                            )
-                        })}
-                    </div>
-                </section>
+                  <h3 className={`font-heading font-bold text-sm sm:text-base ${isActive ? 'text-[#061A2E]' : 'text-slate-700'}`}>
+                    {val.title}
+                  </h3>
+                  <span className="text-[11px] text-slate-400 font-medium block mt-0.5 truncate">
+                    {val.tag}
+                  </span>
 
-                {/* CONTENT SECTIONS */}
-                <div className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-24 lg:pb-32">
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeValueBar"
+                      className="absolute bottom-0 inset-x-5 h-[3px] bg-gradient-to-r from-[#00A9D6] to-[#18C5E8] rounded-full"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
 
-                    {/* Innovation First */}
-                    <section id="innovation" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-                            <div className="lg:w-1/2 flex flex-col items-start relative box-border">
-                                <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="w-16 h-16 lg:w-20 lg:h-20 bg-[#EAF8FC] text-[#08BFE8] rounded-2xl lg:rounded-3xl flex items-center justify-center mb-6 lg:mb-8 shadow-sm">
-                                    <Lightbulb size={36} strokeWidth={2} />
-                                </motion.div>
-                                <span className="text-[#08BFE8] font-bold text-sm tracking-widest uppercase mb-4">01 Innovation First</span>
-                                <h2 className="text-[clamp(32px,5vw,56px)] font-heading font-black text-[#061B2E] mb-6 leading-tight">Exploring better technologies.</h2>
-                                <div className="w-16 h-1 bg-[#08BFE8] rounded-full mb-6"></div>
-                                <p className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed mb-6 font-medium">
-                                    We continuously explore better technologies, smarter systems and new ways to solve business challenges. Stagnation is the enemy of progress.
-                                </p>
-                            </div>
-                            <div className="lg:w-1/2 bg-[#FAFAFA] border border-gray-100 rounded-[40px] p-10 md:p-14 relative w-full h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08BFE8_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-                                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border border-[#08BFE8] flex items-center justify-center relative z-10 bg-white shadow-xl animate-pulse-slow">
-                                    <div className="w-12 h-12 md:w-16 md:h-16 bg-[#061B2E] flex items-center justify-center rounded-full text-[#EAF8FC]"><Lightbulb size={24} /></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          {/* Interactive Deep-Dive Canvas */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeValue.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35 }}
+              className="rounded-3xl bg-white/95 backdrop-blur-md border border-slate-200/90 p-8 sm:p-12 shadow-[0_10px_35px_-10px_rgba(6,26,46,0.06)] relative overflow-hidden"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                {/* Left: Content */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-100 text-[#00A9D6] text-xs font-bold font-mono">
+                    <span>PILLAR {activeValue.number} • {activeValue.tag}</span>
+                  </div>
 
-                    <div className="w-full h-px bg-gray-100"></div>
+                  <h2 className="text-2xl sm:text-4xl font-heading font-black text-[#061A2E] leading-tight">
+                    {activeValue.headline}
+                  </h2>
 
-                    {/* Customer Obsession */}
-                    <section id="customer-obsession" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">
-                        <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-center">
-                            <div className="lg:w-1/2 flex flex-col items-start relative box-border">
-                                <motion.div initial={{ opacity: 0, scale: 0.9, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="w-16 h-16 lg:w-20 lg:h-20 bg-[#EAF8FC] text-[#159ED9] rounded-2xl lg:rounded-3xl flex items-center justify-center mb-6 lg:mb-8 shadow-sm">
-                                    <Heart size={36} strokeWidth={2} />
-                                </motion.div>
-                                <span className="text-[#159ED9] font-bold text-sm tracking-widest uppercase mb-4">02 Customer Obsession</span>
-                                <h2 className="text-[clamp(32px,5vw,56px)] font-heading font-black text-[#061B2E] mb-6 leading-tight">Design for the user.</h2>
-                                <div className="w-16 h-1 bg-[#159ED9] rounded-full mb-6"></div>
-                                <p className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed mb-6 font-medium">
-                                    Every decision starts with understanding the people and businesses we serve. True success is defined entirely by the measurable impact we bring to your bottom line.
-                                </p>
-                            </div>
-                            <div className="lg:w-1/2 bg-[#061B2E] rounded-[40px] p-10 md:p-14 relative w-full h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
-                                <div className="text-white text-center z-10 relative">
-                                    <Heart size={48} className="text-[#08BFE8] mx-auto mb-4 relative z-10" />
-                                    <h3 className="text-2xl font-bold relative z-10">End-User Focus</h3>
-                                </div>
-                                <div className="text-[clamp(100px,15vw,200px)] font-black opacity-[0.03] absolute inset-0 flex items-center justify-center pointer-events-none select-none">ROI</div>
-                            </div>
-                        </div>
-                    </section>
+                  <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+                    {activeValue.desc}
+                  </p>
 
-                    <div className="w-full h-px bg-gray-100"></div>
+                  {/* Highlights */}
+                  <div className="pt-2 space-y-2.5">
+                    {activeValue.highlights.map((item, hIdx) => (
+                      <div key={hIdx} className="flex items-center gap-3 text-slate-700 font-medium text-sm sm:text-base">
+                        <CheckCircle2 size={18} className="text-[#00A9D6] shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                    {/* Quality Without Compromise */}
-                    <section id="quality" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-                            <div className="lg:w-1/2 flex flex-col items-start relative box-border">
-                                <motion.div initial={{ opacity: 0, scale: 0.9, x: -20 }} whileInView={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="w-16 h-16 lg:w-20 lg:h-20 bg-[#F4FAFC] text-[#08243A] rounded-2xl lg:rounded-3xl flex items-center justify-center mb-6 lg:mb-8 shadow-sm border border-[#EAF8FC]">
-                                    <ShieldCheck size={36} strokeWidth={2} />
-                                </motion.div>
-                                <span className="text-[#08243A] font-bold text-sm tracking-widest uppercase mb-4">03 Quality Without Compromise</span>
-                                <h2 className="text-[clamp(32px,5vw,56px)] font-heading font-black text-[#061B2E] mb-6 leading-tight">Reliable engineering.</h2>
-                                <div className="w-16 h-1 bg-[#08243A] rounded-full mb-6"></div>
-                                <p className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed mb-6 font-medium">
-                                    We focus on reliable engineering, thoughtful design and measurable outcomes. Shortcuts are temporary; robust architecture scales forever.
-                                </p>
-                            </div>
-                            <div className="lg:w-1/2 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-md hover:border-[#08BFE8] hover:shadow-lg transition-all duration-300 aspect-square flex flex-col justify-center">
-                                    <div className="w-10 h-10 bg-[#EAF8FC] text-[#08BFE8] flex items-center justify-center rounded-lg mb-4"><ShieldCheck size={20} /></div>
-                                    <h4 className="font-bold text-[#061B2E] text-base md:text-lg">Code Integrity</h4>
-                                </div>
-                                <div className="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-md hover:border-[#08BFE8] hover:shadow-lg transition-all duration-300 aspect-square flex flex-col justify-center lg:translate-y-8">
-                                    <div className="w-10 h-10 bg-[#EAF8FC] text-[#08BFE8] flex items-center justify-center rounded-lg mb-4"><ShieldCheck size={20} /></div>
-                                    <h4 className="font-bold text-[#061B2E] text-base md:text-lg">Pixel Perfect Design</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <div className="w-full h-px bg-gray-100"></div>
-
-                    {/* Continuous Growth */}
-                    <section id="growth" className="py-16 md:py-24 lg:py-32 scroll-mt-[120px]">
-                        <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-center">
-                            <div className="lg:w-1/2 flex flex-col items-start relative box-border">
-                                <motion.div initial={{ opacity: 0, scale: 0.9, y: -20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="w-16 h-16 lg:w-20 lg:h-20 bg-[#EAF8FC] text-[#08BFE8] rounded-2xl lg:rounded-3xl flex items-center justify-center mb-6 lg:mb-8 shadow-sm">
-                                    <TrendingUp size={36} strokeWidth={2} />
-                                </motion.div>
-                                <span className="text-[#08BFE8] font-bold text-sm tracking-widest uppercase mb-4">04 Continuous Growth</span>
-                                <h2 className="text-[clamp(32px,5vw,56px)] font-heading font-black text-[#061B2E] mb-6 leading-tight">Learn, improve, evolve.</h2>
-                                <div className="w-16 h-1 bg-[#08BFE8] rounded-full mb-6"></div>
-                                <p className="text-[#7F94A8] text-lg lg:text-xl leading-relaxed mb-6 font-medium">
-                                    We learn, improve and evolve with every project, partnership and challenge. As your business scales, our capabilities grow alongside it.
-                                </p>
-                            </div>
-                            <div className="lg:w-1/2 bg-gradient-to-br from-[#EAF8FC] to-[#FFFFFF] rounded-[40px] border border-[#08BFE8]/20 p-10 md:p-14 relative w-full h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
-                                <div className="w-40 h-40 md:w-48 md:h-48 bg-[#08BFE8]/10 rounded-full flex items-center justify-center absolute">
-                                    <div className="w-24 h-24 md:w-32 md:h-32 bg-[#08BFE8]/20 rounded-full flex items-center justify-center">
-                                        <div className="w-12 h-12 md:w-16 md:h-16 bg-[#08BFE8] rounded-full flex items-center justify-center text-white shadow-lg"><TrendingUp size={24} /></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                  <div className="pt-4">
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#061A2E] hover:bg-[#00A9D6] text-white font-bold text-sm transition-all duration-300 shadow-sm"
+                    >
+                      <span>Partner With Us</span>
+                      <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
-            </div>
-        </PageTransition>
-    );
+
+                {/* Right: Dynamic Interactive Simulation Card */}
+                <div className="lg:col-span-5">
+                  <div className="p-8 rounded-3xl bg-gradient-to-br from-[#061A2E] via-[#09223A] to-[#04111E] text-white shadow-xl relative overflow-hidden text-center flex flex-col justify-between min-h-[320px]">
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 blur-3xl rounded-full pointer-events-none" />
+
+                    <div className="flex justify-between items-center relative z-10 text-xs text-slate-400 font-mono">
+                      <span>VERIFIED STANDARD</span>
+                      <span className="text-cyan-400 font-bold">100% AUDITED</span>
+                    </div>
+
+                    <div className="my-auto py-6 relative z-10">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-sky-600 text-white flex items-center justify-center mx-auto mb-4 shadow-[0_0_25px_rgba(24,197,232,0.4)]">
+                        <ActiveIcon size={28} />
+                      </div>
+                      <span className="text-4xl sm:text-5xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-[#18C5E8] block mb-1">
+                        {activeValue.metric.value}
+                      </span>
+                      <span className="text-xs sm:text-sm text-slate-300 font-medium">
+                        {activeValue.metric.label}
+                      </span>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-[11px] text-slate-300 font-mono relative z-10">
+                      Phase {activeValue.number}: Guaranteed Architecture Commitment
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+        </section>
+
+      </div>
+    </PageTransition>
+  );
 };
 
 export default Values;
