@@ -227,7 +227,7 @@ const Team = () => {
               <span className="text-xs font-bold text-[#18C5E8] uppercase tracking-widest block mb-2 font-mono">
                 ENGINEERING CULTURE
               </span>
-              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-4">
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-4 text-white">
                 How Our Squads Collaborate With You
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">

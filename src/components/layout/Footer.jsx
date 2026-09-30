@@ -187,13 +187,13 @@ const Footer = () => {
               </a>
 
               <a
-                href="mailto:contact@thedigitalconnect.com"
+                href="mailto:info@thedigitalconnect.in"
                 className="flex items-center gap-3 text-sm text-slate-300 hover:text-[#18C5E8] transition-colors group"
               >
                 <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-400/20 text-[#18C5E8] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Mail size={14} />
                 </div>
-                <span className="truncate">contact@thedigitalconnect.com</span>
+                <span className="truncate">info@thedigitalconnect.in</span>
               </a>
             </div>
 

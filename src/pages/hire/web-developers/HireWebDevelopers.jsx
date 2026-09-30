@@ -484,7 +484,7 @@ const HireWebDevelopers = () => {
               <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest block mb-2 font-mono">
                 READY TO SCALE YOUR TEAM?
               </span>
-              <h3 className="text-3xl sm:text-4xl font-heading font-black mb-3">
+              <h3 className="text-3xl sm:text-4xl font-heading font-black mb-3 text-white">
                 Hire Top 1% Dedicated Web Developers Today
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">

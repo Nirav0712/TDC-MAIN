@@ -476,7 +476,7 @@ const DeveloperHireTemplate = ({
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-black text-2xl mb-3">
+                    <h3 className={`font-heading font-black text-2xl mb-3 ${model.id === 'dedicated' ? 'text-white' : 'text-[#061A2E]'}`}>
                       {model.title}
                     </h3>
 
@@ -610,7 +610,7 @@ const DeveloperHireTemplate = ({
               <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest block mb-2 font-mono">
                 {ctaHeader}
               </span>
-              <h3 className="text-3xl sm:text-4xl font-heading font-black mb-3">
+              <h3 className="text-3xl sm:text-4xl font-heading font-black mb-3 text-white">
                 {ctaTitle}
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">

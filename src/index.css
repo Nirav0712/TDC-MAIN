@@ -65,7 +65,34 @@
   h4,
   h5,
   h6 {
-    @apply font-heading tracking-tight text-primary font-bold;
+    @apply font-heading tracking-tight font-bold;
+    color: var(--color-primary);
+  }
+
+  /* Ensure text-white and headings on dark backgrounds are always crisp white */
+  .text-white,
+  [class*="text-white"],
+  [class*="bg-[#061A2E]"] h1,
+  [class*="bg-[#061A2E]"] h2,
+  [class*="bg-[#061A2E]"] h3,
+  [class*="bg-[#061A2E]"] h4,
+  [class*="bg-[#061A2E]"] h5,
+  [class*="bg-[#061A2E]"] h6,
+  [class*="from-[#061A2E]"] h1,
+  [class*="from-[#061A2E]"] h2,
+  [class*="from-[#061A2E]"] h3,
+  [class*="from-[#061A2E]"] h4,
+  [class*="from-[#061A2E]"] h5,
+  [class*="from-[#061A2E]"] h6,
+  [class*="bg-brand-primary-navy"] h1,
+  [class*="bg-brand-primary-navy"] h2,
+  [class*="bg-brand-primary-navy"] h3,
+  [class*="bg-brand-primary-navy"] h4,
+  [class*="bg-[#03111F]"] h1,
+  [class*="bg-[#03111F]"] h2,
+  [class*="bg-[#03111F]"] h3,
+  [class*="bg-[#03111F]"] h4 {
+    color: #FFFFFF;
   }
 }
 

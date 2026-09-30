@@ -252,7 +252,7 @@ const About = () => {
                         </div>
                         <div>
                           <span className="text-xs text-cyan-300 font-mono block">PILLAR 0{activeTab + 1}</span>
-                          <h4 className="text-xl font-heading font-bold">{pillars[activeTab].title}</h4>
+                          <h4 className="text-xl font-heading font-bold text-white">{pillars[activeTab].title}</h4>
                         </div>
                       </div>
 

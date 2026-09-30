@@ -20,6 +20,10 @@ import CaseStudies from '../pages/CaseStudies';
 import Process from '../pages/Process';
 import Technologies from '../pages/Technologies';
 import Careers from '../pages/Careers';
+import OpenPositions from '../pages/careers/OpenPositions';
+import LifeAtTDC from '../pages/careers/LifeAtTDC';
+import CultureValues from '../pages/careers/CultureValues';
+import Internships from '../pages/careers/Internships';
 import Blog from '../pages/Blog';
 import Contact from '../pages/Contact';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
@@ -181,6 +185,13 @@ const AppRoutes = () => {
                     <Route path="/process" element={<Process />} />
                     <Route path="/technologies" element={<Technologies />} />
                     <Route path="/careers" element={<Careers />} />
+                    <Route path="/careers/open-positions" element={<OpenPositions />} />
+                    <Route path="/careers/life" element={<LifeAtTDC />} />
+                    <Route path="/careers/life-at-tdc" element={<Navigate to="/careers/life" replace />} />
+                    <Route path="/careers/culture" element={<CultureValues />} />
+                    <Route path="/careers/culture-values" element={<Navigate to="/careers/culture" replace />} />
+                    <Route path="/careers/internships" element={<Internships />} />
+                    <Route path="/careers/internship" element={<Navigate to="/careers/internships" replace />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:slug" element={<BlogTemplate />} />
                     <Route path="/contact" element={<Contact />} />

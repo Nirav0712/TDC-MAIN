@@ -1,235 +1,538 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Briefcase, GraduationCap, Users, Lightbulb, MapPin, Code, Cpu, Target, Layers } from 'lucide-react';
-import Button from '../components/common/Button';
+import {
+  ChevronRight, ArrowRight, Briefcase, GraduationCap, Users, Lightbulb,
+  MapPin, Code, Cpu, Target, Layers, Sparkles, CheckCircle2, ChevronDown,
+  Clock, Heart, Award, Shield, Mail, Copy, Check
+} from 'lucide-react';
+import SEO from '../components/seo/SEO';
+import PageTransition from '../components/common/PageTransition';
 
 const benefits = [
-  { title: 'Meaningful Work', description: 'Be part of projects that directly impact digital landscapes and business performance.', icon: <Target className="text-brand-electric-cyan" size={28} /> },
-  { title: 'Continuous Learning', description: 'Access to learning resources, certifications, and mentorship to keep your skills sharp.', icon: <GraduationCap className="text-brand-electric-cyan" size={28} /> },
-  { title: 'Collaborative Culture', description: 'Work alongside ambitious peers in an environment that prioritizes team success.', icon: <Users className="text-brand-electric-cyan" size={28} /> },
-  { title: 'Creative Freedom', description: 'We believe good ideas can come from anywhere. You have the freedom to innovate.', icon: <Lightbulb className="text-brand-electric-cyan" size={28} /> },
-  { title: 'Growth Opportunities', description: 'Clear paths for career advancement shaped by your personal goals and contributions.', icon: <Layers className="text-brand-electric-cyan" size={28} /> },
-  { title: 'Modern Technology', description: 'Work with the latest modern frameworks, infrastructure, and methodologies.', icon: <Cpu className="text-brand-electric-cyan" size={28} /> }
+  {
+    title: 'Meaningful Work',
+    description: 'Be part of high-impact engineering projects that directly transform digital landscapes and global business performance.',
+    icon: Target,
+    highlight: 'Impact'
+  },
+  {
+    title: 'Continuous Learning',
+    description: 'Access to learning stipends, cloud certifications, tech conferences, and 1-on-1 mentorship to keep your skills sharp.',
+    icon: GraduationCap,
+    highlight: 'Upskill'
+  },
+  {
+    title: 'Collaborative Culture',
+    description: 'Work alongside ambitious, humble peers in an open environment that prioritizes collective team success over hierarchy.',
+    icon: Users,
+    highlight: 'Teamwork'
+  },
+  {
+    title: 'Creative Freedom',
+    description: 'We believe good ideas can come from anywhere. You have the autonomy to innovate and architect modern solutions.',
+    icon: Lightbulb,
+    highlight: 'Autonomy'
+  },
+  {
+    title: 'Growth Opportunities',
+    description: 'Clear, merit-based career progression paths shaped by your personal ambitions, leadership, and technical milestones.',
+    icon: Layers,
+    highlight: 'Career Path'
+  },
+  {
+    title: 'Modern Technology',
+    description: 'Work with the latest modern frameworks (React 19, Next.js, Node, Python, Cloud IaC, AI) and clean architecture.',
+    icon: Cpu,
+    highlight: 'Latest Stack'
+  }
 ];
 
-const cultureItems = [
-  'Think boldly', 'Communicate openly', 'Take ownership', 'Learn continuously', 'Build with purpose', 'Celebrate progress'
+const cultureValues = [
+  { title: 'Think Boldly', desc: 'Challenge assumptions and propose ambitious, creative solutions that push boundaries.' },
+  { title: 'Communicate Openly', desc: 'Transparent feedback, psychological safety, and clear asynchronous collaboration.' },
+  { title: 'Take Ownership', desc: 'Own your deliverables from inception to production deployment with accountability.' },
+  { title: 'Learn Continuously', desc: 'Stay curious, experiment with new technologies, and share knowledge with peers.' },
+  { title: 'Build with Purpose', desc: 'Craft clean, performant, and maintainable software that delivers lasting value.' },
+  { title: 'Celebrate Progress', desc: 'Recognize team milestones, small wins, personal growth, and collective breakthroughs.' }
 ];
 
-const jobs = [
-  { id: 1, title: 'Frontend Developer', dept: 'Engineering', location: 'Remote / India', exp: '3+ Years', desc: 'Build highly interactive, performance-obsessed user interfaces using React and modern CSS architectures.' },
-  { id: 2, title: 'Backend Developer', dept: 'Engineering', location: 'Remote / India', exp: '3+ Years', desc: 'Architect robust and highly scalable server-side systems, logic and RESTful/GraphQL APIs using modern Node/Python.' },
-  { id: 3, title: 'Full Stack Developer', dept: 'Engineering', location: 'Remote / India', exp: '5+ Years', desc: 'Own end-to-end solutions combining elegant front-ends with robust and secure backend infrastructure.' },
-  { id: 4, title: 'UI/UX Designer', dept: 'Design', location: 'Remote / India', exp: '2+ Years', desc: 'Translate complex logic into intuitive and stunning user experiences across web and mobile.' },
-  { id: 5, title: 'Digital Marketing Spec.', dept: 'Marketing', location: 'Remote', exp: '4+ Years', desc: 'Drive conversion outcomes using data-driven funnels, SEO, and omnichannel strategy execution.' },
-  { id: 6, title: 'Project Manager', dept: 'Management', location: 'Remote', exp: '5+ Years', desc: 'Guide the product lifecycle uniting business objectives with engineering resources and design.' }
+const stats = [
+  { value: '100%', label: 'Remote & Hybrid Flexibility' },
+  { value: '6+ Yrs', label: 'Continuous Growth' },
+  { value: '98%', label: 'Team Satisfaction' },
+  { value: '25+', label: 'Global Client Brands' }
 ];
+
+const growthSteps = [
+  { step: '01', title: 'Explore', desc: 'Discover our open positions and align your passions with our engineering vision.' },
+  { step: '02', title: 'Join', desc: 'Experience a smooth, respectful interview process with real-time technical feedback.' },
+  { step: '03', title: 'Learn', desc: 'Comprehensive onboarding, codebase walkthroughs, and assigned mentor guidance.' },
+  { step: '04', title: 'Contribute', desc: 'Ship production code, contribute to architecture, and collaborate with global peers.' },
+  { step: '05', title: 'Lead', desc: 'Mentor junior engineers, lead technical sprints, and shape our engineering culture.' },
+  { step: '06', title: 'Grow', desc: 'Advance along leadership or principal engineering tracks with full company support.' }
+];
+
+const jobsData = [
+  {
+    id: 1,
+    title: 'Senior Frontend Developer (React / Next.js)',
+    dept: 'Engineering',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '3+ Years',
+    desc: 'Build highly interactive, performance-obsessed user interfaces and enterprise design systems using React, Next.js, TypeScript, and modern CSS.',
+    responsibilities: [
+      'Architect and maintain scalable frontend architectures using React 19, Next.js App Router, and TypeScript.',
+      'Build reusable, accessible (WCAG 2.1) UI components with TailwindCSS and Framer Motion.',
+      'Optimize Core Web Vitals (LCP, FID, CLS) for sub-second global render speeds.',
+      'Collaborate closely with UI/UX designers and backend API engineers in agile 2-week sprints.'
+    ],
+    skills: ['React.js', 'Next.js', 'TypeScript', 'TailwindCSS', 'Redux / Zustand', 'REST & GraphQL APIs', 'Jest / Cypress']
+  },
+  {
+    id: 2,
+    title: 'Senior Backend Developer (Node.js / Python)',
+    dept: 'Engineering',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '3+ Years',
+    desc: 'Architect robust and scalable server-side systems, event-driven microservices, and high-throughput RESTful/GraphQL APIs.',
+    responsibilities: [
+      'Design, build, and maintain high-concurrency microservices in Node.js (NestJS/Express) or Python (Django/FastAPI).',
+      'Optimize database queries, indexing, and connection pools across PostgreSQL, MongoDB, and Redis.',
+      'Implement secure authentication mechanisms (OAuth2, JWT), rate limiting, and zero-trust security policies.',
+      'Author automated unit and integration test suites with CI/CD integration.'
+    ],
+    skills: ['Node.js', 'Python', 'NestJS / Django', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'AWS / Azure']
+  },
+  {
+    id: 3,
+    title: 'Full Stack Engineer (TypeScript Stack)',
+    dept: 'Engineering',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '4+ Years',
+    desc: 'Own end-to-end web application solutions combining elegant frontend experiences with resilient, cloud-native backend infrastructure.',
+    responsibilities: [
+      'Deliver end-to-end full-stack features from UI wireframe to database schema and deployment.',
+      'Maintain unified TypeScript interfaces across client and server applications to eliminate runtime errors.',
+      'Collaborate on cloud containerization and automated deployments using Docker and GitHub Actions.',
+      'Participate in peer code reviews and architectural RFC discussions.'
+    ],
+    skills: ['Full-Stack TypeScript', 'React / Next.js', 'Node.js', 'PostgreSQL', 'Prisma / TypeORM', 'Docker', 'Git']
+  },
+  {
+    id: 4,
+    title: 'Lead UI/UX Designer',
+    dept: 'Design',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '3+ Years',
+    desc: 'Translate complex business logic and user needs into intuitive, pixel-perfect, and conversion-focused web and mobile interfaces.',
+    responsibilities: [
+      'Conduct user research, customer journey mapping, and information architecture synthesis.',
+      'Create high-fidelity interactive Figma prototypes with auto-layout, variables, and responsive constraints.',
+      'Maintain and govern enterprise Figma design systems and tokens synchronized with frontend engineers.',
+      'Perform usability testing and iterative heuristic UX audits.'
+    ],
+    skills: ['Figma', 'Design Systems', 'Interactive Prototyping', 'User Research', 'Information Architecture', 'Mobile UI/UX']
+  },
+  {
+    id: 5,
+    title: 'Digital Marketing & SEO Specialist',
+    dept: 'Marketing',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '3+ Years',
+    desc: 'Drive organic search growth, technical SEO execution, high-converting lead funnels, and data-driven marketing campaigns.',
+    responsibilities: [
+      'Plan and execute comprehensive technical, on-page, and off-page SEO strategies to scale organic search traffic.',
+      'Analyze conversion funnels, landing page metrics, and user drop-offs using Google Analytics 4 and Hotjar.',
+      'Collaborate with content creators to produce SEO-optimized guides, case studies, and comparison landing pages.',
+      'Manage multi-channel paid acquisition campaigns (Google Ads, LinkedIn) with strict CAC/LTV targets.'
+    ],
+    skills: ['Technical SEO', 'Google Analytics 4', 'Ahrefs / SEMrush', 'Conversion Optimization (CRO)', 'Content Strategy', 'Paid Ads']
+  },
+  {
+    id: 6,
+    title: 'Technical Project Manager / Scrum Master',
+    dept: 'Management',
+    location: 'Remote / India',
+    type: 'Full-Time',
+    exp: '4+ Years',
+    desc: 'Guide the product lifecycle uniting business objectives with engineering resources, design sprints, and on-time milestone delivery.',
+    responsibilities: [
+      'Facilitate agile Scrum ceremonies: Daily standups, sprint planning, backlog grooming, and retrospectives.',
+      'Translate client requirements into clear, unambiguous user stories with well-defined acceptance criteria.',
+      'Proactively identify technical blockers, risk dependencies, and resource constraints.',
+      'Ensure transparent stakeholder communication, sprint progress demos, and delivery velocity.'
+    ],
+    skills: ['Agile / Scrum', 'Jira / Confluence', 'Sprint Planning', 'Stakeholder Management', 'Risk Mitigation', 'Technical Delivery']
+  }
+];
+
+const departments = ['All', 'Engineering', 'Design', 'Marketing', 'Management'];
 
 const Careers = () => {
+  const [selectedDept, setSelectedDept] = useState('All');
+  const [expandedJobId, setExpandedJobId] = useState(null);
+
+  const filteredJobs = selectedDept === 'All'
+    ? jobsData
+    : jobsData.filter((job) => job.dept === selectedDept);
+
+  const toggleJob = (id) => {
+    setExpandedJobId(expandedJobId === id ? null : id);
+  };
+
   return (
-    <div className="w-full min-h-screen bg-brand-bg-light overflow-x-hidden pt-[72px]">
-      {/* HERO SECTION */}
-      <section className="relative py-24 md:py-32 bg-brand-primary-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-deep-blue/60 via-brand-primary-navy to-brand-primary-navy"></div>
-        <div className="absolute right-0 bottom-0 w-full h-[500px] bg-gradient-to-t from-brand-primary-navy/80 to-transparent pointer-events-none"></div>
+    <PageTransition>
+      <SEO
+        title="Careers at The Digital Connect | Build What Matters, Grow With Us"
+        description="Join The Digital Connect's talented team of engineers, designers, and strategists. Explore open positions in web, mobile, DevOps, and design with flexible remote culture."
+      />
 
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight leading-tight mb-6">
-              Build What Matters. <br />
-              <span className="text-brand-electric-cyan">Grow With Us.</span>
-            </h1>
-            <p className="text-lg md:text-2xl text-white/80 leading-relaxed mb-10 max-w-3xl">
-              We bring together strategists, designers, developers and problem-solvers who believe great digital experiences are built through curiosity, collaboration and craft.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#open-positions">
-                <Button className="w-full sm:w-auto text-lg h-14 px-2 bg-brand-cyan text-brand-primary-navy hover:bg-brand-electric-cyan">
-                  View Open Positions <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </a>
-              <Link to="/about/team">
-                <Button variant="outline" className="w-full sm:w-auto text-lg h-14 px-2 border-white/20 text-white hover:bg-white/10">
-                  Meet Our Team
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+      <div className="w-full bg-[#FBFDFE] min-h-screen font-sans text-slate-800">
+        
+        {/* BREADCRUMB */}
+        <div className="pt-28 md:pt-32 px-4 sm:px-6 max-w-7xl mx-auto text-xs sm:text-sm font-medium text-slate-500 flex flex-wrap items-center gap-2">
+          <Link to="/" className="hover:text-[#00A9D6] transition-colors">Home</Link>
+          <ChevronRight size={14} />
+          <span className="text-[#061A2E] font-bold">Careers</span>
         </div>
-      </section>
 
-      {/* WHY WORK WITH US */}
-      <section className="py-24 bg-brand-off-white relative">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
-          <div className="text-center mb-16">
-            <span className="text-brand-light-blue font-bold tracking-widest uppercase text-sm mb-3 block">Benefits</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight">
-              More Than a Job. <span className="text-brand-cyan relative">A Place to Build.<svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-cyan/20" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" /></svg></span>
-            </h2>
-          </div>
+        {/* HERO SECTION */}
+        <section className="pt-8 pb-16 lg:pt-12 lg:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="max-w-4xl space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/80 text-[#00A9D6] text-xs sm:text-sm font-bold tracking-wide shadow-2xs"
+            >
+              <Sparkles className="w-4 h-4 text-[#00A9D6]" />
+              <span>We Are Hiring Talent Worldwide</span>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-3xl border border-brand-border/60 hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-cyan/5 transition-all duration-300"
-              >
-                <div className="w-14 h-14 bg-brand-bg-light rounded-2xl flex items-center justify-center mb-6 border border-brand-border">
-                  {benefit.icon}
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-[1.12] text-[#061A2E]"
+            >
+              Build What Matters.{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A9D6] via-[#087EA4] to-[#063B63]">
+                Grow With Us.
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="text-slate-600 text-base sm:text-xl leading-relaxed max-w-3xl"
+            >
+              We bring together strategists, designers, developers, and problem-solvers who believe great digital experiences are built through curiosity, collaboration, and high-standard engineering craft.
+            </motion.p>
+
+            {/* Quick Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4"
+            >
+              {stats.map((st, i) => (
+                <div
+                  key={i}
+                  className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-cyan-400/50 hover:shadow-md transition-all duration-300"
+                >
+                  <span className="text-2xl sm:text-3xl font-heading font-black text-[#00A9D6] block">
+                    {st.value}
+                  </span>
+                  <span className="text-xs sm:text-sm text-slate-500 font-medium block mt-0.5">
+                    {st.label}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold font-heading text-brand-primary-navy mb-3">{benefit.title}</h3>
-                <p className="text-brand-text-muted leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* OUR CULTURE */}
-      <section className="py-24 bg-white relative border-y border-brand-border overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/3">
-              <span className="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-3 block">Our Culture</span>
-              <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight mb-6">
-                How We Work Together
+        {/* WHY WORK WITH US / BENEFITS */}
+        <section className="py-16 bg-white border-y border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <span className="text-xs font-bold text-[#00A9D6] uppercase tracking-widest block mb-2 font-mono">
+                Work Culture & Perks
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#061A2E] leading-tight">
+                More Than a Job. A Place to Build & Thrive.
               </h2>
-              <p className="text-brand-text-muted text-lg mb-8">
-                A great team is built on shared values. We cultivate an environment where talent can thrive without rigid corporate boundaries.
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, idx) => {
+                const Icon = benefit.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-8 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:bg-white hover:border-cyan-400/50 shadow-xs hover:shadow-[0_16px_36px_-10px_rgba(0,169,214,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="w-12 h-12 rounded-2xl bg-cyan-50 text-[#00A9D6] group-hover:bg-[#00A9D6] group-hover:text-white flex items-center justify-center transition-colors duration-300 shadow-2xs">
+                          <Icon size={22} />
+                        </div>
+                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white border border-slate-200/80 text-slate-600">
+                          {benefit.highlight}
+                        </span>
+                      </div>
+                      <h3 className="font-heading font-bold text-xl text-[#061A2E] mb-3 group-hover:text-[#00A9D6] transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* OUR CULTURE */}
+        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-4 space-y-4">
+              <span className="text-xs font-bold text-[#00A9D6] uppercase tracking-widest block font-mono">
+                Shared Values
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#061A2E] leading-tight">
+                How We Work & Innovate Together
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                A great team is built on transparency, mutual respect, and shared craftsmanship. We cultivate an environment where talent thrives without rigid corporate barriers.
               </p>
             </div>
-            <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {cultureItems.map((item, idx) => (
-                <motion.div
+
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {cultureValues.map((item, idx) => (
+                <div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className={`p-6 rounded-2xl border ${idx % 2 === 0 ? 'bg-brand-primary-navy text-white border-transparent' : 'bg-brand-off-white text-brand-primary-navy border-brand-border'} flex items-center justify-center text-center font-bold text-xl hover:scale-[1.02] transition-transform shadow-sm`}
+                  className="p-6 rounded-2xl bg-white border border-slate-200/80 hover:border-cyan-400/50 shadow-xs hover:shadow-sm transition-all duration-300"
                 >
-                  {item}
-                </motion.div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <CheckCircle2 size={16} className="text-[#00A9D6]" />
+                    <h4 className="font-heading font-bold text-base text-[#061A2E]">
+                      {item.title}
+                    </h4>
+                  </div>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pl-6">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* CAREER GROWTH JOURNEY */}
+        <section className="py-20 bg-white border-y border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <span className="text-xs font-bold text-[#00A9D6] uppercase tracking-widest block mb-2 font-mono">
+                Progression Roadmap
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#061A2E] leading-tight">
+                Your Growth Journey at The Digital Connect
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {growthSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:bg-white hover:border-cyan-400/50 shadow-xs transition-all duration-300"
+                >
+                  <span className="text-2xl font-mono font-black text-[#00A9D6] block mb-2">
+                    {step.step}
+                  </span>
+                  <h4 className="font-heading font-bold text-lg text-[#061A2E] mb-1">
+                    {step.title}
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CAREER JOURNEY */}
-      <section className="py-24 bg-brand-off-white relative">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-primary-navy leading-tight mb-16">
-            Your Growth Journey
-          </h2>
-
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 max-w-5xl mx-auto">
-            {['Explore', 'Join', 'Learn', 'Contribute', 'Lead', 'Grow'].map((step, idx, arr) => (
-              <React.Fragment key={idx}>
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: idx * 0.1 }}
-                  className="bg-white border-2 border-brand-cyan/20 text-brand-primary-navy px-3.5 py-3 rounded-full font-bold shadow-sm"
-                >
-                  {step}
-                </motion.div>
-                {idx < arr.length - 1 && (
-                  <div className="hidden sm:block text-brand-light-blue shrink-0">
-                    <ArrowRight size={24} />
-                  </div>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OPEN POSITIONS */}
-      <section id="open-positions" className="py-24 bg-white relative">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        {/* OPEN POSITIONS WITH INLINE EXPANSION (NO REDIRECTS) */}
+        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
             <div>
-              <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary-navy leading-tight mb-4">
+              <span className="text-xs font-bold text-[#00A9D6] uppercase tracking-widest block mb-2 font-mono">
+                Current Opportunities
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#061A2E] leading-tight mb-2">
                 Open Positions
               </h2>
-              <p className="text-brand-text-muted text-lg max-w-xl">
-                Join our rapidly growing team. If you don't see your exact role listed, we still want to hear from you.
+              <p className="text-slate-600 text-sm sm:text-base max-w-xl">
+                Click any role to view detailed responsibilities and required qualifications directly on this page.
               </p>
+            </div>
+
+            {/* Department Filter Tabs */}
+            <div className="flex flex-wrap gap-2">
+              {departments.map((dept) => {
+                const isSelected = selectedDept === dept;
+                const count = dept === 'All' ? jobsData.length : jobsData.filter(j => j.dept === dept).length;
+                return (
+                  <button
+                    key={dept}
+                    onClick={() => setSelectedDept(dept)}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                      isSelected
+                        ? 'bg-[#061A2E] text-white shadow-sm'
+                        : 'bg-white border border-slate-200/80 text-slate-600 hover:border-cyan-400/50 hover:text-[#061A2E]'
+                    }`}
+                  >
+                    {dept} ({count})
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {jobs.map((job) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="bg-brand-off-white border border-brand-border p-8 rounded-3xl hover:border-brand-cyan transition-colors flex flex-col h-full group"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold font-heading text-brand-primary-navy group-hover:text-brand-cyan transition-colors">{job.title}</h3>
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 border border-brand-border">
-                    <Briefcase size={18} className="text-brand-light-blue" />
+          {/* Job Cards with In-Place Accordion Expansion */}
+          <div className="space-y-4">
+            {filteredJobs.map((job) => {
+              const isExpanded = expandedJobId === job.id;
+              return (
+                <div
+                  key={job.id}
+                  className={`rounded-3xl border transition-all duration-300 overflow-hidden ${
+                    isExpanded
+                      ? 'bg-white border-cyan-400/60 shadow-lg'
+                      : 'bg-white border-slate-200/80 hover:border-cyan-400/50 shadow-xs'
+                  }`}
+                >
+                  {/* Job Header Bar */}
+                  <div
+                    onClick={() => toggleJob(job.id)}
+                    className="p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer select-none"
+                  >
+                    <div className="space-y-2 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/70 text-[#00A9D6]">
+                          {job.dept}
+                        </span>
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 text-slate-600">
+                          {job.type}
+                        </span>
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 text-slate-600">
+                          {job.exp}
+                        </span>
+                        <span className="text-[11px] font-medium text-slate-500 inline-flex items-center gap-1">
+                          <MapPin size={12} className="text-slate-400" /> {job.location}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl sm:text-2xl font-heading font-bold text-[#061A2E]">
+                        {job.title}
+                      </h3>
+                      
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                        {job.desc}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-3 shrink-0 self-start md:self-center">
+                      <span className="text-xs font-bold text-[#00A9D6] hidden sm:inline">
+                        {isExpanded ? 'Hide Details' : 'View Role & Requirements'}
+                      </span>
+                      <div className={`w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 transition-transform duration-300 ${isExpanded ? 'rotate-180 bg-cyan-100 text-[#00A9D6]' : ''}`}>
+                        <ChevronDown size={18} />
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Expanded In-Place Details (No Redirects!) */}
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="border-t border-slate-200/80 bg-[#F8FAFC] px-6 py-8 sm:px-8 space-y-6"
+                      >
+                        {/* Responsibilities */}
+                        <div>
+                          <h4 className="text-sm font-heading font-bold uppercase tracking-wider text-[#061A2E] mb-3">
+                            Key Responsibilities:
+                          </h4>
+                          <div className="space-y-2">
+                            {job.responsibilities.map((resp, rIdx) => (
+                              <div key={rIdx} className="flex items-start gap-3">
+                                <div className="w-4 h-4 rounded-full bg-cyan-100/80 text-[#00A9D6] flex items-center justify-center shrink-0 mt-0.5">
+                                  <CheckCircle2 size={12} className="stroke-[2.5]" />
+                                </div>
+                                <span className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                  {resp}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Required Skills Badges */}
+                        <div>
+                          <h4 className="text-sm font-heading font-bold uppercase tracking-wider text-[#061A2E] mb-3">
+                            Key Skills & Technologies:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {job.skills.map((skill, sIdx) => (
+                              <span
+                                key={sIdx}
+                                className="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-[#061A2E] shadow-2xs"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* In-Place Application Note */}
+                        <div className="p-4 rounded-2xl bg-cyan-50/80 border border-cyan-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm">
+                          <div className="space-y-0.5">
+                            <span className="font-bold text-[#061A2E] block">Interested in this role?</span>
+                            <span className="text-slate-600">Send your resume and portfolio directly to our recruitment team:</span>
+                          </div>
+                          <a
+                            href="mailto:info@thedigitalconnect.in"
+                            className="inline-flex items-center gap-2 font-mono font-bold text-[#00A9D6] hover:text-[#063B63] bg-white px-3.5 py-2 rounded-xl border border-cyan-200/80 shadow-2xs transition-colors"
+                          >
+                            <Mail size={14} />
+                            <span>info@thedigitalconnect.in</span>
+                          </a>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3.5 py-1 rounded-full text-brand-text-muted">
-                    {job.dept}
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3.5 py-1 rounded-full text-brand-text-muted inline-flex items-center gap-1">
-                    <MapPin size={12} /> {job.location}
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-white border border-brand-border px-3.5 py-1 rounded-full text-brand-text-muted">
-                    {job.exp}
-                  </span>
-                </div>
-
-                <p className="text-brand-text-muted mb-8 flex-1">{job.desc}</p>
-
-                <Link to={`/careers/${job.id}`} className="mt-auto">
-                  <Button variant="outline" className="w-full justify-between group-hover:bg-brand-primary-navy group-hover:text-white group-hover:border-brand-primary-navy">
-                    View Position <ArrowRight size={18} />
-                  </Button>
-                </Link>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CAREERS CTA */}
-      <section className="relative py-24 bg-brand-primary-navy text-white overflow-hidden m-4 md:m-8 rounded-3xl text-center">
-        <div className="absolute inset-0 bg-brand-light-blue opacity-10"></div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 leading-tight">
-            Don't See Your Role?
-          </h2>
-          <p className="text-xl text-white/80 mb-10">
-            We're always interested in meeting talented people who can bring new perspectives to our team.
-          </p>
-          <Link to="/contact">
-            <Button className="h-16 px-8 text-lg bg-brand-cyan text-brand-primary-navy hover:bg-white shadow-[0_0_30px_rgba(24,197,232,0.4)] transition-all">
-              Send Your Profile <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
+      </div>
+    </PageTransition>
   );
 };
 
