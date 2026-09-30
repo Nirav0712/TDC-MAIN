@@ -5,7 +5,7 @@ import MegaMenu from './MegaMenu';
 const navLinks = [
     { label: 'Company', id: 'company', path: '/about' },
     { label: 'Services', id: 'services', path: '/services' },
-    { label: 'Industries', id: 'industries', path: '/industries' },
+    // { label: 'Industries', id: 'industries', path: '/industries' },
     // { label: 'Portfolio', id: 'portfolio', path: '/portfolio' },
     { label: 'Process', id: 'process', path: '/process' },
     { label: 'Hire Team', id: 'hire-team', path: '/hire-team/web-developers' },

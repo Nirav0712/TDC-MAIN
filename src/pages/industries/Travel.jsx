@@ -1,38 +1,82 @@
 import React from 'react';
 import useSEO from '../../hooks/useSEO';
 import { motion } from 'framer-motion';
+import { Plane, Compass, Globe, MapPin, Sparkles, CheckCircle2, Navigation } from 'lucide-react';
 import IndustryHero from '../../components/industries/IndustryHero';
 import IndustryOverview from '../../components/industries/IndustryOverview';
 import IndustryChallenges from '../../components/industries/IndustryChallenges';
-import IndustrySolutions from '../../components/industries/IndustrySolutions';
 import IndustryUniqueSection from '../../components/industries/IndustryUniqueSection';
 import IndustryCTA from '../../components/industries/IndustryCTA';
 import { TravelData } from '../../data/industries/travel';
 
 const TravelVisual = () => (
-  <div className='w-full h-[300px] md:h-[400px] bg-white rounded-3xl shadow-xl border border-[#D9E7EF] overflow-hidden flex flex-col p-6 gap-6 relative'>
-    <div className='absolute -right-10 -top-10 w-40 h-40 bg-[#18C5E8]/10 rounded-full blur-3xl'></div>
-    <div className='flex justify-between items-end border-b border-[#D9E7EF] pb-4'>
-       <div className='text-[#061A2E] font-bold text-2xl'>London</div>
-       <div className='hidden sm:flex flex-grow justify-center relative'>
-          <div className='w-1/2 h-px border-t border-dashed border-[#18C5E8]/50 relative'>
-             <motion.div animate={{x: ['0%', '100%']}} transition={{duration:3, repeat:Infinity}} className='absolute -top-2 w-4 h-4 rounded-full bg-[#18C5E8]'></motion.div>
-          </div>
-       </div>
-       <div className='text-[#061A2E] font-bold text-2xl'>Tokyo</div>
+  <div className="w-full bg-white/95 backdrop-blur-xl rounded-[28px] shadow-2xl shadow-purple-950/10 border border-[#D9E7EF] overflow-hidden flex flex-col p-6 relative">
+    {/* Header */}
+    <div className="flex items-center justify-between pb-4 border-b border-[#D9E7EF]/80 mb-5">
+      <div className="flex items-center gap-3">
+        <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-700">
+          <Plane className="w-5 h-5" />
+        </div>
+        <div>
+          <h4 className="font-bold text-sm text-[#061A2E]">Voyager Global Booking Engine</h4>
+          <span className="text-[11px] font-semibold text-purple-600 flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span> GDS / NDC Direct Connect
+          </span>
+        </div>
+      </div>
+      <span className="px-2.5 py-1 rounded-full bg-purple-50 text-[11px] font-bold text-purple-700 border border-purple-200">
+        Live Flight Feed
+      </span>
     </div>
-    <div className='flex-grow grid grid-cols-1 md:grid-cols-2 gap-4'>
-       <div className='bg-[#F7FAFC] rounded-2xl border border-[#D9E7EF] p-4 flex flex-col gap-2'>
-         <div className='h-2 w-1/3 bg-[#087EA4]/30 rounded mb-4'></div>
-         <div className='h-full bg-gradient-to-t from-[#D9A72E]/20 to-transparent rounded-xl'></div>
-       </div>
-       <div className='bg-[#F7FAFC] rounded-2xl border border-[#D9E7EF] p-4 flex flex-col gap-2'>
-         <div className='h-2 w-1/3 bg-[#18C5E8]/30 rounded mb-4'></div>
-         <div className='h-full bg-gradient-to-t from-[#063B63]/20 to-transparent rounded-xl'></div>
-       </div>
+
+    {/* Metric Cards Row */}
+    <div className="grid grid-cols-3 gap-3 mb-5">
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Search Speed</span>
+        <span className="text-base font-extrabold text-emerald-600 mt-0.5">280ms</span>
+      </div>
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Airlines Synced</span>
+        <span className="text-base font-extrabold text-[#087EA4] mt-0.5">450+</span>
+      </div>
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Booking Success</span>
+        <span className="text-base font-extrabold text-purple-600 mt-0.5">99.8%</span>
+      </div>
+    </div>
+
+    {/* Route Visualization */}
+    <div className="p-4 rounded-2xl bg-[#061A2E] text-white flex flex-col gap-3">
+      <div className="flex items-center justify-between text-xs text-slate-300">
+        <span className="flex items-center gap-1.5 text-[#18C5E8]">
+          <Compass className="w-4 h-4" /> JFK (New York) → LHR (London)
+        </span>
+        <span className="text-emerald-400 font-bold">On Schedule</span>
+      </div>
+
+      <div className="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-xs">
+        <div className="flex items-center gap-3">
+          <div className="text-left">
+            <div className="font-extrabold text-white text-sm">BA 178</div>
+            <div className="text-[10px] text-slate-400">Non-Stop • 6h 55m</div>
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="font-extrabold text-[#18C5E8] text-sm">$640.00</div>
+          <div className="text-[10px] text-emerald-400">Instant e-Ticket</div>
+        </div>
+      </div>
     </div>
   </div>
 );
+
+const travelSteps = [
+  { step: '01', title: 'GDS & Supplier Integration', desc: 'Connecting Amadeus, Sabre, NDC APIs, and hotel inventory engines.' },
+  { step: '02', title: 'Frictionless Itinerary UX', desc: 'Designing responsive flight selectors, room pickers, and split payments.' },
+  { step: '03', title: 'Real-Time Sync Engine', desc: 'Building sub-second flight fare search, seat selection, and price alerts.' },
+  { step: '04', title: 'Multi-Currency & VAT Rules', desc: 'Automating multi-currency checkout, dynamic taxes, and cancellation logic.' },
+  { step: '05', title: 'Travel App & Agent Console', desc: 'Deploying mobile itinerary apps with live gate updates and push notifications.' }
+];
 
 const Travel = () => {
   useSEO({
@@ -41,47 +85,49 @@ const Travel = () => {
   });
 
   return (
-    <div className="bg-[#F7FAFC] pt-[72px] lg:pt-[76px]">
-      <IndustryHero 
+    <div className="bg-white min-h-screen">
+      <IndustryHero
         variant="travel"
         eyebrow="TRAVEL TECHNOLOGY"
-        headline="Digital Journeys Designed Around the Traveler."
-        description="Create seamless travel experiences that make discovery, booking and journey management effortless."
+        headline="Digital Journeys Designed Around the Modern Traveler."
+        description="Create seamless travel, hospitality, and booking experiences that make flight discovery, hotel reservations, and journey management completely effortless."
         visual={TravelVisual}
-        ctaText="Create Better Travel Experiences"
+        ctaText="Build Travel Platform"
       />
-      <IndustryOverview 
-        title="Transforming Travel with Digital Architecture"
+
+      <IndustryOverview
+        title="Transforming Travel & Hospitality with High-Speed Architecture"
         content={[
           TravelData.desc ? `"${TravelData.desc}"` : '""',
-          "We partner with leading organizations to modernize outdated legacy systems and construct efficient digital workflows from the ground up."
+          "We build next-generation Online Travel Agencies (OTAs), corporate booking engines, and dynamic packaging platforms integrated with leading global GDS and NDC APIs.",
+          "Our software delivers sub-second flight search, automated itinerary synchronization, interactive destination guides, and seamless mobile check-in capabilities."
         ]}
       />
+
       <IndustryChallenges challenges={TravelData.challenges} />
-      
-      <IndustryUniqueSection title="The Travel Journey" variant="travel">
-         <div className="flex flex-wrap items-center justify-center gap-4 py-8">
-            {[1, 2, 3, 4, 5].map((step, idx) => (
-               <React.Fragment key={idx}>
-                 <motion.div 
-                   whileHover={{ scale: 1.1 }}
-                   className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white border border-[#D9E7EF] shadow-sm flex items-center justify-center text-[#061A2E] font-bold text-lg"
-                 >
-                   {step}
-                 </motion.div>
-                 {idx < 4 && (
-                   <div className="hidden sm:block h-1 w-8 bg-[#18C5E8]/30 overflow-hidden relative">
-                     <motion.div className="absolute top-0 bottom-0 left-0 bg-[#18C5E8]" initial={{width: 0}} animate={{width: '100%'}} transition={{duration: 1.5, repeat: Infinity, delay: idx * 0.2}} />
-                   </div>
-                 )}
-               </React.Fragment>
-            ))}
-         </div>
+
+      <IndustryUniqueSection title="The Travel Tech Engineering Lifecycle" variant="travel">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {travelSteps.map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-2xl bg-white border border-[#D9E7EF] shadow-sm hover:shadow-md hover:border-purple-500/40 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-xs font-bold text-purple-700 px-2.5 py-1 rounded-lg bg-purple-50 inline-block mb-3">
+                  Step {item.step}
+                </span>
+                <h4 className="text-base font-bold text-[#061A2E] mb-2">{item.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </IndustryUniqueSection>
-      
-      <IndustrySolutions solutions={TravelData.solutions} variant="travel" />
-      <IndustryCTA title="Create Better Travel Experiences →" variant="travel" />
+
+      <IndustryCTA title="Ready to Create Better Travel Experiences?" variant="travel" />
     </div>
   );
 };
+
 export default Travel;

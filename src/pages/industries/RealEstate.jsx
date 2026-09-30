@@ -1,28 +1,84 @@
 import React from 'react';
 import useSEO from '../../hooks/useSEO';
 import { motion } from 'framer-motion';
+import { Home, MapPin, Building, Key, Sparkles, CheckCircle2, Navigation } from 'lucide-react';
 import IndustryHero from '../../components/industries/IndustryHero';
 import IndustryOverview from '../../components/industries/IndustryOverview';
 import IndustryChallenges from '../../components/industries/IndustryChallenges';
-import IndustrySolutions from '../../components/industries/IndustrySolutions';
 import IndustryUniqueSection from '../../components/industries/IndustryUniqueSection';
 import IndustryCTA from '../../components/industries/IndustryCTA';
 import { RealEstateData } from '../../data/industries/real-estate';
 
 const RealEstateVisual = () => (
-  <div className='w-full h-[300px] md:h-[400px] bg-[#F7FAFC] rounded-3xl shadow-xl border border-[#D9E7EF] overflow-hidden relative'>
-    {/* Map stricture */}
-    <div className='absolute inset-0 opacity-20' style={{backgroundImage: 'radial-gradient(#18C5E8 2px, transparent 2px)', backgroundSize: '30px 30px'}}></div>
-    <motion.div animate={{y: [-5, 5, -5]}} transition={{duration:4, repeat:Infinity}} className='absolute top-1/4 left-1/4 w-8 h-8 bg-[#061A2E] rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white text-[10px]'>$</motion.div>
-    <motion.div animate={{y: [5, -5, 5]}} transition={{duration:3.5, repeat:Infinity}} className='absolute bottom-1/3 right-1/4 w-8 h-8 bg-[#18C5E8] rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white text-[10px]'>$</motion.div>
-    <div className='absolute bottom-6 left-6 right-6 bg-white p-4 rounded-xl shadow-xl border border-[#D9E7EF] flex gap-4'>
-       <div className='w-1/3 h-16 bg-[#061A2E]/5 rounded-lg'></div>
-       <div className='flex-grow flex flex-col gap-2 justify-center'>
-          <div className='w-full h-3 bg-[#061A2E]/20 rounded'></div><div className='w-1/2 h-3 bg-[#18C5E8]/40 rounded'></div>
-       </div>
+  <div className="w-full bg-white/95 backdrop-blur-xl rounded-[28px] shadow-2xl shadow-amber-950/10 border border-[#D9E7EF] overflow-hidden flex flex-col p-6 relative">
+    {/* Header */}
+    <div className="flex items-center justify-between pb-4 border-b border-[#D9E7EF]/80 mb-5">
+      <div className="flex items-center gap-3">
+        <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
+          <Building className="w-5 h-5" />
+        </div>
+        <div>
+          <h4 className="font-bold text-sm text-[#061A2E]">Aura Estate MLS Platform</h4>
+          <span className="text-[11px] font-semibold text-amber-600 flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span> RETS / IDX Sync • Live
+          </span>
+        </div>
+      </div>
+      <span className="px-2.5 py-1 rounded-full bg-amber-50 text-[11px] font-bold text-amber-700 border border-amber-200">
+        3D Walkthrough
+      </span>
+    </div>
+
+    {/* Metric Cards Row */}
+    <div className="grid grid-cols-3 gap-3 mb-5">
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Active Listings</span>
+        <span className="text-base font-extrabold text-[#061A2E] mt-0.5">18,400+</span>
+      </div>
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Lead Inquiries</span>
+        <span className="text-base font-extrabold text-emerald-600 mt-0.5">+42.8%</span>
+      </div>
+      <div className="p-3 rounded-xl bg-[#F7FAFC] border border-[#D9E7EF] flex flex-col">
+        <span className="text-[10px] font-bold uppercase text-slate-500">Avg Close Time</span>
+        <span className="text-base font-extrabold text-amber-600 mt-0.5">14 Days</span>
+      </div>
+    </div>
+
+    {/* Property Map & Live Inquiries */}
+    <div className="p-4 rounded-2xl bg-[#061A2E] text-white flex flex-col gap-3 relative overflow-hidden">
+      <div className="flex items-center justify-between text-xs text-slate-300">
+        <span className="flex items-center gap-1.5 text-[#18C5E8]">
+          <MapPin className="w-4 h-4" /> Interactive Geospatial Filter
+        </span>
+        <span className="text-slate-400">Polygon Search</span>
+      </div>
+
+      <div className="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xs">
+            $1.4M
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">The Skyline Penthouse</div>
+            <div className="text-[10px] text-slate-400">4 Bed • 3 Bath • 3,200 sqft</div>
+          </div>
+        </div>
+        <span className="text-[10px] font-bold px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+          Verified
+        </span>
+      </div>
     </div>
   </div>
 );
+
+const realEstateSteps = [
+  { step: '01', title: 'Property Data & MLS Mapping', desc: 'Analyzing IDX/RETS protocols, CRM integration, and broker workflows.' },
+  { step: '02', title: 'Immersive UI/UX & 3D Maps', desc: 'Designing interactive polygon maps, 3D floorplan tours, and fast filter UI.' },
+  { step: '03', title: 'Listing Engine & Lead Routing', desc: 'Developing automated valuation models, instant SMS alerts, and lead CRM.' },
+  { step: '04', title: 'Performance & SEO Optimization', desc: 'Engineering programmatic SEO landing pages for high local search rankings.' },
+  { step: '05', title: 'Broker Launch & Portal Onboarding', desc: 'Agent training, multi-office permission structures, and continuous sync.' }
+];
 
 const RealEstate = () => {
   useSEO({
@@ -31,47 +87,49 @@ const RealEstate = () => {
   });
 
   return (
-    <div className="bg-[#F7FAFC] pt-[72px] lg:pt-[76px]">
-      <IndustryHero 
+    <div className="bg-white min-h-screen">
+      <IndustryHero
         variant="real-estate"
         eyebrow="REAL ESTATE TECHNOLOGY"
-        headline="Digital Experiences That Move Property Businesses Forward."
-        description="Create modern property platforms that simplify discovery, management, communication and transactions."
+        headline="Digital Experiences That Move Modern Property Businesses Forward."
+        description="Create high-performance property platforms that simplify discovery, streamline transaction management, and empower agents with automated lead generation."
         visual={RealEstateVisual}
-        ctaText="Build Your Property Platform"
+        ctaText="Build Property Platform"
       />
-      <IndustryOverview 
-        title="Transforming Real Estate with Digital Architecture"
+
+      <IndustryOverview
+        title="Transforming Real Estate with Intelligent Digital Infrastructure"
         content={[
           RealEstateData.desc ? `"${RealEstateData.desc}"` : '""',
-          "We partner with leading organizations to modernize outdated legacy systems and construct efficient digital workflows from the ground up."
+          "We engineer high-speed property listing portals, automated agent CRMs, and 3D virtual tour integrations for enterprise brokerages and proptech innovators.",
+          "Our platforms feature seamless MLS/RETS synchronization, advanced geospatial map search, digital signature workflows, and automated tenant management systems."
         ]}
       />
+
       <IndustryChallenges challenges={RealEstateData.challenges} />
-      
-      <IndustryUniqueSection title="The Real Estate Journey" variant="real-estate">
-         <div className="flex flex-wrap items-center justify-center gap-4 py-8">
-            {[1, 2, 3, 4, 5].map((step, idx) => (
-               <React.Fragment key={idx}>
-                 <motion.div 
-                   whileHover={{ scale: 1.1 }}
-                   className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white border border-[#D9E7EF] shadow-sm flex items-center justify-center text-[#061A2E] font-bold text-lg"
-                 >
-                   {step}
-                 </motion.div>
-                 {idx < 4 && (
-                   <div className="hidden sm:block h-1 w-8 bg-[#18C5E8]/30 overflow-hidden relative">
-                     <motion.div className="absolute top-0 bottom-0 left-0 bg-[#18C5E8]" initial={{width: 0}} animate={{width: '100%'}} transition={{duration: 1.5, repeat: Infinity, delay: idx * 0.2}} />
-                   </div>
-                 )}
-               </React.Fragment>
-            ))}
-         </div>
+
+      <IndustryUniqueSection title="The PropTech Engineering Lifecycle" variant="real-estate">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {realEstateSteps.map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-2xl bg-white border border-[#D9E7EF] shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-xs font-bold text-amber-700 px-2.5 py-1 rounded-lg bg-amber-50 inline-block mb-3">
+                  Step {item.step}
+                </span>
+                <h4 className="text-base font-bold text-[#061A2E] mb-2">{item.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </IndustryUniqueSection>
-      
-      <IndustrySolutions solutions={RealEstateData.solutions} variant="real-estate" />
-      <IndustryCTA title="Build Your Property Platform →" variant="real-estate" />
+
+      <IndustryCTA title="Ready to Build Your Next-Gen Property Platform?" variant="real-estate" />
     </div>
   );
 };
+
 export default RealEstate;
